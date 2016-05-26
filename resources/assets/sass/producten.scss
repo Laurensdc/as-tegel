@@ -1,0 +1,132 @@
+/* Menu styles */
+.catmenu_container {
+	width:25rem;
+	float:left;
+	background-color:$graywhite;
+
+}
+
+.catmenu li, .catmenu .catmenu_title {
+	height:4rem;
+	border:1px solid $gray;
+	margin-top:-1px;
+}
+
+.catmenu .catmenu_title {
+	font-weight:600;
+	background-color:$almostwhite;
+}
+
+.catmenu ul {
+	display: none;
+	padding-left:3rem;
+
+}
+
+.catmenu a, .catmenu .catmenu_title {
+	width:100%;
+	color:$textcolor;
+	padding:1rem;
+	display:inline-block;
+}
+
+.catmenu a:hover {
+	color:$colora_darker;
+}
+/* End of Menu styles */
+
+/* Producten content */
+.categorie_overzicht {
+	background-color:$notsowhite;
+	overflow:hidden;
+}
+/* End of Producten content */
+
+
+/* Producten Overzicht */
+.producten_content {
+	padding:2rem;
+	padding-top:1rem;
+	float:left;
+}
+
+.producten_content h2 {
+	font-size:2rem;
+	
+}
+
+
+	/* Categorie overzicht */
+	.categorie_overzicht .producten_vietnamees {
+		background-image: url('../images/categorie/vietnamees.jpg');
+	}
+	.categorie_overzicht .producten_indisch {
+		background-image: url('../images/categorie/indisch.jpg');
+	}
+	.categorie_overzicht .producten_chinees {
+		background-image: url('../images/categorie/chinees.jpg');
+	}
+
+
+	.categorie_overzicht article {	
+		overflow:hidden;
+
+		background-size:cover;
+		background-position:center top;
+		
+		height:40rem;
+		margin-bottom: 7rem;
+
+		width:31.33333%;
+
+		float:left;
+		margin:0 1% 2%;
+		
+	}
+
+	.categorie_overzicht img {
+		width:100%;
+	}
+
+	.categorie_overzicht .producten_caption {
+		width:100%;
+		margin-top:30rem;
+
+		background-color:$verygray;
+		opacity: 0.9;
+	}
+
+	.categorie_overzicht .producten_caption a {
+		width:100%;
+		height:5rem;
+		line-height:5rem;
+		display:block;
+		
+		font-size:2rem;
+		text-align:center;
+		
+		color:$almostwhite;
+	}
+
+	.categorie_overzicht .producten_caption a:hover {
+		color:$colora;
+		background-color:$gray_darkest;
+	}
+	/* End of Categorie overzicht*/
+
+/* End of producten overzicht */
+
+
+/* Breadcrumb */
+.breadcrumb {
+	height:4rem;
+	padding:0 1rem;
+	margin-bottom:1rem;
+	background-color:$notsowhite;
+}
+
+.breadcrumb p {
+	line-height:4rem;
+}
+
+/* End of Breadcrumb */

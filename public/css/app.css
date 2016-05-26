@@ -1,0 +1,334 @@
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  box-sizing: border-box; }
+
+body {
+  line-height: 1; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+nav ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+/* General stuff */
+html {
+  font-size: 62.5%; }
+
+body {
+  font-size: 1.6rem;
+  font-family: "Verdana", sans-serif;
+  background-color: #FAFAFA; }
+
+a {
+  text-decoration: none;
+  color: #CDDC39;
+  transition: 0.4s ease-in-out; }
+
+a:hover {
+  color: #AFB42B; }
+
+p {
+  line-height: 2.4rem; }
+
+ul, li {
+  list-style: none; }
+
+/* End of General stuff */
+/* Toolbar */
+.toolbar {
+  width: 100%;
+  height: 3rem;
+  background-color: #424242;
+  color: #FAFAFA; }
+
+.toolbar_content {
+  width: 80%;
+  margin: 0 10%;
+  padding: 0.5rem 0; }
+
+.toolbar a {
+  color: #FAFAFA; }
+
+.toolbar a:hover {
+  text-decoration: underline; }
+
+.toolbar a.active {
+  text-decoration: underline; }
+
+.toolbar div {
+  float: left; }
+
+.toolbar .toolbar_right {
+  float: right; }
+
+.toolbar_account {
+  margin-left: 5rem; }
+
+.toolbar_contact {
+  padding: 0 1rem;
+  border-right: 1px solid #CDDC39; }
+
+/* End of Toolbar */
+/* Menu */
+header {
+  width: 80%;
+  margin: 1.5rem 10%;
+  height: 6rem; }
+
+header img {
+  max-height: 6rem; }
+
+header li {
+  list-style: none; }
+
+header li a {
+  display: inline-block;
+  float: left;
+  padding: 0 3rem;
+  height: 6rem;
+  line-height: 6rem;
+  font-size: 2rem;
+  color: #111; }
+
+header li:first-of-type a {
+  padding-left: 0; }
+
+header li a.active {
+  color: #AFB42B; }
+
+/* End of Menu */
+.container {
+  margin: 0 auto;
+  width: 80%;
+  background-color: #FAFAFA; }
+
+/* Container */
+.homecontainer {
+  width: 100%;
+  background-color: #FAFAFA; }
+
+/* Backgrounds */
+.home_vietnamees {
+  background-image: url("../images/home/vietnamees.jpg"); }
+
+.home_indisch {
+  background-image: url("../images/home/indisch.jpg"); }
+
+.home_chinees {
+  background-image: url("../images/home/chinees.jpg"); }
+
+/* End of Backgrounds */
+.homecontainer article {
+  overflow: hidden;
+  background-size: cover;
+  background-position: center top;
+  height: 40rem;
+  margin-bottom: 7rem; }
+
+.homecontainer img {
+  width: 100%; }
+
+.homecontainer .home_caption {
+  width: 100%;
+  margin-top: 30rem;
+  background-color: #424242;
+  opacity: 0.9; }
+
+.homecontainer .home_caption a {
+  width: 100%;
+  height: 5rem;
+  line-height: 5rem;
+  display: block;
+  font-size: 2rem;
+  text-align: center;
+  color: #FAFAFA; }
+
+.homecontainer .home_caption a:hover {
+  color: #CDDC39;
+  background-color: #212121; }
+
+/* End of Container */
+@media screen and (min-width: 90em) {
+  .homecontainer article {
+    height: 50rem; }
+  .homecontainer article .home_caption {
+    margin-top: 40rem; } }
+
+/* Menu styles */
+.catmenu_container {
+  width: 25rem;
+  float: left;
+  background-color: #EEEEEE; }
+
+.catmenu li, .catmenu .catmenu_title {
+  height: 4rem;
+  border: 1px solid #9E9E9E;
+  margin-top: -1px; }
+
+.catmenu .catmenu_title {
+  font-weight: 600;
+  background-color: #FAFAFA; }
+
+.catmenu ul {
+  display: none;
+  padding-left: 3rem; }
+
+.catmenu a, .catmenu .catmenu_title {
+  width: 100%;
+  color: #111;
+  padding: 1rem;
+  display: inline-block; }
+
+.catmenu a:hover {
+  color: #AFB42B; }
+
+/* End of Menu styles */
+/* Producten content */
+.categorie_overzicht {
+  background-color: #F5F5F5;
+  overflow: hidden; }
+
+/* End of Producten content */
+/* Producten Overzicht */
+.producten_content {
+  padding: 2rem;
+  padding-top: 1rem;
+  float: left; }
+
+.producten_content h2 {
+  font-size: 2rem; }
+
+/* Categorie overzicht */
+.categorie_overzicht .producten_vietnamees {
+  background-image: url("../images/categorie/vietnamees.jpg"); }
+
+.categorie_overzicht .producten_indisch {
+  background-image: url("../images/categorie/indisch.jpg"); }
+
+.categorie_overzicht .producten_chinees {
+  background-image: url("../images/categorie/chinees.jpg"); }
+
+.categorie_overzicht article {
+  overflow: hidden;
+  background-size: cover;
+  background-position: center top;
+  height: 40rem;
+  margin-bottom: 7rem;
+  width: 31.33333%;
+  float: left;
+  margin: 0 1% 2%; }
+
+.categorie_overzicht img {
+  width: 100%; }
+
+.categorie_overzicht .producten_caption {
+  width: 100%;
+  margin-top: 30rem;
+  background-color: #424242;
+  opacity: 0.9; }
+
+.categorie_overzicht .producten_caption a {
+  width: 100%;
+  height: 5rem;
+  line-height: 5rem;
+  display: block;
+  font-size: 2rem;
+  text-align: center;
+  color: #FAFAFA; }
+
+.categorie_overzicht .producten_caption a:hover {
+  color: #CDDC39;
+  background-color: #212121; }
+
+/* End of Categorie overzicht*/
+/* End of producten overzicht */
+/* Breadcrumb */
+.breadcrumb {
+  height: 4rem;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+  background-color: #F5F5F5; }
+
+.breadcrumb p {
+  line-height: 4rem; }
+
+/* End of Breadcrumb */
+
+/*# sourceMappingURL=app.css.map */

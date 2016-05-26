@@ -1,0 +1,80 @@
+/* Container */
+.homecontainer {
+	width:100%;
+	background-color:$almostwhite;
+	
+}
+
+	/* Backgrounds */
+	.home_vietnamees {
+		background-image: url('../images/home/vietnamees.jpg');
+	}
+
+	.home_indisch {
+		background-image: url('../images/home/indisch.jpg');
+	}
+
+	.home_chinees {
+		background-image: url('../images/home/chinees.jpg');
+	}
+	/* End of Backgrounds */
+
+.homecontainer article {
+	overflow:hidden;
+
+	background-size:cover;
+	//background-repeat:repeat-y;
+	background-position:center top;
+
+	//background-attachment: fixed;	
+	
+	height:40rem;
+	margin-bottom: 7rem;
+	
+}
+
+.homecontainer img {
+	width:100%;
+}
+
+.homecontainer .home_caption {
+	width:100%;
+	margin-top:30rem;
+
+	background-color:$verygray;
+	opacity: 0.9;
+}
+
+.homecontainer .home_caption a {
+	width:100%;
+	height:5rem;
+	line-height:5rem;
+	display:block;
+	
+	font-size:2rem;
+	text-align:center;
+	
+	color:$almostwhite;
+}
+
+.homecontainer .home_caption a:hover {
+	color:$colora;
+	background-color:$gray_darkest;
+}
+
+
+
+/* End of Container */
+
+
+@media screen and (min-width: 90em) {
+	.homecontainer article {
+		height:50rem;
+	}
+
+	.homecontainer article .home_caption {
+		margin-top: 40rem;
+	}
+
+
+}
