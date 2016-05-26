@@ -4,7 +4,7 @@
 @section('content')
 
 <div class="breadcrumb">
-	<p><a href="{{ route('producten') }}">Producten</a> &raquo; Overzicht</p>
+	<p><a href="{{ route('producten') }}">Producten</a> &raquo; Overzicht categorieën</p>
 </div>
 
 <div class="catmenu_container">
