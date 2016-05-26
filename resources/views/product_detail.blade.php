@@ -9,11 +9,17 @@
 </div>
 
 <div class="catmenu_container">
-	@include('catmenu', array('catmenu_active' => $catmenu_active))
+	@include('catmenu', array('catmenu_active' => $catmenu_active, 'allcategories' => $allcategories, 'allsubcategories' => $allsubcategories))
 </div>
 
 <div class="producten_content">
 	<h2>Vietnamees Getrommeld</h2>
+
+	@foreach($producten as $p)
+		{{ $p->naam }}<br>
+		{{ $p->afmeting }}<br>
+		{{ $p->prijs_particulier }}<br>
+	@endforeach
 
 
 </div>

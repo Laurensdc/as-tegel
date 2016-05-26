@@ -7,7 +7,7 @@
 </div>
 
 <div class="catmenu_container">
-	@include('catmenu', array('catmenu_active' => $catmenu_active))
+	@include('catmenu', array('catmenu_active' => $catmenu_active, 'allcategories' => $allcategories, 'allsubcategories' => $allsubcategories))
 </div>
 
 <div class="categorie_overzicht">
