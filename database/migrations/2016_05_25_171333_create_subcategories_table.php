@@ -13,12 +13,12 @@ class CreateSubcategoriesTable extends Migration
     public function up()
     {
         Schema::create('subcategories', function (Blueprint $table) {
-            $table->increments('subcat_id');
+            $table->increments('id');
             $table->string('naam');
             $table->string('subcat_linknaam');
 
-            $table->integer('cat_id')->unsigned();
-            $table->foreign('cat_id')->references('cat_id')->on('categories');
+            $table->integer('categorie_id')->unsigned();
+            $table->foreign('categorie_id')->references('id')->on('categories');
             
             $table->string('coverfoto');
     

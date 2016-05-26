@@ -16,7 +16,7 @@ class SubcategorieSeeder extends Seeder
             'subcat_linknaam'=>'getrommeld',
             'coverfoto'=>'producten_vietnamees_getrommeld',
 
-            'cat_id'=>1,
+            'categorie_id'=>1,
 
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s')
@@ -27,7 +27,7 @@ class SubcategorieSeeder extends Seeder
             'subcat_linknaam'=>'geschuurd_gezaagd',
             'coverfoto'=>'producten_vietnamees_geschuurd_gezaagd',
 
-            'cat_id'=>1,
+            'categorie_id'=>1,
 
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s')

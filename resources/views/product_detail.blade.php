@@ -9,7 +9,7 @@
 </div>
 
 <div class="catmenu_container">
-	@include('catmenu', array('categorie' => $categorie))
+	@include('catmenu', array('catmenu_active' => $catmenu_active))
 </div>
 
 <div class="producten_content">

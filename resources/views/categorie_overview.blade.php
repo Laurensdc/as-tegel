@@ -8,16 +8,21 @@
 </div>
 
 <div class="catmenu_container">
-	@include('catmenu', array('categorie' => $categorie))
+	@include('catmenu', array('catmenu_active' => $catmenu_active))
 </div>
 
 <div class="categorie_overzicht">
 	<h2>Overzicht categorieën</h2>
-	<article class="producten_vietnamees">
+
+	@foreach($categories as $cat)
+	<article class="{{ $cat->coverfoto }}">
 		<div class="producten_caption">
-			<a href="{{ route('producten') }}/vietnamees">Vietnamese Natuursteen</a>
+			<a href="{{ route('producten') }}/{{ $cat->cat_linknaam }}">{{ $cat->naam }}</a>
 		</div>		
 	</article>
+	@endforeach
+
+	<!-- Original html
 	<article class="producten_indisch">
 		<div class="producten_caption">
 			<a href="#">Indische Natuursteen</a>
@@ -33,6 +38,7 @@
 			<a href="#">Vietnamese Natuursteen</a>
 		</div>		
 	</article>
+	-->
 </div>
 
 @endsection

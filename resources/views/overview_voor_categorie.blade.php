@@ -3,15 +3,27 @@
 @section('content')
 
 <div class="breadcrumb">
-	<p><a href="{{ route('producten') }}">Producten</a> &raquo; {{ $catdisplayname }}</p>
+	<p><a href="{{ route('producten') }}">Producten</a> &raquo; {{ $hoofdcategorie }}</p>
 </div>
 
 <div class="catmenu_container">
-	@include('catmenu', array('categorie' => $categorie))
+	@include('catmenu', array('catmenu_active' => $catmenu_active))
 </div>
 
 <div class="categorie_overzicht">
-	<h2>{{ $catdisplayname }}</h2>
+	<h2>{{ $hoofdcategorie }}</h2>
+
+
+	@foreach($subcategories as $cat) 
+	<article class="{{ $cat->coverfoto }}">
+		<div class="producten_caption">
+			<a href="{{ route('producten') }}/{{ $hoofdcategorielink }}/{{ $cat->subcat_linknaam }}">{{ $cat->naam }}</a>
+		</div>		
+	</article>
+	@endforeach
+
+{{-- 
+	<!-- Original html
 	<article class="producten_vietnamees_getrommeld">
 		<div class="producten_caption">
 			<a href="{{ route('producten') }}/{{ $categorie }}/getrommeld">Getrommeld</a>
@@ -22,6 +34,8 @@
 			<a href="#">Geschuurd Gezaagd</a>
 		</div>		
 	</article>
+	-->
+	--}}
 </div>
 	
 

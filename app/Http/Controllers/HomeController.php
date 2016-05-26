@@ -10,7 +10,7 @@ class HomeController extends Controller
 {
     //
     function homePage() {
-    	return view('home', ["title" => "Home", "page" => "home"]);
+    	return view('home', ["title" => "Home", "headermenu_active" => "home"]);
 
     }
 }

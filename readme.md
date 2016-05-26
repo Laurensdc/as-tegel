@@ -1,10 +1,9 @@
 # Readme
+- Set db settings
 - php artisan make:model
-
+- php artisan db:seed
 
 # TODO
 - Update logo with new theme color?
-- Bestelling(0) in header
-- Active menu item
 - titel verkeerde val / gwn dinges pakken
 - mobile

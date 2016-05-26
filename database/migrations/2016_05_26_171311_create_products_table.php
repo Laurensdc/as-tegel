@@ -13,7 +13,7 @@ class CreateProductsTable extends Migration
     public function up()
     {
         Schema::create('products', function (Blueprint $table) {
-            $table->increments('product_id');
+            $table->increments('id');
             $table->string('naam');
             $table->string('afmeting');
             $table->decimal('prijs_particulier', 4, 2);
@@ -21,11 +21,11 @@ class CreateProductsTable extends Migration
 
             $table->string('coverfoto');
 
-            $table->integer('cat_id')->unsigned();
-            $table->foreign('cat_id')->references('cat_id')->on('categories');
+            $table->integer('categorie_id')->unsigned();
+            $table->foreign('categorie_id')->references('id')->on('categories');
 
-            $table->integer('subcat_id')->unsigned();
-            $table->foreign('subcat_id')->references('subcat_id')->on('subcategories');
+            $table->integer('subcategorie_id')->unsigned();
+            $table->foreign('subcategorie_id')->references('id')->on('subcategories');
 
             $table->timestamps();
         });
