@@ -13,10 +13,26 @@ class ProductenController extends Controller
     }
 
     function categorieFilter($cat) {
-    	return view('producten_overview', 
-    		["title" => $cat . " - Producten", "page" => "producten", "catdisplayname" => "Vietnamese Natuursteen",
-    		 "categorie" => $cat]);
+    	return view('overview_voor_categorie', 
+    		[
+    		"title" => "Vietnamese Natuursteen" . " - Producten",
+    		"page" => "producten", 
+    		"catdisplayname" => "Vietnamese Natuursteen",
+    		"categorie" => $cat
 
+    		 ]);
+
+    }
+
+    function productDetail($cat) {
+    	return view('product_detail',
+    		[
+    		"title" => "test", 
+    		"page" => "test",
+    		"catdisplayname" => "Vietnamese Natuursteen",
+    		"categorie" => $cat
+
+    		]);
     }
 
 

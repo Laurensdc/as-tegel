@@ -12,6 +12,7 @@
 </div>
 
 <div class="categorie_overzicht">
+	<h2>Overzicht categorieën</h2>
 	<article class="producten_vietnamees">
 		<div class="producten_caption">
 			<a href="{{ route('producten') }}/vietnamees">Vietnamese Natuursteen</a>

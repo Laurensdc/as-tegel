@@ -29,9 +29,12 @@
 				<li><a href="{{ route('home') }}"><img src="{{ asset('assets/logo.png') }}" alt="Logo"/></a></li>
 				<li><a href="{{ route('home') }}" @if($page === 'home') class="active" @endif>Home</a></li>
 				<li><a href="{{ route('producten') }}" @if($page === 'producten') class="active" @endif>Producten</a></li>				
-				<li><a href="#" @if($page === 'contact') class="active" @endif>Contact</a></li>
-				
+				<li><a href="#" @if($page === 'contact') class="active" @endif>Contact</a></li>			
 			</ul>
+			<!-- if ingelogd tonen -->
+			<div class="header_bestelling">
+				<p><a href="#">Bestelling (0 items)</a></p>
+			</div>
 		</header>
 
 		<div class="homecontainer">

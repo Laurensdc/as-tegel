@@ -116,6 +116,19 @@ header li a.active {
 	color:$colora_darker;
 }
 
+header .header_bestelling {
+	float:right;
+	font-size:1.8rem;
+}
+
+header .header_bestelling a {
+	color:$textcolor;
+}
+
+header .header_bestelling a:hover {
+	text-decoration:underline;
+}
+
 /* End of Menu */
 
 .container {

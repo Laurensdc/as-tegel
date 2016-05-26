@@ -1,5 +1,5 @@
 $(document).ready(function () {
-	$('.catmenu ul.active').show();
+	$('.catmenu li.active').next().show();
 });
 
 $('.catmenu li').on('click', function() {

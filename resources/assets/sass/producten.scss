@@ -33,6 +33,10 @@
 .catmenu a:hover {
 	color:$colora_darker;
 }
+
+ .catmenu li.active a {
+ 	font-weight:600;
+ }
 /* End of Menu styles */
 
 /* Producten content */
@@ -44,30 +48,24 @@
 
 
 /* Producten Overzicht */
-.producten_content {
+.producten_content, .categorie_overzicht {
 	padding:2rem;
 	padding-top:1rem;
+
+}
+
+.producten_content {
 	float:left;
 }
 
-.producten_content h2 {
+.producten_content h2, .categorie_overzicht h2 {
 	font-size:2rem;
+	padding:1rem 0 2rem 1rem;
 	
 }
 
 
 	/* Categorie overzicht */
-	.categorie_overzicht .producten_vietnamees {
-		background-image: url('../images/categorie/vietnamees.jpg');
-	}
-	.categorie_overzicht .producten_indisch {
-		background-image: url('../images/categorie/indisch.jpg');
-	}
-	.categorie_overzicht .producten_chinees {
-		background-image: url('../images/categorie/chinees.jpg');
-	}
-
-
 	.categorie_overzicht article {	
 		overflow:hidden;
 

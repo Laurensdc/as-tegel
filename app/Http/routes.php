@@ -15,4 +15,6 @@ Route::get('/', ['as' => 'home', 'uses' => 'HomeController@homePage']);
 
 Route::get('/producten', ['as' => 'producten', 'uses' => 'ProductenController@overview']);
 Route::get('/producten/{cat}', ['uses' => 'ProductenController@categorieFilter']);
+Route::get('/producten/{cat}/{detail}', ['uses' => 'ProductenController@productDetail']);
+
 

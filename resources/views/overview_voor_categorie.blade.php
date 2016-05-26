@@ -1,6 +1,5 @@
 @extends('master')
 
-
 @section('content')
 
 <div class="breadcrumb">
@@ -11,12 +10,20 @@
 	@include('catmenu', array('categorie' => $categorie))
 </div>
 
-<div class="producten_content">
-<h2>{{ $catdisplayname }}</h2>
-
-	
-
+<div class="categorie_overzicht">
+	<h2>{{ $catdisplayname }}</h2>
+	<article class="producten_vietnamees_getrommeld">
+		<div class="producten_caption">
+			<a href="{{ route('producten') }}/{{ $categorie }}/getrommeld">Getrommeld</a>
+		</div>		
+	</article>
+	<article class="producten_vietnamees_geschuurd_gezaagd">
+		<div class="producten_caption">
+			<a href="#">Geschuurd Gezaagd</a>
+		</div>		
+	</article>
 </div>
+	
 
 @endsection
 
