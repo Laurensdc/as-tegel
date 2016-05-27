@@ -1,82 +1,91 @@
-@extends('layouts.app')
+
+
+
+@extends('master_login', ['title'=>'Registreer'])
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Register</div>
-                <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
-                        {{ csrf_field() }}
 
-                        <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                            <label class="col-md-4 control-label">Name</label>
 
-                            <div class="col-md-6">
-                                <input type="text" class="form-control" name="name" value="{{ old('name') }}">
+<div class="login_panel">
+	<h2>Registreer</h2>
+	<form method="POST" action="{{ url('/register') }}">
+		{{ csrf_field() }}
 
-                                @if ($errors->has('name'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('name') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
+		<div>
+			<label class="">Voornaam</label>
+			<input type="text" name="voornaam" value="{{ old('voornaam') }}">
 
-                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label class="col-md-4 control-label">E-Mail Address</label>
+			@if ($errors->has('voornaam'))
+				<span class="txt_warning">
+					{{ $errors->first('voornaam') }}
+				</span>
+			@endif		
+		</div>
 
-                            <div class="col-md-6">
-                                <input type="email" class="form-control" name="email" value="{{ old('email') }}">
+		<div>
+			<label class="">Naam</label>
+			<input type="text" name="naam" value="{{ old('naam') }}">
 
-                                @if ($errors->has('email'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
+			@if ($errors->has('naam'))
+				<span class="txt_warning">
+					{{ $errors->first('naam') }}
+				</span>
+			@endif		
+		</div>
 
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label class="col-md-4 control-label">Password</label>
+		<div>
+			<label>E-mailadres</label>
+			<input type="email" name="email" value="{{ old('email') }}">
 
-                            <div class="col-md-6">
-                                <input type="password" class="form-control" name="password">
+			@if ($errors->has('email'))
+				<span class="txt_warning">
+					{{ $errors->first('email') }}
+				</span>
+			@endif
+		</div>
 
-                                @if ($errors->has('password'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
+		<div>
+			<label>Wachtwoord</label>
+			<input type="password" name="password">
+			@if ($errors->has('password'))
+				<span class="txt_warning">
+					{{ $errors->first('password') }}
+				</span>
+			@endif
+		</div>
 
-                        <div class="form-group{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
-                            <label class="col-md-4 control-label">Confirm Password</label>
+		<div>
+			<label>Bevestig Wachtwoord</label>
+			<input type="password" name="password_confirmation">
 
-                            <div class="col-md-6">
-                                <input type="password" class="form-control" name="password_confirmation">
+			@if ($errors->has('password_confirmation'))
+				<span class="txt_warning">
+					{{ $errors->first('password_confirmation') }}
+				</span>
+			@endif
+		</div>
 
-                                @if ($errors->has('password_confirmation'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password_confirmation') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
+		<div class="login_handelaar">
+			<input type="checkbox" name="is_handelaar" id="cbhandelaar">Ik ben een handelaar
+			<p id="handelaar_tekst"></p>
+		</div>
 
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
-                                    <i class="fa fa-btn fa-user"></i>Register
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+		<input type="submit" value="Registreer"/>
+	</form>
 </div>
+
+@endsection
+
+@section('javascript')
+
+<script src="{{ asset('bower_components/jquery/dist/jquery.min.js') }}"></script>
+
+<script>
+	$('#cbhandelaar').on('click', function() {
+		if($('#cbhandelaar').prop('checked'))
+			$('#handelaar_tekst').html('U dient een aanvraag in om als handelaar geregistreerd te worden.<br>Indien deze aanvraag goedgekeurd wordt krijgt u van ons een bevestiging.');
+		else $('#handelaar_tekst').html('');
+	});
+</script>
+
 @endsection

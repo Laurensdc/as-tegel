@@ -42,7 +42,10 @@
 					@else
 						<li>Prijs: &euro;{{ $p->prijs_particulier }}/m&sup2;</li>
 					@endif
+				@else
+					<li>Prijs: &euro;{{ $p->prijs_particulier }}/m&sup2;</li>
 				@endif
+
 			</ul>
 			
 			@if(isset($p->beschrijving))
