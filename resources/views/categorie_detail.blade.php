@@ -45,7 +45,7 @@
 			@if($p->invoorraad == false)
 				<p class="txt_warning">Niet in voorraad</p>
 			@else
-				<form  method="get" name="form">
+				<form action="" method="get" name="form">
 					<p>Voeg <input type="number" name="vierkantemeter" min="1" max="1000" required/>m&sup2; toe aan mijn bestelling.</p> 
 					<p><input type="submit" clas="btn btn_cta" value="Bestel"/></p>
 				</form>

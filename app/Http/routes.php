@@ -18,3 +18,9 @@ Route::get('/producten/{cat}', ['uses' => 'ProductenController@categorieFilter']
 Route::get('/producten/{cat}/{subcat}', ['uses' => 'ProductenController@categorieDetail']);
 
 
+
+Route::auth();
+
+Route::get('/home', 'HomeController@homePage');
+
+
