@@ -23,4 +23,3 @@ Route::auth();
 
 Route::get('/home', 'HomeController@homePage');
 
-

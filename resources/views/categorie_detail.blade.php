@@ -35,7 +35,14 @@
 			<h1>{{ $p->naam }}</h1>
 			<ul>
 				<li>Afmetingen: {{ $p->afmetingen }}</li>
-				<li>Prijs: &euro;{{ $p->prijs_particulier }}/m&sup2;</li>
+				@if(Auth::check())
+
+					@if(Auth::user()->role == 'handelaar')
+						<li>Prijs: &euro;{{ $p->prijs_handelaar }}/m&sup2;</li>
+					@else
+						<li>Prijs: &euro;{{ $p->prijs_particulier }}/m&sup2;</li>
+					@endif
+				@endif
 			</ul>
 			
 			@if(isset($p->beschrijving))
