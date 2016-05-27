@@ -9,6 +9,7 @@
 
 		<title>{{ $title }} &ndash; As-Tegel</title>
 		<link rel="stylesheet" href="{{ asset('css/app.css') }}"/>
+		@yield('css')
 	</head>
 	<body>
 		<div class="toolbar">

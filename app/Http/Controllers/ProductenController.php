@@ -63,27 +63,34 @@ class ProductenController extends Controller
 
     }
 
-    function subcategorieFilter($cat, $subcat) {
+    function categorieDetail($cat, $subcat) {
 
 	   //	$categorie = Categorie::where('cat_linknaam', $cat)->first();
 	  // 	$subcategories = $categorie->subcategories;	// Subcats for this category
 	   	
 	   	$subcategories = Subcategorie::where('subcat_linknaam', $subcat)->first();
+        $subcategorie = $subcategories["naam"];
+
 	   	$producten = $subcategories->products;
 
 	   	$allcategories = Categorie::all();
     	$allsubcategories = Subcategorie::all();
 
+        $hoofdcategorie = Categorie::where('cat_linknaam', $cat)->first();
+        $hoofdcategorie = $hoofdcategorie["naam"];
+   
 
-    	return view('product_detail',
+    	return view('categorie_detail',
     		[
-    		"title" => "test", 
+    		"title" =>  $subcategorie . " &ndash; " . $hoofdcategorie, 
     		"headermenu_active" => "producten",// Active title in menu
     		"catmenu_active" => $cat,
 
     		"allcategories" => $allcategories,			// Pass to build menu
     		"allsubcategories" => $allsubcategories,	// Pass to build menu
 
+            "hoofdcategorie" => $hoofdcategorie,        // For title
+            "subcategorie" => $subcategorie,            // For page title
 
     		"producten" => $producten
 

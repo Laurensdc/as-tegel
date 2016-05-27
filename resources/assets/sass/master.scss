@@ -31,6 +31,60 @@ ul, li {
 	list-style:none;
 }
 
+	/* General but more specific stuff */
+	input[type=submit] {
+		background-color:$colorb;
+		color:$almostwhite;
+		display:inline-block;
+
+		box-shadow: 0 1px 3px rgba(0,0,0,0.20);
+		border-radius: 5px;
+		border:0;
+		
+		padding:1rem 2rem;
+		margin-top:1rem;
+		font-size:1.6rem;
+
+		
+		transition: 0.4s ease-in-out;
+	}
+
+	input[type=submit]:hover {
+		background-color:$colorb_lighter;
+		box-shadow: 2px 3px 5px rgba(0,0,0,0.25);
+	}
+
+	.btn {
+		padding:1rem 2rem;
+
+		display:inline-block;
+		border-radius: 5px;
+
+		
+	}
+
+	a.btn {
+		background-color:$colorb;
+		color:$almostwhite;
+		box-shadow: 0 1px 3px rgba(0,0,0,0.20);
+	}
+
+	a.btn:hover {
+		background-color:$colorb_lighter;
+		box-shadow: 2px 3px 5px rgba(0,0,0,0.25);
+	}
+
+
+	.btn_warning { 
+		color:$almostwhite;
+		background-color:$colorb;
+	}
+
+	.txt_warning {
+		color:$colorb;
+	}
+	/* End of General but more specific stuff */
+
 /* End of General stuff */
 
 

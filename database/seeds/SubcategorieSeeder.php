@@ -33,5 +33,21 @@ class SubcategorieSeeder extends Seeder
             'updated_at' => date('Y-m-d H:i:s')
         ]);
 
+        DB::table('subcategories')->insert([
+            'naam'=>'Candela',
+            'subcat_linknaam'=>'candela',
+            'coverfoto'=>'producten_indisch_candela',
+
+            'categorie_id'=>3,
+
+        ]);
+        DB::table('subcategories')->insert([
+            'naam'=>'Chandra',
+            'subcat_linknaam'=>'chandra',
+            'coverfoto'=>'producten_indisch_chandra',
+
+            'categorie_id'=>3,
+
+        ]);
     }
 }

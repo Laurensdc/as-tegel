@@ -12,7 +12,7 @@ class CategorieSeeder extends Seeder
     public function run()
     {
         DB::table('categories')->insert([
-            'naam'=>'Natuursteen Vietnamees',
+            'naam'=>'Vietnamese Natuursteen',
             'cat_linknaam'=>'vietnamees',
             'coverfoto'=>'producten_vietnamees',
 
@@ -21,14 +21,19 @@ class CategorieSeeder extends Seeder
         ]);
         
         DB::table('categories')->insert([
-            'naam'=>'Natuursteen Chinees',
+            'naam'=>'Chinese Natuursteen',
             'cat_linknaam'=>'chinees',
             'coverfoto'=>'producten_chinees',
 
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s')
         ]);
+        DB::table('categories')->insert([
+            'naam'=>'Indische Natuursteen',
+            'cat_linknaam'=>'indisch',
+            'coverfoto'=>'producten_indisch',
 
+        ]);
 
     }
 }
