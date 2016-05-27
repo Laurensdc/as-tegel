@@ -1,14 +1,9 @@
-
-
-
 @extends('master_login', ['title'=>'Registreer'])
 
 @section('content')
-
-
 <div class="login_panel">
 	<h2>Registreer</h2>
-	<form method="POST" action="{{ url('/register') }}">
+	<form role="form" method="POST" action="{{ url('/register') }}">
 		{{ csrf_field() }}
 
 		<div>
@@ -34,7 +29,7 @@
 		</div>
 
 		<div>
-			<label>E-mailadres</label>
+			<label>E-mail</label>
 			<input type="email" name="email" value="{{ old('email') }}">
 
 			@if ($errors->has('email'))
@@ -55,12 +50,23 @@
 		</div>
 
 		<div>
-			<label>Bevestig Wachtwoord</label>
+			<label>Bevestig wachtwoord</label>
 			<input type="password" name="password_confirmation">
 
 			@if ($errors->has('password_confirmation'))
 				<span class="txt_warning">
 					{{ $errors->first('password_confirmation') }}
+				</span>
+			@endif
+		</div>
+
+		<div>
+			<label>Telefoonnummer (optioneel)</label>
+			<input type="text" name="tel" value="{{ old('tel') }}" title="Indien u uw telefoonnummer wenst op te geven, kunnen wij u beter van dienst zijn.">
+
+			@if ($errors->has('tel'))
+				<span class="txt_warning">
+					{{ $errors->first('tel') }}
 				</span>
 			@endif
 		</div>

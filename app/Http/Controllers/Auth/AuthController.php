@@ -53,6 +53,7 @@ class AuthController extends Controller
             'voornaam' => 'required|max:255',
             'email' => 'required|email|max:255|unique:users',
             'password' => 'required|min:6|confirmed',
+            'tel' => 'min:8|max:20'
         ]);
     }
 
@@ -64,16 +65,18 @@ class AuthController extends Controller
      */
     protected function create(array $data)
     {
-        if($data['is_handelaar'] == true) {
-            echo "<script>alert('checked')";
+        if(isset($data['is_handelaar'])) {
+            // send request
+            
         }
 
         return User::create([
             'firstname' => $data['voornaam'],
             'lastname' => $data['naam'],
             'role' => 'particulier',
+            'telnr' => 'tel',
             'email' => $data['email'],
-            'password' => bcrypt($data['password']),
+            'password' => bcrypt($data['password'])
         ]);
     }
 }

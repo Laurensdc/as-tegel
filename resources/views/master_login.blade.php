@@ -23,9 +23,8 @@
 							<a href="{{ route('home') }}/logout">Log uit</a>
 						</div>
 					@else
-						<div class="toolbar_account"><a href="{{ route('home') }}/login">Log in</a></div>
+						<div class="toolbar_account"><a href="{{ route('home') }}/login">Log in</a> - <a href="{{ route('home') }}/register">Registreer</a></div>
 					@endif
-					<div class="toolbar_account"><a href="{{ route('home') }}/register">Registreer</a></div>
 				</div>
 			</div>
 		</div>

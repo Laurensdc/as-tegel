@@ -45,7 +45,6 @@ ul, li {
 		margin-top:1rem;
 		font-size:1.6rem;
 
-		
 		transition: 0.4s ease-in-out;
 	}
 
@@ -58,9 +57,7 @@ ul, li {
 		padding:1rem 2rem;
 
 		display:inline-block;
-		border-radius: 5px;
-
-		
+		border-radius: 5px;		
 	}
 
 	a.btn {
@@ -83,6 +80,14 @@ ul, li {
 	.txt_warning {
 		color:$colorb;
 	}
+
+	a.boringlink {
+		color:$textcolor;
+	}
+	a.boringlink:hover {
+		text-decoration:underline;
+	}
+
 	/* End of General but more specific stuff */
 
 /* End of General stuff */
