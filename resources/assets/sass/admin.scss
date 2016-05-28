@@ -1,8 +1,13 @@
 
 
-
 .admin_container {
 	margin-top:2rem;
+
+}
+
+.admin_hugecontainer {
+	overflow:auto;
+	width:100%;
 }
 
 .admin_container td {
@@ -11,7 +16,7 @@
 }
 
 .admin_container table {
-	margin:0 auto;
+	margin:0 auto 2rem;
 }
 
 .admin_smallcol {
@@ -29,4 +34,9 @@
 
 .admin_container form p {
 	margin-bottom:1rem;
+}
+
+.admin_center {
+	width:30rem;
+	margin: 0 auto;
 }

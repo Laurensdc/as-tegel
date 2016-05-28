@@ -458,12 +458,16 @@ header .header_bestelling a:hover {
 .admin_container {
   margin-top: 2rem; }
 
+.admin_hugecontainer {
+  overflow: auto;
+  width: 100%; }
+
 .admin_container td {
   padding: 1rem;
   border: 1px solid #111; }
 
 .admin_container table {
-  margin: 0 auto; }
+  margin: 0 auto 2rem; }
 
 .admin_smallcol {
   padding: 1rem;
@@ -478,5 +482,9 @@ header .header_bestelling a:hover {
 
 .admin_container form p {
   margin-bottom: 1rem; }
+
+.admin_center {
+  width: 30rem;
+  margin: 0 auto; }
 
 /*# sourceMappingURL=app.css.map */

@@ -4,7 +4,7 @@
 <h2>Gegevens</h2>
 <p>Naam: {{ $achternaam }} {{ $voornaam }}</p>
 <p>Email: <a href="mailto:{{ $email }}">{{ $email }}</a></p>
-@if(isset($telnr))
+@if($telnr != '')
 <p>Telefoonnr: {{ $telnr }}</p>
 @endif
 <br>

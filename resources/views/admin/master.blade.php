@@ -13,7 +13,10 @@
 				</div>
 				<div class="toolbar_right">
 					<div class="toolbar_contact">
-						<a href="{{ route('admin_useroverview') }}">Overzicht gebruikers</a>
+						<strong><a href="{{ route('admin_useroverview') }}">Gebruikers</a></strong>
+					</div>
+					<div class="toolbar_contact">
+						<strong><a href="{{ route('admin_productoverview') }}">Producten</a></strong>
 					</div>
 	
 					@if(Auth::check())
@@ -27,6 +30,10 @@
 
 		<div class="container admin_container">
 			@yield('content')
+		</div>
+
+		<div class="admin_hugecontainer admin_container">
+			@yield('hugecontent')
 		</div>
 
 		@yield('javascript')

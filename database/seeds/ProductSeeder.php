@@ -104,6 +104,7 @@ class ProductSeeder extends Seeder
             'prijs_particulier'=>'30.00',
             'prijs_handelaar'=>'20.00',
             'coverfoto'=>'images/producten/carius/carius_4dik.jpg',
+            'beschrijving'=>'De Carius is een unieke steen. Te verkrijgen in twee verschillende formaten met elk hun unieke afwerking zal deze steen uw tuin gegarandeerd vervolmaken!',
             'subcategorie_id'=>5,
         ]);     
 

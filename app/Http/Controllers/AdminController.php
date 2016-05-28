@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use Auth;
 use App\User;
+use App\Product;
 use Mail;
 
 class AdminController extends Controller
@@ -89,5 +90,13 @@ class AdminController extends Controller
 
     }
 
+
+    function productEdit($id) {
+        $product = Product::find($id);
+
+        return view('admin.productedit', [
+            'p' => $product
+            ]);
+    }
 
 }
