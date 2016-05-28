@@ -7,6 +7,7 @@ use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
+use Mail;
 
 class AuthController extends Controller
 {
@@ -65,9 +66,17 @@ class AuthController extends Controller
      */
     protected function create(array $data)
     {
-        if(isset($data['is_handelaar'])) {
-            // send request
-            
+        if(isset($data['is_handelaar'])) {      
+            Mail::send('mail.handelaar',
+             [  'voornaam' => $data['voornaam'],
+                'achternaam' => $data['naam'],
+                'telnr' => $data['tel'],
+                'email' => $data['email']
+             ], function($message)
+            {
+                $message->to('laurensdc@gmail.com', 'Laurens De Cock')->subject('Aanvraag registratie handelaar AS-tegel');
+            });
+
         }
 
         return User::create([

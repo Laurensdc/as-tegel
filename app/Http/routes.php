@@ -23,13 +23,4 @@ Route::auth();
 
 Route::get('/home', 'HomeController@homePage');
 
-
-Route::get('/test', function() {
-
-	Mail::send('mail.handelaar', ['key' => 'value'], function($message)
-	{
-	    $message->to('laurensdc@gmail.com', 'Laurens De Cock')->subject('Welcome!');
-	});
-
-	return 'hallo';
-});
+Route::get('/admin', 'AdminController@mainPanel');
