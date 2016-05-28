@@ -4,7 +4,7 @@
 @section('homecontent')
     <article class="home_carius">
         <div class="home_caption">
-            <a href="{{ route('producten') }}/carius">Carius</a>
+            <a href="{{ route('producten') }}/specialiteiten">Unieke Specialiteiten</a>
         </div>
     </article>
 

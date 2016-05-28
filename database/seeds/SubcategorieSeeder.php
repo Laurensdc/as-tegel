@@ -49,5 +49,26 @@ class SubcategorieSeeder extends Seeder
             'categorie_id'=>3,
 
         ]);
+
+        DB::table('subcategories')->insert([
+            'naam'=>'Carius',
+            'subcat_linknaam'=>'carius',
+            'coverfoto'=>'images/cover/carius.jpg',
+
+            'categorie_id'=>4,
+
+        ]);
+
+        DB::table('subcategories')->insert([
+            'naam'=>'Keramische Tegels',
+            'subcat_linknaam'=>'keramiek',
+            'coverfoto'=>'images/cover/keramiek.jpg',
+
+            'categorie_id'=>5,
+
+        ]);
+
+
+
     }
 }

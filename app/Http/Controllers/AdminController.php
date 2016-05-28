@@ -65,20 +65,29 @@ class AdminController extends Controller
     	$vollenaam = $user->lastname . ' ' . $user->firstname;
 		*/
 
-    	/* THIS WONT WORK and i DONT know WHY!!!!!!!! 
+    	/* THIS WONT WORK and i DONT know WHY!
 		Mail::send('mail.handelaar_goedgekeurd', ['user' => $user], function($m) use ($user)
 		{
 		    $m->from('mailer@as-tegel.be', 'As-Tegel');
 		    $m->to($user->email)->subject('Uw aanvraag voor handelaar is goedgekeurd');
-			// $m->to('laurensdc@gmail.com')->subject('Uw aanvraag voor handelaar is goedgekeurd'); // THIS DOES WORK !! Why?!?!?
+			// $m->to('laurensdc@gmail.com')->subject('Uw aanvraag voor handelaar is goedgekeurd'); // THIS DOES WORK 
 		});
 
 		*/
 
        	return redirect()->route('admin_useroverview');
-
     }
 
+
+    function productOverview() {
+        $producten = Product::all();
+
+        return view('admin.producten', [
+            'producten' => $producten
+
+            ]);
+
+    }
 
 
 }

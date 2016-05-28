@@ -34,6 +34,20 @@ class CategorieSeeder extends Seeder
             'coverfoto'=>'images/cover/indisch.jpg',
 
         ]);
+        
+        DB::table('categories')->insert([
+            'naam'=>'Unieke Specialiteiten',
+            'cat_linknaam'=>'specialiteiten',
+            'coverfoto'=>'images/cover/carius.jpg',
+
+        ]);
+        DB::table('categories')->insert([
+            'naam'=>'Tegels Keramiek',
+            'cat_linknaam'=>'keramiek',
+            'coverfoto'=>'images/cover/keramiek.jpg',
+
+        ]);
+
 
     }
 }

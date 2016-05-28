@@ -26,46 +26,49 @@
 		<p>Geen producten gevonden</p><br>
 	@else
 		
-	@foreach($producten as $p)
-		<article>	
-			<a href="{{ asset($p->coverfoto) }}" data-lightbox="{{ $p->naam }}" data-title="{{ $p->naam }}">
-				<img src="{{ asset($p->coverfoto) }}"/>
-			</a>
-			
-			<h1>{{ $p->naam }}</h1>
-			<ul>
-				<li>Afmetingen: {{ $p->afmetingen }}</li>
-				@if(Auth::check())
+		@foreach($producten as $i=>$p)
+			<article>	
+				<a href="{{ asset($p->coverfoto) }}" data-lightbox="{{ $p->naam }}" data-title="{{ $p->naam }}">
+					<img src="{{ asset($p->coverfoto) }}"/>
+				</a>
+				
+				<h1>{{ $p->naam }}</h1>
+				<ul>
+					<li>Afmetingen: {{ $p->afmetingen }}</li>
+					@if(Auth::check())
 
-					@if(Auth::user()->role == 'handelaar')
-						<li>Prijs: &euro;{{ $p->prijs_handelaar }}/m&sup2;</li>
+						@if(Auth::user()->role == 'handelaar')
+							<li>Prijs: &euro;{{ $p->prijs_handelaar }}/m&sup2;</li>
+						@else
+							<li>Prijs: &euro;{{ $p->prijs_particulier }}/m&sup2;</li>
+						@endif
 					@else
 						<li>Prijs: &euro;{{ $p->prijs_particulier }}/m&sup2;</li>
 					@endif
-				@else
-					<li>Prijs: &euro;{{ $p->prijs_particulier }}/m&sup2;</li>
+
+				</ul>
+				
+				@if(isset($p->beschrijving))
+					<p>{{ $p->beschrijving }}</p>
 				@endif
 
-			</ul>
-			
-			@if(isset($p->beschrijving))
-				<p>{{ $p->beschrijving }}</p>
+				@if($p->invoorraad == false)
+					<p class="txt_warning">Niet in voorraad</p>
+				@else
+					<form action="" method="post" name="form">
+						{{ csrf_field() }}
+						<input type="hidden" value="{{ $p->id }}" name="prod_id">
+						<p>Voeg <input type="number" name="vierkantemeter" min="1" max="1000" value="20" required/>m&sup2; toe aan mijn bestelling.</p> 
+						<p><input type="submit" clas="btn btn_cta" value="Bestel"/></p>
+					</form>
+				@endif
+			</article>
+
+			@if(($i+1)%3 == 0)
+				<div class="clear"></div>
 			@endif
 
-			@if($p->invoorraad == false)
-				<p class="txt_warning">Niet in voorraad</p>
-			@else
-				<form action="" method="post" name="form">
-					{{ csrf_field() }}
-					<input type="hidden" value="{{ $p->id }}" name="prod_id">
-					<p>Voeg <input type="number" name="vierkantemeter" min="1" max="1000" value="20" required/>m&sup2; toe aan mijn bestelling.</p> 
-					<p><input type="submit" clas="btn btn_cta" value="Bestel"/></p>
-				</form>
-			@endif
-		</article>
-
-	@endforeach
-
+		@endforeach
 
 	@endif
 

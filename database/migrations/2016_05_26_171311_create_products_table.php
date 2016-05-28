@@ -22,7 +22,7 @@ class CreateProductsTable extends Migration
             $table->boolean('invoorraad')->default(true);
 
             $table->text('beschrijving');
-            $table->string('coverfoto')->default('images/producten/geenfoto.jpg');
+            $table->string('coverfoto')->default('images/producten/_geenfoto.jpg');
 
             $table->integer('subcategorie_id')->unsigned();
             $table->foreign('subcategorie_id')->references('id')->on('subcategories');

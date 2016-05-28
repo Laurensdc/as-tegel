@@ -30,12 +30,16 @@ Route::auth();
 
 // Admin
 Route::get('/admin', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@mainPanel', 'as' => 'admin']);
-Route::get('/admin/users', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@userOverview', 'as' => 'admin_useroverview']);
-Route::get('/admin/users/{id}', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@userDetail']);
-Route::post('/admin/users/{id}', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@userEdit']);
-
+	// Users
+	Route::get('/admin/users', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@userOverview', 'as' => 'admin_useroverview']);
+	Route::get('/admin/users/{id}', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@userDetail']);
+	Route::post('/admin/users/{id}', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@userEdit']);
 	// User rol van handelaar geven - gebruikt voor email link
-Route::get('/admin/users/{email}/makehandelaar', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@makeHandelaar']);
+	Route::get('/admin/users/{email}/makehandelaar', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@makeHandelaar']);
+
+	// Producten
+	Route::get('/admin/producten', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@productOverview', 'as' => 'admin_productenoverview']);
+	
 
 
 

@@ -17,7 +17,7 @@ class CreateCategoriesTable extends Migration
             $table->string('naam');
             $table->string('cat_linknaam')->unique();
             
-            $table->string('coverfoto')->default('images/cover/geenfoto.jpg');
+            $table->string('coverfoto')->default('images/cover/_geenfoto.jpg');
     
             $table->timestamps();
         });

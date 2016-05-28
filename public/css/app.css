@@ -126,6 +126,9 @@ p {
 ul, li {
   list-style: none; }
 
+.clear {
+  clear: both; }
+
 /* General but more specific stuff */
 input[type=submit] {
   background-color: #D84315;
