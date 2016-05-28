@@ -1,6 +1,15 @@
 @extends('admin.master')
 
 @section('hugecontent')
+	<div class="admin_smallcol">
+		<h2>Sorteren</h2>
+		
+		<a class="boringlink" href="{{ route('admin') }}/producten/sort/naam">Naam</a> - 
+		<a class="boringlink" href="{{ route('admin') }}/producten/sort/subcategorie_id">Categorie</a> - 
+		<a class="boringlink" href="{{ route('admin') }}/producten/sort/prijs_particulier">Particuliere prijs</a>	 - 
+		<a class="boringlink" href="{{ route('admin') }}/producten/sort/prijs_handelaar">Handelaarsprijs</a> - 
+		<a class="boringlink" href="{{ route('admin') }}/producten/sort/invoorraad">In voorraad</a>
+	</div>
 
 	<table>
 		<tr>

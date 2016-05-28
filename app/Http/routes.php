@@ -38,10 +38,14 @@ Route::get('/admin', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminControl
 	Route::get('/admin/users/{email}/makehandelaar', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@makeHandelaar']);
 
 	// Producten
-	Route::get('/admin/producten', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@productOverview', 'as' => 'admin_productoverview']);
-	Route::get('/admin/producten/{id}', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@productDetail']);
+		// Overview
+		Route::get('/admin/producten', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@productOverview', 'as' => 'admin_productoverview']);
+		// Overview sort
+		Route::get('/admin/producten/sort/{val}', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@productOverviewOrderby']);
 
-	Route::post('/admin/producten/{id}', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@productEdit']);
+		// Product details & edit
+		Route::get('/admin/producten/{id}', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@productDetail']);
+		Route::post('/admin/producten/{id}', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@productEdit']);
 
 
 

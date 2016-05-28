@@ -48,7 +48,7 @@
 			</p>		
 
 			<div class="admin_center">
-				<a href="{{ route('admin') }}/producten" class="btn">Aanpassen</a> <a href="{{ route('admin_productoverview') }}" class="boringlink">Annuleren</a>
+				<input type="submit" value ="Aanpassen"> <a href="{{ route('admin_productoverview') }}" class="boringlink">Annuleren</a>
 			</div>
 		</form>
 	</div>

@@ -476,7 +476,7 @@ header .header_bestelling a:hover {
   padding: 1rem;
   float: left;
   width: 50%;
-  margin: 0 25%;
+  margin: 0 25% 2rem;
   border: 1px solid #111; }
 
 .admin_container form label {

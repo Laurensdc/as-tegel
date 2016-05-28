@@ -10,6 +10,7 @@ use App\User;
 use App\Product;
 use App\Subcategorie;
 use Mail;
+use DB;
 
 class AdminController extends Controller
 {
@@ -37,8 +38,7 @@ class AdminController extends Controller
     }
 
     function userEdit($id, Request $request) {
-
-    	// do changes to user
+    	// Make changes to user
     	$user = User::find($id);
 
     	$user->firstname = $request['firstname'];
@@ -82,7 +82,7 @@ class AdminController extends Controller
 
 
     function productOverview() {
-        $producten = Product::all();
+        $producten = Product::orderBy('naam')->get();
 
         return view('admin.producten', [
             'producten' => $producten
@@ -91,6 +91,15 @@ class AdminController extends Controller
 
     }
 
+    function productOverviewOrderby($val) {
+        $producten = Product::orderBy($val)->get();
+
+        return view('admin.producten', [
+            'producten' => $producten
+
+            ]);
+
+    }
 
     function productDetail($id) {
         $product = Product::find($id);
@@ -102,10 +111,22 @@ class AdminController extends Controller
             ]);
     }
 
-    function productEdit($id, Request $request) {
+    function productEdit($id, Request $r) {
+        // Make changes to product
+        $p = Product::find($id);
+        
+        $p->naam = $r['naam'];
+        $p->afmetingen = $r['afmetingen'];
+        $p->prijs_particulier = $r['prijs_particulier'];
+        $p->prijs_handelaar = $r['prijs_handelaar'];
+        $p->invoorraad = $r['invoorraad'];
+        $p->beschrijving = $r['beschrijving'];
+        $p->coverfoto = $r['foto'];
+        $p->subcategorie_id = $r['subcategorie_id'];
 
-        return view('admin.test', 
-            ['val' => $request]);
+        $p->save();
+
+        return redirect()->route('admin_productoverview');
 
     }
 
