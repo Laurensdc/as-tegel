@@ -1,5 +1,5 @@
 <h2>Registratie AS-Tegel</h2>
-<p>Iemand heeft zich als handelaar willen registreren.</p>
+<p>{{ $achternaam }} {{ $voornaam }} heeft zich als handelaar willen registreren.</p>
 <br>
 <h2>Gegevens</h2>
 <p>Naam: {{ $achternaam }} {{ $voornaam }}</p>
@@ -9,9 +9,10 @@
 @endif
 <br>
 <p>
-<a href="{{ route('home') }}/admin/accept/{{ $email }}">Goedkeuren</a> / 
-<a href="{{ route('home') }}/admin/refuse/{{ $email }}">Afkeuren</a>
+<strong><a href="{{ route('home') }}/admin/users/{{ $email }}/makehandelaar">{{ $achternaam }} {{ $voornaam }} Goedkeuren</a></strong>
 </p>
+<br>
+Om af te keuren, geen handeling ondernemen (gebruiker blijft een particulier).
 
 <p><a href="{{ route('admin') }}">Naar administrator panel</a></p>
 

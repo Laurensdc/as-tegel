@@ -449,4 +449,28 @@ header .header_bestelling a:hover {
   line-height: 2.4rem;
   margin-left: 1rem; }
 
+.admin_container {
+  margin-top: 2rem; }
+
+.admin_container td {
+  padding: 1rem;
+  border: 1px solid #111; }
+
+.admin_container table {
+  margin: 0 auto; }
+
+.admin_smallcol {
+  padding: 1rem;
+  float: left;
+  width: 50%;
+  margin: 0 25%;
+  border: 1px solid #111; }
+
+.admin_container form label {
+  width: 15rem;
+  display: inline-block; }
+
+.admin_container form p {
+  margin-bottom: 1rem; }
+
 /*# sourceMappingURL=app.css.map */

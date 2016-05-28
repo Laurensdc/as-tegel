@@ -66,7 +66,7 @@ class AuthController extends Controller
      */
     protected function create(array $data)
     {
-
+        $naam = $data['naam'];
         
         if(isset($data['is_handelaar'])) {      
             Mail::send('mail.handelaar',
@@ -74,12 +74,13 @@ class AuthController extends Controller
                 'achternaam' => $data['naam'],
                 'telnr' => $data['tel'],
                 'email' => $data['email']
-             ], function($message)
+             ], function($message) use ($naam)
             {
-                $message->to('laurensdc@gmail.com', 'Laurens De Cock')->subject('Aanvraag registratie handelaar AS-tegel');
+                $message->to('laurensdc@gmail.com', 'Laurens De Cock')->subject('Aanvraag registratie handelaar ' . $naam);
             });
 
         }
+
 
         return User::create([
             'firstname' => $data['voornaam'],

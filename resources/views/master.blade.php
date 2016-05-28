@@ -21,7 +21,7 @@
 					<div class="toolbar_contact"><a href="tel:0470053862">0470/05.38.62</a></div>
 					<div class="toolbar_contact"><a href="mailto:contact@as-tegel.be">contact@as-tegel.be</a></div>
 					@if(Auth::check())
-						<div class="toolbar_account">Welkom, {{ Auth::user()->firstname }} &ndash;
+						<div class="toolbar_account">Welkom, {{ Auth::user()->firstname }} ({{ Auth::user()->role }}) &ndash;
 							<a href="{{ route('home') }}/logout">Log uit</a>
 						</div>
 					@else
