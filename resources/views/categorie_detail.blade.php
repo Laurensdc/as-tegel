@@ -55,8 +55,10 @@
 			@if($p->invoorraad == false)
 				<p class="txt_warning">Niet in voorraad</p>
 			@else
-				<form action="" method="get" name="form">
-					<p>Voeg <input type="number" name="vierkantemeter" min="1" max="1000" required/>m&sup2; toe aan mijn bestelling.</p> 
+				<form action="" method="post" name="form">
+					{{ csrf_field() }}
+					<input type="hidden" value="{{ $p->id }}" name="prod_id">
+					<p>Voeg <input type="number" name="vierkantemeter" min="1" max="1000" value="20" required/>m&sup2; toe aan mijn bestelling.</p> 
 					<p><input type="submit" clas="btn btn_cta" value="Bestel"/></p>
 				</form>
 			@endif

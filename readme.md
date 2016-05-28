@@ -5,8 +5,8 @@
 - When changing: php artisan migrate:refresh --seed
 
 # TODO
-- Update logo with new theme color?
-- mobile
-- Bestelling
-- Auth
+- mobile responsive
+- Bestelling: session
+- multi lang
+- zoekvenster
 

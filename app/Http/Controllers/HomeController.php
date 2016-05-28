@@ -22,4 +22,6 @@ class HomeController extends Controller
         return view('home', ["title" => "Home", "headermenu_active" => "home"]);
 
     }
+
+
 }

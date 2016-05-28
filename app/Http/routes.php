@@ -12,19 +12,22 @@
 */
 
 Route::get('/', ['as' => 'home', 'uses' => 'HomeController@homePage']);
+Route::get('/home', 'HomeController@homePage');
 
 Route::get('/producten', ['as' => 'producten', 'uses' => 'ProductenController@overview']);
 Route::get('/producten/{cat}', ['uses' => 'ProductenController@categorieFilter']);
 Route::get('/producten/{cat}/{subcat}', ['uses' => 'ProductenController@categorieDetail']);
+Route::post('/producten/{cat}/{subcat}', ['uses' => 'ProductenController@bestelProduct']);
 
+Route::get('/order', ['uses' => 'OrderController@overview', 'as' => 'order']);
+Route::get('/deleteorder', ['uses' => 'OrderController@deleteorder']);
 
 
 Route::auth();
-
-Route::get('/home', 'HomeController@homePage');
 
 Route::get('/admin', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@mainPanel', 'as' => 'admin']);
 
 Route::get('/unauthorized', function() {
 	return view('admin.unauthorized');
 });
+

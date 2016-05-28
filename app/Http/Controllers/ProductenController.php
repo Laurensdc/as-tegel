@@ -9,6 +9,8 @@ use App\Http\Requests;
 use App\Categorie;
 use App\Subcategorie;
 
+use Session;
+
 class ProductenController extends Controller
 {
     function overview() {
@@ -96,6 +98,13 @@ class ProductenController extends Controller
 
 
     		]);
+    }
+
+    function bestelProduct($cat, $subcat, Request $request) {
+        Session::push('orderitems', [$request['prod_id'], $request['vierkantemeter']]);
+
+        return $this->categorieDetail($cat, $subcat);
+
     }
 
 

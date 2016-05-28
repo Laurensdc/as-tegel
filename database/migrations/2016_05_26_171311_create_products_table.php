@@ -24,9 +24,6 @@ class CreateProductsTable extends Migration
             $table->text('beschrijving');
             $table->string('coverfoto')->default('images/producten/geenfoto.jpg');
 
-            $table->integer('categorie_id')->unsigned();
-            $table->foreign('categorie_id')->references('id')->on('categories');
-
             $table->integer('subcategorie_id')->unsigned();
             $table->foreign('subcategorie_id')->references('id')->on('subcategories');
 

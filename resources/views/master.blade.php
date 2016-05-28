@@ -39,7 +39,7 @@
 				<li><a href="#" @if($headermenu_active === 'contact') class="active" @endif>Contact</a></li>			
 			</ul>
 			<div class="header_bestelling">
-				<p><a href="#">Bestelling (0 items)</a></p>
+				<p><a href="{{ route('order') }}">Bestelling ({{ count(Session::get('orderitems')) }} items)</a></p>
 			</div>
 		</header>
 

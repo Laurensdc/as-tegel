@@ -11,8 +11,4 @@ class Categorie extends Model
         return $this->hasMany('App\Subcategorie');
     }
 
-    public function products() 
-    {
-    	return $this->hasMany('App\Product');
-    }
 }
