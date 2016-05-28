@@ -2,6 +2,19 @@
 
 
 @section('homecontent')
+    <article class="home_carius">
+        <div class="home_caption">
+            <a href="{{ route('producten') }}/carius">Carius</a>
+        </div>
+    </article>
+
+    <article class="home_keramiek">
+        <div class="home_caption">
+            <a href="{{ route('producten') }}/keramiek">Keramische Natuursteen</a>
+        </div>
+    </article>
+
+
     <article class="home_vietnamees">
         <div class="home_caption">
             <a href="{{ route('producten') }}/vietnamees">Vietnamese natuursteen</a>

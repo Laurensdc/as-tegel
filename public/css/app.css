@@ -97,6 +97,12 @@ input, select {
 .home_chinees {
   background-image: url("../images/home/chinees.jpg"); }
 
+.home_carius {
+  background-image: url("../images/home/carius.jpg"); }
+
+.home_keramiek {
+  background-image: url("../images/home/keramiek.jpg"); }
+
 /* General stuff */
 html {
   font-size: 62.5%; }
@@ -281,9 +287,9 @@ header .header_bestelling a:hover {
 /* End of Container */
 @media screen and (min-width: 90em) {
   .homecontainer article {
-    height: 50rem; }
+    height: 60rem; }
   .homecontainer article .home_caption {
-    margin-top: 40rem; } }
+    margin-top: 50rem; } }
 
 /* Menu styles */
 .catmenu_container {

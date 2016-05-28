@@ -9,8 +9,11 @@
 - multi lang
 - zoekvenster
 - items uit bestelling verwijderen
-- registratie afwerken: In mail verwijzen naar admin panel -> daar roles aanpassen
+
 - Show confirmation that items are added to order
 - admin deel prod toevoegen/verwijderen
+- stijl besteloverzicht
+
+- seeden carius, keramiek
 
 - email verstuurd op 3 plaatsen aanpassen naar Chris ipv mij
