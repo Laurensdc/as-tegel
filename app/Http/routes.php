@@ -21,7 +21,7 @@ Route::post('/producten/{cat}/{subcat}', ['uses' => 'ProductenController@bestelP
 
 Route::get('/order', ['uses' => 'OrderController@overview', 'as' => 'order']);
 Route::get('/order/delete', ['uses' => 'OrderController@deleteorder', 'as' => 'deleteorder']);
-Route::get('/order/place', ['uses' => 'OrderController@placeOrder', 'as' => 'placeorder']);
+Route::get('/order/place', ['uses' => 'OrderplaceController@placeOrder', 'as' => 'placeorder']);
 
 Route::auth();
 

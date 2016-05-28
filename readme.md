@@ -10,5 +10,7 @@
 - multi lang
 - zoekvenster
 - items uit bestelling verwijderen
+- registratie afwerken: In mail verwijzen naar admin panel -> daar roles aanpassen
+- Show confirmation that items are added to order
 
 
