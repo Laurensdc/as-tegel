@@ -20,7 +20,7 @@ Route::get('/producten/{cat}/{subcat}', ['uses' => 'ProductenController@categori
 Route::post('/producten/{cat}/{subcat}', ['uses' => 'ProductenController@bestelProduct']);
 
 Route::get('/order', ['uses' => 'OrderController@overview', 'as' => 'order']);
-Route::get('/deleteorder', ['uses' => 'OrderController@deleteorder']);
+Route::get('/deleteorder', ['uses' => 'OrderController@deleteorder', 'as' => 'deleteorder']);
 
 
 Route::auth();
