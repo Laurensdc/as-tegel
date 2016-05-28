@@ -15,7 +15,8 @@
 
 
 	@foreach($subcategories as $cat) 
-	<article class="{{ $cat->coverfoto }}">
+	<article class="categorie_overzicht_article">
+		<img src="{{ asset($cat->coverfoto) }}" alt="{{ $cat->naam }}"/>
 		<div class="producten_caption">
 			<a href="{{ route('producten') }}/{{ $hoofdcategorielink }}/{{ $cat->subcat_linknaam }}">{{ $cat->naam }}</a>
 		</div>		

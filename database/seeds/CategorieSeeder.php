@@ -14,7 +14,7 @@ class CategorieSeeder extends Seeder
         DB::table('categories')->insert([
             'naam'=>'Vietnamese Natuursteen',
             'cat_linknaam'=>'vietnamees',
-            'coverfoto'=>'producten_vietnamees',
+            'coverfoto'=>'images/cover/vietnamees.jpg',
 
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s')
@@ -23,7 +23,7 @@ class CategorieSeeder extends Seeder
         DB::table('categories')->insert([
             'naam'=>'Chinese Natuursteen',
             'cat_linknaam'=>'chinees',
-            'coverfoto'=>'producten_chinees',
+            'coverfoto'=>'images/cover/chinees.jpg',
 
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s')
@@ -31,7 +31,7 @@ class CategorieSeeder extends Seeder
         DB::table('categories')->insert([
             'naam'=>'Indische Natuursteen',
             'cat_linknaam'=>'indisch',
-            'coverfoto'=>'producten_indisch',
+            'coverfoto'=>'images/cover/indisch.jpg',
 
         ]);
 

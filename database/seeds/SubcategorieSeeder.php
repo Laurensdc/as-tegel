@@ -14,7 +14,7 @@ class SubcategorieSeeder extends Seeder
         DB::table('subcategories')->insert([
             'naam'=>'Getrommeld',
             'subcat_linknaam'=>'getrommeld',
-            'coverfoto'=>'producten_vietnamees_getrommeld',
+            'coverfoto'=>'images/cover/vietnamees_getrommeld.jpg',
 
             'categorie_id'=>1,
 
@@ -25,7 +25,7 @@ class SubcategorieSeeder extends Seeder
         DB::table('subcategories')->insert([
             'naam'=>'Geschuurd Gezaagd',
             'subcat_linknaam'=>'geschuurd_gezaagd',
-            'coverfoto'=>'producten_vietnamees_geschuurd_gezaagd',
+            'coverfoto'=>'images/cover/vietnamees.jpg',
 
             'categorie_id'=>1,
 
@@ -36,7 +36,7 @@ class SubcategorieSeeder extends Seeder
         DB::table('subcategories')->insert([
             'naam'=>'Candela',
             'subcat_linknaam'=>'candela',
-            'coverfoto'=>'producten_indisch_candela',
+            'coverfoto'=>'images/cover/candela.jpg',
 
             'categorie_id'=>3,
 
@@ -44,7 +44,7 @@ class SubcategorieSeeder extends Seeder
         DB::table('subcategories')->insert([
             'naam'=>'Chandra',
             'subcat_linknaam'=>'chandra',
-            'coverfoto'=>'producten_indisch_chandra',
+            'coverfoto'=>'images/cover/chandra.jpg',
 
             'categorie_id'=>3,
 

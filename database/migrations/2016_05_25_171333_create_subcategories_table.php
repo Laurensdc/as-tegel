@@ -20,7 +20,7 @@ class CreateSubcategoriesTable extends Migration
             $table->integer('categorie_id')->unsigned();
             $table->foreign('categorie_id')->references('id')->on('categories');
             
-            $table->string('coverfoto');
+            $table->string('coverfoto')->default('images/cover/geenfoto.jpg');
     
             $table->timestamps();
         });

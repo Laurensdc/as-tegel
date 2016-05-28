@@ -39,7 +39,7 @@
  }
 /* End of Menu styles */
 
-/* Producten content */
+/* Producten content, Categorie overzicht */
 .categorie_overzicht, .producten_content {
 	background-color:$notsowhite;
 	overflow:hidden;
@@ -52,7 +52,6 @@
 .producten_content h2, .categorie_overzicht h2 {
 	font-size:2.2rem;
 	padding:1rem 0 1rem 1%;
-	
 
 	margin-bottom:2rem;
 	border-bottom:1px solid $colora;
@@ -60,6 +59,8 @@
 	
 }
 
+
+	
 /* Producten Overzicht */
 
 	/* Producten overzicht */
@@ -85,10 +86,6 @@
 	.producten_content article p {
 		margin-bottom: 2rem;
 	}
-
-
-
-
 	/* End of producten overzicht */
 
 
@@ -116,30 +113,53 @@
 		width:100%;
 	}
 
-	.categorie_overzicht .producten_caption {
-		width:100%;
-		margin-top:30rem;
+		/* Articles */
+		.categorie_overzicht_article, .producten_content_article  {
+			position:relative;
 
-		background-color:$verygray;
-		opacity: 0.9;
-	}
+		}
 
-	.categorie_overzicht .producten_caption a {
-		width:100%;
-		height:5rem;
-		line-height:5rem;
-		display:block;
-		
-		font-size:2rem;
-		text-align:center;
-		
-		color:$almostwhite;
-	}
+		.categorie_overzicht_article img {
+			object-fit:cover;
+			height:100%;
+		}
 
-	.categorie_overzicht .producten_caption a:hover {
-		color:$colora;
-		background-color:$gray_darkest;
-	}
+			/* Caption */
+			.categorie_overzicht .producten_caption {
+				position:absolute;
+				bottom:5rem;
+				width:100%;
+			}
+
+
+			.categorie_overzicht .producten_caption {
+				background-color:$verygray;
+				opacity: 0.9;
+			}
+
+			.categorie_overzicht .producten_caption a {
+				width:100%;
+				height:5rem;
+				line-height:5rem;
+				display:block;
+				
+				font-size:2rem;
+				text-align:center;
+				
+				color:$almostwhite;
+			}
+
+			.categorie_overzicht .producten_caption a:hover {
+				color:$colora;
+				background-color:$gray_darkest;
+			}
+			/* End of caption */
+
+		/* End of Articles */
+
+
+
+
 	/* End of Categorie overzicht*/
 
 /* End of producten overzicht */
