@@ -9,4 +9,6 @@
 - Bestelling: session
 - multi lang
 - zoekvenster
+- items uit bestelling verwijderen
+
 

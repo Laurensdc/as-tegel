@@ -66,6 +66,8 @@ class AuthController extends Controller
      */
     protected function create(array $data)
     {
+
+        
         if(isset($data['is_handelaar'])) {      
             Mail::send('mail.handelaar',
              [  'voornaam' => $data['voornaam'],
@@ -83,7 +85,7 @@ class AuthController extends Controller
             'firstname' => $data['voornaam'],
             'lastname' => $data['naam'],
             'role' => 'particulier',
-            'telnr' => 'tel',
+            'telnr' => $data['tel'],
             'email' => $data['email'],
             'password' => bcrypt($data['password'])
         ]);
