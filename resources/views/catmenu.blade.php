@@ -4,7 +4,7 @@
 	<li class="catmenu_title">Categorieën</li>
 	@foreach($allcategories as $cat)
 		<li @if($catmenu_active === $cat->cat_linknaam) class="active" @endif >
-			<a href="#">{{ $cat->naam }}</a>
+			<a href="#" onclick="event.preventDefault()">{{ $cat->naam }}</a>
 		</li>
 		<ul>
 		@foreach($allsubcategories as $subcat) 

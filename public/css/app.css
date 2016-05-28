@@ -114,11 +114,11 @@ body {
 
 a {
   text-decoration: none;
-  color: #CDDC39;
+  color: #AFB42B;
   transition: 0.4s ease-in-out; }
 
 a:hover {
-  color: #AFB42B; }
+  color: #CDDC39; }
 
 p {
   line-height: 2.4rem; }
@@ -235,6 +235,9 @@ header li:first-of-type a {
   padding-left: 0; }
 
 header li a.active {
+  color: #AFB42B; }
+
+header li a:hover {
   color: #AFB42B; }
 
 header .header_bestelling {

@@ -14,13 +14,13 @@ body {
 
 a {
 	text-decoration:none;
-	color:$colora;
+	color:$colora_darker;
 	transition:0.4s ease-in-out;
 }
 
 
 a:hover {
-	color:$colora_darker;
+	color:$colora;
 }
 
 p {
@@ -176,6 +176,9 @@ header li:first-of-type a {
 	padding-left:0;
 }
 header li a.active {
+	color:$colora_darker;
+}
+header li a:hover {
 	color:$colora_darker;
 }
 

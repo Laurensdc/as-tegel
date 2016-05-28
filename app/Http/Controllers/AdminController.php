@@ -8,6 +8,7 @@ use App\Http\Requests;
 use Auth;
 use App\User;
 use App\Product;
+use App\Subcategorie;
 use Mail;
 
 class AdminController extends Controller
@@ -91,12 +92,21 @@ class AdminController extends Controller
     }
 
 
-    function productEdit($id) {
+    function productDetail($id) {
         $product = Product::find($id);
+        $subcategories = Subcategorie::all();
 
         return view('admin.productedit', [
-            'p' => $product
+            'p' => $product,
+            'subcategories' => $subcategories
             ]);
+    }
+
+    function productEdit($id, Request $request) {
+
+        return view('admin.test', 
+            ['val' => $request]);
+
     }
 
 }

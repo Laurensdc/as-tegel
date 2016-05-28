@@ -39,8 +39,9 @@ Route::get('/admin', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminControl
 
 	// Producten
 	Route::get('/admin/producten', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@productOverview', 'as' => 'admin_productoverview']);
-	Route::get('/admin/producten/{id}', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@productEdit']);
+	Route::get('/admin/producten/{id}', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@productDetail']);
 
+	Route::post('/admin/producten/{id}', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@productEdit']);
 
 
 

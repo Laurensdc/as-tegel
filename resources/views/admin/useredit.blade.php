@@ -5,7 +5,8 @@
 
 	
 	<div class="admin_smallcol">
-		<form action="{{ route('admin') }}/users/{{ $user->id }}" method="post">			{{ csrf_field() }}
+		<form action="{{ route('admin') }}/users/{{ $user->id }}" method="post">
+			{{ csrf_field() }}
 
 			<p>
 				<label>Naam</label>

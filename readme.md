@@ -1,8 +1,9 @@
-# Readme
-- Set db settings
-- php artisan make:model
-- php artisan db:seed
-- When changing: php artisan migrate:refresh --seed
+# Project setup
+- composer install
+- npm install
+- Set db settings in .env
+- php artisan migrate:refresh --seed
+
 
 # TODO
 - mobile responsive
@@ -14,6 +15,6 @@
 - admin deel prod toevoegen/verwijderen
 - stijl besteloverzicht
 
-- seeden carius, keramiek
+- Sorteren: producten / admin
 
 - email verstuurd op 3 plaatsen aanpassen naar Chris ipv mij
