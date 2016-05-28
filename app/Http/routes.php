@@ -23,4 +23,8 @@ Route::auth();
 
 Route::get('/home', 'HomeController@homePage');
 
-Route::get('/admin', 'AdminController@mainPanel');
+Route::get('/admin', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@mainPanel', 'as' => 'admin']);
+
+Route::get('/unauthorized', function() {
+	return view('admin.unauthorized');
+});
