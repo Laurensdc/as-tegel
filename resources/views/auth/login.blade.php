@@ -3,7 +3,7 @@
 @section('content')
 <div class="login_panel">
 	<h2>Log in</h2>
-	<p><a class="boringlink" href="{{ route('home') }}/register">Heeft u nog geen login?<br>Geen probleem, u kan zich hier registreren</a>.</p>
+	<p><a class="boringlink" href="{{ route('home') }}/register">Heeft u nog geen login?<br>Geen probleem, u kan zich registreren</a>.</p>
 
 	<form role="form" method="POST" action="{{ url('/login') }}">
 		{{ csrf_field() }}
@@ -37,7 +37,7 @@
 		</div>
 
 		<div>
-			<input type="submit" value="Log in">
+			<input type="submit" value="Log in"> 
 			<a class="boringlink" href="{{ url('/password/reset') }}">Wachtwoord vergeten?</a>
 		</div>
 	</form>

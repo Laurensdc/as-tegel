@@ -16,7 +16,7 @@ return [
     |
     */
 
-    'driver' => env('MAIL_DRIVER', 'smtp'),
+    'driver' => env('MAIL_DRIVER', 'mailgun'),
 
     /*
     |--------------------------------------------------------------------------
@@ -55,7 +55,7 @@ return [
     |
     */
 
-    'from' => ['address' => null, 'name' => null],
+    'from' => ['address' => 'mailer@as-tegel.be', 'name' => 'AS-Tegel'],
 
     /*
     |--------------------------------------------------------------------------
@@ -81,7 +81,7 @@ return [
     |
     */
 
-    'username' => env('MAIL_USERNAME'),
+    'username' => env('postmaster@sandboxffda3837484548619267fb4846e1a2b6.mailgun.org'),
 
     /*
     |--------------------------------------------------------------------------
@@ -94,7 +94,7 @@ return [
     |
     */
 
-    'password' => env('MAIL_PASSWORD'),
+    'password' => env('c9e8595ce149a959ada8a40c953bc366'),
 
     /*
     |--------------------------------------------------------------------------
@@ -109,4 +109,5 @@ return [
 
     'sendmail' => '/usr/sbin/sendmail -bs',
 
+    'pretend'    => false,
 ];
