@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="breadcrumb">
-	<p><a href="{{ route('producten') }}">Producten</a> &raquo; {{ $hoofdcategorie }}</p>
+	<p><a href="{{ route('producten') }}">{{ trans('cont.products') }}</a> &raquo; {{ $hoofdcategorie }}</p>
 </div>
 
 <div class="catmenu_container">

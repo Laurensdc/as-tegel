@@ -4,7 +4,7 @@
 @section('content')
 
 <div class="breadcrumb">
-	<p><a href="{{ route('producten') }}">Producten</a> &raquo; Overzicht categorieën</p>
+	<p><a href="{{ route('producten') }}">{{ trans('cont.products') }}</a> &raquo; {{ trans('cont.overzicht') }}</p>
 </div>
 
 <div class="catmenu_container">
@@ -12,7 +12,7 @@
 </div>
 
 <div class="categorie_overzicht">
-	<h2>Overzicht categorieën</h2>
+	<h2>{{ trans('cont.cat_overview') }}</h2>
 
 	@foreach($categories as $cat)
 	<article class="categorie_overzicht_article">
@@ -32,3 +32,4 @@
 <script src="js/scripts.js"></script>
 
 @endsection
+

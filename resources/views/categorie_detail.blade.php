@@ -10,7 +10,7 @@
 
 <div class="breadcrumb">
 	<p>
-		<a href="{{ route('producten') }}">Producten</a> 
+		<a href="{{ route('producten') }}">{{ trans('cont.products') }}</a> 
 		&raquo; <a href="{{ route('producten') }}/{{ $catmenu_active }}">{{ $hoofdcategorie }}</a> 
 		&raquo; {{ $subcategorie }}
 	</p>
@@ -24,7 +24,7 @@
 	<h2>{{ $hoofdcategorie }} &ndash; {{ $subcategorie }}</h2>
 
 	@if($producten->isEmpty())
-		<p>Geen producten gevonden</p><br>
+		<p>{{ trans('cont.noproducts') }}</p><br>
 	@else
 		
 		@foreach($producten as $i=>$p)
@@ -35,16 +35,16 @@
 				
 				<h1>{{ $p->naam }}</h1>
 				<ul>
-					<li>Afmetingen: {{ $p->afmetingen }}</li>
+					<li>{{ trans('cont.dimensions') }}: {{ $p->afmetingen }}</li>
 					@if(Auth::check())
 
 						@if(Auth::user()->role == 'handelaar')
-							<li>Prijs: &euro;{{ $p->prijs_handelaar }}/m&sup2;</li>
+							<li>{{ trans('cont.price') }}: &euro;{{ $p->prijs_handelaar }}/m&sup2;</li>
 						@else
-							<li>Prijs: &euro;{{ $p->prijs_particulier }}/m&sup2;</li>
+							<li>{{ trans('cont.price') }}: &euro;{{ $p->prijs_particulier }}/m&sup2;</li>
 						@endif
 					@else
-						<li>Prijs: &euro;{{ $p->prijs_particulier }}/m&sup2;</li>
+						<li>{{ trans('cont.price') }}: &euro;{{ $p->prijs_particulier }}/m&sup2;</li>
 					@endif
 
 				</ul>
@@ -54,13 +54,13 @@
 				@endif
 
 				@if($p->invoorraad == false)
-					<p class="txt_warning">Niet in voorraad</p>
+					<p class="txt_warning">{{ trans('cont.nostock') }}</p>
 				@else
 					<form action="" method="post" name="form">
 						{{ csrf_field() }}
 						<input type="hidden" value="{{ $p->id }}" name="prod_id">
-						<p>Voeg <input type="number" name="vierkantemeter" min="1" max="1000" value="20" required/>m&sup2; toe aan mijn bestelling.</p> 
-						<p><input type="submit" clas="btn btn_cta" value="Bestel"/></p>
+						<p>{{ trans('cont.add') }} <input type="number" name="vierkantemeter" min="1" max="1000" value="20" required/>m&sup2; {{ trans('cont.toorder') }}.</p> 
+						<p><input type="submit" clas="btn btn_cta" value="{{ trans('cont.order') }}"/></p>
 					</form>
 				@endif
 			</article>
@@ -85,7 +85,7 @@
 @if($showtoast)
 	<script src="{{ asset('bower_components/toastr/toastr.min.js') }}"></script>
 	<script>toastr.options = { "newestOnTop": true, "positionClass": "toast-top-right", "timeOut": "4000", }</script>
-	<script>toastr.success("Product toegevoegd aan uw bestelling");</script>
+	<script>toastr.success("{{ trans('cont.product_added') }}");</script>
 @endif
 
 <script src="{{ asset('bower_components/lightbox2/dist/js/lightbox.min.js') }}"></script>

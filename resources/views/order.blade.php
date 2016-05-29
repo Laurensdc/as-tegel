@@ -26,7 +26,7 @@
 		<br>
 
 		<p>
-			<a href="{{ route('placeorder') }}" class="btn">Plaats bestelling</a> <a href="{{ route('deleteorder') }}" class="boringlink">Alle items verwijderen</a>
+			<a href="{{ route('placeorder') }}" class="btn">{{ trans('cont.orderit') }}</a> <a href="{{ route('deleteorder') }}" class="boringlink">Alle items verwijderen</a>
 		</p>
 
 	@else
