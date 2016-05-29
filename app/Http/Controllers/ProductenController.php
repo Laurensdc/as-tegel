@@ -65,7 +65,7 @@ class ProductenController extends Controller
 
     }
 
-    function categorieDetail($cat, $subcat) {
+    function categorieDetail($cat, $subcat, $showtoast=false) {
 
 	   //	$categorie = Categorie::where('cat_linknaam', $cat)->first();
 	  // 	$subcategories = $categorie->subcategories;	// Subcats for this category
@@ -94,16 +94,16 @@ class ProductenController extends Controller
             "hoofdcategorie" => $hoofdcategorie,        // For title
             "subcategorie" => $subcategorie,            // For page title
 
-    		"producten" => $producten
-
+    		"producten" => $producten,
+            "showtoast" => $showtoast
 
     		]);
     }
 
     function bestelProduct($cat, $subcat, Request $request) {
-        Session::push('orderitems', [$request['prod_id'], $request['vierkantemeter']]);
+        Session::push('orderitems', [$request['prod_id'], $request['vierkantemeter']]);    
 
-        return $this->categorieDetail($cat, $subcat);
+        return $this->categorieDetail($cat, $subcat, true);
 
     }
 

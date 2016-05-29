@@ -23,20 +23,6 @@
 	</article>
 	@endforeach
 
-{{-- 
-	<!-- Original html
-	<article class="producten_vietnamees_getrommeld">
-		<div class="producten_caption">
-			<a href="{{ route('producten') }}/{{ $categorie }}/getrommeld">Getrommeld</a>
-		</div>		
-	</article>
-	<article class="producten_vietnamees_geschuurd_gezaagd">
-		<div class="producten_caption">
-			<a href="#">Geschuurd Gezaagd</a>
-		</div>		
-	</article>
-	-->
-	--}}
 </div>
 	
 

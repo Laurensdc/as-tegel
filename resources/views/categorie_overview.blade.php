@@ -23,23 +23,6 @@
 	</article>
 	@endforeach
 
-	<!-- Original html
-	<article class="producten_indisch">
-		<div class="producten_caption">
-			<a href="#">Indische Natuursteen</a>
-		</div>		
-	</article>
-	<article class="producten_chinees">
-		<div class="producten_caption">
-			<a href="#">Chinese Natuursteen</a>
-		</div>		
-	</article>
-	<article class="producten_vietnamees">
-		<div class="producten_caption">
-			<a href="#">Vietnamese Natuursteen</a>
-		</div>		
-	</article>
-	-->
 </div>
 
 @endsection

@@ -2,6 +2,7 @@
 
 @section('css')
 <link rel="stylesheet" href="{{ asset('bower_components/lightbox2/dist/css/lightbox.min.css') }}"/>
+<link rel="stylesheet" href="{{ asset('bower_components/toastr/toastr.css') }}"/>
 
 @endsection
 
@@ -72,27 +73,6 @@
 
 	@endif
 
-{{-- original html
-
-	<article>	
-		<a href="{{ asset('images/producten/vietnamees/getrommeld.jpg') }}" data-lightbox="image-1" data-title="Vietnamees Getrommeld"><img src="{{ asset('images/producten/vietnamees/getrommeld.jpg') }}"/></a>
-		
-		<h1>Vietnamees Getrommeld</h1>
-		<ul>
-			<li>Formaat: 20 x 20 x 2</li>
-			<li>Prijs: &euro;22.34/m&sup2;</li>
-		</ul>
-		
-		<p>Optionele beschrijving van het artikel</p>
-
-		<p class="txt_warning">Niet in voorraad</p>
-
-		<form  method="get" name="form">
-			<p>Voeg <input type="number" name="vierkantemeter" min="1" max="1000" required/>m&sup2; toe aan mijn bestelling.</p> 
-			<p><input type="submit" clas="btn btn_cta" value="Bestel"/></p>
-		</form>
-	</article>
---}}
 
 </div>
 
@@ -101,6 +81,20 @@
 @section('javascript')
 <script src="{{ asset('bower_components/jquery/dist/jquery.min.js') }}"></script>
 <script src="{{ asset('js/scripts.js') }}"></script>
+
+@if($showtoast)
+	<script src="{{ asset('bower_components/toastr/toastr.min.js') }}"></script>
+	<script>
+		toastr.options = {
+	  "newestOnTop": true,
+	  "positionClass": "toast-top-right",
+	  "timeOut": "4000",
+
+	}
+	</script>
+	<script>toastr.success("Product toegevoegd aan uw bestelling");</script>
+@endif
+
 <script src="{{ asset('bower_components/lightbox2/dist/js/lightbox.min.js') }}"></script>
 
 @endsection
