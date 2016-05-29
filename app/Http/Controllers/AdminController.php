@@ -127,7 +127,31 @@ class AdminController extends Controller
         $p->save();
 
         return redirect()->route('admin_productoverview');
+    }
 
+    function productAdd() {
+        $subcategories = Subcategorie::all();
+
+        return view('admin.productadd', [
+            'subcategories' => $subcategories,
+            ]);
+    }
+
+    function productAddAction(Request $r) {
+        $p = new Product;
+
+        $p->naam = $r['naam'];
+        $p->afmetingen = $r['afmetingen'];
+        $p->prijs_particulier = $r['prijs_particulier'];
+        $p->prijs_handelaar = $r['prijs_handelaar'];
+        $p->invoorraad = $r['invoorraad'];
+        $p->beschrijving = $r['beschrijving'];
+        $p->coverfoto = $r['foto'];
+        $p->subcategorie_id = $r['subcategorie_id'];
+
+        $p->save();
+
+        return redirect()->route('admin_productoverview');
     }
 
 }

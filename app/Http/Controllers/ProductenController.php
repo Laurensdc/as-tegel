@@ -38,7 +38,7 @@ class ProductenController extends Controller
 	    //	->select('subcategories.*', 'categories.naam as catnaam')
 	    //	->get();
 
-	    // AND THEN AFTER 2 HOURS OF TRYING THE NEXT LINE WITHOUT SUCCESS AND WRITING THIS WHOLE JOIN QUERY, IT WORKS:
+	    // and then after 2 hours of trying this suddenly does work
     	$categorie = Categorie::where('cat_linknaam', $cat)->first();
     	$subcategories = $categorie->subcategories;
 

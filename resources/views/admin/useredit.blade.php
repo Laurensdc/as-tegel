@@ -33,6 +33,7 @@
 				</select>
 			</p>
 			<p>
+				<label></label>
 				<input type="submit" value="Aanpassen"> <a href="{{ route('admin') }}/users" class="boringlink">Annuleren</a>
 			</p>
 		</form>

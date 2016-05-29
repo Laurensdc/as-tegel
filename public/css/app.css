@@ -480,7 +480,7 @@ header .header_bestelling a:hover {
   border: 1px solid #111; }
 
 .admin_container form label {
-  width: 15rem;
+  width: 20rem;
   display: inline-block; }
 
 .admin_container form p {
@@ -489,5 +489,8 @@ header .header_bestelling a:hover {
 .admin_center {
   width: 30rem;
   margin: 0 auto; }
+
+.admin_smallcol p {
+  margin-bottom: 1rem; }
 
 /*# sourceMappingURL=app.css.map */
