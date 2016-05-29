@@ -102,6 +102,10 @@ Route::get('/admin', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminControl
 
 		Route::get('/admin/subcategorie/delete/{id}', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@subcategorieDelete']);
 
+	// Fotoupload
+	Route::get('/admin/fotoupload', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@fotoUpload']);
+	Route::post('/admin/fotoupload', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@fotoUploadAction']);
+
 Route::get('/unauthorized', function() {
 	return view('admin.unauthorized');
 });

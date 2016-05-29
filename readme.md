@@ -16,4 +16,5 @@
 
 ## TODO on publish
 - email verstuurd op 3 plaatsen aanpassen naar Chris ipv mij
-- Vragen welke telefoonnummer er moet staan / emails aanmaken
+- Vragen welke telefoonnummer er moet staan / emails aanmaken (?) / contact pagina -> fotos?
+

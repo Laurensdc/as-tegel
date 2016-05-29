@@ -24,6 +24,9 @@
 					<div class="toolbar_contact">
 						<a @if($admin_menu=='subcategorie') class="admin_active" @endif href="{{ route('admin_subcategorieoverview') }}">Subcategorie</a>
 					</div>
+					<div class="toolbar_contact">
+						<a @if($admin_menu=='fotoupload') class="admin_active" @endif href="{{ route('admin') }}/fotoupload">Foto Uploaden</a>
+					</div>
 					@if(Auth::check())
 						<div class="toolbar_account">Ingelogd als {{ Auth::user()->firstname }} ({{ Auth::user()->role }}) &ndash;
 							<a href="{{ route('home') }}/logout">Log uit</a>

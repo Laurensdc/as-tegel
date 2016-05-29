@@ -341,5 +341,33 @@ class AdminController extends Controller
         return redirect()->route('admin_subcategorieoverview');
     }
 
+    //////////////////
+    // Fotoupload
+
+    function fotoUpload($success = false, $msg = '') {
+        return view('admin.fotoupload', ['success' => $success, 'msg' => $msg]);
+    }
+
+    function fotoUploadAction(Request $r) {
+        // File upload in correct folder, also on fail
+        $f = $r->file('foto');
+
+        $msg = "Foto uploaden mislukt";
+        $status = false;
+
+        if($r->hasFile('foto')) {
+            if($r->file('foto')->isValid()) {
+                $path = public_path() . '/' . $r['coverfoto']; 
+                $name = $f->getClientOriginalName();
+                $f->move($path, $name);
+                $msg = $r['coverfoto'] . $name;
+                $status = true;
+            }
+        }
+        
+        return $this->fotoUpload($status, $msg);
+
+    }
+
 
 }
