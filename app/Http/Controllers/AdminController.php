@@ -133,6 +133,20 @@ class AdminController extends Controller
     }
 
     function productAddAction(Request $r) {
+        // File upload in correct folder, also on fail
+        $f = $r->file('foto');
+        $path = 'images/producten/';
+        $name = '_geenfoto.jpg';
+
+        if($r->hasFile('foto')) {
+            if($r->file('foto')->isValid()) {
+                $path = public_path() . '/' . $r['coverfoto']; 
+                $name = $f->getClientOriginalName();
+                $f->move($path, $name);
+                $path = $r['coverfoto'];
+           }
+        }        
+
         $p = new Product;
 
         $p->naam = $r['naam'];
@@ -141,7 +155,7 @@ class AdminController extends Controller
         $p->prijs_handelaar = $r['prijs_handelaar'];
         $p->invoorraad = $r['invoorraad'];
         $p->beschrijving = $r['beschrijving'];
-        $p->coverfoto = $r['foto'];
+        $p->coverfoto = $path . $name;
         $p->subcategorie_id = $r['subcategorie_id'];
 
         $p->save();
@@ -199,11 +213,25 @@ class AdminController extends Controller
             'cat_linknaam' => 'alpha|unique:categories'
             ]);
 
+        // File upload in correct folder, also on fail
+        $f = $r->file('foto');
+        $path = 'images/cover/';
+        $name = '_geenfoto.jpg';
+
+        if($r->hasFile('foto')) {
+            if($r->file('foto')->isValid()) {
+                $path = public_path() . '/' . $r['coverfoto']; 
+                $name = $f->getClientOriginalName();
+                $f->move($path, $name);
+                $path = $r['coverfoto'];
+           }
+        }
+
         $cat = new Categorie;
 
         $cat->naam = $r['naam'];
         $cat->cat_linknaam = strtolower($r['cat_linknaam']);
-        $cat->coverfoto = $r['coverfoto'];
+        $cat->coverfoto = $path . $name;
 
         $cat->save();
 
@@ -265,13 +293,26 @@ class AdminController extends Controller
             'subcat_linknaam' => 'alpha|unique:subcategories'
             ]);
 
+        // File upload in correct folder, also on fail
+        $f = $r->file('foto');
+        $path = 'images/cover/';
+        $name = '_geenfoto.jpg';
+
+        if($r->hasFile('foto')) {
+            if($r->file('foto')->isValid()) {
+                $path = public_path() . '/' . $r['coverfoto']; 
+                $name = $f->getClientOriginalName();
+                $f->move($path, $name);
+                $path = $r['coverfoto'];
+           }
+        }
+
         $subcat = new Subcategorie;
 
         $subcat->naam = $r['naam'];
         $subcat->subcat_linknaam = $r['subcat_linknaam'];
         $subcat->categorie_id = $r['categorie_id'];
-        $subcat->coverfoto = $r['coverfoto'];
-
+        $subcat->coverfoto = $path . $name;
         $subcat->save();
 
         return redirect()->route('admin_subcategorieoverview');

@@ -89,7 +89,7 @@
 <script>
 	$('#cbhandelaar').on('click', function() {
 		if($('#cbhandelaar').prop('checked'))
-			$('#handelaar_tekst').html('U dient een aanvraag in om als handelaar geregistreerd te worden.<br>Indien deze aanvraag goedgekeurd wordt krijgt u van ons een bevestiging.');
+			$('#handelaar_tekst').html('U dient een aanvraag in om als handelaar geregistreerd te worden.');
 		else $('#handelaar_tekst').html('');
 	});
 </script>

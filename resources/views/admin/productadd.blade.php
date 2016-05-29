@@ -2,7 +2,7 @@
 
 @section('content')
 	<div class="admin_smallcol">
-		<form action="{{ route('admin') }}/producten/add" method="post">
+		{!! Form::open(array('url' => route('admin') . '/producten/add', 'method' => 'post', 'files' => true)) !!}
 			{{ csrf_field() }}
 
 			<p>
@@ -43,9 +43,13 @@
 				<textarea name="beschrijving" rows="3" cols="40"></textarea>
 			</p>
 			<p>
-				<label>Foto</label>
-				<input type="text" name="foto" size="40" value="images/producten/_geenfoto.jpg">
+				<label>Map voor foto</label>
+				<input type="text" name="foto" size="40" value="images/producten/">
 			</p>	
+			<p>
+				<label>Foto</label>
+				<input type="file" name="foto" methode="post">
+			</p>			
 			<label></label>
 			<input type="submit" value ="Product Toevoegen"> <a href="{{ route('admin_productoverview') }}" class="boringlink">Annuleren</a>
 		</form>

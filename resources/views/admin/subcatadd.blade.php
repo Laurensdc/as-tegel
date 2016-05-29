@@ -3,7 +3,7 @@
 @section('content')
 
 	<div class="admin_smallcol">
-		<form action="{{ route('admin') }}/subcategorie/add" method="post">
+		{!! Form::open(array('url' => route('admin') . '/subcategorie/add', 'method' => 'post', 'files' => true)) !!}
 			{{ csrf_field() }}
 
 			<p>
@@ -27,8 +27,12 @@
 				</select>
 			</p>
 			<p>
-				<label>Coverfoto</label>
-				<input type="text" name="coverfoto" size="40" value="images/cover/_geenfoto.jpg">
+				<label>Map voor foto</label>
+				<input type="text" name="coverfoto" size="40" value="images/cover/" >
+			</p>
+			<p>
+				<label>Foto</label>
+				<input type="file" name="foto" methode="post">
 			</p>
 			<p>
 				<label></label>

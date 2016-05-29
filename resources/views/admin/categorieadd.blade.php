@@ -3,7 +3,7 @@
 @section('content')
 
 	<div class="admin_smallcol">
-		<form action="{{ route('admin') }}/categorie/add" method="post">
+		{!! Form::open(array('url' => route('admin') . '/categorie/add', 'method' => 'post', 'files' => true)) !!}
 			{{ csrf_field() }}
 
 			<p>
@@ -18,9 +18,13 @@
 				<p class="txt_warning"><label></label> Kleine letters, geen spaties, moet uniek zijn</p>
 			@endif	
 			<p>
-				<label>Coverfoto</label>
-				<input type="text" name="coverfoto" value="images/cover/_geenfoto.jpg" size="40">
+				<label>Map voor foto</label>
+				<input type="text" name="coverfoto" value="images/cover/" size="40">
 			</p>
+			<p>
+				<label>Foto</label>
+				<input type="file" name="foto" methode="post">
+			</p>			
 			<p>
 				<label></label>
 				<input type="submit" value="Categorie Aanmaken"> <a href="{{ route('admin') }}/categorie/add" class="boringlink">Annuleren</a>
