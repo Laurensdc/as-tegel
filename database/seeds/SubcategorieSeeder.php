@@ -24,7 +24,7 @@ class SubcategorieSeeder extends Seeder
 
         DB::table('subcategories')->insert([
             'naam'=>'Geschuurd Gezaagd',
-            'subcat_linknaam'=>'geschuurd_gezaagd',
+            'subcat_linknaam'=>'geschuurdgezaagd',
             'coverfoto'=>'images/cover/vietnamees.jpg',
 
             'categorie_id'=>1,

@@ -18,7 +18,12 @@
 					<div class="toolbar_contact">
 						<strong><a href="{{ route('admin_productoverview') }}">Producten</a></strong>
 					</div>
-	
+					<div class="toolbar_contact">
+						<strong><a href="{{ route('admin_categorieoverview') }}">Categorie</a></strong>
+					</div>
+					<div class="toolbar_contact">
+						<strong><a href="{{ route('admin_subcategorieoverview') }}">Subcategorie</a></strong>
+					</div>
 					@if(Auth::check())
 						<div class="toolbar_account">Ingelogd als {{ Auth::user()->firstname }} ({{ Auth::user()->role }}) &ndash;
 							<a href="{{ route('home') }}/logout">Log uit</a>

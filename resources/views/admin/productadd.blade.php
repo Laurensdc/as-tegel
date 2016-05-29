@@ -47,7 +47,7 @@
 				<input type="text" name="foto" size="40" value="images/producten/_geenfoto.jpg">
 			</p>	
 			<label></label>
-			<input type="submit" value ="Aanpassen"> <a href="{{ route('admin_productoverview') }}" class="boringlink">Annuleren</a>
+			<input type="submit" value ="Product Toevoegen"> <a href="{{ route('admin_productoverview') }}" class="boringlink">Annuleren</a>
 		</form>
 	</div>
 

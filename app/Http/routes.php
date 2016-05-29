@@ -31,11 +31,14 @@ Route::auth();
 // Admin
 Route::get('/admin', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@mainPanel', 'as' => 'admin']);
 	// Users
-	Route::get('/admin/users', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@userOverview', 'as' => 'admin_useroverview']);
-	Route::get('/admin/users/{id}', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@userDetail']);
-	Route::post('/admin/users/{id}', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@userEdit']);
-	// User rol van handelaar geven - gebruikt voor email link
-	Route::get('/admin/users/{email}/makehandelaar', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@makeHandelaar']);
+		// Overview
+		Route::get('/admin/users', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@userOverview', 'as' => 'admin_useroverview']);
+
+		// Detail & edit
+		Route::get('/admin/users/{id}', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@userDetail']);
+		Route::post('/admin/users/{id}', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@userEdit']);
+		// User rol van handelaar geven - gebruikt voor email link
+		Route::get('/admin/users/{email}/makehandelaar', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@makeHandelaar']);
 
 	// Producten
 		// Overview
@@ -50,6 +53,32 @@ Route::get('/admin', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminControl
 		// Add product
 		Route::get('/admin/producten/add', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@productAdd']);
 		Route::post('/admin/producten/add', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@productAddAction']);
+
+	// Categorie
+		// Overview
+		Route::get('/admin/categorie', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@categorieOverview', 'as' => 'admin_categorieoverview']);
+
+		// Detail & edit
+		Route::get('/admin/categorie/edit/{id}', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@categorieDetail']);
+		Route::post('/admin/categorie/edit/{id}', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@categorieEdit']);
+
+		// Add
+		Route::get('/admin/categorie/add', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@categorieAdd']);
+		Route::post('/admin/categorie/add', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@categorieAddAction']);
+
+
+	// Subcategorie
+		// Overview
+		Route::get('/admin/subcategorie', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@subcategorieOverview', 'as' => 'admin_subcategorieoverview']);
+
+		// Detail & edit
+		Route::get('/admin/subcategorie/edit/{id}', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@subcategorieDetail']);
+		Route::post('/admin/subcategorie/edit/{id}', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@subcategorieEdit']);
+
+		// Add
+		Route::get('/admin/subcategorie/add', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@subcategorieAdd']);
+		Route::post('/admin/subcategorie/add', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@subcategorieAddAction']);
+
 
 
 
