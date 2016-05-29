@@ -17,6 +17,9 @@ Route::get('/home', function() {
 	return redirect()->route('home');
 });
 
+// Contact
+Route::get('/contact', ['middleware' => 'lang', 'as' => 'contact', 'uses' => 'HomeController@contact']);
+
 // Producten
 Route::get('/producten', ['middleware' => 'lang', 'as' => 'producten', 'uses' => 'ProductenController@overview']);
 Route::get('/producten/{cat}', ['middleware' => 'lang', 'uses' => 'ProductenController@categorieFilter']);
@@ -98,9 +101,6 @@ Route::get('/admin', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminControl
 		Route::post('/admin/subcategorie/add', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@subcategorieAddAction']);
 
 		Route::get('/admin/subcategorie/delete/{id}', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@subcategorieDelete']);
-
-
-
 
 Route::get('/unauthorized', function() {
 	return view('admin.unauthorized');

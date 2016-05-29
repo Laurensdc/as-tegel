@@ -13,15 +13,13 @@ class HomeController extends Controller
      *
      * @return void
      */
-//    public function __construct()
-  //  {
-       // $this->middleware('auth');
-   // }
-
-    //
     function homePage() {
         return view('home', ["title" => "Home", "headermenu_active" => "home"]);
 
+    }
+
+    function contact() {
+        return view('contact', ["title" => "Contact", "headermenu_active" => "contact"]);
     }
 
 }
