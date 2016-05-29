@@ -15,17 +15,20 @@
 		<div class="toolbar">
 			<div class="toolbar_content">
 				<div class="toolbar_left">
-					<div class="toolbar_languages"><a href="{{ route('home') }}/lang/nl" class="active">NL</a> - <a href="{{ route('home') }}/lang/fr">FR</a> - <a href="{{ route('home') }}/lang/en">EN</a></div>
+					<div class="toolbar_languages">
+						<a href="{{ route('home') }}/lang/nl" @if(Session::get('ln') == 'nl') class="active" @endif>NL</a> - 
+						<a href="{{ route('home') }}/lang/fr" @if(Session::get('ln') == 'fr') class="active" @endif>FR</a> -
+						<a href="{{ route('home') }}/lang/en" @if(Session::get('ln') == 'en') class="active" @endif>EN</a></div>
 				</div>
 				<div class="toolbar_right">
 					<div class="toolbar_contact">0470/05.38.62</div>
 					<div class="toolbar_contact"><a href="mailto:contact@as-tegel.be">contact@as-tegel.be</a></div>
 					@if(Auth::check())
-						<div class="toolbar_account">Welkom, {{ Auth::user()->firstname }} ({{ Auth::user()->role }}) &ndash;
-							<a href="{{ route('home') }}/logout">Log uit</a>
+						<div class="toolbar_account">{{ trans('cont.welkom') }}, {{ Auth::user()->firstname }} ({{ Auth::user()->role }}) &ndash;
+							<a href="{{ route('home') }}/logout">{{ trans('cont.logout') }}</a>
 						</div>
 					@else
-						<div class="toolbar_account"><a href="{{ route('home') }}/login">Log in</a> - <a href="{{ route('home') }}/register">Registreer</a></div>
+						<div class="toolbar_account"><a href="{{ route('home') }}/login">{{ trans('cont.login') }}</a> - <a href="{{ route('home') }}/register">{{ trans('cont.register') }}</a></div>
 					@endif
 				</div>
 			</div>

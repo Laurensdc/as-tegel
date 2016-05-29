@@ -5,6 +5,8 @@ return [
 	"categorieen" 	=> "Categories",
 	"overzicht"		=> "Category Overview",
 	"bestelling" 	=> "Order",
-	"welkom"		=> "Welcome"
-
+	"welkom"		=> "Welcome",
+	"login"			=> "Login",
+	"logout"		=> "Logout",
+	"register"		=> "Register",
 ];

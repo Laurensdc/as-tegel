@@ -12,24 +12,26 @@
 */
 
 // Home
-Route::get('/', ['as' => 'home', 'uses' => 'HomeController@homePage']);
-Route::get('/home', 'HomeController@homePage');
+Route::get('/', ['middleware' => 'lang', 'as' => 'home', 'uses' => 'HomeController@homePage']);
+Route::get('/home', function() {
+	return redirect()->route('home');
+});
 
 // Producten
-Route::get('/producten', ['as' => 'producten', 'uses' => 'ProductenController@overview']);
-Route::get('/producten/{cat}', ['uses' => 'ProductenController@categorieFilter']);
-Route::get('/producten/{cat}/{subcat}', ['uses' => 'ProductenController@categorieDetail']);
-Route::post('/producten/{cat}/{subcat}', ['uses' => 'ProductenController@bestelProduct']);
+Route::get('/producten', ['middleware' => 'lang', 'as' => 'producten', 'uses' => 'ProductenController@overview']);
+Route::get('/producten/{cat}', ['middleware' => 'lang', 'uses' => 'ProductenController@categorieFilter']);
+Route::get('/producten/{cat}/{subcat}', ['middleware' => 'lang', 'uses' => 'ProductenController@categorieDetail']);
+Route::post('/producten/{cat}/{subcat}', ['middleware' => 'lang', 'uses' => 'ProductenController@bestelProduct']);
 
 // Bestellingen
-Route::get('/order', ['uses' => 'OrderController@overview', 'as' => 'order']);
-Route::get('/order/delete', ['uses' => 'OrderController@deleteorder', 'as' => 'deleteorder']);
-Route::get('/order/place', ['uses' => 'OrderplaceController@placeOrder', 'as' => 'placeorder']);
+Route::get('/order', ['middleware' => 'lang', 'uses' => 'OrderController@overview', 'as' => 'order']);
+Route::get('/order/delete', ['middleware' => 'lang', 'uses' => 'OrderController@deleteorder', 'as' => 'deleteorder']);
+Route::get('/order/place', ['middleware' => 'lang', 'uses' => 'OrderplaceController@placeOrder', 'as' => 'placeorder']);
 
 // Lang
 Route::get('/lang/{ln}', function($ln) {
-        App::setLocale($ln);
-       	return redirect()->route('home');
+		Session::put('ln', $ln);      
+       	return Redirect::back();
 });
 
 // Auth
