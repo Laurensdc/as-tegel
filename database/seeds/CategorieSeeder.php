@@ -42,7 +42,7 @@ class CategorieSeeder extends Seeder
 
         ]);
         DB::table('categories')->insert([
-            'naam'=>'Tegels Keramiek',
+            'naam'=>'Tegels',
             'cat_linknaam'=>'keramiek',
             'coverfoto'=>'images/cover/keramiek.jpg',
 

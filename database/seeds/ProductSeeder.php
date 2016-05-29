@@ -64,7 +64,7 @@ class ProductSeeder extends Seeder
             'afmetingen'=>'60 x 60 x 3',
             'prijs_particulier'=>'35.00',
             'prijs_handelaar'=>'25.00',
-            'coverfoto'=>'images/producten/vietnamees/getrommeld.jpg',
+            'coverfoto'=>'images/producten/vietnamees/getrommeld_2.jpg',
             'subcategorie_id'=>1,
 
             'created_at' => date('Y-m-d H:i:s'),
@@ -115,6 +115,34 @@ class ProductSeeder extends Seeder
             'prijs_handelaar'=>'30.00',
             'coverfoto'=>'images/producten/keramiek/osteria.jpg',
             'subcategorie_id'=>6,
+        ]);
+
+        DB::table('products')->insert([
+            'naam'=>'Gevlamd en Geborsteld',
+            'afmetingen'=>'40 x 40 x 2',
+            'prijs_particulier'=>'25.00',
+            'prijs_handelaar'=>'23.00',
+            'coverfoto'=>'images/producten/chinees/gevlamd_geborsteld.jpg',
+            'subcategorie_id'=>7,
+        ]);
+
+        DB::table('products')->insert([
+            'naam'=>'Candela Grey',
+            'afmetingen'=>'20 x 5 x 5',
+            'prijs_particulier'=>'25.32',
+            'prijs_handelaar'=>'17.48',
+            'coverfoto'=>'images/producten/indisch/candela_grey_20x5x5.jpg',
+            'invoorraad'=>false,
+            'subcategorie_id'=>3,
+        ]);
+
+        DB::table('products')->insert([
+            'naam'=>'Candela Black',
+            'afmetingen'=>'20 x 20 x 2',
+            'prijs_particulier'=>'20',
+            'prijs_handelaar'=>'12',
+            'coverfoto'=>'images/producten/indisch/candela_black.jpg',
+            'subcategorie_id'=>3,
         ]);
     }
 }

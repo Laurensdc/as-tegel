@@ -60,7 +60,7 @@ class SubcategorieSeeder extends Seeder
         ]);
 
         DB::table('subcategories')->insert([
-            'naam'=>'Keramische Tegels',
+            'naam'=>'Keramiek',
             'subcat_linknaam'=>'keramiek',
             'coverfoto'=>'images/cover/keramiek.jpg',
 
@@ -68,6 +68,16 @@ class SubcategorieSeeder extends Seeder
 
         ]);
 
+
+        DB::table('subcategories')->insert([
+            'naam'=>'Vloer',
+            'subcat_linknaam'=>'vloer',
+        
+            'categorie_id'=>2,
+
+        ]);
+
+        
 
 
     }
