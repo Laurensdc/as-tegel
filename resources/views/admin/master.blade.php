@@ -9,7 +9,7 @@
 		<div class="toolbar">
 			<div class="toolbar_content">
 				<div class="toolbar_left">
-					<div class="toolbar_languages"><a href="{{ route('home') }}">Terug naar site</a></div>
+					<div class="toolbar_languages"><a href="{{ route('home') }}">Terug naar site</a> - <a href="{{ route('admin') }}">Admin Panel</a></div>
 				</div>
 				<div class="toolbar_right">
 					<div class="toolbar_contact">
