@@ -23,7 +23,7 @@
 
 	<br><br>
 
-	<h2>Gegevens bestelling</h2>
+	<h2>Producten</h2>
 	@for ($i = 0; $i < count($producten); $i++)
 
 		<p>
