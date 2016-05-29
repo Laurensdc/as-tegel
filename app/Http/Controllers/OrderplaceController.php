@@ -73,8 +73,8 @@ class OrderplaceController extends Controller
             });
 
 
-            // Redirect and confirm
-    	return view('mail.order',
+        // Redirect and confirm
+    	return view('mail.orderconfirm',
     	 [
     	 "items" => $items,
     	 "producten" => $producten,

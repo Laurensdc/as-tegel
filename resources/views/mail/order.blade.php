@@ -5,7 +5,7 @@
 <p>
 	Besteld door: {{ $user->lastname }} {{ $user->firstname }}<br>
 	Email: <a href="mailto:{{ $user->email }}">{{ $user->email }}</a><br>
-	@if(isset($user->telnr))
+	@if(isset($user->telnr) && $user->telnr != '')
 	Telefoonnr: {{ $user->telnr }}<br>
 	@endif
 	Datum bestelling: {{ $date }}

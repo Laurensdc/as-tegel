@@ -18,7 +18,7 @@
 					<div class="toolbar_languages"><a href="#" class="active">NL</a> - <a href="#">FR</a> - <a href="#">EN</a></div>
 				</div>
 				<div class="toolbar_right">
-					<div class="toolbar_contact"><a href="tel:0470053862">0470/05.38.62</a></div>
+					<div class="toolbar_contact">0470/05.38.62</div>
 					<div class="toolbar_contact"><a href="mailto:contact@as-tegel.be">contact@as-tegel.be</a></div>
 					@if(Auth::check())
 						<div class="toolbar_account">Welkom, {{ Auth::user()->firstname }} ({{ Auth::user()->role }}) &ndash;

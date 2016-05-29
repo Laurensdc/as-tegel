@@ -17,8 +17,10 @@
 
 - Sorteren: producten pagina (subcat sort?)
 - Dubbelchecken of alle product changes / oplijsting goed gebeuren want ik was zeer moe
-- Admin foto upload voorzien
 
+- Admin foto upload voorzien
 - Delete products/cat/subcat / ...
 
 - email verstuurd op 3 plaatsen aanpassen naar Chris ipv mij
+
+- Vragen welke telefoonnummer er moet staan / emails aanmaken

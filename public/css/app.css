@@ -417,6 +417,11 @@ header .header_bestelling a:hover {
 /* End of Articles */
 /* End of Categorie overzicht*/
 /* End of producten overzicht */
+/* Order */
+.ordercontent h2 {
+  margin: 5rem 0 2rem; }
+
+/* End of Order */
 /* Breadcrumb */
 .breadcrumb {
   height: 4rem;

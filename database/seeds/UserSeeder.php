@@ -21,14 +21,14 @@ class UserSeeder extends Seeder
 		DB::table('users')->insert([
 			'firstname'=>'Henk',
 			'lastname'=>'De Particulier',
-			'email'=>'henk@as-tegel.be',
+			'email'=>'particulier@as-tegel.be',
 			'password'=>bcrypt('123456'),
 			'role'=>'particulier'
 	   ]);
 		DB::table('users')->insert([
 			'firstname'=>'Jos',
 			'lastname'=>'De Handelaar',
-			'email'=>'jos@as-tegel.be',
+			'email'=>'handelaar@as-tegel.be',
 			'password'=>bcrypt('123456'),
 			'role'=>'handelaar'
 	   ]);
