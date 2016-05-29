@@ -49,6 +49,9 @@ Route::get('/admin', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminControl
 		// User rol van handelaar geven - gebruikt voor email link
 		Route::get('/admin/users/{email}/makehandelaar', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@makeHandelaar']);
 
+		// Delete
+		Route::get('/admin/users/delete/{id}', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@userDelete']);
+
 	// Producten
 		// Overview
 		Route::get('/admin/producten', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@productOverview', 'as' => 'admin_productoverview']);
@@ -63,6 +66,9 @@ Route::get('/admin', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminControl
 		Route::get('/admin/producten/add', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@productAdd']);
 		Route::post('/admin/producten/add', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@productAddAction']);
 
+		// Delete
+		Route::get('/admin/producten/delete/{id}', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@productDelete']);
+
 	// Categorie
 		// Overview
 		Route::get('/admin/categorie', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@categorieOverview', 'as' => 'admin_categorieoverview']);
@@ -74,6 +80,9 @@ Route::get('/admin', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminControl
 		// Add
 		Route::get('/admin/categorie/add', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@categorieAdd']);
 		Route::post('/admin/categorie/add', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@categorieAddAction']);
+
+		// Delete
+		Route::get('/admin/categorie/delete/{id}', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@categorieDelete']);
 
 
 	// Subcategorie
@@ -88,6 +97,7 @@ Route::get('/admin', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminControl
 		Route::get('/admin/subcategorie/add', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@subcategorieAdd']);
 		Route::post('/admin/subcategorie/add', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@subcategorieAddAction']);
 
+		Route::get('/admin/subcategorie/delete/{id}', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@subcategorieDelete']);
 
 
 

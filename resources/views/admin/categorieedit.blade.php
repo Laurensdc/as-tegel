@@ -25,8 +25,19 @@
 				<label></label>
 				<input type="submit" value="Aanpassen"> <a href="{{ route('admin') }}/categorie" class="boringlink">Annuleren</a>
 			</p>
+
 		</form>
 	</div>
 
+	<div class="admin_smallcol">
+				<span id="for_admin_delete"class="txt_warning">Verwijderen</span>
+				<a class="admin_delete btn" href="{{ route('admin' )}}/categorie/delete/{{ $categorie->id}}">Bevestig Verwijdering {{ $categorie->naam }}</a>	
+	</div>	
 @endsection
+
+@section('javascript') 
+	<script src="{{ asset('js/adminscripts.js') }}"></script>
+@endsection
+
+
 

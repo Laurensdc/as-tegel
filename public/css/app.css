@@ -502,4 +502,8 @@ a.admin_active {
   font-weight: 600;
   text-decoration: underline; }
 
+/* Delete confirmation-ish thing */
+a.admin_delete {
+  display: none; }
+
 /*# sourceMappingURL=app.css.map */

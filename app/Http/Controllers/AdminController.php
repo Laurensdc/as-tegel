@@ -20,6 +20,9 @@ class AdminController extends Controller
 
     }
 
+    ///////////////////////////////////////
+    ///// Users
+
     function userOverview() {
     	$users = User::orderBy('lastname')->get();
 
@@ -50,6 +53,13 @@ class AdminController extends Controller
     	return redirect()->route('admin_useroverview');
     }
 
+    function userDelete($id) {
+        $user = User::find($id);
+        $user->delete();
+
+        return redirect()->route('admin_useroverview');   
+    }
+
     function makeHandelaar($email) {
     	$user = User::where('email', $email)->first();
     	$user->role = 'handelaar';
@@ -67,6 +77,9 @@ class AdminController extends Controller
        	return redirect()->route('admin_useroverview');
     }
 
+
+    ///////////////////////////////////////
+    ///// Products
 
     function productOverview() {
         $producten = Product::orderBy('naam')->get();
@@ -136,6 +149,17 @@ class AdminController extends Controller
         return redirect()->route('admin_productoverview');
     }
 
+    function productDelete($id) {
+        $p = Product::find($id);
+        $p->delete();
+
+        return redirect()->route('admin_productoverview');
+    }
+
+
+    ///////////////////////////////////////
+    ///// Categories
+
     function categorieOverview() {
         $categories = Categorie::all();
 
@@ -185,6 +209,16 @@ class AdminController extends Controller
 
         return redirect()->route('admin_categorieoverview');
     }
+
+    function categorieDelete($id) {
+        $c = Categorie::find($id);
+        $c->delete();
+
+        return redirect()->route('admin_categorieoverview');
+    }
+
+    ///////////////////////////////////////
+    ///// Subcategories
 
     function subcategorieOverview() {
         $subcat = Subcategorie::all();
@@ -239,6 +273,13 @@ class AdminController extends Controller
         $subcat->coverfoto = $r['coverfoto'];
 
         $subcat->save();
+
+        return redirect()->route('admin_subcategorieoverview');
+    }
+
+    function subcategorieDelete($id) {
+        $s = Subcategorie::find($id);
+        $s->delete();
 
         return redirect()->route('admin_subcategorieoverview');
     }

@@ -7,14 +7,12 @@
 
 # TODO pre publish
 - mobile responsive
-- multi lang
 - zoekvenster producten + admin
 - items uit bestelling verwijderen
 
 - Sorteren: producten pagina (subcat sort?)
 
 - Admin foto upload voorzien
-- Admin Delete products/cat/subcat / ...
 
 ## TODO on publish
 - email verstuurd op 3 plaatsen aanpassen naar Chris ipv mij

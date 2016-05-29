@@ -45,12 +45,23 @@
 			<p>
 				<label>Foto</label>
 				<input type="text" name="foto" value="{{ $p->coverfoto }}" size="40">
-			</p>	
+			</p>
+
+
 			<label></label>
 			<input type="submit" value ="Aanpassen"> <a href="{{ route('admin_productoverview') }}" class="boringlink">Annuleren</a>
 		</form>
 	</div>
 
-
-
+	<div class="admin_smallcol">
+				<span id="for_admin_delete"class="txt_warning">Verwijderen</span>
+				<a class="admin_delete btn" href="{{ route('admin' )}}/producten/delete/{{ $p->id}}">Bevestig Verwijdering {{ $p->naam }}</a>
+	</div>	
 @endsection
+
+@section('javascript') 
+	<script src="{{ asset('js/adminscripts.js') }}"></script>
+@endsection
+
+
+

@@ -37,5 +37,13 @@
 		</form>
 	</div>
 
+	<div class="admin_smallcol">
+				<span id="for_admin_delete"class="txt_warning">Verwijderen</span>
+				<a class="admin_delete btn" href="{{ route('admin' )}}/users/delete/{{ $user->id}}">Bevestig Verwijdering {{ $user->firstname }} {{ $user->lastname }}</a>
+	</div>	
+@endsection
+
+@section('javascript') 
+	<script src="{{ asset('js/adminscripts.js') }}"></script>
 @endsection
 
