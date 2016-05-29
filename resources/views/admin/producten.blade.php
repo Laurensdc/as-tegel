@@ -1,4 +1,4 @@
-@extends('admin.master')
+@extends('admin.master', ['admin_menu' => 'producten'])
 
 @section('hugecontent')
 	<div class="admin_smallcol">

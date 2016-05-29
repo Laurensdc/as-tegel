@@ -498,4 +498,8 @@ header .header_bestelling a:hover {
 .admin_smallcol p {
   margin-bottom: 1rem; }
 
+a.admin_active {
+  font-weight: 600;
+  text-decoration: underline; }
+
 /*# sourceMappingURL=app.css.map */

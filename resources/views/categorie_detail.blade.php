@@ -84,14 +84,7 @@
 
 @if($showtoast)
 	<script src="{{ asset('bower_components/toastr/toastr.min.js') }}"></script>
-	<script>
-		toastr.options = {
-	  "newestOnTop": true,
-	  "positionClass": "toast-top-right",
-	  "timeOut": "4000",
-
-	}
-	</script>
+	<script>toastr.options = { "newestOnTop": true, "positionClass": "toast-top-right", "timeOut": "4000", }</script>
 	<script>toastr.success("Product toegevoegd aan uw bestelling");</script>
 @endif
 

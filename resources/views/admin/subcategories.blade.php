@@ -1,4 +1,4 @@
-@extends('admin.master')
+@extends('admin.master', ['admin_menu' => 'subcategorie'])
 
 @section('content')
 	<div class="admin_smallcol">

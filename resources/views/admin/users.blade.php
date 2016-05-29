@@ -1,5 +1,4 @@
-@extends('admin.master')
-
+@extends('admin.master', ['admin_menu' => 'gebruikers'])
 
 @section('content')
 

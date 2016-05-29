@@ -13,16 +13,16 @@
 				</div>
 				<div class="toolbar_right">
 					<div class="toolbar_contact">
-						<strong><a href="{{ route('admin_useroverview') }}">Gebruikers</a></strong>
+						<a @if($admin_menu=='gebruikers') class="admin_active" @endif href="{{ route('admin_useroverview') }}">Gebruikers</a>
 					</div>
 					<div class="toolbar_contact">
-						<strong><a href="{{ route('admin_productoverview') }}">Producten</a></strong>
+						<a @if($admin_menu=='producten') class="admin_active" @endif href="{{ route('admin_productoverview') }}">Producten</a>
 					</div>
 					<div class="toolbar_contact">
-						<strong><a href="{{ route('admin_categorieoverview') }}">Categorie</a></strong>
+						<a @if($admin_menu=='categorie') class="admin_active" @endif href="{{ route('admin_categorieoverview') }}">Categorie</a>
 					</div>
 					<div class="toolbar_contact">
-						<strong><a href="{{ route('admin_subcategorieoverview') }}">Subcategorie</a></strong>
+						<a @if($admin_menu=='subcategorie') class="admin_active" @endif href="{{ route('admin_subcategorieoverview') }}">Subcategorie</a>
 					</div>
 					@if(Auth::check())
 						<div class="toolbar_account">Ingelogd als {{ Auth::user()->firstname }} ({{ Auth::user()->role }}) &ndash;

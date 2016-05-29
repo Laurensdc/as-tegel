@@ -15,8 +15,6 @@ use DB;
 
 class AdminController extends Controller
 {
-
-
     function mainPanel() {
     	return view('admin.home');
 
