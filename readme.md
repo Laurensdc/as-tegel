@@ -11,8 +11,8 @@
 - items uit bestelling verwijderen
 
 - Sorteren: producten pagina (subcat sort?)
+- Edit subcat/cat photo
 
-- Admin foto upload voorzien
 
 ## TODO on publish
 - email verstuurd op 3 plaatsen aanpassen naar Chris ipv mij
