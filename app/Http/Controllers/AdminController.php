@@ -108,6 +108,22 @@ class AdminController extends Controller
     }
 
     function productEdit($id, Request $r) {
+        // File upload in correct folder, also on fail
+        $f = $r->file('foto');
+        $path = 'images/cover/';
+        $name = '_geenfoto.jpg';
+        $passpath = $r['coverfoto'];    // Original path
+
+        if($r->hasFile('foto')) {
+            if($r->file('foto')->isValid()) {
+                $path = public_path() . '/' . $r['coverfoto']; 
+                $name = $f->getClientOriginalName();
+                $f->move($path, $name);
+                $path = $r['coverfoto'];
+                $passpath = $path . $name;  // Only edit $p->coverfoto in this case
+           }
+        }
+
         // Make changes to product
         $p = Product::find($id);
         
@@ -117,7 +133,7 @@ class AdminController extends Controller
         $p->prijs_handelaar = $r['prijs_handelaar'];
         $p->invoorraad = $r['invoorraad'];
         $p->beschrijving = $r['beschrijving'];
-        $p->coverfoto = $r['foto'];
+        $p->coverfoto = $passpath;
         $p->subcategorie_id = $r['subcategorie_id'];
 
         $p->save();
@@ -190,7 +206,7 @@ class AdminController extends Controller
 
     function categorieEdit($id, Request $r) {
         $this->validate($r, [
-            'cat_linknaam' => 'alpha|unique:categories'
+            'cat_linknaam' => 'alpha|unique:categories,cat_linknaam,' . $id
             ]);
 
         $cat = Categorie::find($id);
@@ -266,7 +282,7 @@ class AdminController extends Controller
 
     function subcategorieEdit($id, Request $r) {
         $this->validate($r, [
-            'subcat_linknaam' => 'alpha|unique:subcategories'
+            'subcat_linknaam' => 'alpha|unique:subcategories,subcat_linknaam,' . $id
             ]);
 
         $subcat = Subcategorie::find($id);
