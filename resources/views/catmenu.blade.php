@@ -1,7 +1,5 @@
-
-
 <ul class="catmenu">
-	<li class="catmenu_title">Categorieën</li>
+	<li class="catmenu_title">{{ trans('cont.categorieen') }}</li>
 	@foreach($allcategories as $cat)
 		<li @if($catmenu_active === $cat->cat_linknaam) class="active" @endif >
 			<a href="#" onclick="event.preventDefault()">{{ $cat->naam }}</a>

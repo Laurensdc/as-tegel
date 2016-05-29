@@ -26,6 +26,13 @@ Route::get('/order', ['uses' => 'OrderController@overview', 'as' => 'order']);
 Route::get('/order/delete', ['uses' => 'OrderController@deleteorder', 'as' => 'deleteorder']);
 Route::get('/order/place', ['uses' => 'OrderplaceController@placeOrder', 'as' => 'placeorder']);
 
+// Lang
+Route::get('/lang/{ln}', function($ln) {
+        App::setLocale($ln);
+       	return redirect()->route('home');
+});
+
+// Auth
 Route::auth();
 
 // Admin

@@ -15,7 +15,7 @@
 		<div class="toolbar">
 			<div class="toolbar_content">
 				<div class="toolbar_left">
-					<div class="toolbar_languages"><a href="#" class="active">NL</a> - <a href="#">FR</a> - <a href="#">EN</a></div>
+					<div class="toolbar_languages"><a href="{{ route('home') }}/lang/nl" class="active">NL</a> - <a href="{{ route('home') }}/lang/fr">FR</a> - <a href="{{ route('home') }}/lang/en">EN</a></div>
 				</div>
 				<div class="toolbar_right">
 					<div class="toolbar_contact">0470/05.38.62</div>
