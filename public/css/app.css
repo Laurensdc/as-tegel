@@ -112,6 +112,28 @@ body {
   font-family: "Verdana", sans-serif;
   background-color: #FAFAFA; }
 
+/* Content widths */
+.container {
+  margin: 0 auto;
+  width: 70%;
+  background-color: #FAFAFA; }
+
+header {
+  width: 70%;
+  margin: 1.5rem 15%;
+  height: 6rem; }
+
+.toolbar_content {
+  width: 70%;
+  margin: 0 15%;
+  padding: 0.5rem 0; }
+
+.homecontainer {
+  width: 70%;
+  margin: 0 15%;
+  background-color: #FAFAFA; }
+
+/* End of content widths */
 a {
   text-decoration: none;
   color: #AFB42B;
@@ -182,11 +204,6 @@ a.boringlink:hover {
   background-color: #424242;
   color: #FAFAFA; }
 
-.toolbar_content {
-  width: 80%;
-  margin: 0 10%;
-  padding: 0.5rem 0; }
-
 .toolbar a {
   color: #FAFAFA; }
 
@@ -211,11 +228,6 @@ a.boringlink:hover {
 
 /* End of Toolbar */
 /* Menu */
-header {
-  width: 80%;
-  margin: 1.5rem 10%;
-  height: 6rem; }
-
 header img {
   max-height: 6rem; }
 
@@ -251,17 +263,7 @@ header .header_bestelling a:hover {
   text-decoration: underline; }
 
 /* End of Menu */
-.container {
-  margin: 0 auto;
-  width: 80%;
-  background-color: #FAFAFA; }
-
 /* Container */
-.homecontainer {
-  width: 80%;
-  margin: 0 10%;
-  background-color: #FAFAFA; }
-
 .homecontainer article {
   overflow: hidden;
   background-size: cover;
