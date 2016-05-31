@@ -206,7 +206,7 @@ class AdminController extends Controller
 
     function categorieEdit($id, Request $r) {
         $this->validate($r, [
-            'cat_linknaam' => 'alpha|unique:categories,cat_linknaam,' . $id
+            'cat_linknaam' => 'alpha|required|unique:categories,cat_linknaam,' . $id
             ]);
 
         $cat = Categorie::find($id);
@@ -226,7 +226,7 @@ class AdminController extends Controller
 
     function categorieAddAction(Request $r) {
         $this->validate($r, [
-            'cat_linknaam' => 'alpha|unique:categories'
+            'cat_linknaam' => 'alpha|required|unique:categories'
             ]);
 
         // File upload in correct folder, also on fail
@@ -282,7 +282,7 @@ class AdminController extends Controller
 
     function subcategorieEdit($id, Request $r) {
         $this->validate($r, [
-            'subcat_linknaam' => 'alpha|unique:subcategories,subcat_linknaam,' . $id
+            'subcat_linknaam' => 'alpha|required|unique:subcategories,subcat_linknaam,' . $id
             ]);
 
         $subcat = Subcategorie::find($id);
@@ -306,7 +306,7 @@ class AdminController extends Controller
 
     function subcategorieAddAction(Request $r) {
         $this->validate($r, [
-            'subcat_linknaam' => 'alpha|unique:subcategories'
+            'subcat_linknaam' => 'alpha|required|unique:subcategories'
             ]);
 
         // File upload in correct folder, also on fail

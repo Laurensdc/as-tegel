@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App;
 use App\Http\Requests;
 use Illuminate\Http\Request;
+use Session;
+use Redirect;
 
 class HomeController extends Controller
 {
@@ -20,6 +22,11 @@ class HomeController extends Controller
 
     function contact() {
         return view('contact', ["title" => "Contact", "headermenu_active" => "contact"]);
+    }
+
+    function lang($ln) {
+        Session::put('ln', $ln);      
+        return Redirect::back();
     }
 
 }
