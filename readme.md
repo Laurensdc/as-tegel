@@ -14,9 +14,18 @@
 - Edit subcat/cat photo
 
 
+- Checke nof het wel nodig is om aparte prijzen in te geven: Handelaar 6% particulier 21% ??
+- BTW nummer bij handelaars opslaan
+- Facturatie adres, etc
+
+
+
 ## TODO on publish
 - email verstuurd op 3 plaatsen aanpassen naar Chris ipv mij
 - Vragen welke telefoonnummer er moet staan / emails aanmaken (?) / contact pagina -> fotos?
 - Fix /public folder
 
+
+## Wont be implemented
+- In tabellen aparte kolommen voor FR en EN naam bijgeven
 

@@ -36,7 +36,7 @@
 
 		<header>
 			<ul>
-				<li><a href="{{ route('home') }}"><img src="{{ asset('assets/logo.png') }}" alt="Logo"/></a></li>
+				<li><a href="{{ route('home') }}"  class="logo"><img src="{{ asset('assets/logo.png') }}" alt="Logo"/></a></li>
 				<li><a href="{{ route('home') }}" @if($headermenu_active === 'home') class="active" @endif>Home</a></li>
 				<li><a href="{{ route('producten') }}" @if($headermenu_active === 'producten') class="active" @endif>{{ trans('cont.products') }}</a></li>				
 				<li><a href="{{ route('contact') }}" @if($headermenu_active === 'contact') class="active" @endif>Contact</a></li>			
