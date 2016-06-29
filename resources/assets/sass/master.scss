@@ -236,11 +236,8 @@ header .header_bestelling a:hover {
 
 
 	@media (min-width: $screen_medium) {
-
-
+		
 		/* Toolbar */
-
-
 		.toolbar_account {
 			margin-left:5rem;
 		}
@@ -270,10 +267,6 @@ header .header_bestelling a:hover {
 			padding: 0 3rem;
 		}
 
-		
-
-
-
 		header .header_bestelling {
 			position: relative;
 			top:0; right:0;
@@ -287,9 +280,7 @@ header .header_bestelling a:hover {
 
 		header .header_bestelling a {
 			line-height:6rem;
-		}
-
-		
+		}		
 		/* End of menu */
 
 	}

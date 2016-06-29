@@ -262,6 +262,15 @@
 			padding: 0.5rem;
 		}
 
+		/* Categorie overzicht */
+
+			/* Caption */
+			.categorie_overzicht .producten_caption a {
+				font-size:1.5rem;
+			}
+
+		/* End of categorie overzicht */	
+
 	}
 
 	@media (min-width: $screen_biggest) {
@@ -279,6 +288,10 @@
 			} 
 			.producten_content article p {
 				font-size:1.4rem;
+			}
+			/* Caption */
+			.categorie_overzicht .producten_caption a {
+				font-size:2rem;
 			}
 			/* End of categorie overzicht */
 		

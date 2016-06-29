@@ -553,7 +553,12 @@ header .header_bestelling a:hover {
   .producten_content {
     padding: 0; }
   .producten_content article {
-    padding: 0.5rem; } }
+    padding: 0.5rem; }
+  /* Categorie overzicht */
+  /* Caption */
+  .categorie_overzicht .producten_caption a {
+    font-size: 1.5rem; }
+  /* End of categorie overzicht */ }
 
 @media (min-width: 100em) {
   /* Producten Overzicht */
@@ -564,6 +569,9 @@ header .header_bestelling a:hover {
     font-size: 1.8rem; }
   .producten_content article p {
     font-size: 1.4rem; }
+  /* Caption */
+  .categorie_overzicht .producten_caption a {
+    font-size: 2rem; }
   /* End of categorie overzicht */
   /* Margins for 3 col view */
   .producten_content {
