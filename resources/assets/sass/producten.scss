@@ -1,6 +1,7 @@
 /* Menu styles */
 .catmenu_container {
-	width:25rem;
+	width:96%;
+	margin:0 2%;
 	float:left;
 	background-color:$graywhite;
 
@@ -28,6 +29,7 @@
 	color:$textcolor;
 	padding:1rem;
 	display:inline-block;
+
 }
 
 .catmenu a:hover {
@@ -44,8 +46,8 @@
 	background-color:$notsowhite;
 	overflow:hidden;
 
-	padding-top:1rem;
-	padding-left:2rem;
+	//padding-top:1rem;
+	padding:1rem;
 }
 
 
@@ -73,7 +75,7 @@
 	.producten_content article h1 {
 		margin:1rem 0;
 		font-size:1.8rem;
-		font-weight:400;
+		font-weight:800;
 	}
 	.producten_content ul {
 		margin-bottom: 2rem;
@@ -96,9 +98,9 @@
 		background-position:center top;				
 		margin-bottom: 7rem;
 
-		width:31.33333%;
+		width:100%;
 		float:left;
-		margin:0 1% 2%;
+		margin:1rem 0;
 		
 	}
 	.categorie_overzicht article {
@@ -177,7 +179,117 @@
 }
 
 .breadcrumb p {
-	line-height:4rem;
+	line-height:2rem;
+	font-size:1.4rem;
 }
 
 /* End of Breadcrumb */
+
+/* Media queries */
+
+
+
+	@media (min-width: $screen_medium) {
+
+		/* Menu styles */
+		.catmenu_container {
+			width:25rem;
+			margin: 1rem;
+		}
+
+		/* End of menu styles */
+		
+		/* Producten content, Categorie overzicht */
+		.categorie_overzicht, .producten_content {
+			overflow:hidden;
+		}
+		/* End of Producten content, Categorie overzicht */
+
+
+
+		/* Breadcrumb */
+		.breadcrumb {
+			height:4rem;
+		}
+
+		.breadcrumb p {
+			line-height:4rem;
+			font-size:1.6rem;
+		}
+
+		/* End of Breadcrumb */
+
+	}
+
+	@media (min-width: $screen_mediumbig) {
+		/* Producten Overzicht */
+
+			/* Categorie overzicht */
+			.categorie_overzicht article, .producten_content article {
+				width:31.33333%;
+				float:left;
+				margin:0 1% 2%;
+			}
+
+			.producten_content article li {
+				font-size:1.3rem;
+			}
+			.producten_content article h1 {	
+				font-size:1.5rem;
+			} 
+			.producten_content article p {
+				font-size:1.2rem;
+			}
+
+			/* End of categorie overzicht */
+		/* End of producten overzicht */
+
+	}
+
+	@media (min-width: $screen_big) {
+		/* Menu styles */
+		.catmenu_container {
+			margin:0;
+		}
+
+
+		/* Producten overzicht */
+		.producten_content {
+			padding: 0;
+			
+		}
+		.producten_content article {
+			padding: 0.5rem;
+		}
+
+	}
+
+	@media (min-width: $screen_biggest) {
+		/* Producten Overzicht */
+
+			/* Categorie overzicht */
+
+			.producten_content article li {
+				font-size:1.6rem;
+			}
+
+			.producten_content article h1 {
+
+				font-size:1.8rem;
+			} 
+			.producten_content article p {
+				font-size:1.4rem;
+			}
+			/* End of categorie overzicht */
+		
+		/* Margins for 3 col view */ 
+		.producten_content {
+			padding: 1rem;
+		}
+		.producten_content article {
+			padding: 1rem;
+		}
+		/* End of producten overzicht */
+	}
+
+/* End of Media queries */
