@@ -15,7 +15,7 @@
 				<input type="text" name="subcat_linknaam">
 			</p>		
 			@if ($errors->has('subcat_linknaam'))
-				<p class="txt_warning"><label></label> Kleine letters, geen spaties, moet uniek zijn</p>
+				<p class="txt_warning"><label></label> Kleine letters, geen spaties, niet leeg, moet uniek zijn</p>
 			@endif	
 
 			<p>

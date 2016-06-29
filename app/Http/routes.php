@@ -17,6 +17,10 @@ Route::get('/home', function() {
 	return redirect()->route('home');
 });
 
+// Lang
+Route::get('/lang/{ln}', 'HomeController@lang');
+
+
 // Contact
 Route::get('/contact', ['middleware' => 'lang', 'as' => 'contact', 'uses' => 'HomeController@contact']);
 
@@ -31,11 +35,6 @@ Route::get('/order', ['middleware' => 'lang', 'uses' => 'OrderController@overvie
 Route::get('/order/delete', ['middleware' => 'lang', 'uses' => 'OrderController@deleteorder', 'as' => 'deleteorder']);
 Route::get('/order/place', ['middleware' => 'lang', 'uses' => 'OrderplaceController@placeOrder', 'as' => 'placeorder']);
 
-// Lang
-Route::get('/lang/{ln}', function($ln) {
-		Session::put('ln', $ln);      
-       	return Redirect::back();
-});
 
 // Auth
 Route::auth();

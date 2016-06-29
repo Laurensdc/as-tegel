@@ -15,7 +15,7 @@
 				<input type="text" name="cat_linknaam">
 			</p>		
 			@if ($errors->has('cat_linknaam'))
-				<p class="txt_warning"><label></label> Kleine letters, geen spaties, moet uniek zijn</p>
+				<p class="txt_warning"><label></label> Kleine letters, geen spaties, niet leeg, moet uniek zijn</p>
 			@endif	
 			<p>
 				<label>Map voor foto</label>
