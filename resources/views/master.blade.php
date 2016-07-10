@@ -16,9 +16,9 @@
 			<div class="toolbar_content">
 				<div class="toolbar_left">
 					<div class="toolbar_languages">
-						<a href="{{ route('home') }}/lang/nl" @if(Session::get('ln') == 'nl') class="active" @endif>NL</a> - 
-						<a href="{{ route('home') }}/lang/fr" @if(Session::get('ln') == 'fr') class="active" @endif>FR</a> -
-						<a href="{{ route('home') }}/lang/en" @if(Session::get('ln') == 'en') class="active" @endif>EN</a></div>
+						<a href="{{ route('home') }}/lang/nl" @if(Cookie::get('ln') == 'nl') class="active" @endif>NL</a> - 
+						<a href="{{ route('home') }}/lang/fr" @if(Cookie::get('ln') == 'fr') class="active" @endif>FR</a> -
+						<a href="{{ route('home') }}/lang/en" @if(Cookie::get('ln') == 'en') class="active" @endif>EN</a></div>
 				</div>
 				<div class="toolbar_right">
 					<div class="toolbar_contact">0470/05.38.62</div>
