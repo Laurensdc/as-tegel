@@ -8,6 +8,7 @@ use App\Http\Requests;
 
 class HomepageController extends Controller
 {
+    // Not in use ?
     public function index()
     {
         return view('home');

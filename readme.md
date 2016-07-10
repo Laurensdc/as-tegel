@@ -6,7 +6,8 @@
 
 
 # TODO pre publish
-- mobile responsive
+- Test responsiveness on all pages
+
 - zoekvenster producten + admin
 - items uit bestelling verwijderen
 
