@@ -19,6 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->string('telnr');
+            $table->string('btwnr')->unique()->nullable();
             $table->enum('role', array('particulier', 'handelaar', 'admin'));
             $table->rememberToken();
             $table->timestamps();
