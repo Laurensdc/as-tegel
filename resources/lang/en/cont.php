@@ -18,6 +18,6 @@ return [
 	"order"			=> "Order",
 	"product_added"	=> "Product added to your order",
 	"orderit"		=> "Order now",
-	
+	"prijzen_afgehaald" =>  "All prices are given for pickup of goods. BTW included.",
 
 ];

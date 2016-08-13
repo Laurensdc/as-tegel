@@ -18,7 +18,7 @@ return [
 	"order"			=> "Commande",
 	"product_added"	=> "Produit ajouté à votre commande",
 	"orderit"		=> "Commandez",
-	
+	"prijzen_afgehaald" =>  "Tous les prix sont donnés hors transport. BTW inclu.",
 
 ];
 

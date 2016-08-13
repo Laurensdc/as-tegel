@@ -22,9 +22,10 @@
 		@endfor
 
 		<p>Totale prijs: &euro;{{ $totaleprijs }}</p>
-
 		<br>
-
+        <p>{{ trans('cont.prijzen_afgehaald') }}</p>
+        <br>
+        
 		<p>
 			<a href="{{ route('placeorder') }}" class="btn">{{ trans('cont.orderit') }}</a> <a href="{{ route('deleteorder') }}" class="boringlink">Alle items verwijderen</a>
 		</p>
