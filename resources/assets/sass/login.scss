@@ -10,8 +10,14 @@
 	margin-top:4rem;
 }
 
+.login_panel div {
+    margin-bottom:1rem;
+    padding-bottom:1rem;
+    border-bottom:1px solid $graywhite;
+}
+
 .login_panel input {
-	margin-bottom:1.5rem;
+	
 }
 
 .login_panel label {
@@ -33,4 +39,12 @@
 .login_handelaar p {
 	line-height:2.4rem;
 	margin-left:1rem;
+}
+
+.input_btw {
+    display:none;
+}
+
+.login_panel p.handelaar_tekst {
+    margin:1rem 0;
 }

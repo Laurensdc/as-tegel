@@ -72,8 +72,8 @@
 		</div>
 
 		<div class="login_handelaar">
-			<input type="checkbox" name="is_handelaar" id="cbhandelaar">Ik ben een handelaar
-			<p id="handelaar_tekst"></p>
+			<input type="checkbox" name="is_handelaar" id="cbhandelaar"> Ik ben een handelaar
+			<p class="handelaar_tekst" id="handelaar_tekst"></p>
 		</div>
 
         <div class="input_btw">
@@ -94,16 +94,7 @@
 
 @section('javascript')
 
-<script src="{{ asset('bower_components/jquery/dist/jquery.min.js') }}"></script>
-
-<script>
-	$('#cbhandelaar').on('click', function() {
-		if($('#cbhandelaar').prop('checked')) {
-			$('#handelaar_tekst').html('U dient een aanvraag in om als handelaar geregistreerd te worden.');
-            $('#btw').type('text');
-        }
-		else $('#handelaar_tekst').html('');
-	});
-</script>
+<script src="{{ asset('bower_components/jquery/dist/jquery.min.js') }}"></script>   
+<script src="{{ asset('js/register.js') }}"></script>
 
 @endsection
