@@ -3,7 +3,7 @@
 @section('content')
 <div class="login_panel">
 	<h2>Registreer</h2>
-	<form role="form" method="POST" action="{{ url('/register') }}">
+	<form role="form" method="POST" action="{{ url('/register') }}" id="registerform">
 		{{ csrf_field() }}
 
 		<div>
@@ -78,12 +78,8 @@
 
         <div class="input_btw">
             <label>BTW Nummer</label>
-            <input type="text" name="btw" id="btw" value="BTW BE ">
-            @if ($errors->has('btw'))$_COOKIE
-				<span class="txt_warning">
-					{{ $errors->first('btw') }}
-				</span>
-            @endif
+            <input type="text" name="btw" id="btw" value="BE ">
+            <span class="txt_warning" id="btw_errormsg"></span>
         </div>
 
 		<input type="submit" value="Registreer"/>

@@ -7,6 +7,9 @@
 @if($telnr != '')
 <p>Telefoonnr: {{ $telnr }}</p>
 @endif
+@if($btw != '')
+<p>BTW: {{ $btw }}</p>
+@endif
 <br>
 <p>
 <strong><a href="{{ route('home') }}/admin/users/{{ $email }}/makehandelaar">{{ $achternaam }} {{ $voornaam }} Goedkeuren</a></strong>

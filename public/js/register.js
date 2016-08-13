@@ -8,3 +8,14 @@ $('#cbhandelaar').on('click', function() {
         $('.input_btw').hide();
     }
 });
+
+
+$('#registerform').submit(function(e) {
+    // If handelaar is checked and btw nummer is too short or not filled in
+    if($('#cbhandelaar').prop('checked')) {
+        if($('#btw').val().length < 13) {
+            e.preventDefault();
+            $('#btw_errormsg').html('Gelieve een geldig btw-nummer in te geven');
+        }
+    }
+});

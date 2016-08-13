@@ -73,7 +73,8 @@ class AuthController extends Controller
              [  'voornaam' => $data['voornaam'],
                 'achternaam' => $data['naam'],
                 'telnr' => $data['tel'],
-                'email' => $data['email']
+                'email' => $data['email'],
+                'btw' => $data['btw']
              ], function($message) use ($naam)
             {
                 $message->to('laurensdc@gmail.com', 'Laurens De Cock')->subject('Aanvraag registratie handelaar ' . $naam);
@@ -81,13 +82,13 @@ class AuthController extends Controller
 
         }
 
-
         return User::create([
             'firstname' => $data['voornaam'],
             'lastname' => $data['naam'],
             'role' => 'particulier',
             'telnr' => $data['tel'],
             'email' => $data['email'],
+            'btwnr' => $data['btw'],
             'password' => bcrypt($data['password'])
         ]);
     }

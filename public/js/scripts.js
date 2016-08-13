@@ -6,4 +6,3 @@ $('.catmenu li').on('click', function(e) {
 	$('.catmenu ul').hide(200);
 	$(this).next().show(300);
 });
-
