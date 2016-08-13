@@ -20,6 +20,16 @@
 - Facturatie adres, etc
 
 
+- Foto;s bij uupload naar juist eformaat ?
+- In subcategorie groeperen (als admin) -> 'groep' bijvoegen
+- Vermelden dat het exclusief transport is 
+- Prijzen afgehaald te desselgem 
+- als particulier: inclusfie btw
+
+- get jquery out
+
+
+- BTW nummer opslaan per klant -> btw uniek
 
 ## TODO on publish
 - email verstuurd op 3 plaatsen aanpassen naar Chris ipv mij

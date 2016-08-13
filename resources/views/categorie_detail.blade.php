@@ -54,15 +54,14 @@
 				@endif
 
 				@if($p->invoorraad == false)
-					<p class="txt_warning">{{ trans('cont.nostock') }}</p>
-				@else
-					<form action="" method="post" name="form">
-						{{ csrf_field() }}
-						<input type="hidden" value="{{ $p->id }}" name="prod_id">
-						<p>{{ trans('cont.add') }} <input type="number" name="vierkantemeter" min="1" max="1000" value="20" required/>m&sup2; {{ trans('cont.toorder') }}.</p> 
-						<p><input type="submit" clas="btn btn_cta" value="{{ trans('cont.order') }}"/></p>
-					</form>
+					<p class="txt_warning">{{ trans('cont.nostock') }}.</p>
 				@endif
+                <form action="" method="post" name="form">
+                    {{ csrf_field() }}
+                    <input type="hidden" value="{{ $p->id }}" name="prod_id">
+                    <p>{{ trans('cont.add') }} <input type="number" name="vierkantemeter" min="1" max="1000" value="20" required/>m&sup2; {{ trans('cont.toorder') }}.</p> 
+                    <p><input type="submit" clas="btn btn_cta" value="{{ trans('cont.order') }}"/></p>
+                </form>
 			</article>
 
 			@if(($i+1)%3 == 0)

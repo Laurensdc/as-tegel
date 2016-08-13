@@ -12,7 +12,7 @@ return [
 	"noproducts"	=> "Geen producten gevonden",
 	"dimensions"	=> "Afmetingen",
 	"price"			=> "Prijs",
-	"nostock"		=> "Niet in voorraad",
+	"nostock"		=> "Niet in voorraad, maar bestellen is mogelijk",
 	"add"			=> "Voeg",
 	"toorder"		=> "toe aan mijn bestelling",
 	"order"			=> "Bestel",

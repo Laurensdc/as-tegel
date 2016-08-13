@@ -66,6 +66,7 @@ class AdminController extends Controller
     	$user->save();
 
     	/* THIS WONT WORK and i DONT know WHY! I can pass variable to subject line but not to '$m->to' function
+        // Probably because mailgun only allows registered email to be sent to
 		Mail::send('mail.handelaar_goedgekeurd', ['user' => $user], function($m) use ($user)
 		{
 		    $m->from('mailer@as-tegel.be', 'As-Tegel');

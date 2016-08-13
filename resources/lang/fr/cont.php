@@ -12,7 +12,7 @@ return [
 	"noproducts"	=> "Pas des produits",
 	"dimensions"	=> "Dimensions",
 	"price"			=> "Prix",
-	"nostock"		=> "Pas de stock maintenant",
+	"nostock"		=> "Pas de stock maintenant, mais vous pouvez encore commander",
 	"add"			=> "Ajoutez",
 	"toorder"		=> "à ma commande",
 	"order"			=> "Commande",

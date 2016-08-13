@@ -76,6 +76,16 @@
 			<p id="handelaar_tekst"></p>
 		</div>
 
+        <div class="input_btw">
+            <label>BTW Nummer</label>
+            <input type="text" name="btw" id="btw" value="BTW BE ">
+            @if ($errors->has('btw'))$_COOKIE
+				<span class="txt_warning">
+					{{ $errors->first('btw') }}
+				</span>
+            @endif
+        </div>
+
 		<input type="submit" value="Registreer"/>
 	</form>
 </div>
@@ -88,8 +98,10 @@
 
 <script>
 	$('#cbhandelaar').on('click', function() {
-		if($('#cbhandelaar').prop('checked'))
+		if($('#cbhandelaar').prop('checked')) {
 			$('#handelaar_tekst').html('U dient een aanvraag in om als handelaar geregistreerd te worden.');
+            $('#btw').type('text');
+        }
 		else $('#handelaar_tekst').html('');
 	});
 </script>
