@@ -30,7 +30,8 @@ class UserSeeder extends Seeder
 			'lastname'=>'De Handelaar',
 			'email'=>'handelaar@as-tegel.be',
 			'password'=>bcrypt('123456'),
-			'role'=>'handelaar'
+			'role'=>'handelaar',
+			'btwnr'=>'BE123451235'
 	   ]);
 
 
