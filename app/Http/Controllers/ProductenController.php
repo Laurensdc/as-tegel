@@ -8,6 +8,7 @@ use App\Http\Requests;
 
 use App\Categorie;
 use App\Subcategorie;
+use DB;
 
 use Session;
 
@@ -66,14 +67,14 @@ class ProductenController extends Controller
     }
 
     function categorieDetail($cat, $subcat, $showtoast=false) {
-
-	   //	$categorie = Categorie::where('cat_linknaam', $cat)->first();
-	  // 	$subcategories = $categorie->subcategories;	// Subcats for this category
+        //	$categorie = Categorie::where('cat_linknaam', $cat)->first();
+        // 	$subcategories = $categorie->subcategories;	// Subcats for this category
 	   	
 	   	$subcategories = Subcategorie::where('subcat_linknaam', $subcat)->first();
         $subcategorie = $subcategories["naam"];
 
-	   	$producten = $subcategories->products;
+	   	//$producten = $subcategories->products;
+        $producten = $subcategories->products()->orderBy('groepering')->get();
 
 	   	$allcategories = Categorie::all();
     	$allsubcategories = Subcategorie::all();

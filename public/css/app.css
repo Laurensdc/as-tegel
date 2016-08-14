@@ -620,7 +620,8 @@ header .header_bestelling a:hover {
   margin: 1rem 0; }
 
 .admin_container {
-  margin-top: 2rem; }
+  margin-top: 2rem;
+  font-size: 1.4rem; }
 
 .admin_hugecontainer {
   overflow: auto;

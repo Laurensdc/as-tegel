@@ -18,6 +18,7 @@ class ProductSeeder extends Seeder
             'prijs_handelaar'=>'15.32',
             'coverfoto'=>'images/producten/vietnamees/getrommeld.jpg',
             'subcategorie_id'=>1,
+            'groepering'=>2,
 
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s')
@@ -66,6 +67,7 @@ class ProductSeeder extends Seeder
             'prijs_handelaar'=>'25.00',
             'coverfoto'=>'images/producten/vietnamees/getrommeld_2.jpg',
             'subcategorie_id'=>1,
+            'groepering'=>1,
 
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s')
@@ -76,7 +78,8 @@ class ProductSeeder extends Seeder
             'afmetingen'=>'40 x 40 x 2',
             'prijs_particulier'=>'22.32',
             'prijs_handelaar'=>'24.32',
-            'subcategorie_id'=>1
+            'subcategorie_id'=>1,
+            'groepering'=>1,
         ]);
 
         DB::table('products')->insert([
@@ -86,6 +89,7 @@ class ProductSeeder extends Seeder
             'prijs_handelaar'=>'25.00',
             'coverfoto'=>'images/producten/vietnamees/getrommeld.jpg',
             'subcategorie_id'=>1,
+            'groepering'=>1,
             'invoorraad'=>false,
         ]);
 

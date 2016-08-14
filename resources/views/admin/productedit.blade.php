@@ -28,6 +28,10 @@
 					<option value="0" @if(!$p->invoorraad)selected @endif>Nee</option>
 				</select>
 			</p>
+            <p>
+                <label>Groeperingsnummer</label>
+                <input type="number" name="groepering" value="{{ $p->groepering }}">
+            </p>
 			<p>
 				<label>Behoort tot subcategorie</label>
 				<select name="subcategorie_id">

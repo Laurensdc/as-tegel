@@ -65,7 +65,7 @@ class AdminController extends Controller
     	$user->role = 'handelaar';
     	$user->save();
 
-    	/* THIS WONT WORK and i DONT know WHY! I can pass variable to subject line but not to '$m->to' function
+    	/* Won't work - I can pass variable to subject line but not to '$m->to' function
         // Probably because mailgun only allows registered email to be sent to
 		Mail::send('mail.handelaar_goedgekeurd', ['user' => $user], function($m) use ($user)
 		{
@@ -133,6 +133,7 @@ class AdminController extends Controller
         $p->prijs_particulier = $r['prijs_particulier'];
         $p->prijs_handelaar = $r['prijs_handelaar'];
         $p->invoorraad = $r['invoorraad'];
+        $p->groepering = $r['groepering'];
         $p->beschrijving = $r['beschrijving'];
         $p->coverfoto = $passpath;
         $p->subcategorie_id = $r['subcategorie_id'];
@@ -171,6 +172,7 @@ class AdminController extends Controller
         $p->prijs_particulier = $r['prijs_particulier'];
         $p->prijs_handelaar = $r['prijs_handelaar'];
         $p->invoorraad = $r['invoorraad'];
+        $p->groepering = $r['groepering'];
         $p->beschrijving = $r['beschrijving'];
         $p->coverfoto = $path . $name;
         $p->subcategorie_id = $r['subcategorie_id'];

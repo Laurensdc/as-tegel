@@ -28,6 +28,10 @@
 					<option value="0">Nee</option>
 				</select>
 			</p>
+            <p>
+                <label>Groeperingsnummer</label>
+                <input type="number" name="groepering" value="99">
+            </p>
 			<p>
 				<label>Behoort tot subcategorie</label>
 				<select name="subcategorie_id">
