@@ -120,30 +120,52 @@ body {
   margin: 0 auto;
   width: 100%;
   background-color: #FAFAFA; }
+  @media (min-width: 75em) {
+    .container {
+      width: 70%; } }
 
 header {
   width: 96%;
   margin: 1.5rem 2%;
   height: 12rem; }
+  @media (min-width: 45em) {
+    header {
+      height: 11rem; } }
+  @media (min-width: 55em) {
+    header {
+      height: 6rem; } }
+  @media (min-width: 75em) {
+    header {
+      width: 70%;
+      margin: 1.5rem 15%;
+      height: 6rem; } }
 
 .toolbar_content {
   width: 96%;
   margin: 0 2%;
   padding: 0.5rem 0; }
+  @media (min-width: 75em) {
+    .toolbar_content {
+      width: 70%;
+      margin: 0 15%; } }
 
 .homecontainer {
   width: 96%;
   margin: 0 2%;
   background-color: #FAFAFA; }
+  @media (min-width: 75em) {
+    .homecontainer {
+      width: 70%;
+      margin: 0 15%; } }
 
 /* End of content widths */
 a {
   text-decoration: none;
-  color: #AFB42B;
+  color: #529C06;
   transition: 0.4s ease-in-out; }
 
 a:hover {
-  color: #CDDC39; }
+  color: #6CC313; }
 
 p {
   line-height: 2.4rem; }
@@ -211,10 +233,10 @@ a.boringlink:hover {
   color: #FAFAFA; }
 
 .toolbar a:hover {
-  text-decoration: underline; }
+  color: #6CC313; }
 
 .toolbar a.active {
-  text-decoration: underline; }
+  color: #6CC313; }
 
 .toolbar div {
   float: left; }
@@ -224,20 +246,34 @@ a.boringlink:hover {
 
 .toolbar_account {
   margin-left: 1rem; }
+  @media (min-width: 45em) {
+    .toolbar_account {
+      margin-left: 5rem; } }
 
 .toolbar_contact {
   padding: 0 1rem;
-  border-right: 1px solid #CDDC39;
+  border-right: 1px solid #6CC313;
   display: none; }
+  @media (min-width: 45em) {
+    .toolbar_contact {
+      display: block; } }
 
 /* End of Toolbar */
 /* Menu */
 header .logo {
   width: 100%; }
+  @media (min-width: 45em) {
+    header .logo {
+      width: auto; } }
 
 header img {
   height: 100%;
   max-width: 30rem; }
+  @media (min-width: 45em) {
+    header img {
+      max-height: 6rem;
+      height: auto;
+      max-width: auto; } }
 
 header li {
   list-style: none; }
@@ -250,15 +286,22 @@ header li a {
   line-height: 6rem;
   font-size: 1.8rem;
   color: #111; }
+  @media (min-width: 28.5em) {
+    header li a {
+      padding: 1rem 3rem;
+      font-size: 2rem; } }
+  @media (min-width: 45em) {
+    header li a {
+      padding: 0 3rem; } }
 
 header li:first-of-type a {
   padding-left: 0; }
 
 header li a.active {
-  color: #AFB42B; }
+  color: #529C06; }
 
 header li a:hover {
-  color: #AFB42B; }
+  color: #529C06; }
 
 header .header_bestelling {
   float: right;
@@ -266,76 +309,31 @@ header .header_bestelling {
   position: absolute;
   top: 4rem;
   right: 1rem; }
+  @media (min-width: 45em) {
+    header .header_bestelling {
+      position: relative;
+      top: 0;
+      right: 0;
+      float: right;
+      margin-left: 2rem;
+      height: 6rem;
+      width: 18rem; } }
+  @media (min-width: 55em) {
+    header .header_bestelling {
+      margin-left: 0;
+      height: auto;
+      width: auto; } }
 
 header .header_bestelling a {
   color: #111; }
+  @media (min-width: 45em) {
+    header .header_bestelling a {
+      line-height: 6rem; } }
 
 header .header_bestelling a:hover {
   text-decoration: underline; }
 
 /* End of Menu */
-/* Media queries */
-@media (min-width: 28.5em) {
-  header li a {
-    padding: 1rem 3rem;
-    font-size: 2rem; } }
-
-@media (min-width: 45em) {
-  /* Toolbar */
-  .toolbar_account {
-    margin-left: 5rem; }
-  .toolbar_contact {
-    display: block; }
-  /* End of Toolbar */
-  /* Menu */
-  header img {
-    max-height: 6rem;
-    height: auto;
-    max-width: auto; }
-  header .logo {
-    width: auto; }
-  header {
-    height: 11rem; }
-  header li a {
-    padding: 0 3rem; }
-  header .header_bestelling {
-    position: relative;
-    top: 0;
-    right: 0;
-    float: right;
-    margin-left: 2rem;
-    height: 6rem;
-    width: 18rem; }
-  header .header_bestelling a {
-    line-height: 6rem; }
-  /* End of menu */ }
-
-@media (min-width: 55em) {
-  header .header_bestelling {
-    margin-left: 0;
-    height: auto;
-    width: auto; }
-  header {
-    height: 6rem; } }
-
-@media (min-width: 75em) {
-  /* Content widths */
-  .container {
-    margin: 0 auto;
-    width: 70%; }
-  header {
-    width: 70%;
-    margin: 1.5rem 15%;
-    height: 6rem; }
-  .toolbar_content {
-    width: 70%;
-    margin: 0 15%; }
-  .homecontainer {
-    width: 70%;
-    margin: 0 15%; }
-  /* End of content widths */ }
-
-/* End of media queries */
 /* Container */
 .homecontainer article {
   overflow: hidden;
@@ -343,6 +341,11 @@ header .header_bestelling a:hover {
   background-position: center top;
   height: 40rem;
   margin-bottom: 7rem; }
+  @media screen and (min-width: 90em) {
+    .homecontainer article {
+      height: 60rem; }
+      .homecontainer article .home_caption {
+        margin-top: 50rem; } }
 
 .homecontainer img {
   width: 100%; }
@@ -352,33 +355,32 @@ header .header_bestelling a:hover {
   margin-top: 30rem;
   background-color: #424242;
   opacity: 0.9; }
-
-.homecontainer .home_caption a {
-  width: 100%;
-  height: 5rem;
-  line-height: 5rem;
-  display: block;
-  font-size: 2rem;
-  text-align: center;
-  color: #FAFAFA; }
-
-.homecontainer .home_caption a:hover {
-  color: #CDDC39;
-  background-color: #212121; }
+  .homecontainer .home_caption a {
+    width: 100%;
+    height: 5rem;
+    line-height: 5rem;
+    display: block;
+    font-size: 2rem;
+    text-align: center;
+    color: #FAFAFA; }
+    .homecontainer .home_caption a:hover {
+      color: #6CC313;
+      background-color: #212121; }
 
 /* End of Container */
-@media screen and (min-width: 90em) {
-  .homecontainer article {
-    height: 60rem; }
-  .homecontainer article .home_caption {
-    margin-top: 50rem; } }
-
 /* Menu styles */
 .catmenu_container {
   width: 96%;
   margin: 0 2%;
   float: left;
   background-color: #EEEEEE; }
+  @media (min-width: 45em) {
+    .catmenu_container {
+      width: 25rem;
+      margin: 1rem; } }
+  @media (min-width: 75em) {
+    .catmenu_container {
+      margin: 0; } }
 
 .catmenu li, .catmenu .catmenu_title {
   height: 4rem;
@@ -400,7 +402,7 @@ header .header_bestelling a:hover {
   display: inline-block; }
 
 .catmenu a:hover {
-  color: #AFB42B; }
+  color: #529C06; }
 
 .catmenu li.active a {
   font-weight: 600; }
@@ -416,20 +418,52 @@ header .header_bestelling a:hover {
   font-size: 2.2rem;
   padding: 1rem 0 1rem 1%;
   margin-bottom: 2rem;
-  border-bottom: 1px solid #CDDC39;
-  border-right: 1px solid #CDDC39; }
+  border-bottom: 1px solid #6CC313;
+  border-right: 1px solid #6CC313; }
 
 /* Producten Overzicht */
-/* Producten overzicht */
+@media (min-width: 75em) {
+  .producten_content {
+    padding: 0; } }
+
+@media (min-width: 100em) {
+  .producten_content {
+    padding: 1rem; } }
+
 .producten_content article {
   border: 1px solid #BDBDBD;
   padding: 1rem;
   font-size: 1.4rem; }
-
-.producten_content article h1 {
-  margin: 1rem 0;
-  font-size: 1.8rem;
-  font-weight: 800; }
+  @media (min-width: 75em) {
+    .producten_content article {
+      padding: 0.5rem; } }
+  @media (min-width: 100em) {
+    .producten_content article {
+      padding: 1rem; } }
+  .producten_content article h1 {
+    margin: 1rem 0;
+    font-size: 1.8rem;
+    font-weight: 800; }
+    @media (min-width: 60em) {
+      .producten_content article h1 {
+        font-size: 1.5rem; } }
+    @media (min-width: 100em) {
+      .producten_content article h1 {
+        font-size: 1.8rem; } }
+  .producten_content article p {
+    margin-bottom: 2rem; }
+    @media (min-width: 60em) {
+      .producten_content article p {
+        font-size: 1.2rem; } }
+    @media (min-width: 100em) {
+      .producten_content article p {
+        font-size: 1.4rem; } }
+  @media (min-width: 60em) {
+    .producten_content article li {
+      font-size: 1.3rem; } }
+  @media (min-width: 100em) {
+    .producten_content article li {
+      font-size: 1.6rem; } }
 
 .producten_content ul {
   margin-bottom: 2rem;
@@ -437,9 +471,6 @@ header .header_bestelling a:hover {
 
 .producten_content li {
   height: 2.2rem; }
-
-.producten_content article p {
-  margin-bottom: 2rem; }
 
 /* End of producten overzicht */
 /* Categorie overzicht */
@@ -451,6 +482,11 @@ header .header_bestelling a:hover {
   width: 100%;
   float: left;
   margin: 1rem 0; }
+  @media (min-width: 60em) {
+    .categorie_overzicht article, .producten_content article {
+      width: 31.33333%;
+      float: left;
+      margin: 0 1% 2%; } }
 
 .categorie_overzicht article {
   height: 40rem; }
@@ -470,32 +506,37 @@ header .header_bestelling a:hover {
 .categorie_overzicht .producten_caption {
   position: absolute;
   bottom: 5rem;
-  width: 100%; }
-
-.categorie_overzicht .producten_caption {
+  width: 100%;
   background-color: #424242;
   opacity: 0.9; }
+  .categorie_overzicht .producten_caption a {
+    width: 100%;
+    height: 5rem;
+    line-height: 5rem;
+    display: block;
+    font-size: 2rem;
+    text-align: center;
+    color: #FAFAFA; }
+    .categorie_overzicht .producten_caption a:hover {
+      color: #6CC313;
+      background-color: #212121; }
+    @media (min-width: 75em) {
+      .categorie_overzicht .producten_caption a {
+        font-size: 1.5rem; } }
+    @media (min-width: 100em) {
+      .categorie_overzicht .producten_caption a {
+        font-size: 2rem; } }
 
-.categorie_overzicht .producten_caption a {
-  width: 100%;
-  height: 5rem;
-  line-height: 5rem;
-  display: block;
-  font-size: 2rem;
-  text-align: center;
-  color: #FAFAFA; }
-
-.categorie_overzicht .producten_caption a:hover {
-  color: #CDDC39;
-  background-color: #212121; }
-
-/* End of caption */
 /* End of Articles */
 /* End of Categorie overzicht*/
-/* End of producten overzicht */
 /* Order */
-.ordercontent h2 {
-  margin: 5rem 0 2rem; }
+.ordercontent {
+  padding: 1rem; }
+  .ordercontent h2 {
+    margin: 5rem 0 2rem; }
+  @media (min-width: 75em) {
+    .ordercontent {
+      padding: 0; } }
 
 /* End of Order */
 /* Breadcrumb */
@@ -504,83 +545,18 @@ header .header_bestelling a:hover {
   padding: 0 1rem;
   margin-bottom: 1rem;
   background-color: #F5F5F5; }
-
-.breadcrumb p {
-  line-height: 2rem;
-  font-size: 1.4rem; }
+  @media (min-width: 45em) {
+    .breadcrumb {
+      height: 4rem; } }
+  .breadcrumb p {
+    line-height: 2rem;
+    font-size: 1.4rem; }
+    @media (min-width: 45em) {
+      .breadcrumb p {
+        line-height: 4rem;
+        font-size: 1.6rem; } }
 
 /* End of Breadcrumb */
-/* Media queries */
-@media (min-width: 45em) {
-  /* Menu styles */
-  .catmenu_container {
-    width: 25rem;
-    margin: 1rem; }
-  /* End of menu styles */
-  /* Producten content, Categorie overzicht */
-  .categorie_overzicht, .producten_content {
-    overflow: hidden; }
-  /* End of Producten content, Categorie overzicht */
-  /* Breadcrumb */
-  .breadcrumb {
-    height: 4rem; }
-  .breadcrumb p {
-    line-height: 4rem;
-    font-size: 1.6rem; }
-  /* End of Breadcrumb */ }
-
-@media (min-width: 60em) {
-  /* Producten Overzicht */
-  /* Categorie overzicht */
-  .categorie_overzicht article, .producten_content article {
-    width: 31.33333%;
-    float: left;
-    margin: 0 1% 2%; }
-  .producten_content article li {
-    font-size: 1.3rem; }
-  .producten_content article h1 {
-    font-size: 1.5rem; }
-  .producten_content article p {
-    font-size: 1.2rem; }
-  /* End of categorie overzicht */
-  /* End of producten overzicht */ }
-
-@media (min-width: 75em) {
-  /* Menu styles */
-  .catmenu_container {
-    margin: 0; }
-  /* Producten overzicht */
-  .producten_content {
-    padding: 0; }
-  .producten_content article {
-    padding: 0.5rem; }
-  /* Categorie overzicht */
-  /* Caption */
-  .categorie_overzicht .producten_caption a {
-    font-size: 1.5rem; }
-  /* End of categorie overzicht */ }
-
-@media (min-width: 100em) {
-  /* Producten Overzicht */
-  /* Categorie overzicht */
-  .producten_content article li {
-    font-size: 1.6rem; }
-  .producten_content article h1 {
-    font-size: 1.8rem; }
-  .producten_content article p {
-    font-size: 1.4rem; }
-  /* Caption */
-  .categorie_overzicht .producten_caption a {
-    font-size: 2rem; }
-  /* End of categorie overzicht */
-  /* Margins for 3 col view */
-  .producten_content {
-    padding: 1rem; }
-  .producten_content article {
-    padding: 1rem; }
-  /* End of producten overzicht */ }
-
-/* End of Media queries */
 .toolbar_content_small {
   width: 80%;
   margin: 0 10%;
@@ -656,8 +632,7 @@ header .header_bestelling a:hover {
   margin-bottom: 1rem; }
 
 a.admin_active {
-  font-weight: 600;
-  text-decoration: underline; }
+  color: #6CC313; }
 
 /* Delete confirmation-ish thing */
 a.admin_delete {

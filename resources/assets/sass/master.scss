@@ -13,32 +13,57 @@ body {
 	min-width:30rem;
 }
 
-	/* Content widths */
-	.container {
-		margin: 0 auto;
-		width:100%;
-		background-color:$almostwhite;
+/* Content widths */
+.container {
+    margin: 0 auto;
+    width:100%;
+    background-color:$almostwhite;
 
-	}
+    @media (min-width: $screen_big) {
+        width:70%;
+    }
+}
 
-	header {
-		width:96%;
-		margin:1.5rem 2%;
-		height:12rem;
-	}
-	.toolbar_content {
-		width:96%;
-		margin:0 2%;
-		padding:0.5rem 0;
-	}
+header {
+    width:96%;
+    margin:1.5rem 2%;
+    height:12rem;
 
-	.homecontainer {
-		width:96%;
-		margin: 0 2%;
-		background-color:$almostwhite;
-	
-	}
-	/* End of content widths */
+    @media (min-width: $screen_medium) {
+        height:11rem;
+    }
+    @media (min-width:$breakpoint_bestelling) {
+        height:6rem;
+    }
+    @media (min-width: $screen_big) {
+        width:70%;
+        margin:1.5rem 15%;
+        height: 6rem;
+    }
+}
+.toolbar_content {
+    width:96%;
+    margin:0 2%;
+    padding:0.5rem 0;
+
+    @media (min-width: $screen_big) {
+        width:70%;
+        margin:0 15%;
+    }
+}
+
+.homecontainer {
+    width:96%;
+    margin: 0 2%;
+    background-color:$almostwhite;
+
+    @media (min-width: $screen_big) {
+        width:70%;
+        margin:0 15%;
+    }
+
+}
+/* End of content widths */
 
 
 a {
@@ -141,11 +166,13 @@ ul, li {
 }
 
 .toolbar a:hover {
-	text-decoration: underline;
+	//text-decoration: underline;
+    color:$colora;
 }
 
 .toolbar a.active {
-	text-decoration: underline;
+	//text-decoration: underline;
+    color:$colora;
 }
 
 .toolbar div {
@@ -159,12 +186,21 @@ ul, li {
 
 .toolbar_account {
 	margin-left:1rem;
+
+    @media (min-width: $screen_medium) {
+        margin-left:5rem;
+    }
 }
 
 .toolbar_contact {
 	padding:0 1rem;
 	border-right: 1px solid $colora;
 	display:none;
+
+    @media (min-width: $screen_medium) {
+        display:block;
+    }
+	
 }
 
 
@@ -176,11 +212,21 @@ ul, li {
 
 header .logo {
 	width:100%;
+
+    @media (min-width: $screen_medium) {
+        width:auto;
+    }
 }
 
 header img {
 	height:100%;
 	max-width:30rem;
+
+  	@media (min-width: $screen_medium) {
+        max-height:6rem;
+        height:auto;
+        max-width:auto;
+    }  
 }
 
 header li {
@@ -196,6 +242,15 @@ header li a {
 
 	font-size:1.8rem;
 	color:$textcolor;
+
+    @media (min-width: $screen_small) {
+        padding: 1rem 3rem;
+        font-size:2rem;
+	}
+    @media (min-width: $screen_medium) {
+        padding: 0 3rem;
+    }
+
 }
 header li:first-of-type a {
 	padding-left:0;
@@ -213,10 +268,29 @@ header .header_bestelling {
 	position:absolute;
 	top:4rem;
 	right:1rem;
+
+    @media (min-width: $screen_medium) {
+        position: relative;
+        top:0; right:0;
+        float:right;
+        margin-left:2rem;
+        
+        height:6rem;
+        width:18rem;
+    }
+    @media (min-width:$breakpoint_bestelling) {
+        margin-left:0;
+        height:auto;
+        width:auto;
+    }
 }
 
 header .header_bestelling a {
 	color:$textcolor;
+
+    @media (min-width: $screen_medium) {
+        line-height:6rem;
+    }
 }
 
 header .header_bestelling a:hover {
@@ -224,109 +298,3 @@ header .header_bestelling a:hover {
 }
 
 /* End of Menu */
-
-
-/* Media queries */
-	@media (min-width: $screen_small) {
-		header li a {
-			padding: 1rem 3rem;
-			font-size:2rem;
-		}
-	}
-
-
-	@media (min-width: $screen_medium) {
-		
-		/* Toolbar */
-		.toolbar_account {
-			margin-left:5rem;
-		}
-
-		.toolbar_contact {
-			display:block;
-		}
-
-		/* End of Toolbar */
-
-		/* Menu */
-
-		header img {
-			max-height:6rem;
-			height:auto;
-			max-width:auto;
-		}
-		header .logo {
-			width:auto;
-		}
-
-		header {
-			height:11rem;
-		}
-
-		header li a {
-			padding: 0 3rem;
-		}
-
-		header .header_bestelling {
-			position: relative;
-			top:0; right:0;
-			float:right;
-			margin-left:2rem;
-			
-			height:6rem;
-			width:18rem;
-
-		}
-
-		header .header_bestelling a {
-			line-height:6rem;
-		}		
-		/* End of menu */
-
-	}
-
-	@media (min-width:$breakpoint_bestelling) {
-		header .header_bestelling {
-			margin-left:0;
-			height:auto;
-			width:auto;
-
-		}
-
-		header {
-			height:6rem;
-		}
-	}
-
-	@media (min-width: $screen_big) {
-
-		/* Content widths */
-		.container {
-			margin: 0 auto;
-			width:70%;
-
-		}
-
-		header {
-			width:70%;
-			margin:1.5rem 15%;
-			height: 6rem;
-		}
-
-		.toolbar_content {
-			width:70%;
-			margin:0 15%;
-
-		}
-
-		.homecontainer {
-			width:70%;
-			margin: 0 15%;	
-		}
-		/* End of content widths */	
-
-
-
-
-	}
-/* End of media queries */

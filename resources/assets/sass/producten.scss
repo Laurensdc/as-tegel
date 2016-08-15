@@ -5,6 +5,15 @@
 	float:left;
 	background-color:$graywhite;
 
+    @media (min-width: $screen_medium) {
+        width:25rem;
+        margin:1rem;
+    }
+
+    @media (min-width: $screen_big) {
+        margin:0;
+    }
+
 }
 
 .catmenu li, .catmenu .catmenu_title {
@@ -45,11 +54,8 @@
 .categorie_overzicht, .producten_content {
 	background-color:$notsowhite;
 	overflow:hidden;
-
-	//padding-top:1rem;
 	padding:1rem;
 }
-
 
 .producten_content h2, .categorie_overzicht h2 {
 	font-size:2.2rem;
@@ -58,116 +64,162 @@
 	margin-bottom:2rem;
 	border-bottom:1px solid $colora;
 	border-right:1px solid $colora;
-	
 }
-
-
 	
 /* Producten Overzicht */
+.producten_content {
+    @media (min-width: $screen_big) {
+        padding:0;
+    }
+    @media (min-width: $screen_biggest) {
+        padding:1rem;
+    }
 
-	/* Producten overzicht */
-	.producten_content article {
-		border: 1px solid $gray_lighter;
-		padding: 1rem;
-		font-size:1.4rem;
+    article {
+        border: 1px solid $gray_lighter;
+        padding: 1rem;
+        font-size:1.4rem;
+
+        @media (min-width: $screen_big) {
+            padding:0.5rem;
+        }
+        @media (min-width: $screen_biggest) {
+            padding:1rem;
+        }
+
+        h1 {
+            margin:1rem 0;
+            font-size:1.8rem;
+            font-weight:800;
+
+            @media (min-width: $screen_mediumbig) {
+                font-size:1.5rem;
+            }
+            @media (min-width: $screen_biggest) {
+                font-size:1.8rem;
+            }
+        }
+
+        p {
+            margin-bottom: 2rem;
+
+            @media (min-width: $screen_mediumbig) {
+                font-size:1.2rem;
+            }
+            @media (min-width: $screen_biggest) {
+                font-size:1.4rem;
+            }
+        }
+
+        li {
+            @media (min-width: $screen_mediumbig) {
+                font-size:1.3rem;
+            }
+            @media (min-width: $screen_biggest) {
+                font-size:1.6rem;
+            }
+        }
+    }
+
+    ul {
+        margin-bottom: 2rem;
+        font-size:1.6rem;
 	}
 
-	.producten_content article h1 {
-		margin:1rem 0;
-		font-size:1.8rem;
-		font-weight:800;
-	}
-	.producten_content ul {
-		margin-bottom: 2rem;
-		font-size:1.6rem;
-	}
-	.producten_content li {
+    li {
 		height:2.2rem;
 	}
-	.producten_content article p {
-		margin-bottom: 2rem;
-	}
-	/* End of producten overzicht */
-
-
-	/* Categorie overzicht */
-	.categorie_overzicht article, .producten_content article {	
-		overflow:hidden;
-
-		background-size:cover;
-		background-position:center top;				
-		margin-bottom: 7rem;
-
-		width:100%;
-		float:left;
-		margin:1rem 0;
-		
-	}
-	.categorie_overzicht article {
-		height:40rem;
-	}
-
-	.categorie_overzicht img, .producten_content img {
-		width:100%;
-	}
-
-		/* Articles */
-		.categorie_overzicht_article, .producten_content_article  {
-			position:relative;
-
-		}
-
-		.categorie_overzicht_article img {
-			object-fit:cover;
-			height:100%;
-		}
-
-			/* Caption */
-			.categorie_overzicht .producten_caption {
-				position:absolute;
-				bottom:5rem;
-				width:100%;
-			}
-
-
-			.categorie_overzicht .producten_caption {
-				background-color:$verygray;
-				opacity: 0.9;
-			}
-
-			.categorie_overzicht .producten_caption a {
-				width:100%;
-				height:5rem;
-				line-height:5rem;
-				display:block;
-				
-				font-size:2rem;
-				text-align:center;
-				
-				color:$almostwhite;
-			}
-
-			.categorie_overzicht .producten_caption a:hover {
-				color:$colora;
-				background-color:$gray_darkest;
-			}
-			/* End of caption */
-
-		/* End of Articles */
-
-
-
-
-	/* End of Categorie overzicht*/
-
+}
 /* End of producten overzicht */
 
-/* Order */
 
-.ordercontent h2 {
-	margin:5rem 0 2rem;
+/* Categorie overzicht */
+.categorie_overzicht article, .producten_content article {	
+    overflow:hidden;
+
+    background-size:cover;
+    background-position:center top;				
+    margin-bottom: 7rem;
+
+    width:100%;
+    float:left;
+    margin:1rem 0;
+
+    @media (min-width: $screen_mediumbig) {
+        width:31.33333%;
+        float:left;
+        margin:0 1% 2%;           
+    }
+    
+}
+.categorie_overzicht article {
+    height:40rem;
 }
 
+.categorie_overzicht img, .producten_content img {
+    width:100%;
+}
+
+    /* Articles */
+    .categorie_overzicht_article, .producten_content_article  {
+        position:relative;
+
+    }
+
+    .categorie_overzicht_article img {
+        object-fit:cover;
+        height:100%;
+    }
+
+    /* Caption */
+    .categorie_overzicht .producten_caption {
+        position:absolute;
+        bottom:5rem;
+        width:100%;
+        background-color:$verygray;
+        opacity: 0.9;
+
+        a {
+            width:100%;
+            height:5rem;
+            line-height:5rem;
+            display:block;
+            
+            font-size:2rem;
+            text-align:center;
+            
+            color:$almostwhite;
+
+            &:hover {
+                color:$colora;
+                background-color:$gray_darkest;
+            }
+
+            @media (min-width: $screen_big) {
+                font-size:1.5rem;
+            }
+            @media (min-width: $screen_biggest) {
+                font-size:2rem;
+            }
+        }
+    }
+
+    /* End of Articles */
+/* End of Categorie overzicht*/
+
+
+
+/* Order */
+.ordercontent {
+    h2 {
+	    margin:5rem 0 2rem;
+    }
+
+    padding:1rem;
+    @media (min-width:$screen-big) {
+        padding:0;
+    }
+}
 /* End of Order */
 
 /* Breadcrumb */
@@ -176,133 +228,23 @@
 	padding:0 1rem;
 	margin-bottom:1rem;
 	background-color:$notsowhite;
+
+    @media (min-width: $screen_medium) {
+        height:4rem;
+    }
+
+    p {
+        line-height:2rem;
+        font-size:1.4rem;
+
+        @media (min-width: $screen_medium) {
+            line-height:4rem;
+            font-size:1.6rem;        
+        }
+        
+    }
 }
 
-.breadcrumb p {
-	line-height:2rem;
-	font-size:1.4rem;
-}
 
 /* End of Breadcrumb */
 
-/* Media queries */
-
-
-
-	@media (min-width: $screen_medium) {
-
-		/* Menu styles */
-		.catmenu_container {
-			width:25rem;
-			margin: 1rem;
-		}
-
-		/* End of menu styles */
-		
-		/* Producten content, Categorie overzicht */
-		.categorie_overzicht, .producten_content {
-			overflow:hidden;
-		}
-		/* End of Producten content, Categorie overzicht */
-
-
-
-		/* Breadcrumb */
-		.breadcrumb {
-			height:4rem;
-		}
-
-		.breadcrumb p {
-			line-height:4rem;
-			font-size:1.6rem;
-		}
-
-		/* End of Breadcrumb */
-
-	}
-
-	@media (min-width: $screen_mediumbig) {
-		/* Producten Overzicht */
-
-			/* Categorie overzicht */
-			.categorie_overzicht article, .producten_content article {
-				width:31.33333%;
-				float:left;
-				margin:0 1% 2%;
-			}
-
-			.producten_content article li {
-				font-size:1.3rem;
-			}
-			.producten_content article h1 {	
-				font-size:1.5rem;
-			} 
-			.producten_content article p {
-				font-size:1.2rem;
-			}
-
-			/* End of categorie overzicht */
-		/* End of producten overzicht */
-
-	}
-
-	@media (min-width: $screen_big) {
-		/* Menu styles */
-		.catmenu_container {
-			margin:0;
-		}
-
-
-		/* Producten overzicht */
-		.producten_content {
-			padding: 0;
-			
-		}
-		.producten_content article {
-			padding: 0.5rem;
-		}
-
-		/* Categorie overzicht */
-
-			/* Caption */
-			.categorie_overzicht .producten_caption a {
-				font-size:1.5rem;
-			}
-
-		/* End of categorie overzicht */	
-
-	}
-
-	@media (min-width: $screen_biggest) {
-		/* Producten Overzicht */
-
-			/* Categorie overzicht */
-
-			.producten_content article li {
-				font-size:1.6rem;
-			}
-
-			.producten_content article h1 {
-
-				font-size:1.8rem;
-			} 
-			.producten_content article p {
-				font-size:1.4rem;
-			}
-			/* Caption */
-			.categorie_overzicht .producten_caption a {
-				font-size:2rem;
-			}
-			/* End of categorie overzicht */
-		
-		/* Margins for 3 col view */ 
-		.producten_content {
-			padding: 1rem;
-		}
-		.producten_content article {
-			padding: 1rem;
-		}
-		/* End of producten overzicht */
-	}
-
-/* End of Media queries */
