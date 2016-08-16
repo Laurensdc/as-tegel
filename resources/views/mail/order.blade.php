@@ -8,6 +8,9 @@
 	@if(isset($user->telnr) && $user->telnr != '')
 	Telefoonnr: {{ $user->telnr }}<br>
 	@endif
+    @if(isset($user->btwnr))
+    BTW-nummer: {{ $user->btwnr }}<br>
+    @endif
 	Datum bestelling: {{ $date }}
 </p>
 
