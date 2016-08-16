@@ -1,0 +1,50 @@
+.catmenu_container {
+	width:96%;
+	margin:0 2%;
+	float:left;
+	background-color:$actuallywhite;
+
+    @media (min-width: $screen_medium) {
+        width:25rem;
+        margin:1rem;
+    }
+
+    @media (min-width: $screen_big) {
+        margin:0;
+    }
+
+}
+
+.catmenu li, .catmenu .catmenu_title {
+	height:4rem;
+	border:1px solid $gray;
+	margin-top:-1px;
+}
+
+.catmenu .catmenu_title {
+	font-weight:600;
+	background-color:$almostwhite;
+}
+
+.catmenu ul {
+	display: none;
+	padding-left:3rem;
+
+}
+
+.catmenu a, .catmenu .catmenu_title {
+	width:100%;
+	color:$textcolor;
+	padding:1rem;
+	display:inline-block;
+}
+
+.catmenu a:hover, .catmenu li.active a:hover, .catmenu ul li.active a:hover {
+	color:$colora_lightest;
+}
+
+// Menu items and submenu items
+.catmenu li.active a, .catmenu ul li.active a {
+    //font-weight:600;
+    color:$colora;
+}

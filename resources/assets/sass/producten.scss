@@ -1,56 +1,3 @@
-/* Menu styles */
-.catmenu_container {
-	width:96%;
-	margin:0 2%;
-	float:left;
-	background-color:$actuallywhite;
-
-    @media (min-width: $screen_medium) {
-        width:25rem;
-        margin:1rem;
-    }
-
-    @media (min-width: $screen_big) {
-        margin:0;
-    }
-
-}
-
-.catmenu li, .catmenu .catmenu_title {
-	height:4rem;
-	border:1px solid $gray;
-	margin-top:-1px;
-}
-
-.catmenu .catmenu_title {
-	font-weight:600;
-	background-color:$almostwhite;
-}
-
-.catmenu ul {
-	display: none;
-	padding-left:3rem;
-
-}
-
-.catmenu a, .catmenu .catmenu_title {
-	width:100%;
-	color:$textcolor;
-	padding:1rem;
-	display:inline-block;
-}
-
-.catmenu a:hover {
-	color:$colora_darker;
-}
-
-// Menu items and submenu items
-.catmenu li.active a, .catmenu ul li.active a {
-    //font-weight:600;
-    color:$colora;
-}
-/* End of Menu styles */
-
 /* Producten content, Categorie overzicht */
 .categorie_overzicht, .producten_content {
 	background-color:$almostwhite;
@@ -60,11 +7,11 @@
 
 .producten_content h2, .categorie_overzicht h2 {
 	font-size:2.2rem;
-	padding:1rem 0 1rem 1%;
+	padding:1rem 0 1rem 1.5%;
 
 	margin-bottom:2rem;
-	border-bottom:1px solid $colora;
-	border-right:1px solid $colora;
+	//border-bottom:1px solid $colora;
+	//border-right:1px solid $colora;
 }
 	
 /* Producten Overzicht */
@@ -77,15 +24,15 @@
     }
 
     article {
-        border: 1px solid $gray_lighter;
-        box-shadow:1px 1px 2px 0 rgba(0,0,0,0.18);
-        padding: 1rem;
+        //border: 1px solid $gray_lighter;
+        //box-shadow:1px 1px 2px 0 rgba(0,0,0,0.18);
+        //padding: 1rem;
         font-size:1.4rem;
-        background-color:$actuallywhite;
+        //background-color:$actuallywhite;
 
-        &:hover {
-            box-shadow:1px 1px 3px 1px rgba(0,0,0,0.15);
-        }
+        // &:hover {
+        //     box-shadow:1px 1px 3px 1px rgba(0,0,0,0.15);
+        // }
 
         @media (min-width: $screen_big) {
             padding:0.5rem;
@@ -234,7 +181,7 @@
 	height:4rem;
 	padding:0 1rem;
 	margin-bottom:1rem;
-	background-color:$almostwhite;
+	//background-color:$almostwhite;
 
     @media (min-width: $screen_medium) {
         height:4rem;
