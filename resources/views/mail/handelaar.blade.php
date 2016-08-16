@@ -12,7 +12,7 @@
 @endif
 <br>
 <p>
-<strong><a href="{{ route('home') }}/admin/users/{{ $email }}/makehandelaar">{{ $achternaam }} {{ $voornaam }} Goedkeuren</a></strong>
+<strong><a href="{{ route('home') }}/admin/users/{{ $email }}/makehandelaar">{{ $achternaam }} {{ $voornaam }} Goedkeuren</a> of manueel aanpassen in administrator paneel.</strong>
 </p>
 <br>
 Om af te keuren, geen handeling ondernemen (gebruiker blijft een particulier).

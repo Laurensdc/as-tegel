@@ -1,6 +1,6 @@
 $('#cbhandelaar').on('click', function() {
     if($('#cbhandelaar').prop('checked')) {
-        $('#handelaar_tekst').html('U dient een aanvraag in om als handelaar geregistreerd te worden.');
+        $('#handelaar_tekst').html('U dient een aanvraag in om als handelaar geregistreerd te worden.<br>Totdat deze aanvraag wordt goedgekeurd, blijft uw account onder de status particulier.');
         $('.input_btw').show();
     }
     else {
