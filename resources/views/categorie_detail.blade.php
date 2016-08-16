@@ -83,8 +83,10 @@
 
 @if($showtoast)
 	<script src="{{ asset('bower_components/toastr/toastr.min.js') }}"></script>
-	<script>toastr.options = { "newestOnTop": true, "positionClass": "toast-top-center", "timeOut": "4000", }</script>
-	<script>toastr.success("{{ trans('cont.product_added') }}");</script>
+	<script>
+        toastr.options = { "newestOnTop": true, "positionClass": "toast-top-center", "timeOut": "4000", }
+        toastr.success("{{ trans('cont.product_added') }}");
+    </script>
 @endif
 
 <script src="{{ asset('bower_components/lightbox2/dist/js/lightbox.min.js') }}"></script>

@@ -112,14 +112,14 @@ html {
 body {
   font-size: 1.6rem;
   font-family: "Verdana", sans-serif;
-  background-color: #FAFAFA;
+  background-color: #FFFFFF;
   min-width: 30rem; }
 
 /* Content widths */
 .container {
   margin: 0 auto;
   width: 100%;
-  background-color: #FAFAFA; }
+  background-color: #FFFFFF; }
   @media (min-width: 75em) {
     .container {
       width: 70%; } }
@@ -161,11 +161,11 @@ header {
 /* End of content widths */
 a {
   text-decoration: none;
-  color: #529C06;
+  color: #7CB342;
   transition: 0.4s ease-in-out; }
 
 a:hover {
-  color: #6CC313; }
+  color: #558B2F; }
 
 p {
   line-height: 2.4rem; }
@@ -187,7 +187,8 @@ input[type=submit] {
   padding: 1rem 2rem;
   margin-top: 1rem;
   font-size: 1.6rem;
-  transition: 0.4s ease-in-out; }
+  transition: 0.4s ease-in-out;
+  cursor: pointer; }
 
 input[type=submit]:hover {
   background-color: #F4511E;
@@ -233,10 +234,10 @@ a.boringlink:hover {
   color: #FAFAFA; }
 
 .toolbar a:hover {
-  color: #6CC313; }
+  color: #7CB342; }
 
 .toolbar a.active {
-  color: #6CC313; }
+  color: #7CB342; }
 
 .toolbar div {
   float: left; }
@@ -252,7 +253,7 @@ a.boringlink:hover {
 
 .toolbar_contact {
   padding: 0 1rem;
-  border-right: 1px solid #6CC313;
+  border-right: 1px solid #7CB342;
   display: none; }
   @media (min-width: 45em) {
     .toolbar_contact {
@@ -298,10 +299,10 @@ header li:first-of-type a {
   padding-left: 0; }
 
 header li a.active {
-  color: #529C06; }
+  color: #7CB342; }
 
 header li a:hover {
-  color: #529C06; }
+  color: #558B2F; }
 
 header .header_bestelling {
   float: right;
@@ -364,7 +365,7 @@ header .header_bestelling a:hover {
     text-align: center;
     color: #FAFAFA; }
     .homecontainer .home_caption a:hover {
-      color: #6CC313;
+      color: #7CB342;
       background-color: #212121; }
 
 /* End of Container */
@@ -373,7 +374,7 @@ header .header_bestelling a:hover {
   width: 96%;
   margin: 0 2%;
   float: left;
-  background-color: #EEEEEE; }
+  background-color: #FFFFFF; }
   @media (min-width: 45em) {
     .catmenu_container {
       width: 25rem;
@@ -402,7 +403,7 @@ header .header_bestelling a:hover {
   display: inline-block; }
 
 .catmenu a:hover {
-  color: #529C06; }
+  color: #558B2F; }
 
 .catmenu li.active a {
   font-weight: 600; }
@@ -410,7 +411,7 @@ header .header_bestelling a:hover {
 /* End of Menu styles */
 /* Producten content, Categorie overzicht */
 .categorie_overzicht, .producten_content {
-  background-color: #F5F5F5;
+  background-color: #FAFAFA;
   overflow: hidden;
   padding: 1rem; }
 
@@ -418,8 +419,8 @@ header .header_bestelling a:hover {
   font-size: 2.2rem;
   padding: 1rem 0 1rem 1%;
   margin-bottom: 2rem;
-  border-bottom: 1px solid #6CC313;
-  border-right: 1px solid #6CC313; }
+  border-bottom: 1px solid #7CB342;
+  border-right: 1px solid #7CB342; }
 
 /* Producten Overzicht */
 @media (min-width: 75em) {
@@ -432,8 +433,12 @@ header .header_bestelling a:hover {
 
 .producten_content article {
   border: 1px solid #BDBDBD;
+  box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.18);
   padding: 1rem;
-  font-size: 1.4rem; }
+  font-size: 1.4rem;
+  background-color: #FFFFFF; }
+  .producten_content article:hover {
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.15); }
   @media (min-width: 75em) {
     .producten_content article {
       padding: 0.5rem; } }
@@ -518,7 +523,7 @@ header .header_bestelling a:hover {
     text-align: center;
     color: #FAFAFA; }
     .categorie_overzicht .producten_caption a:hover {
-      color: #6CC313;
+      color: #7CB342;
       background-color: #212121; }
     @media (min-width: 75em) {
       .categorie_overzicht .producten_caption a {
@@ -544,7 +549,7 @@ header .header_bestelling a:hover {
   height: 4rem;
   padding: 0 1rem;
   margin-bottom: 1rem;
-  background-color: #F5F5F5; }
+  background-color: #FAFAFA; }
   @media (min-width: 45em) {
     .breadcrumb {
       height: 4rem; } }
@@ -632,7 +637,7 @@ header .header_bestelling a:hover {
   margin-bottom: 1rem; }
 
 a.admin_active {
-  color: #6CC313; }
+  color: #7CB342; }
 
 /* Delete confirmation-ish thing */
 a.admin_delete {

@@ -3,7 +3,7 @@
 	width:96%;
 	margin:0 2%;
 	float:left;
-	background-color:$graywhite;
+	background-color:$actuallywhite;
 
     @media (min-width: $screen_medium) {
         width:25rem;
@@ -52,7 +52,7 @@
 
 /* Producten content, Categorie overzicht */
 .categorie_overzicht, .producten_content {
-	background-color:$notsowhite;
+	background-color:$almostwhite;
 	overflow:hidden;
 	padding:1rem;
 }
@@ -77,8 +77,14 @@
 
     article {
         border: 1px solid $gray_lighter;
+        box-shadow:1px 1px 2px 0 rgba(0,0,0,0.18);
         padding: 1rem;
         font-size:1.4rem;
+        background-color:$actuallywhite;
+
+        &:hover {
+            box-shadow:1px 1px 3px 1px rgba(0,0,0,0.15);
+        }
 
         @media (min-width: $screen_big) {
             padding:0.5rem;
@@ -102,7 +108,7 @@
 
         p {
             margin-bottom: 2rem;
-
+      
             @media (min-width: $screen_mediumbig) {
                 font-size:1.2rem;
             }
@@ -227,7 +233,7 @@
 	height:4rem;
 	padding:0 1rem;
 	margin-bottom:1rem;
-	background-color:$notsowhite;
+	background-color:$almostwhite;
 
     @media (min-width: $screen_medium) {
         height:4rem;

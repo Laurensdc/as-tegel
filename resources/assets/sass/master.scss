@@ -9,7 +9,7 @@ body {
 	font-size:1.6rem;
 	font-family: "Verdana", sans-serif;
 
-	background-color: $almostwhite;
+	background-color: $actuallywhite;
 	min-width:30rem;
 }
 
@@ -17,7 +17,7 @@ body {
 .container {
     margin: 0 auto;
     width:100%;
-    background-color:$almostwhite;
+    background-color:$actuallywhite;
 
     @media (min-width: $screen_big) {
         width:70%;
@@ -68,13 +68,13 @@ header {
 
 a {
 	text-decoration:none;
-	color:$colora_darker;
+	color:$colora;
 	transition:0.4s ease-in-out;
 }
 
 
 a:hover {
-	color:$colora;
+	color:$colora_darker;
 }
 
 p {
@@ -104,6 +104,7 @@ ul, li {
 		font-size:1.6rem;
 
 		transition: 0.4s ease-in-out;
+        cursor:pointer;
 	}
 
 	input[type=submit]:hover {
@@ -232,6 +233,7 @@ header img {
 header li {
 	list-style: none;
 }
+
 header li a {
 	display:inline-block;
 	float:left;
@@ -252,12 +254,15 @@ header li a {
     }
 
 }
+
 header li:first-of-type a {
 	padding-left:0;
 }
+
 header li a.active {
-	color:$colora_darker;
+	color:$colora;
 }
+
 header li a:hover {
 	color:$colora_darker;
 }
