@@ -38,16 +38,17 @@
 	color:$textcolor;
 	padding:1rem;
 	display:inline-block;
-
 }
 
 .catmenu a:hover {
 	color:$colora_darker;
 }
 
- .catmenu li.active a {
- 	font-weight:600;
- }
+// Menu items and submenu items
+.catmenu li.active a, .catmenu ul li.active a {
+    //font-weight:600;
+    color:$colora;
+}
 /* End of Menu styles */
 
 /* Producten content, Categorie overzicht */

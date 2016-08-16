@@ -405,8 +405,8 @@ header .header_bestelling a:hover {
 .catmenu a:hover {
   color: #558B2F; }
 
-.catmenu li.active a {
-  font-weight: 600; }
+.catmenu li.active a, .catmenu ul li.active a {
+  color: #7CB342; }
 
 /* End of Menu styles */
 /* Producten content, Categorie overzicht */

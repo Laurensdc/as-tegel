@@ -7,7 +7,9 @@
 		<ul>
 		@foreach($allsubcategories as $subcat) 
 			@if($subcat->categorie_id == $cat->id)
-				<li><a href="{{ route('producten') }}/{{ $cat->cat_linknaam }}/{{ $subcat->subcat_linknaam }}">{{ $subcat->naam }}</a></li>
+				<li @if($subcat->naam == $subcategorie) class="active" @endif >
+                    <a href="{{ route('producten') }}/{{ $cat->cat_linknaam }}/{{ $subcat->subcat_linknaam }}">{{ $subcat->naam }}</a>
+                </li>
 			@endif
 
 		@endforeach
