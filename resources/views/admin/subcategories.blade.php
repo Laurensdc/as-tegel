@@ -11,7 +11,7 @@
 			<td><strong>Naam</strong></td>
 			<td><strong>Linknaam</strong></td>
 			<td><strong>Behoort tot Categorie</strong></td>
-			<td><strong>Coverfoto</strong></td>
+			<td><strong>Beschrijving</strong></td>
 			<td></td>
 		</tr>
 	@foreach($subcategories as $s)
@@ -19,7 +19,7 @@
 			<td>{{ $s->naam }}</td>
 			<td>{{ $s->subcat_linknaam }}</td>
 			<td>{{ $s->categorie->naam }}</td>
-			<td>{{ $s->coverfoto }}</td>
+			<td>{{ substr($s->beschrijving, 0, 25) }}@if($s->beschrijving != '')...@endif</td>
 			<td><a class="btn" href="{{ route('admin') }}/subcategorie/edit/{{ $s->id }}">Subcategorie bewerken</a></td>
 		</tr>
 	@endforeach

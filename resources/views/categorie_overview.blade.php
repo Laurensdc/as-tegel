@@ -27,7 +27,13 @@
             <h3>{{ trans('cont.subcategories') }}</h3>
             @foreach($subcategories as $subcat)
                 @if($cat->id == $subcat->categorie_id)
-                    <p class="subcat-item"><a href="{{ route('producten') }}/{{ $cat->cat_linknaam }}/{{ $subcat->subcat_linknaam }}">{{ $subcat->naam }}</a></p>
+                    <p>{{ $subcat->naam }}</p>
+                    <p>{{ $subcat->beschrijving }}</p>
+                    <p class="subcat-item">
+                        <a href="{{ route('producten') }}/{{ $cat->cat_linknaam }}/{{ $subcat->subcat_linknaam }}" class="btn">
+                            Bekijk producten {{ $subcat->naam }}
+                        </a>
+                    </p>
                 @endif
 
             @endforeach

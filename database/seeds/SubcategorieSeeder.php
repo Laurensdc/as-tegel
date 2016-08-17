@@ -14,7 +14,7 @@ class SubcategorieSeeder extends Seeder
         DB::table('subcategories')->insert([
             'naam'=>'Getrommeld',
             'subcat_linknaam'=>'getrommeld',
-            'coverfoto'=>'images/cover/vietnamees_getrommeld.jpg',
+            'beschrijving'=>'Een prachtige blauwsteen waar u jarenlang plezier aan zult beleven.',
 
             'categorie_id'=>1,
 
@@ -25,7 +25,7 @@ class SubcategorieSeeder extends Seeder
         DB::table('subcategories')->insert([
             'naam'=>'Geschuurd Gezaagd',
             'subcat_linknaam'=>'geschuurdgezaagd',
-            'coverfoto'=>'images/cover/vietnamees.jpg',
+            'beschrijving'=>'Stelt nooit teleur.',
 
             'categorie_id'=>1,
 
@@ -36,7 +36,6 @@ class SubcategorieSeeder extends Seeder
         DB::table('subcategories')->insert([
             'naam'=>'Candela',
             'subcat_linknaam'=>'candela',
-            'coverfoto'=>'images/cover/candela.jpg',
 
             'categorie_id'=>3,
 
@@ -44,7 +43,6 @@ class SubcategorieSeeder extends Seeder
         DB::table('subcategories')->insert([
             'naam'=>'Chandra',
             'subcat_linknaam'=>'chandra',
-            'coverfoto'=>'images/cover/chandra.jpg',
 
             'categorie_id'=>3,
 
@@ -53,7 +51,6 @@ class SubcategorieSeeder extends Seeder
         DB::table('subcategories')->insert([
             'naam'=>'Carius',
             'subcat_linknaam'=>'carius',
-            'coverfoto'=>'images/cover/carius.jpg',
 
             'categorie_id'=>4,
 
@@ -62,7 +59,6 @@ class SubcategorieSeeder extends Seeder
         DB::table('subcategories')->insert([
             'naam'=>'Keramiek',
             'subcat_linknaam'=>'keramiek',
-            'coverfoto'=>'images/cover/keramiek.jpg',
 
             'categorie_id'=>5,
 

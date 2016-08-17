@@ -27,9 +27,10 @@
 				</select>
 			</p>
 			<p>
-				<label>Coverfoto</label>
-				<input type="text" name="coverfoto" size="40" value="{{ $subcat->coverfoto }}">
+				<label>Beschrijving</label>
+                <textarea name="beschrijving" rows="3" cols="40">{{ $subcat->beschrijving }}</textarea>
 			</p>
+
 			<p>
 				<label></label>
 				<input type="submit" value="Aanpassen"> <a href="{{ route('admin') }}/subcategorie" class="boringlink">Annuleren</a>

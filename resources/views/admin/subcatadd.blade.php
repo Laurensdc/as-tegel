@@ -27,13 +27,10 @@
 				</select>
 			</p>
 			<p>
-				<label>Map voor foto</label>
-				<input type="text" name="coverfoto" size="40" value="images/cover/" >
+				<label>Beschrijving</label>
+                <textarea name="beschrijving" rows="3" cols="40"></textarea>
 			</p>
-			<p>
-				<label>Foto</label>
-				<input type="file" name="foto" methode="post">
-			</p>
+
 			<p>
 				<label></label>
 				<input type="submit" value="Subcategorie Aanmaken"> <a href="{{ route('admin') }}/subcategorie" class="boringlink">Annuleren</a>

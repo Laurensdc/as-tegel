@@ -293,7 +293,7 @@ class AdminController extends Controller
         $subcat->naam = $r['naam'];
         $subcat->subcat_linknaam = $r['subcat_linknaam'];
         $subcat->categorie_id = $r['categorie_id'];
-        $subcat->coverfoto = $r['coverfoto'];
+        $subcat->beschrijving = $r['beschrijving'];
 
         $subcat->save();
 
@@ -312,26 +312,13 @@ class AdminController extends Controller
             'subcat_linknaam' => 'alpha|required|unique:subcategories'
             ]);
 
-        // File upload in correct folder, also on fail
-        $f = $r->file('foto');
-        $path = 'images/cover/';
-        $name = '_geenfoto.jpg';
-
-        if($r->hasFile('foto')) {
-            if($r->file('foto')->isValid()) {
-                $path = public_path() . '/' . $r['coverfoto']; 
-                $name = $f->getClientOriginalName();
-                $f->move($path, $name);
-                $path = $r['coverfoto'];
-           }
-        }
 
         $subcat = new Subcategorie;
 
         $subcat->naam = $r['naam'];
         $subcat->subcat_linknaam = $r['subcat_linknaam'];
         $subcat->categorie_id = $r['categorie_id'];
-        $subcat->coverfoto = $path . $name;
+        $subcat->beschrijving = $r['beschrijving'];
         $subcat->save();
 
         return redirect()->route('admin_subcategorieoverview');

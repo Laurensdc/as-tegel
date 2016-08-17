@@ -16,12 +16,11 @@ class CreateSubcategoriesTable extends Migration
             $table->increments('id');
             $table->string('naam');
             $table->string('subcat_linknaam')->unique();
+            $table->text('beschrijving');
 
             $table->integer('categorie_id')->unsigned();
             $table->foreign('categorie_id')->references('id')->on('categories');
             
-            $table->string('coverfoto')->default('images/cover/_geenfoto.jpg');
-    
             $table->timestamps();
         });
     }
