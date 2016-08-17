@@ -19,7 +19,7 @@
 		    @endif
 		    </p>
 		    <p>&euro;{{ $prijzen[$i] }}</p>
-            <p><a href="{{ route('deleteorder') }}/{{ $sessionIndexes[$i] }}">Verwijder van bestelling</a></p>
+            <p><a href="{{ route('deleteorder') }}/{{ $sessionIndexes[$i] }}">Item verwijderen</a></p>
 		    <br>
 		@endfor
 
@@ -29,7 +29,8 @@
         <br>
         
 		<p>
-			<a href="{{ route('placeorder') }}" class="btn">{{ trans('cont.orderit') }}</a> <a href="{{ route('deleteorder') }}" class="boringlink">Alle items verwijderen</a>
+			<a href="{{ route('placeorder') }}" class="btn">{{ trans('cont.orderit') }}</a>
+            <a href="{{ route('deleteorder') }}">Alle items verwijderen</a>
 		</p>
 
 	@else
@@ -40,7 +41,7 @@
 	<br>
 
 	<p>
-		<a class="boringlink" href="{{ route('producten') }}">&larrhk; Terug naar producten</a>
+		<a href="{{ route('producten') }}">&larrhk; Terug naar producten</a>
 	</p>
 
 

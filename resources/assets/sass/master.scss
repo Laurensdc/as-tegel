@@ -75,6 +75,7 @@ a {
 
 a:hover {
 	color:$colora_lightest;
+    text-decoration:underline;
 }
 
 p {
@@ -110,6 +111,7 @@ ul, li {
 	input[type=submit]:hover {
 		background-color:$colora_lighter;
 		box-shadow: 2px 3px 5px rgba(0,0,0,0.25);
+        text-decoration:none;
 	}
 
 	.btn {
@@ -128,6 +130,7 @@ ul, li {
 	a.btn:hover {
 		background-color:$colora_lighter;
 		box-shadow: 2px 3px 5px rgba(0,0,0,0.25);
+        text-decoration:none;
 	}
 
 
@@ -290,6 +293,7 @@ header li a.active {
 
 header li a:hover {
 	color:$colora_lightest;
+    text-decoration:none;
 }
 
 header .header_bestelling {
@@ -325,6 +329,7 @@ header .header_bestelling a {
 
 header .header_bestelling a:hover {
 	text-decoration:underline;
+    color:$colora_lighter;
 }
 
 .order-icon {
