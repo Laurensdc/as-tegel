@@ -215,7 +215,7 @@ a.btn:hover {
   color: #FAFAFA;
   background-color: #D84315; }
 
-.txt_warning {
+.txt_warning, .boringlink.txt_warning {
   color: #D84315; }
 
 a.boringlink {
@@ -518,6 +518,9 @@ header .header_bestelling a:hover {
   @media (min-width: 85em) {
     .ordercontent {
       padding: 0; } }
+
+.order_item {
+  margin: 0.5rem 0 3rem 2rem; }
 
 /* Breadcrumb */
 .breadcrumb {

@@ -8,22 +8,26 @@
 	@if(isset($producten))
 
 		@for ($i = 0; $i < count($producten); $i++)
-		    <p><strong>{{ $producten[$i]->naam }}</strong></p>
-            <p>{{ $producten[$i]->afmetingen }}</p>
-		    <p>{{ $vierkantemeters[$i] }}m&sup2;
-		    @if(Auth::check())
-			    aan &euro; 
-			    	@if(Auth::user()->role=='handelaar') {{ $producten[$i]->prijs_handelaar }} 
-			    	@else {{ $producten[$i]->prijs_particulier }} 
-			    	@endif /m&sup2;
-		    @endif
-		    </p>
-		    <p>&euro;{{ $prijzen[$i] }}</p>
-            <p><a href="{{ route('deleteorder') }}/{{ $sessionIndexes[$i] }}">Item verwijderen</a></p>
-		    <br>
+		    <p><strong>{{ $producten[$i]->naam }}</strong></p> 
+            <div class="order_item">
+                <p>{{ $producten[$i]->afmetingen }}</p>
+                <p>{{ $vierkantemeters[$i] }}m&sup2;
+                aan &euro;
+                @if(Auth::check())		    
+                    @if(Auth::user()->role=='handelaar') {{ $producten[$i]->prijs_handelaar }} 
+                    @else {{ $producten[$i]->prijs_particulier }} 
+                    @endif 		    
+                @else {{ $producten[$i]->prijs_particulier }} 
+                @endif     
+                /m&sup2;
+                </p>
+                <p>&rarr; &euro;{{ $prijzen[$i] }}</p>
+                <p><a href="{{ route('deleteorder') }}/{{ $sessionIndexes[$i] }}">Item verwijderen</a></p>
+            </div>
+		    
 		@endfor
 
-		<p>Totale prijs: &euro;{{ $totaleprijs }}</p>
+		<p><strong>Totaal: </strong> &euro;{{ $totaleprijs }}</p>
 		<br>
         <p>{{ trans('cont.prijzen_afgehaald') }}</p>
         <br>
