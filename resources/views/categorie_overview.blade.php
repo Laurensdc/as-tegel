@@ -12,8 +12,6 @@
 </div>
 
 <div class="categorie_overzicht">
-	<h2>{{ trans('cont.cat_overview') }}</h2>
-
 	@foreach($categories as $cat)
 	<article id="{{ $cat->cat_linknaam }}">
         <div class="catoverzicht_cat">
