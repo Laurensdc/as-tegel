@@ -341,7 +341,7 @@ header .header_bestelling a:hover {
   background-position: center top;
   height: 40rem;
   margin-bottom: 7rem; }
-  @media screen and (min-width: 90em) {
+  @media screen and (min-width: 70em) {
     .homecontainer article {
       height: 60rem; }
       .homecontainer article .home_caption {
@@ -410,17 +410,16 @@ header .header_bestelling a:hover {
   color: #7CB342; }
 
 /* Producten content, Categorie overzicht */
-.categorie_overzicht, .producten_content {
+.producten_content {
   background-color: #FAFAFA;
   overflow: hidden;
   padding: 1rem; }
 
-.producten_content h2, .categorie_overzicht h2 {
+.producten_content h2 {
   font-size: 2.2rem;
   padding: 1rem 0 1rem 1.5%;
   margin-bottom: 2rem; }
 
-/* Producten Overzicht */
 @media (min-width: 45em) {
   .producten_content {
     padding: 0; } }
@@ -446,9 +445,10 @@ header .header_bestelling a:hover {
 .producten_content li {
   height: 2.2rem; }
 
-/* End of producten overzicht */
-/* Categorie overzicht */
-.categorie_overzicht article, .producten_content article {
+.producten_content_article {
+  position: relative; }
+
+.producten_content article {
   overflow: hidden;
   background-size: cover;
   background-position: center top;
@@ -457,19 +457,75 @@ header .header_bestelling a:hover {
   float: left;
   margin: 1rem 0; }
   @media (min-width: 60em) {
-    .categorie_overzicht article, .producten_content article {
+    .producten_content article {
       width: 31.33333%;
       float: left;
       margin: 0 1% 2%; } }
 
+.producten_content_article {
+  position: relative; }
+
+.producten_content img {
+  width: 100%; }
+
+/* Order */
+.ordercontent {
+  padding: 1rem; }
+  .ordercontent h2 {
+    margin: 5rem 0 2rem; }
+  @media (min-width: 85em) {
+    .ordercontent {
+      padding: 0; } }
+
+/* Breadcrumb */
+.breadcrumb {
+  height: 4rem;
+  padding: 0 1rem;
+  margin-bottom: 1rem; }
+  @media (min-width: 45em) {
+    .breadcrumb {
+      height: 4rem; } }
+  .breadcrumb p {
+    line-height: 2rem;
+    font-size: 1.4rem; }
+    @media (min-width: 45em) {
+      .breadcrumb p {
+        line-height: 4rem;
+        font-size: 1.6rem; } }
+
+.categorie_overzicht, .producten_content {
+  background-color: #FAFAFA;
+  overflow: hidden;
+  padding: 1rem; }
+
+.categorie_overzicht h2 {
+  font-size: 2.2rem;
+  padding: 1rem 0 1rem 1.5%;
+  margin-bottom: 2rem; }
+
+.categorie_overzicht article {
+  overflow: hidden;
+  background-size: cover;
+  background-position: center top;
+  margin-bottom: 7rem;
+  width: 100%;
+  float: left;
+  margin: 1rem 0; }
+  @media (min-width: 60em) {
+    .categorie_overzicht article {
+      width: 31.33333%;
+      float: left;
+      margin: 0 1% 2%; } }
+
+/* Categorie overzicht */
 .categorie_overzicht article {
   height: 40rem; }
 
-.categorie_overzicht img, .producten_content img {
+.categorie_overzicht img {
   width: 100%; }
 
 /* Articles */
-.categorie_overzicht_article, .producten_content_article {
+.categorie_overzicht_article {
   position: relative; }
 
 .categorie_overzicht_article img {
@@ -503,33 +559,6 @@ header .header_bestelling a:hover {
 
 /* End of Articles */
 /* End of Categorie overzicht*/
-/* Order */
-.ordercontent {
-  padding: 1rem; }
-  .ordercontent h2 {
-    margin: 5rem 0 2rem; }
-  @media (min-width: 85em) {
-    .ordercontent {
-      padding: 0; } }
-
-/* End of Order */
-/* Breadcrumb */
-.breadcrumb {
-  height: 4rem;
-  padding: 0 1rem;
-  margin-bottom: 1rem; }
-  @media (min-width: 45em) {
-    .breadcrumb {
-      height: 4rem; } }
-  .breadcrumb p {
-    line-height: 2rem;
-    font-size: 1.4rem; }
-    @media (min-width: 45em) {
-      .breadcrumb p {
-        line-height: 4rem;
-        font-size: 1.6rem; } }
-
-/* End of Breadcrumb */
 .toolbar_content_small {
   width: 80%;
   margin: 0 10%;

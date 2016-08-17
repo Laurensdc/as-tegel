@@ -26,8 +26,8 @@ class ProductenController extends Controller
 	   		"allcategories" => $categories,			// Pass to build menu
     		"allsubcategories" => $allsubcategories,	// Pass to build menu
 
-
-    		"categories" => $categories
+    		"categories" => $categories,
+            "subcategories" => $allsubcategories
     		]);
     }
 
