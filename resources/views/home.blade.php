@@ -5,8 +5,8 @@
 
     <div class="hometext">
         <p>
-            Hier ziet u enkele van onze mooise producten.
-            <a href="{{ route('producten') }}" class="btn">Ontdek aanbod</a>
+            {{ trans('cont.nicest_products') }}
+            <a href="{{ route('producten') }}" class="btn">{{ trans('cont.explore_collection') }}</a>
 
         </p>
 
