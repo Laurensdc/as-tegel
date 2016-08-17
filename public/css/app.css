@@ -425,8 +425,20 @@ header .header_bestelling a:hover {
     padding: 0; } }
 
 .producten_content article {
+  overflow: hidden;
+  background-size: cover;
+  background-position: center top;
+  margin-bottom: 7rem;
+  width: 100%;
+  float: left;
+  margin: 1rem 0;
   font-size: 1.4rem;
   padding: 0.5rem; }
+  @media (min-width: 60em) {
+    .producten_content article {
+      width: 31.33333%;
+      float: left;
+      margin: 0 1% 2%; } }
   .producten_content article h1 {
     margin: 1rem 0;
     font-size: 1.8rem;
@@ -444,26 +456,6 @@ header .header_bestelling a:hover {
 
 .producten_content li {
   height: 2.2rem; }
-
-.producten_content_article {
-  position: relative; }
-
-.producten_content article {
-  overflow: hidden;
-  background-size: cover;
-  background-position: center top;
-  margin-bottom: 7rem;
-  width: 100%;
-  float: left;
-  margin: 1rem 0; }
-  @media (min-width: 60em) {
-    .producten_content article {
-      width: 31.33333%;
-      float: left;
-      margin: 0 1% 2%; } }
-
-.producten_content_article {
-  position: relative; }
 
 .producten_content img {
   width: 100%; }

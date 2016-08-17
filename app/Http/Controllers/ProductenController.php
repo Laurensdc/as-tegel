@@ -83,7 +83,7 @@ class ProductenController extends Controller
         $hoofdcategorie = $hoofdcategorie["naam"];
    
 
-    	return view('categorie_detail',
+    	return view('products',
     		[
     		"title" =>  $subcategorie . " &ndash; " . $hoofdcategorie, 
     		"headermenu_active" => "producten",// Active title in menu

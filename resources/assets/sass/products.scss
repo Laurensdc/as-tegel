@@ -17,6 +17,21 @@
     }
 
     article {
+        overflow:hidden;
+
+        background-size:cover;
+        background-position:center top;				
+        margin-bottom: 7rem;
+
+        width:100%;
+        float:left;
+        margin:1rem 0;
+
+        @media (min-width: $screen_mediumbig) {
+            width:31.33333%;
+            float:left;
+            margin:0 1% 2%;           
+        }
         font-size:1.4rem;
 
         // &:hover {
@@ -50,37 +65,10 @@
     li {
 		height:2.2rem;
 	}
-}
 
-.producten_content_article {
-    position:relative;
-}
-
-.producten_content article {	
-    overflow:hidden;
-
-    background-size:cover;
-    background-position:center top;				
-    margin-bottom: 7rem;
-
-    width:100%;
-    float:left;
-    margin:1rem 0;
-
-    @media (min-width: $screen_mediumbig) {
-        width:31.33333%;
-        float:left;
-        margin:0 1% 2%;           
+    img {
+        width:100%;
     }
-    
-}
-
-.producten_content_article  {
-    position:relative;
-}
-
-.producten_content img {
-    width:100%;
 }
 
 
