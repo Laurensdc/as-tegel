@@ -575,7 +575,8 @@ header .header_bestelling a:hover {
 
 .catoverzicht_subcat {
   float: left;
-  width: 100%; }
+  width: 100%;
+  padding-bottom: 2rem; }
   @media (min-width: 60em) {
     .catoverzicht_subcat {
       width: 50%;
