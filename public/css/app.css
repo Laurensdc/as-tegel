@@ -417,10 +417,10 @@ header .header_bestelling a:hover {
   @media (min-width: 45em) {
     .catmenu_container {
       width: 25rem;
-      margin: 1rem; } }
+      margin: 0 1rem; } }
   @media (min-width: 85em) {
     .catmenu_container {
-      margin: 0; } }
+      margin: 0 1rem 0 0; } }
 
 .catmenu li, .catmenu .catmenu_title {
   height: 4rem;
@@ -526,7 +526,7 @@ header .header_bestelling a:hover {
 .categorie_overzicht {
   background-color: #FAFAFA;
   overflow: hidden;
-  padding: 1rem; }
+  padding: 0 1rem; }
   .categorie_overzicht h2 {
     font-size: 2.2rem;
     padding: 1rem 0 1rem 1.5%;
@@ -540,22 +540,34 @@ header .header_bestelling a:hover {
     position: relative;
     border-bottom: 1px solid #9E9E9E;
     margin-bottom: 1rem;
-    padding-top: 1rem;
     width: 100%;
     float: left; }
   .categorie_overzicht img {
     width: 100%;
     float: left;
+    min-height: 20rem;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
     max-height: 30rem;
     object-fit: cover; }
 
 .catoverzicht_cat {
   float: left;
   width: 100%; }
+  @media (min-width: 60em) {
+    .catoverzicht_cat {
+      width: 42%;
+      margin-right: 8%; } }
 
 .catoverzicht_subcat {
   float: left;
   width: 100%; }
+  @media (min-width: 60em) {
+    .catoverzicht_subcat {
+      width: 50%;
+      margin-top: 3rem; }
+      .catoverzicht_subcat a {
+        display: inline-block; } }
   .catoverzicht_subcat .subcat-item {
     margin: 1rem 0; }
   .catoverzicht_subcat .btn {
@@ -565,6 +577,10 @@ header .header_bestelling a:hover {
     float: left; }
     .catoverzicht_subcat .catoverzicht_subcat_detail:nth-child(odd) {
       margin-right: 2%; }
+    @media (min-width: 60em) {
+      .catoverzicht_subcat .catoverzicht_subcat_detail {
+        width: 100%;
+        margin: 0; } }
 
 .toolbar_content_small {
   width: 80%;

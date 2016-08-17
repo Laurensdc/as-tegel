@@ -1,7 +1,7 @@
 .categorie_overzicht {
 	background-color:$almostwhite;
 	overflow:hidden;
-	padding:1rem;
+	padding:0 1rem;
 
     h2 {
         font-size:2.2rem;
@@ -25,37 +25,46 @@
         border-bottom:1px solid $gray;
 
         margin-bottom: 1rem;
-        padding-top:1rem;
+
 
         width:100%;
-        float:left;
-
-        @media (min-width: $screen_mediumbig) {
-            
-  
-           
-        }       
+        float:left;   
     }
 
     img {
         width:100%;
         float:left;
+        min-height:20rem;
+        margin-left:1rem;
+        margin-bottom:2rem;
         max-height:30rem;
         object-fit:cover;
-    }
-
-    
+    } 
 }
-
 
 .catoverzicht_cat {
     float:left;
     width:100%;
+
+    @media (min-width:$screen-mediumbig) {
+        width:42%;
+        margin-right:8%;
+    }
+
 }
 
 .catoverzicht_subcat {
     float:left;
     width:100%;
+
+    @media (min-width:$screen-mediumbig) {
+        width:50%;
+        margin-top:3rem;
+
+        a {
+            display:inline-block;
+        }
+    }
 
     .subcat-item {
         margin:1rem 0;
@@ -71,6 +80,11 @@
 
         &:nth-child(odd) {
             margin-right:2%;
+        }
+
+        @media (min-width:$screen-mediumbig) {
+            width:100%;
+            margin:0;
         }
     }
 }

@@ -1,16 +1,17 @@
 .catmenu_container {
 	width:96%;
 	margin:0 2%;
+
 	float:left;
 	background-color:$actuallywhite;
 
     @media (min-width: $screen_medium) {
         width:25rem;
-        margin:1rem;
+        margin:0 1rem;
     }
 
     @media (min-width: $screen_big) {
-        margin:0;
+        margin:0 1rem 0 0;
     }
 
 }
