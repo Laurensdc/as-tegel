@@ -31,17 +31,17 @@
                 @if($cat->id == $subcat->categorie_id)
                     <div class="catoverzicht_subcat_detail">
                         <h3>
-                            <a href="{{ route('producten') }}/{{ $cat->cat_linknaam }}/{{ $subcat->subcat_linknaam }}" class="boringlink">
-                                {{ $subcat->naam }}
+                            <a href="{{ route('producten') }}/{{ $cat->cat_linknaam }}/{{ $subcat->subcat_linknaam }}">
+                                {{ $subcat->naam }} &#9757;
                             </a>
                         </h3>
                         @if(isset($subcat->beschrijving) && $subcat->beschrijving != '')
-                            <p class="quote"> {{ $subcat->beschrijving }}</p>
+                            <p> {{ $subcat->beschrijving }}</p>
                         @endif
                         <p class="subcat-item">
-                            <a href="{{ route('producten') }}/{{ $cat->cat_linknaam }}/{{ $subcat->subcat_linknaam }}" class="btn">
-                                Bekijk producten
-                            </a>
+                            <!--<a href="{{ route('producten') }}/{{ $cat->cat_linknaam }}/{{ $subcat->subcat_linknaam }}">
+                                Toon alles voor {{ $subcat->naam }}
+                            </a>-->
                         </p>
                     </div>
                 @endif

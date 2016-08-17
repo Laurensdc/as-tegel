@@ -17,8 +17,7 @@
 			<a class="btn" href="{{ route('admin_categorieoverview') }}">Categorie</a>
 
 			<a class="btn" href="{{ route('admin_subcategorieoverview') }}">Subcategorie</a>
-		</p>
-		<p>
+
 			<a class="btn" href="{{ route('admin') }}/fotoupload">Foto Uploaden</a>
 		</p>
 	</div>

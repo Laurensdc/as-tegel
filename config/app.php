@@ -78,7 +78,7 @@ return [
     |
     */
 
-    'fallback_locale' => 'en',
+    'fallback_locale' => 'nl',
 
     /*
     |--------------------------------------------------------------------------
@@ -91,8 +91,8 @@ return [
     |
     */
 
-    'key' => env('APP_KEY'),
-    // 'key' => 'jdifjeIJIJIJFIEJdiJIJEFDafadfeiw',
+    //'key' => env('APP_KEY'),
+     'key' => 'jdifjeIJIJIJFIEJdiJIJEFDafadfeiw',
 
     'cipher' => 'AES-256-CBC',
 

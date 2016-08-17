@@ -17,7 +17,6 @@
 .toolbar_admin .toolbar_content {
     width:calc(100% - 2rem);
     margin:0 1rem;
-    
 }
 
 .toolbar_admin_item {
@@ -30,6 +29,10 @@
 .admin_container {
 	margin-top:2rem;
     font-size:1.4rem;
+
+    a.btn {
+        margin-bottom:1rem;
+    }
 }
 
 .admin_hugecontainer {

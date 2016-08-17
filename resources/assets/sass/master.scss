@@ -69,7 +69,7 @@ header {
 a {
 	text-decoration:none;
 	color:$colora;
-	transition:0.4s ease-in-out;
+	transition:0.2s ease-in-out;
 }
 
 
@@ -147,11 +147,21 @@ ul, li {
 		text-decoration:underline;
 	}
 
-    .quote:before {
+    .quote:before, .quote:after {
         font-family:serif;
         font-weight:800;
+        
+
+    }
+
+    .quote:after {
+        content: " \201D";
+        font-size:2rem;
+    }
+
+    .quote:before {
+        content: "\201C ";
         font-size:3rem;
-        content: "\201C";
     }
 
 

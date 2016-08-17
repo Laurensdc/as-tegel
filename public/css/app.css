@@ -162,7 +162,7 @@ header {
 a {
   text-decoration: none;
   color: #7CB342;
-  transition: 0.4s ease-in-out; }
+  transition: 0.2s ease-in-out; }
 
 a:hover {
   color: #9CCC65; }
@@ -221,11 +221,17 @@ a.boringlink {
 a.boringlink:hover {
   text-decoration: underline; }
 
-.quote:before {
+.quote:before, .quote:after {
   font-family: serif;
-  font-weight: 800;
-  font-size: 3rem;
-  content: "\201C"; }
+  font-weight: 800; }
+
+.quote:after {
+  content: " \201D";
+  font-size: 2rem; }
+
+.quote:before {
+  content: "\201C ";
+  font-size: 3rem; }
 
 /* End of General but more specific stuff */
 /* End of General stuff */
@@ -523,6 +529,11 @@ header .header_bestelling a:hover {
         line-height: 4rem;
         font-size: 1.6rem; } }
 
+.toast-center {
+  top: 12rem;
+  margin: 0 auto;
+  right: 15%; }
+
 .categorie_overzicht {
   background-color: #FAFAFA;
   overflow: hidden;
@@ -534,7 +545,10 @@ header .header_bestelling a:hover {
   .categorie_overzicht h3 {
     font-size: 1.8rem;
     margin-bottom: 1rem;
-    margin-top: 2rem; }
+    margin-top: 2rem;
+    text-decoration: underline; }
+    .categorie_overzicht h3 a:hover {
+      text-decoration: underline; }
   .categorie_overzicht article {
     overflow: hidden;
     position: relative;
@@ -577,10 +591,6 @@ header .header_bestelling a:hover {
     float: left; }
     .catoverzicht_subcat .catoverzicht_subcat_detail:nth-child(odd) {
       margin-right: 2%; }
-    @media (min-width: 60em) {
-      .catoverzicht_subcat .catoverzicht_subcat_detail {
-        width: 100%;
-        margin: 0; } }
 
 .toolbar_content_small {
   width: 80%;
@@ -647,6 +657,8 @@ header .header_bestelling a:hover {
 .admin_container {
   margin-top: 2rem;
   font-size: 1.4rem; }
+  .admin_container a.btn {
+    margin-bottom: 1rem; }
 
 .admin_hugecontainer {
   overflow: auto;
