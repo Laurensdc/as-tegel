@@ -372,9 +372,9 @@ header .header_bestelling a:hover {
   margin-bottom: 7rem; }
   @media screen and (min-width: 70em) {
     .homecontainer article {
-      height: 60rem; }
+      height: 50rem; }
       .homecontainer article .home_caption {
-        margin-top: 50rem; } }
+        margin-top: 40rem; } }
 
 .homecontainer img {
   width: 100%; }
@@ -530,15 +530,10 @@ header .header_bestelling a:hover {
     overflow: hidden;
     position: relative;
     border-bottom: 1px solid #9E9E9E;
-    border-top: 1px solid #9E9E9E;
-    margin-bottom: 7rem;
+    margin-bottom: 1rem;
     padding-top: 1rem;
     width: 100%;
     float: left; }
-    @media (min-width: 60em) {
-      .categorie_overzicht article {
-        float: left;
-        margin: 0 1% 2%; } }
   .categorie_overzicht img {
     width: 100%;
     float: left;
