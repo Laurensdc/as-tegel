@@ -26,7 +26,7 @@ Route::get('/contact', ['middleware' => 'lang', 'as' => 'contact', 'uses' => 'Ho
 
 // Producten
 Route::get('/producten', ['middleware' => 'lang', 'as' => 'producten', 'uses' => 'ProductenController@overview']);
-Route::get('/producten/{cat}', ['middleware' => 'lang', 'uses' => 'ProductenController@categorieFilter']);
+//Route::get('/producten/{cat}', ['middleware' => 'lang', 'uses' => 'ProductenController@categorieFilter']);
 Route::get('/producten/{cat}/{subcat}', ['middleware' => 'lang', 'uses' => 'ProductenController@categorieDetail']);
 Route::post('/producten/{cat}/{subcat}', ['middleware' => 'lang', 'uses' => 'ProductenController@bestelProduct']);
 

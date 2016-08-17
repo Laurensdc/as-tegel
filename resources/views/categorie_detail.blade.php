@@ -11,7 +11,7 @@
 <div class="breadcrumb">
 	<p>
 		<a href="{{ route('producten') }}">{{ trans('cont.products') }}</a> 
-		&raquo; <a href="{{ route('producten') }}/{{ $catmenu_active }}">{{ $hoofdcategorie }}</a> 
+		&raquo; <a href="{{ route('producten') }}#{{ $catmenu_active }}">{{ $hoofdcategorie }}</a> 
 		&raquo; {{ $subcategorie }}
 	</p>
 </div>

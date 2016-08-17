@@ -31,40 +31,40 @@ class ProductenController extends Controller
     		]);
     }
 
-    function categorieFilter($cat) {
-		// Join tables
-	  	// 	$subcategories = Subcategorie::orderBy('categories.naam')
-	    //	->join('categories', 'categories.id', '=', 'subcategories.categorie_id')
-	    //	->where('categories.cat_linknaam', $cat)
-	    //	->select('subcategories.*', 'categories.naam as catnaam')
-	    //	->get();
+    // function categorieFilter($cat) {
+	// 	// Join tables
+	//   	// 	$subcategories = Subcategorie::orderBy('categories.naam')
+	//     //	->join('categories', 'categories.id', '=', 'subcategories.categorie_id')
+	//     //	->where('categories.cat_linknaam', $cat)
+	//     //	->select('subcategories.*', 'categories.naam as catnaam')
+	//     //	->get();
 
-	    // and then after 2 hours of trying this suddenly does work
-    	$categorie = Categorie::where('cat_linknaam', $cat)->first();
-    	$subcategories = $categorie->subcategories;
+	//     // and then after 2 hours of trying this suddenly does work
+    // 	$categorie = Categorie::where('cat_linknaam', $cat)->first();
+    // 	$subcategories = $categorie->subcategories;
 
-    	$allcategories = Categorie::all();
-    	$allsubcategories = Subcategorie::all();
+    // 	$allcategories = Categorie::all();
+    // 	$allsubcategories = Subcategorie::all();
 
-    	$hoofdcategorie = $categorie["naam"];
+    // 	$hoofdcategorie = $categorie["naam"];
 
-    	return view('overview_voor_categorie', 
-    		[
-    		"title" => "Vietnamese Natuursteen",	// Tab title
-    		"headermenu_active" => "producten",  // Active title in menu
-    		"catmenu_active" => $cat, 	// Active left menu
+    // 	return view('overview_voor_categorie', 
+    // 		[
+    // 		"title" => "Vietnamese Natuursteen",	// Tab title
+    // 		"headermenu_active" => "producten",  // Active title in menu
+    // 		"catmenu_active" => $cat, 	// Active left menu
 
-    		"allcategories" => $allcategories,			// Pass to build menu
-    		"allsubcategories" => $allsubcategories,	// Pass to build menu
+    // 		"allcategories" => $allcategories,			// Pass to build menu
+    // 		"allsubcategories" => $allsubcategories,	// Pass to build menu
 
-    		"subcategories" => $subcategories,
-    		"hoofdcategorie" => $hoofdcategorie,
- 			"hoofdcategorielink" => $cat
+    // 		"subcategories" => $subcategories,
+    // 		"hoofdcategorie" => $hoofdcategorie,
+ 	// 		"hoofdcategorielink" => $cat
 
 
-    		 ]);
+    // 		 ]);
 
-    }
+    // }
 
     function categorieDetail($cat, $subcat, $showtoast=false) {
         //	$categorie = Categorie::where('cat_linknaam', $cat)->first();
