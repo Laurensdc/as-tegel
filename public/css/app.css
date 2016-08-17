@@ -618,7 +618,7 @@ header .header_bestelling a:hover {
       height: 3rem;
       line-height: 1.6rem; } }
 
-.toolbar_content {
+.toolbar_admin .toolbar_content {
   width: calc(100% - 2rem);
   margin: 0 1rem; }
 
