@@ -599,6 +599,30 @@ header .header_bestelling a:hover {
 .login_panel p.handelaar_tekst {
   margin: 1rem 0; }
 
+.toolbar_admin {
+  height: 14rem;
+  line-height: 3rem; }
+  @media (min-width: 500px) {
+    .toolbar_admin {
+      height: 10rem; } }
+  @media (min-width: 1000px) {
+    .toolbar_admin {
+      height: 8rem; } }
+  @media (min-width: 1260px) {
+    .toolbar_admin {
+      height: 3rem;
+      line-height: 1.6rem; } }
+
+.toolbar_content {
+  width: calc(100% - 2rem);
+  margin: 0 1rem; }
+
+.toolbar_admin_item {
+  border-right: 1px solid #7CB342;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  text-decoration: underline; }
+
 .admin_container {
   margin-top: 2rem;
   font-size: 1.4rem; }
@@ -617,9 +641,13 @@ header .header_bestelling a:hover {
 .admin_smallcol {
   padding: 1rem;
   float: left;
-  width: 50%;
-  margin: 0 25% 2rem;
-  border: 1px solid #111; }
+  border: 1px solid #111;
+  width: 100%;
+  margin: 0 0 2rem 0; }
+  @media (min-width: 60em) {
+    .admin_smallcol {
+      width: 50%;
+      margin: 0 25% 2rem; } }
 
 .admin_container form label {
   width: 20rem;

@@ -1,3 +1,32 @@
+.toolbar_admin {
+    height:14rem;
+    line-height:3rem;
+
+    @media (min-width:500px) {
+        height:10rem;   
+    }
+    @media (min-width:1000px) {
+        height:8rem;   
+    }
+    @media (min-width:1260px) {
+        height:3rem;   
+        line-height:1.6rem;
+    }
+}
+
+.toolbar_content {
+    width:calc(100% - 2rem);
+    margin:0 1rem;
+    
+}
+
+.toolbar_admin_item {
+    border-right:1px solid $colora;
+    padding-right:1rem;
+    padding-left:1rem;
+    text-decoration:underline;
+}
+
 .admin_container {
 	margin-top:2rem;
     font-size:1.4rem;
@@ -6,6 +35,7 @@
 .admin_hugecontainer {
 	overflow:auto;
 	width:100%;
+    
 }
 
 .admin_container td {
@@ -20,9 +50,17 @@
 .admin_smallcol {
 	padding:1rem;
 	float:left;
-	width:50%;
-	margin: 0 25% 2rem;
 	border:1px solid $textcolor;
+
+    width:100%;
+    margin: 0 0 2rem 0;
+
+    @media (min-width:$screen-mediumbig) {
+	    width:50%;
+        margin: 0 25% 2rem;
+    }
+	
+
 }
 
 .admin_container form label {
