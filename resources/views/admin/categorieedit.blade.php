@@ -31,7 +31,7 @@
 
 	<div class="admin_smallcol">
 				<span id="for_admin_delete"class="txt_warning">Verwijderen</span>
-				<a class="admin_delete btn" href="{{ route('admin' )}}/categorie/delete/{{ $categorie->id}}">Bevestig Verwijdering {{ $categorie->naam }}</a>	
+				<a class="admin_delete btn" href="{{ route('admin' )}}/categorie/delete/{{ $categorie->id}}">Bevestig verwijdering {{ $categorie->naam }}</a>	
 	</div>	
 @endsection
 

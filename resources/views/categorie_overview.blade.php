@@ -24,9 +24,10 @@
             </div>		-->
         </div>
         <div class="catoverzicht_subcat">
+            <h3>{{ trans('cont.subcategories') }}</h3>
             @foreach($subcategories as $subcat)
                 @if($cat->id == $subcat->categorie_id)
-                    {{ $subcat->naam }}
+                    <p class="subcat-item"><a href="{{ route('producten') }}/{{ $cat->cat_linknaam }}/{{ $subcat->subcat_linknaam }}">{{ $subcat->naam }}</a></p>
                 @endif
 
             @endforeach

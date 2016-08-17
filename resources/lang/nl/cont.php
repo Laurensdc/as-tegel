@@ -3,6 +3,7 @@
 return [
 	"products"	 	=> "Producten",
 	"cat_overview" 	=> "Categorieën",
+    "subcategories" => "Subcategorieën",
 	"overzicht"		=> "Overzicht Categorieën",
 	"bestelling" 	=> "Bestelling",
 	"welkom"		=> "Welkom",
