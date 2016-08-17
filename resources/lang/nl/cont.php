@@ -19,7 +19,7 @@ return [
 	"order"			=> "Bestel",
 	"product_added"	=> "Product toegevoegd aan uw bestelling",
 	"orderit"		=> "Plaats bestelling",
-	"prijzen_afgehaald" =>  "Alle prijzen zijn afgehaald te Desselgem en inclusief BTW.",
+	"prijzen_afgehaald" =>  "Alle prijzen zijn afgehaald te Desselgem. BTW inbegrepen.",
     "nicest_products"   => "Hier ziet u enkele van onze mooise producten.",
     "explore_collection" => "Ontdek aanbod",
 ];
