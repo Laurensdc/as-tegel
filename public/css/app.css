@@ -370,10 +370,12 @@ header .header_bestelling a:hover {
 
 .homecontainer article {
   overflow: hidden;
-  background-size: cover;
-  background-position: center top;
+  width: 49%;
+  float: left;
   height: 40rem;
-  margin-bottom: 7rem; }
+  margin-bottom: 7rem;
+  background-size: cover;
+  background-position: center top; }
   @media screen and (min-width: 70em) {
     .homecontainer article {
       height: 50rem; }
@@ -403,6 +405,9 @@ header .header_bestelling a:hover {
   .homecontainer a:hover article .home_caption span {
     color: #7CB342;
     background-color: #212121; }
+
+.mgright-2pct {
+  margin-right: 2%; }
 
 .catmenu_container {
   width: 96%;

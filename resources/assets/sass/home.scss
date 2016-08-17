@@ -22,14 +22,15 @@
 
     article {
         overflow:hidden;
+        width:49%;
+        float:left;
+        height:40rem;
+        margin-bottom: 7rem;
 
         background-size:cover;
         //background-repeat:repeat-y;
         background-position:center top;
         //background-attachment: fixed;	
-        
-        height:40rem;
-        margin-bottom: 7rem;
 
         @media screen and (min-width: 70em) {
             height:50rem;
@@ -78,3 +79,6 @@
     }
 }
 
+.mgright-2pct {
+        margin-right:2%;
+}

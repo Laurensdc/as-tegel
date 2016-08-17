@@ -14,7 +14,7 @@
     </div>
 
     <a href="{{ route('producten') }}/specialiteiten/carius">
-        <article class="home_carius">
+        <article class="home_carius mgright-2pct">
             <div class="home_caption">
                 <span>Carius</span>
             </div>
@@ -30,7 +30,7 @@
     </a>
 
     <a href="{{ route('producten') }}/vietnamees/geschuurdgezaagd">
-        <article class="home_vietnamees">
+        <article class="home_vietnamees mgright-2pct">
             <div class="home_caption">
                 <span>Vietnamese Geschuurd Gezaagd</span>
             </div>
@@ -46,7 +46,7 @@
     </a>
 
     <a href="{{ route('producten') }}/indisch/candela">
-        <article class="home_indisch">
+        <article class="home_indisch mgright-2pct">
             <div class="home_caption">
                 <span>Candela</span>
             </div>
