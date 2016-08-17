@@ -24,7 +24,7 @@
 	<h2>{{ $hoofdcategorie }} &ndash; {{ $subcategorie }}</h2>
 
 	@if($producten->isEmpty())
-		<p>{{ trans('cont.noproducts') }}</p><br>
+		<p>&nbsp;&nbsp; {{ trans('cont.noproducts') }}</p><br>
 	@else
 		
 		@foreach($producten as $i=>$p)
