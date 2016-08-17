@@ -147,6 +147,14 @@ ul, li {
 		text-decoration:underline;
 	}
 
+    .quote:before {
+        font-family:serif;
+        font-weight:800;
+        font-size:3rem;
+        content: "\201C";
+    }
+
+
 	/* End of General but more specific stuff */
 
 /* End of General stuff */
@@ -197,7 +205,7 @@ ul, li {
 	border-right: 1px solid $colora;
 	display:none;
 
-    @media (min-width: $screen_medium) {
+    @media (min-width: $screen_mediumbig) {
         display:block;
     }
 	

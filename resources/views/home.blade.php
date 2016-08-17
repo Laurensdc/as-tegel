@@ -2,6 +2,17 @@
 
 
 @section('homecontent')
+
+    <div class="hometext">
+        <p>
+            Hier ziet u enkele van onze mooise producten.
+            <a href="{{ route('producten') }}" class="btn">Ontdek aanbod</a>
+
+        </p>
+
+
+    </div>
+
     <a href="{{ route('producten') }}/specialiteiten/carius">
         <article class="home_carius">
             <div class="home_caption">

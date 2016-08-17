@@ -221,6 +221,12 @@ a.boringlink {
 a.boringlink:hover {
   text-decoration: underline; }
 
+.quote:before {
+  font-family: serif;
+  font-weight: 800;
+  font-size: 3rem;
+  content: "\201C"; }
+
 /* End of General but more specific stuff */
 /* End of General stuff */
 /* Toolbar */
@@ -255,7 +261,7 @@ a.boringlink:hover {
   padding: 0 1rem;
   border-right: 1px solid #7CB342;
   display: none; }
-  @media (min-width: 45em) {
+  @media (min-width: 60em) {
     .toolbar_contact {
       display: block; } }
 
@@ -344,6 +350,20 @@ header .header_bestelling a:hover {
       margin-top: 2rem; } }
 
 /* End of Menu */
+.homecontainer .hometext {
+  background-color: #424242;
+  color: #FAFAFA;
+  padding: 3rem;
+  margin: 6rem 0;
+  text-align: center; }
+  .homecontainer .hometext a {
+    margin: 2rem 0 0 2rem;
+    display: block; }
+    @media (min-width: 45em) {
+      .homecontainer .hometext a {
+        margin: 0 0 0 2rem;
+        display: inline-block; } }
+
 .homecontainer article {
   overflow: hidden;
   background-size: cover;
@@ -505,22 +525,25 @@ header .header_bestelling a:hover {
   .categorie_overzicht h3 {
     font-size: 2rem;
     margin-bottom: 1rem;
-    margin-top: 1rem; }
+    margin-top: 2rem; }
   .categorie_overzicht article {
     overflow: hidden;
     position: relative;
+    border-bottom: 1px solid #9E9E9E;
+    border-top: 1px solid #9E9E9E;
     margin-bottom: 7rem;
+    padding-top: 1rem;
     width: 100%;
-    float: left;
-    margin: 1rem 0; }
+    float: left; }
     @media (min-width: 60em) {
       .categorie_overzicht article {
-        width: 31.33333%;
         float: left;
         margin: 0 1% 2%; } }
   .categorie_overzicht img {
     width: 100%;
-    float: left; }
+    float: left;
+    max-height: 30rem;
+    object-fit: cover; }
 
 .catoverzicht_cat {
   float: left;
@@ -531,6 +554,13 @@ header .header_bestelling a:hover {
   width: 100%; }
   .catoverzicht_subcat .subcat-item {
     margin: 1rem 0; }
+  .catoverzicht_subcat .btn {
+    margin-bottom: 2rem; }
+  .catoverzicht_subcat .catoverzicht_subcat_detail {
+    width: 49%;
+    float: left; }
+    .catoverzicht_subcat .catoverzicht_subcat_detail:nth-child(odd) {
+      margin-right: 2%; }
 
 .toolbar_content_small {
   width: 80%;

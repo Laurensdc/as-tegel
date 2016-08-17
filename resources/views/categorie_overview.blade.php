@@ -24,18 +24,24 @@
             </div>		-->
         </div>
         <div class="catoverzicht_subcat">
-            <h3>{{ trans('cont.subcategories') }}</h3>
             @foreach($subcategories as $subcat)
                 @if($cat->id == $subcat->categorie_id)
-                    <p>{{ $subcat->naam }}</p>
-                    <p>{{ $subcat->beschrijving }}</p>
-                    <p class="subcat-item">
-                        <a href="{{ route('producten') }}/{{ $cat->cat_linknaam }}/{{ $subcat->subcat_linknaam }}" class="btn">
-                            Bekijk producten {{ $subcat->naam }}
-                        </a>
-                    </p>
+                    <div class="catoverzicht_subcat_detail">
+                        <h3>
+                            <a href="{{ route('producten') }}/{{ $cat->cat_linknaam }}/{{ $subcat->subcat_linknaam }}" class="boringlink">
+                                {{ $subcat->naam }}
+                            </a>
+                        </h3>
+                        @if(isset($subcat->beschrijving) && $subcat->beschrijving != '')
+                            <p class="quote"> {{ $subcat->beschrijving }}</p>
+                        @endif
+                        <p class="subcat-item">
+                            <a href="{{ route('producten') }}/{{ $cat->cat_linknaam }}/{{ $subcat->subcat_linknaam }}" class="btn">
+                                Bekijk producten
+                            </a>
+                        </p>
+                    </div>
                 @endif
-
             @endforeach
         </div>
 	</article>

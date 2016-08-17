@@ -1,32 +1,49 @@
 // Check background_images.scss for homepage background images
-
-.homecontainer article {
-	overflow:hidden;
-
-	background-size:cover;
-	//background-repeat:repeat-y;
-	background-position:center top;
-
-	//background-attachment: fixed;	
-	
-	height:40rem;
-	margin-bottom: 7rem;
-
-    @media screen and (min-width: 70em) {
-        height:60rem;
-
-        .home_caption {
-            margin-top: 50rem;
-        }
-    }	
-}
-
-.homecontainer img {
-	width:100%;
-}
-
 .homecontainer  {
-      
+
+    .hometext {
+        background-color: $verygray;
+        color:$almostwhite;
+        padding:3rem;
+        margin:6rem 0;
+        text-align:center;
+
+        a {
+            margin:2rem 0 0 2rem;
+            display:block;
+
+            @media (min-width:$screen-medium) {
+                margin:0 0 0 2rem;
+                display:inline-block;
+            }
+        }
+
+    }
+
+    article {
+        overflow:hidden;
+
+        background-size:cover;
+        //background-repeat:repeat-y;
+        background-position:center top;
+        //background-attachment: fixed;	
+        
+        height:40rem;
+        margin-bottom: 7rem;
+
+        @media screen and (min-width: 70em) {
+            height:60rem;
+
+            .home_caption {
+                margin-top: 50rem;
+            }
+        }	
+    } 
+
+    img {
+        width:100%;
+    }
+
     .home_caption {
         width:100%;
         margin-top:30rem;
@@ -48,14 +65,15 @@
             color:$almostwhite;
         }
     }
-}
 
-.homecontainer a:hover article {
-    box-shadow:3px 3px 2px 0 rgba(0,0,0,0.30);
+    a:hover article {
+        box-shadow:3px 3px 2px 0 rgba(0,0,0,0.30);
 
-    .home_caption span {
-        color:$colora;
-        background-color:$gray_darkest; 
+        .home_caption span {
+            color:$colora;
+            background-color:$gray_darkest; 
+        }
+
     }
-
 }
+

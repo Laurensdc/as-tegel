@@ -15,21 +15,24 @@
     h3 {
         font-size:2rem;
         margin-bottom:1rem;
-        margin-top:1rem;
+        margin-top:2rem;
     }
 
     article {	
         overflow:hidden;
         position:relative;  
 
+        border-bottom:1px solid $gray;
+        border-top:1px solid $gray;
+
         margin-bottom: 7rem;
+        padding-top:1rem;
 
         width:100%;
         float:left;
-        margin:1rem 0;
 
         @media (min-width: $screen_mediumbig) {
-            width:31.33333%;
+            
             float:left;
             margin:0 1% 2%;           
         }       
@@ -38,7 +41,8 @@
     img {
         width:100%;
         float:left;
-        //object-fit:cover;
+        max-height:30rem;
+        object-fit:cover;
     }
 
     
@@ -56,6 +60,19 @@
 
     .subcat-item {
         margin:1rem 0;
+    }
+
+    .btn {
+        margin-bottom:2rem;
+    }
+
+    .catoverzicht_subcat_detail {
+        width:49%;
+        float:left;
+
+        &:nth-child(odd) {
+            margin-right:2%;
+        }
     }
 }
 
