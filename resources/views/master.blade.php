@@ -42,7 +42,12 @@
 				<li><a href="{{ route('contact') }}" @if($headermenu_active === 'contact') class="active" @endif>Contact</a></li>			
 			</ul>
 			<div class="header_bestelling">
-				<p><a href="{{ route('order') }}">{{ trans('cont.bestelling') }} ({{ count(Session::get('orderitems')) }} items)</a></p>
+				<p> 
+                    <a href="{{ route('order') }}">
+                        <img src="{{ asset('assets/icon-order.png') }}" class="order-icon" alt="Order icon"/>
+                        {{ trans('cont.bestelling') }} ({{ count(Session::get('orderitems')) }} items)
+                    </a>
+                </p>
 			</div>
 		</header>
 

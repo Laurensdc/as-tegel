@@ -280,7 +280,7 @@ header .header_bestelling {
         margin-left:2rem;
         
         height:6rem;
-        width:18rem;
+        width:22rem;
     }
     @media (min-width:$breakpoint_bestelling) {
         margin-left:0;
@@ -301,4 +301,15 @@ header .header_bestelling a:hover {
 	text-decoration:underline;
 }
 
+.order-icon {
+    height:2rem;
+    float:left;
+    
+    margin-top:0.2rem;
+    margin-right:0.5rem;
+
+    @media (min-width: $screen_medium) {
+        margin-top:2rem;
+    }
+}
 /* End of Menu */

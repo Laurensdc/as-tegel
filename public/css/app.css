@@ -318,7 +318,7 @@ header .header_bestelling {
       float: right;
       margin-left: 2rem;
       height: 6rem;
-      width: 18rem; } }
+      width: 22rem; } }
   @media (min-width: 55em) {
     header .header_bestelling {
       margin-left: 0;
@@ -333,6 +333,15 @@ header .header_bestelling a {
 
 header .header_bestelling a:hover {
   text-decoration: underline; }
+
+.order-icon {
+  height: 2rem;
+  float: left;
+  margin-top: 0.2rem;
+  margin-right: 0.5rem; }
+  @media (min-width: 45em) {
+    .order-icon {
+      margin-top: 2rem; } }
 
 /* End of Menu */
 .homecontainer article {
@@ -485,46 +494,30 @@ header .header_bestelling a:hover {
         line-height: 4rem;
         font-size: 1.6rem; } }
 
-.categorie_overzicht, .producten_content {
+.categorie_overzicht {
   background-color: #FAFAFA;
   overflow: hidden;
   padding: 1rem; }
+  .categorie_overzicht h2 {
+    font-size: 2.2rem;
+    padding: 1rem 0 1rem 1.5%;
+    margin-bottom: 2rem; }
+  .categorie_overzicht article {
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 7rem;
+    width: 100%;
+    float: left;
+    margin: 1rem 0; }
+    @media (min-width: 60em) {
+      .categorie_overzicht article {
+        width: 31.33333%;
+        float: left;
+        margin: 0 1% 2%; } }
+  .categorie_overzicht img {
+    width: 100%;
+    float: left; }
 
-.categorie_overzicht h2 {
-  font-size: 2.2rem;
-  padding: 1rem 0 1rem 1.5%;
-  margin-bottom: 2rem; }
-
-.categorie_overzicht article {
-  overflow: hidden;
-  background-size: cover;
-  background-position: center top;
-  margin-bottom: 7rem;
-  width: 100%;
-  float: left;
-  margin: 1rem 0; }
-  @media (min-width: 60em) {
-    .categorie_overzicht article {
-      width: 31.33333%;
-      float: left;
-      margin: 0 1% 2%; } }
-
-/* Categorie overzicht */
-.categorie_overzicht article {
-  height: 40rem; }
-
-.categorie_overzicht img {
-  width: 100%; }
-
-/* Articles */
-.categorie_overzicht_article {
-  position: relative; }
-
-.categorie_overzicht_article img {
-  object-fit: cover;
-  height: 100%; }
-
-/* Caption */
 .categorie_overzicht .producten_caption {
   position: absolute;
   bottom: 5rem;
@@ -549,8 +542,6 @@ header .header_bestelling a:hover {
       .categorie_overzicht .producten_caption a {
         font-size: 2rem; } }
 
-/* End of Articles */
-/* End of Categorie overzicht*/
 .toolbar_content_small {
   width: 80%;
   margin: 0 10%;

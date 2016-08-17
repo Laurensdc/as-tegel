@@ -15,15 +15,15 @@
 	<h2>{{ trans('cont.cat_overview') }}</h2>
 
 	@foreach($categories as $cat)
-	<article class="categorie_overzicht_article">
-        <div class="categorie_overzicht_categorie">
+	<article id="{{ $cat->cat_linknaam }}">
+        <div class="catoverzicht_cat">
             <h2>{{ $cat->naam }}</h2>
             <img src="{{ asset($cat->coverfoto) }}" alt="{{ $cat->naam }}"/>
-            <!--<div class="producten_caption" id="{{ $cat->cat_linknaam }}">
+            <!--<div class="producten_caption" >
                 <a href="{{ route('producten') }}/{{ $cat->cat_linknaam }}">{{ $cat->naam }}</a>
             </div>		-->
         </div>
-        <div class="categorie_overzicht_subcategories">
+        <div class="catoverzicht_subcat">
             @foreach($subcategories as $subcat)
                 @if($cat->id == $subcat->categorie_id)
                     {{ $subcat->naam }}
