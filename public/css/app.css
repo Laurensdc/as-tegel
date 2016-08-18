@@ -296,23 +296,30 @@ input, select {
 
 /* General stuff */
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  height: 100%; }
 
 body {
   font-size: 1.6rem;
   font-family: "Verdana", sans-serif;
   background-color: #FFFFFF;
-  min-width: 30rem; }
+  min-width: 30rem;
+  height: 100%; }
 
 /* Content widths */
 .container {
   margin: 0 auto;
   width: 100%;
   background-color: #FFFFFF;
-  padding-bottom: 10rem; }
+  padding-bottom: 2rem; }
   @media (min-width: 85em) {
     .container {
       width: 70%; } }
+
+/* Wrap around everything (also header and toolbar) for sticky footer */
+.contentwrapper {
+  min-height: 100%;
+  margin-bottom: -28rem; }
 
 header {
   width: 96%;
@@ -951,17 +958,36 @@ a.admin_delete {
 .contact_gap {
   height: 5rem; }
 
+.push {
+  height: 28rem; }
+
 footer {
+  clear: both;
   width: 100%;
   background-color: #424242;
-  min-height: 20rem;
-  padding: 3rem;
-  clear: both; }
+  height: 28rem;
+  padding: 3rem; }
   @media (min-width: 85em) {
     footer {
-      padding: 3rem 0; } }
-  footer .container {
+      padding: 6rem 0; } }
+  footer .footercontent {
+    margin: 0 auto;
+    width: 100%;
     color: #FAFAFA;
     background-color: #424242; }
+    @media (min-width: 85em) {
+      footer .footercontent {
+        width: 70%; } }
+    footer .footercontent p {
+      line-height: 3.2rem; }
+  footer .footercol {
+    width: 100%;
+    float: left; }
+    @media (min-width: 45em) {
+      footer .footercol {
+        width: 33.333%; } }
+  footer.shortpage {
+    position: absolute;
+    bottom: 0; }
 
 /*# sourceMappingURL=app.css.map */

@@ -24,6 +24,9 @@ Route::get('/lang/{ln}', 'HomeController@lang');
 // Contact
 Route::get('/contact', ['middleware' => 'lang', 'as' => 'contact', 'uses' => 'HomeController@contact']);
 
+// DOP norm
+Route::get('/ce', ['middleware' => 'lang', 'as' => 'ce', 'uses' => 'HomeController@ce']);
+
 // Producten
 Route::get('/producten', ['middleware' => 'lang', 'as' => 'producten', 'uses' => 'ProductenController@overview']);
 //Route::get('/producten/{cat}', ['middleware' => 'lang', 'uses' => 'ProductenController@categorieFilter']);

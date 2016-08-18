@@ -38,4 +38,8 @@ class HomeController extends Controller
         return Redirect::back()->withCookie(cookie('ln', $ln));
     }
 
+    function ce() {
+        return view('ce', ["title" => "EP norm", "headermenu_active" => "ce"]);
+    }
+
 }

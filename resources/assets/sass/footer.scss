@@ -1,16 +1,51 @@
-footer {
-    width:100%;
-    background-color:$verygray;
-    min-height:20rem;
-    padding: 3rem;
+.push {
+    height:28rem;
+}
 
-    @media (min-width: $screen-big) {
-        padding: 3rem 0;
-    }
+footer {
     clear:both;
 
-    .container {
+    width:100%;
+    background-color:$verygray;
+
+    height:28rem;
+    padding: 3rem;
+
+
+    @media (min-width: $screen-big) {
+        padding: 6rem 0;
+
+    }
+    
+    .footercontent {
+        margin: 0 auto;
+        width:100%;
+ 
         color:$almostwhite;
         background-color:$verygray;
+
+        @media (min-width: $screen_big) {
+            width:70%;
+        }
+
+        p {
+            line-height:3.2rem;
+        }
     }
+
+    .footercol {
+        width:100%;
+        float:left;
+
+        @media (min-width: $screen-medium) {
+            width:33.333%;
+
+        }
+    }
+
+    &.shortpage {
+        position:absolute;
+        bottom:0;
+    }
+
 }
