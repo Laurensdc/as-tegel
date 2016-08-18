@@ -161,11 +161,11 @@ header {
 /* End of content widths */
 a {
   text-decoration: none;
-  color: #7CB342;
+  color: #BAAB18;
   transition: 0.2s ease-in-out; }
 
 a:hover {
-  color: #9CCC65;
+  color: #DACC38;
   text-decoration: underline; }
 
 p {
@@ -179,7 +179,7 @@ ul, li {
 
 /* General but more specific stuff */
 input[type=submit] {
-  background-color: #7CB342;
+  background-color: #BAAB18;
   color: #FAFAFA;
   display: inline-block;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
@@ -192,7 +192,7 @@ input[type=submit] {
   cursor: pointer; }
 
 input[type=submit]:hover {
-  background-color: #8BC34A;
+  background-color: #DACC38;
   box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.25);
   text-decoration: none; }
 
@@ -202,12 +202,12 @@ input[type=submit]:hover {
   border-radius: 5px; }
 
 a.btn {
-  background-color: #7CB342;
+  background-color: #BAAB18;
   color: #FAFAFA;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); }
 
 a.btn:hover {
-  background-color: #8BC34A;
+  background-color: #DACC38;
   box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.25);
   text-decoration: none; }
 
@@ -253,10 +253,10 @@ a.boringlink:hover {
   color: #FAFAFA; }
 
 .toolbar a:hover, .toolbar a.active:hover {
-  color: #9CCC65; }
+  color: #F3E663; }
 
 .toolbar a.active {
-  color: #7CB342; }
+  color: #BAAB18; }
 
 .toolbar div {
   float: left; }
@@ -272,7 +272,7 @@ a.boringlink:hover {
 
 .toolbar_contact {
   padding: 0 1rem;
-  border-right: 1px solid #7CB342;
+  border-right: 1px solid #BAAB18;
   display: none; }
   @media (min-width: 60em) {
     .toolbar_contact {
@@ -318,10 +318,10 @@ header li:first-of-type a {
   padding-left: 0; }
 
 header li a.active {
-  color: #7CB342; }
+  color: #BAAB18; }
 
 header li a:hover {
-  color: #9CCC65;
+  color: #DACC38;
   text-decoration: none; }
 
 header .header_bestelling {
@@ -353,7 +353,7 @@ header .header_bestelling a {
 
 header .header_bestelling a:hover {
   text-decoration: underline;
-  color: #8BC34A; }
+  color: #DACC38; }
 
 .order-icon {
   height: 2rem;
@@ -414,7 +414,7 @@ header .header_bestelling a:hover {
 .homecontainer a:hover article {
   box-shadow: 3px 3px 2px 0 rgba(0, 0, 0, 0.3); }
   .homecontainer a:hover article .home_caption span {
-    color: #7CB342;
+    color: #BAAB18;
     background-color: #212121; }
 
 .mgright-2pct {
@@ -453,10 +453,10 @@ header .header_bestelling a:hover {
   display: inline-block; }
 
 .catmenu a:hover, .catmenu li.active a:hover, .catmenu ul li.active a:hover {
-  color: #9CCC65; }
+  color: #F3E663; }
 
 .catmenu li.active a, .catmenu ul li.active a {
-  color: #7CB342; }
+  color: #BAAB18; }
 
 /* Producten content, Categorie overzicht */
 .producten_content {
@@ -659,7 +659,7 @@ header .header_bestelling a:hover {
   margin: 0 1rem; }
 
 .toolbar_admin_item {
-  border-right: 1px solid #7CB342;
+  border-right: 1px solid #BAAB18;
   padding-right: 1rem;
   padding-left: 1rem;
   text-decoration: underline; }
@@ -707,7 +707,7 @@ header .header_bestelling a:hover {
   margin-bottom: 1rem; }
 
 a.admin_active {
-  color: #7CB342; }
+  color: #BAAB18; }
 
 /* Delete confirmation-ish thing */
 a.admin_delete {
