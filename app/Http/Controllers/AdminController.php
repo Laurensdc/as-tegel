@@ -44,10 +44,9 @@ class AdminController extends Controller
     	// Make changes to user
     	$user = User::find($id);
 
-        if($user->role = 'handelaar') {
+        if($user->role == 'particulier' && $request['role'] == 'handelaar') {
             Mail::send('mail.handelaar_goedgekeurd', ['user' => $user], function($m) use ($user)
             {
-                $m->from('mailer@as-tegel.be', 'As-Tegel');
                 $m->to($user->email)->subject('Uw aanvraag voor handelaar is goedgekeurd'); 
             });
 
@@ -72,16 +71,15 @@ class AdminController extends Controller
 
     function makeHandelaar($email) {
     	$user = User::where('email', $email)->first();
-    	$user->role = 'handelaar';
-    	$user->save();
+        if($user->role == 'particulier') {
+            $user->role = 'handelaar';
+            $user->save();
 
-    	// Won't work - I can pass variable to subject line but not to '$m->to' function
-        // Probably because mailgun only allows registered email to be sent to
-		Mail::send('mail.handelaar_goedgekeurd', ['user' => $user], function($m) use ($user)
-		{
-		    $m->to($user->email)->subject('Uw aanvraag voor handelaar is goedgekeurd'); 
-		});
-		
+            Mail::send('mail.handelaar_goedgekeurd', ['user' => $user], function($m) use ($user)
+            {
+                $m->to($user->email)->subject('Uw aanvraag voor handelaar is goedgekeurd'); 
+            });          
+        }
 
        	return redirect()->route('admin_useroverview');
     }

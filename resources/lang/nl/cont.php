@@ -34,7 +34,7 @@ return [
     "geen_prod_toegevoegd" => "Nog geen producten aan bestelling toegevoegd.",
     "terug_naar_prod"   => "Terug naar producten",
     "item_verwijderen"  => "Verwijder item",
-    "alle_items_verwijderen" => "Alles verwijderen",
+    "alle_items_verwijderen" => "Alle items verwijderen",
     "totaal"            => "Totaal",
     "ikwildop"          => "Ja, ik wens een DOP certificaat te ontvangen met mijn bestelling.",    
 
