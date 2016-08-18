@@ -59,7 +59,16 @@
 			@yield('content')
 		</div>
 
+
+        <footer>
+            <div class="container">
+                hello
+
+
+            </div>
+        </footer>
+
 		@yield('javascript')
-		
+
 	</body>
 </html>

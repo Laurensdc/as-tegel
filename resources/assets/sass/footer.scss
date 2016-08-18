@@ -1,0 +1,16 @@
+footer {
+    width:100%;
+    background-color:$verygray;
+    min-height:20rem;
+    padding: 3rem;
+
+    @media (min-width: $screen-big) {
+        padding: 3rem 0;
+    }
+    clear:both;
+
+    .container {
+        color:$almostwhite;
+        background-color:$verygray;
+    }
+}
