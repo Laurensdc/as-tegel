@@ -1,29 +1,33 @@
 .contact_content {
 	width:60rem;
 	margin:0 auto;
-}
 
-.contact_content ul {
-	margin:2rem 0;
-}
+    ul {
+        margin:2rem 0;
+    }
+    
+    li {
+        padding:0.5rem 2rem;
+    }
 
-.contact_content li {
-	padding:0.5rem 2rem;
+    h2 {
+        margin:5rem 0 2rem;
+        font-size:2rem;
+    }
+
+    h3 {
+        margin:3rem 0 1rem;
+    }
+
+    p {
+        margin-bottom:2rem;
+        
+    }
 }
 
 .contact_content_left {
 	width:20rem;
 	display:inline-block;
-}
-
-.contact_content h2 {
-	margin:5rem 0 2rem;
-	font-size:2rem;
-}
-
-.contact_content h3 {
-	margin:3rem 0 1rem;
-
 }
 
 .contact_gap {
