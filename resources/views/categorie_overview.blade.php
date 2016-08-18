@@ -32,7 +32,7 @@
                     <div class="catoverzicht_subcat_detail">
                         <h3>
                             <a href="{{ route('producten') }}/{{ $cat->cat_linknaam }}/{{ $subcat->subcat_linknaam }}">
-                                {{ $subcat->naam }} &#9757;
+                                {{ $subcat->naam }} <span class="icon-angle-circled-right">
                             </a>
                         </h3>
                         @if(isset($subcat->beschrijving) && $subcat->beschrijving != '')

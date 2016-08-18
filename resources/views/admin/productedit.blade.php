@@ -61,7 +61,7 @@
 				<textarea name="beschrijving" rows="3" cols="40">{{ $p->beschrijving }}</textarea>
 			</p>
 			<p>
-				<label>Map voor foto <span class="txt_warning">moet eindigen met '/' bij bewerken!</span></label>
+				<label>Map voor foto <span class="txt_warning">moet eindigen met '/' bij upload nieuwe foto!</span></label>
 				<input type="text" name="coverfoto" value="{{ $p->coverfoto }}" size="40">
 			</p>
 			<p>
@@ -75,7 +75,7 @@
 	</div>
 
 	<div class="admin_smallcol">
-				<span id="for_admin_delete"class="txt_warning">Verwijderen</span>
+				<span id="for_admin_delete"class="txt_warning"><span class="icon-trash-empty"></span> Verwijderen</span>
 				<a class="admin_delete btn" href="{{ route('admin' )}}/producten/delete/{{ $p->id}}">Bevestig verwijdering {{ $p->naam }}</a>
 	</div>	
 @endsection

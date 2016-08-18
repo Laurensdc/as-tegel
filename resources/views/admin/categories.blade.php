@@ -3,7 +3,7 @@
 @section('content')
 	<div class="admin_smallcol">
 		<h2>Toevoegen</h2>
-		<p><a class="boringlink" href="{{ route('admin') }}/categorie/add">Categorie toevoegen</a></p>
+		<p><a href="{{ route('admin') }}/categorie/add"><span class="icon-plus"></span> Categorie toevoegen</a></p>
 	</div>
 
 	<table>
@@ -15,10 +15,10 @@
 		</tr>
 	@foreach($categories as $c)
 		<tr>
-			<td>{{ $c->naam }}</td>
+			<td><a class="boringlink" href="{{ route('admin') }}/categorie/edit/{{ $c->id }}">{{ $c->naam }}</a></td>
 			<td>{{ $c->cat_linknaam }}</td>
 			<td>{{ $c->coverfoto }}</td>
-			<td><a class="btn" href="{{ route('admin') }}/categorie/edit/{{ $c->id }}">Categorie bewerken</a></td>
+			<td><a class="btn" href="{{ route('admin') }}/categorie/edit/{{ $c->id }}"><span class="icon-pencil"></span> Bewerken</a></td>
 		</tr>
 	@endforeach
 	</table>

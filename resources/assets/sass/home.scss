@@ -1,7 +1,5 @@
 // Check background_images.scss for homepage background images
-.homecontainer  {
-
-    
+.homecontainer  {  
     .hometext {
         background-color: $verygray;
         color:$almostwhite;
@@ -27,6 +25,20 @@
         
         .producten_content {
             background-color:$actuallywhite;
+            padding:1rem;
+
+            article {
+
+                padding-bottom:2rem;
+                margin-bottom:4rem;  
+                border-bottom:1px solid $textcolor;
+
+                @media (min-width: $screen-mediumbig) {
+                    margin:0 1% 2%;
+                    padding-bottom:1rem;
+                    border:0;
+                }
+            }
         }
         .homepromo_banner {
             background-color:$verygray;

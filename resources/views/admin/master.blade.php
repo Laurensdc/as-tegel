@@ -14,19 +14,29 @@
 				</div>
 				<div class="toolbar_right">
 					<div class="toolbar_admin_item">
-						<a @if($admin_menu=='gebruikers') class="admin_active" @endif href="{{ route('admin_useroverview') }}">Gebruikers</a>
+						<a @if($admin_menu=='gebruikers') class="admin_active" @endif href="{{ route('admin_useroverview') }}">
+                            <span class="icon-user"></span> Gebruikers
+                        </a>
 					</div>
 					<div class="toolbar_admin_item">
-						<a @if($admin_menu=='producten') class="admin_active" @endif href="{{ route('admin_productoverview') }}">Producten</a>
+						<a @if($admin_menu=='categorie') class="admin_active" @endif href="{{ route('admin_categorieoverview') }}">
+                            &#10022; Categorie
+                        </a>
 					</div>
 					<div class="toolbar_admin_item">
-						<a @if($admin_menu=='categorie') class="admin_active" @endif href="{{ route('admin_categorieoverview') }}">Categorie</a>
+						<a @if($admin_menu=='subcategorie') class="admin_active" @endif href="{{ route('admin_subcategorieoverview') }}">
+                            &#10039; Subcategorie
+                        </a>
+					</div>
+                    <div class="toolbar_admin_item">
+						<a @if($admin_menu=='producten') class="admin_active" @endif href="{{ route('admin_productoverview') }}">
+                            <span class="icon-basket"></span>Producten
+                        </a>
 					</div>
 					<div class="toolbar_admin_item">
-						<a @if($admin_menu=='subcategorie') class="admin_active" @endif href="{{ route('admin_subcategorieoverview') }}">Subcategorie</a>
-					</div>
-					<div class="toolbar_admin_item">
-						<a @if($admin_menu=='fotoupload') class="admin_active" @endif href="{{ route('admin') }}/fotoupload">Foto Uploaden</a>
+						<a @if($admin_menu=='fotoupload') class="admin_active" @endif href="{{ route('admin') }}/fotoupload">
+                            <span class="icon-upload"></span> Foto Uploaden
+                        </a>
 					</div>
 					@if(Auth::check())
 						<div class="toolbar_account">Ingelogd als {{ Auth::user()->firstname }} ({{ Auth::user()->role }}) &ndash;
