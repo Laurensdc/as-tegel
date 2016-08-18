@@ -15,7 +15,7 @@ use Session;
 class ProductenController extends Controller
 {
     function overview() {
-    	$categories = Categorie::all();
+    	$categories = Categorie::orderBy(\DB::raw('-`volgorde`'), 'desc')->get();
     	$allsubcategories = Subcategorie::all();
 
     	return view('categorie_overview', [
@@ -41,7 +41,7 @@ class ProductenController extends Controller
 	   	//$producten = $subcategories->products;
         $producten = $subcategories->products()->orderBy('groepering')->get();
 
-	   	$allcategories = Categorie::all();
+	   	$allcategories = Categorie::orderBy(\DB::raw('-`volgorde`'), 'desc')->get();
     	$allsubcategories = Subcategorie::all();
 
         $hoofdcategorie = Categorie::where('cat_linknaam', $cat)->first();
@@ -68,7 +68,6 @@ class ProductenController extends Controller
 
     function bestelProduct($cat, $subcat, Request $request) {
         Session::push('orderitems', [$request['prod_id'], $request['vierkantemeter']]);    
-
         return $this->categorieDetail($cat, $subcat, true);
 
     }

@@ -21,6 +21,14 @@
 				<label>Coverfoto</label>
 				<input type="text" name="coverfoto" value="{{ $categorie->coverfoto }}">
 			</p>
+            <p>
+				<label>Volgorde in menu (optioneel)</label>
+                <input type="number" max="99" name="volgorde">
+            </p>
+            @if ($errors->has('volgorde'))
+                <p class="txt_warning"><label></label>Moet uniek zijn (of leeg laten)</p>
+            @endif
+
 			<p>
 				<label></label>
 				<input type="submit" value="Aanpassen"> <a href="{{ route('admin') }}/categorie" class="boringlink">Annuleren</a>

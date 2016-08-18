@@ -234,8 +234,11 @@ class AdminController extends Controller
     }
 
     function categorieEdit($id, Request $r) {
+        if($r['volgorde'] == '') $r['volgorde'] = null;
+
         $this->validate($r, [
-            'cat_linknaam' => 'alpha|required|unique:categories,cat_linknaam,' . $id
+            'cat_linknaam' => 'alpha|required|unique:categories,cat_linknaam,' . $id,
+            'volgorde' => 'unique:categories',
             ]);
 
         $cat = Categorie::find($id);
@@ -243,6 +246,7 @@ class AdminController extends Controller
         $cat->naam = $r['naam'];
         $cat->cat_linknaam = strtolower($r['cat_linknaam']);
         $cat->coverfoto = $r['coverfoto'];
+        $cat->volgorde = $r['volgorde'];
 
         $cat->save();
 
@@ -254,8 +258,11 @@ class AdminController extends Controller
     }
 
     function categorieAddAction(Request $r) {
+        if($r['volgorde'] == '') $r['volgorde'] = null;
+
         $this->validate($r, [
-            'cat_linknaam' => 'alpha|required|unique:categories'
+            'cat_linknaam' => 'alpha|required|unique:categories',
+            'volgorde' => 'unique:categories',
             ]);
 
         // File upload in correct folder, also on fail
@@ -284,6 +291,7 @@ class AdminController extends Controller
         $cat->cat_linknaam = strtolower($r['cat_linknaam']);
         $cat->coverfoto = $path . $name;
         $cat->fullresfoto = $path . $name_orig;
+        $cat->volgorde = $r['volgorde'];
 
         $cat->save();
 

@@ -17,7 +17,6 @@ class CreateSubcategoriesTable extends Migration
             $table->string('naam');
             $table->string('subcat_linknaam')->unique();
             $table->text('beschrijving');
-            $table->tinyint('volgorde')->unique();
 
             $table->integer('categorie_id')->unsigned();
             $table->foreign('categorie_id')->references('id')->on('categories');

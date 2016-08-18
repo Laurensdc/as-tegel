@@ -44,7 +44,7 @@
 			</p>
             <p>
                 <label>Groeperingsnummer</label>
-                <input type="number" name="groepering" value="{{ $p->groepering }}">
+                <input type="number" name="groepering" value="{{ $p->groepering }}" max="999">
             </p>
 			<p>
 				<label>Behoort tot subcategorie</label>

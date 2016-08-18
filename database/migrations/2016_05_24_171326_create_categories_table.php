@@ -16,7 +16,7 @@ class CreateCategoriesTable extends Migration
             $table->increments('id');
             $table->string('naam');
             $table->string('cat_linknaam')->unique();
-            $table->tinyint('volgorde')->unique();
+            $table->tinyInteger('volgorde')->unique()->nullable();
             
             $table->string('coverfoto')->default('images/cover/_geenfoto.jpg');
             $table->string('fullresfoto')->default('images/cover/_geenfoto.jpg');

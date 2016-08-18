@@ -24,7 +24,15 @@
 			<p>
 				<label>Foto</label>
 				<input type="file" name="foto" methode="post">
-			</p>			
+			</p>	
+            <p>
+				<label>Volgorde in menu (optioneel)</label>
+                <input type="number" max="99" name="volgorde">
+            </p>
+            @if ($errors->has('volgorde'))
+                <p class="txt_warning"><label></label>Moet uniek zijn of niet ingevuld</p>
+            @endif
+
 			<p>
 				<label></label>
 				<input type="submit" value="Categorie Aanmaken"> <a href="{{ route('admin') }}/categorie/add" class="boringlink">Annuleren</a>

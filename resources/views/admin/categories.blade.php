@@ -11,6 +11,7 @@
 			<td><strong>Naam</strong></td>
 			<td><strong>Linknaam</strong></td>
 			<td><strong>Coverfoto</strong></td>
+            <td><strong>Volgorde in menu</strong></td>
 			<td></td>
 		</tr>
 	@foreach($categories as $c)
@@ -18,6 +19,7 @@
 			<td><a class="boringlink" href="{{ route('admin') }}/categorie/edit/{{ $c->id }}">{{ $c->naam }}</a></td>
 			<td>{{ $c->cat_linknaam }}</td>
 			<td>{{ $c->coverfoto }}</td>
+            <td>{{ $c->volgorde }}</td>
 			<td><a class="btn" href="{{ route('admin') }}/categorie/edit/{{ $c->id }}">Bewerken</a></td>
 		</tr>
 	@endforeach

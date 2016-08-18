@@ -29,7 +29,7 @@
 			<p>
 				<label>Beschrijving</label>
                 <textarea name="beschrijving" rows="3" cols="40"></textarea>
-			</p>
+			</p>            
 
 			<p>
 				<label></label>
