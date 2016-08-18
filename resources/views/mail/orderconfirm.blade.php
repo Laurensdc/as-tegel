@@ -1,9 +1,17 @@
 @extends('master', ['title' => 'Bestelling', 'headermenu_active' => 'producten'])
 
 @section('content')
+<div class="ordercontent">
 	<h1>Bestelling ontvangen</h1>
+    <br>
 	<p>Bedankt voor uw bestelling!</p>
-	<p>Een bestelbon wordt opgemaakt die u spoedig zal ontvangen.</p>
+    @if(Auth::user()->role == 'handelaar')
+    <p>Een bestelbon wordt opgemaakt die u spoedig zal ontvangen.</p>
+    @else
+	<p>Een offerte wordt opgemaakt die u spoedig zal ontvangen.</p>
+    <p>Indien u nog vragen heeft, gelieve gerust contact met ons op te nemen.</p>
+    @endif
+    <br>
 	<p>
 		<a class="boringlink" href="{{ route('producten') }}">&larrhk; Terug naar producten</a>
 	</p>	
@@ -34,7 +42,7 @@
 
 		    Aantal m&sup2; besteld: 
 		    <strong>{{ $vierkantemeters[$i] }}</strong><br>
-		    if(Auth::user()->role == 'handelaar')
+		    @if(Auth::user()->role == 'handelaar')
                 Handelaarsprijs per m&sup2;: <strong>&euro; {{ $producten[$i]->prijs_handelaar }}</strong><br>
                 Uitgerekende prijs: 
                 <strong>&euro; {{ $prijzen[$i] }}</strong><br>    
@@ -57,5 +65,5 @@
 	<p>
 		<a class="boringlink" href="{{ route('producten') }}">&larrhk; Terug naar producten</a>
 	</p>	
-
+</div>
 @endsection

@@ -456,7 +456,10 @@ header .header_bestelling a:hover {
 
 /* Order */
 .ordercontent {
-  padding: 1rem; }
+  padding: 2rem; }
+  @media (min-width: 28.5em) {
+    .ordercontent {
+      padding: 2rem 6rem; } }
   .ordercontent h2 {
     margin: 5rem 0 2rem;
     font-size: 2rem; }

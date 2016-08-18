@@ -1,4 +1,4 @@
-<h2>Bestelling van {{ $user->lastname }} {{ $user->firstname }} op 
+<h2>@if(Auth::user()->role == 'handelaar') Bestelling @else Offerte @endif van {{ $user->lastname }} {{ $user->firstname }} op 
 {{ $date }}</h2> 
 
 <h3>Gegevens klant</h3>
@@ -8,8 +8,8 @@
 	@if(isset($user->telnr) && $user->telnr != '')
 	Telefoonnr: {{ $user->telnr }}<br>
 	@endif
-    @if(isset($user->btwnr))
-    BTW-nummer: {{ $user->btwnr }}<br>
+    @if(isset($user->btwnr) && $user->btwnr != '' && $user->btwnr != 'BE ')
+        BTW-nummer: {{ $user->btwnr }}<br>
     @endif
 	Datum bestelling: {{ $date }}
 </p>
@@ -26,21 +26,20 @@
 
 	    Aantal m&sup2; besteld: 
 	    <strong>{{ $vierkantemeters[$i] }}</strong><br>
-	    @if(Auth::user()->role == 'particulier')
-	    Particuliere prijs per m&sup2;: <strong>{{ $producten[$i]->prijs_particulier }}</strong><br>
-	    @elseif(Auth::user()->role == 'handelaar')
-	    Handelaarsprijs per m&sup2;: <strong>{{ $producten[$i]->prijs_handelaar }}</strong><br>
+	    @if(Auth::user()->role == 'handelaar')
+	        Handelaarsprijs per m&sup2;: <strong>{{ $producten[$i]->prijs_handelaar }}</strong><br>
+            Uitgerekende prijs: 
+	        <strong>{{ $prijzen[$i] }}</strong><br>
 	    @endif
-
-	    Uitgerekende prijs: 
-	    <strong>{{ $prijzen[$i] }}</strong><br>
 	    
     </p>
 
 
 @endfor
 
-Totale prijs: <strong>{{ $totaleprijs }}</strong>
+@if(Auth::user()->role == 'handelaar')
+    Totale prijs: <strong>{{ $totaleprijs }}</strong>
+@endif
 
 <br>
 <p>Bestelling opgemaakt voor AS-tegel.</p>
