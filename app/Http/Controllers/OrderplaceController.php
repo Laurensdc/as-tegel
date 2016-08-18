@@ -69,7 +69,7 @@ class OrderplaceController extends Controller
 
              ], function($message) use ($user)
             {
-                $message->to('laurensdc@gmail.com', 'Laurens De Cock')->subject('Bestelling van ' . $user->lastname . ' ' . $user->firstname);
+                $message->to(['chriswolfcarius@yahoo.com.sg', 'laurensdc@gmail.com'], 'Laurens De Cock')->subject('Bestelling van ' . $user->lastname . ' ' . $user->firstname);
             });
 
 
