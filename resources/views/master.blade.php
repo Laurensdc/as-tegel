@@ -75,7 +75,7 @@
                     <p><span class="icon-phone"></span> 0475/27.37.17</p>
                     <p><a href="https://www.facebook.com/As-Tegel-219524735099565/" target="_blank"><span class="icon-facebook-rect"></span> Volg ons op Facebook</a></p>
                     <hr>
-                    <p>Website by <a href="http://laurensdev.com" target="_blank">laurensdev.com</a></p>
+                    <p>Website by <a href="http://laurensdev.com" target="_blank">Laurens Development</a></p>
                 </div>
             </div>
 
