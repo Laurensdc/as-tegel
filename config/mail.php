@@ -16,7 +16,8 @@ return [
     |
     */
 
-    'driver' => env('MAIL_DRIVER', 'mailgun'),
+    //'driver' => env('MAIL_DRIVER', 'mailgun'),
+    'driver' => 'smtp',
 
     /*
     |--------------------------------------------------------------------------
@@ -29,7 +30,8 @@ return [
     |
     */
 
-    'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
+    //'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
+    'host' => 'smtp.gmail.com',
 
     /*
     |--------------------------------------------------------------------------
@@ -42,7 +44,8 @@ return [
     |
     */
 
-    'port' => env('MAIL_PORT', 587),
+    //'port' => env('MAIL_PORT', 587),
+    'port' => 465,
 
     /*
     |--------------------------------------------------------------------------
@@ -68,7 +71,8 @@ return [
     |
     */
 
-    'encryption' => env('MAIL_ENCRYPTION', 'tls'),
+    //'encryption' => env('MAIL_ENCRYPTION', 'tls'),
+    'encryption' => 'ssl',
 
     /*
     |--------------------------------------------------------------------------
@@ -81,7 +85,8 @@ return [
     |
     */
 
-    'username' => env('postmaster@sandboxffda3837484548619267fb4846e1a2b6.mailgun.org'),
+    //'username' => env('postmaster@sandboxffda3837484548619267fb4846e1a2b6.mailgun.org'),
+    'username' => 'astegelbe@gmail.com',
 
     /*
     |--------------------------------------------------------------------------
@@ -94,7 +99,8 @@ return [
     |
     */
 
-    'password' => env('c9e8595ce149a959ada8a40c953bc366'),
+    //'password' => env('c9e8595ce149a959ada8a40c953bc366'),
+    'password' => 'astegel2737',
 
     /*
     |--------------------------------------------------------------------------

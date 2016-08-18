@@ -41,7 +41,7 @@
 			<td>{{ $p->subcategorie->naam }}</td>
 			<td>{{ substr($p->beschrijving, 0, 25) }}@if($p->beschrijving != '')...@endif</td>
 			<td>...{{ substr($p->coverfoto, sizeof($p->coverfoto)-25) }}</td>
-			<td><a href="{{ route('admin_productoverview')}}/edit/{{ $p->id }}" class="btn"><span class="icon-pencil"></span> Bewerken</a></td>
+			<td><a href="{{ route('admin_productoverview')}}/edit/{{ $p->id }}" class="btn">Bewerken</a></td>
 		</tr>
 	@endforeach
 

@@ -20,7 +20,7 @@
 			<td>{{ $s->subcat_linknaam }}</td>
 			<td>{{ $s->categorie->naam }}</td>
 			<td>{{ substr($s->beschrijving, 0, 25) }}@if($s->beschrijving != '')...@endif</td>
-			<td><a class="btn" href="{{ route('admin') }}/subcategorie/edit/{{ $s->id }}"><span class="icon-pencil"></span> Bewerken</a></td>
+			<td><a class="btn" href="{{ route('admin') }}/subcategorie/edit/{{ $s->id }}">Bewerken</a></td>
 		</tr>
 	@endforeach
 	</table>

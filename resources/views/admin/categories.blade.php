@@ -18,7 +18,7 @@
 			<td><a class="boringlink" href="{{ route('admin') }}/categorie/edit/{{ $c->id }}">{{ $c->naam }}</a></td>
 			<td>{{ $c->cat_linknaam }}</td>
 			<td>{{ $c->coverfoto }}</td>
-			<td><a class="btn" href="{{ route('admin') }}/categorie/edit/{{ $c->id }}"><span class="icon-pencil"></span> Bewerken</a></td>
+			<td><a class="btn" href="{{ route('admin') }}/categorie/edit/{{ $c->id }}">Bewerken</a></td>
 		</tr>
 	@endforeach
 	</table>
