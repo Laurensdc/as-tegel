@@ -38,6 +38,7 @@ Route::get('/order', ['middleware' => 'lang', 'uses' => 'OrderController@overvie
 Route::get('/order/delete', ['middleware' => 'lang', 'uses' => 'OrderController@deleteorder', 'as' => 'deleteorder']);
 Route::get('/order/place', ['middleware' => 'lang', 'uses' => 'OrderplaceController@placeOrder', 'as' => 'placeorder']);
 Route::get('/order/delete/{id}',['middleware' => 'lang', 'uses' => 'OrderController@deleteOne']); 
+Route::get('/order/toggledop', ['middleware' => 'lang', 'uses' => 'OrderController@toggledop', 'as' => 'dop']);
 
 // Auth
 Route::auth();

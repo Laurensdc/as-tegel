@@ -1,6 +1,7 @@
 @extends('master', ['title' => 'Bestelling', 'headermenu_active' => 'producten'])
 
 @section('content')
+
 <div class="ordercontent">
 	<h1>Bestelling ontvangen</h1>
     <br>
@@ -26,7 +27,15 @@
 		@if(isset($user->telnr) && $user->telnr != '')
 		Telefoonnr: {{ $user->telnr }}<br>
 		@endif
-		Datum bestelling: {{ $date }}
+		Datum bestelling: {{ $date }}<br>
+        @if(Auth::user()->role == 'handelaar') 
+            Aanvraag DOP certificaat: 
+            @if(Session::get('dop') == true)
+                ja
+            @else
+                nee
+            @endif
+        @endif
 	</p>
 
 	<br><br>

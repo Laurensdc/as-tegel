@@ -71,4 +71,13 @@ class OrderController extends Controller
         return $this->overview();
     }
 
+    function toggledop() {
+        if(Auth::check() && Auth::user()->role == 'handelaar') {
+            if(Session::get('dop') == true) Session::put('dop', false);
+            else Session::put('dop', true);
+        }
+
+        return $this->overview();
+    }
+
 }

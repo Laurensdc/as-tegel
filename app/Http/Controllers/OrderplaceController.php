@@ -73,6 +73,9 @@ class OrderplaceController extends Controller
             });
 
 
+        Session::forget('orderitems');
+        Session::forget('dop');
+
         // Redirect and confirm
     	return view('mail.orderconfirm',
     	 [

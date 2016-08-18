@@ -11,7 +11,15 @@
     @if(isset($user->btwnr) && $user->btwnr != '' && $user->btwnr != 'BE ')
         BTW-nummer: {{ $user->btwnr }}<br>
     @endif
-	Datum bestelling: {{ $date }}
+	Datum bestelling: {{ $date }}<br>
+    @if(Auth::user()->role == 'handelaar') 
+    Aanvraag DOP certificaat:  
+        @if(Session::get('dop') == true)
+            <strong>ja</strong>
+        @else
+            <strong>nee</strong>
+        @endif
+    @endif
 </p>
 
 

@@ -654,6 +654,12 @@ header .header_bestelling a:hover {
 /* Order */
 .ordercontent {
   padding: 2rem; }
+  .ordercontent .ml {
+    margin-left: 8rem; }
+  .ordercontent .controls p {
+    margin-top: 3rem; }
+  .ordercontent .backtoproducts {
+    margin: 8rem 0 4rem; }
   @media (min-width: 28.5em) {
     .ordercontent {
       padding: 2rem 6rem; } }

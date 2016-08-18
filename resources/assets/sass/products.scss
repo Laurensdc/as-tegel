@@ -75,6 +75,20 @@
 /* Order */
 .ordercontent {
     padding:2rem;
+    .ml {
+        margin-left:8rem;
+    }
+
+    .controls {
+        p {
+            margin-top:3rem;
+        }
+    }
+
+    .backtoproducts {
+        margin: 8rem 0 4rem;
+    }
+
     @media (min-width:$screen-small) {
         padding:2rem 6rem;
     }
