@@ -250,6 +250,7 @@ class AdminController extends Controller
         $f = $r->file('foto');
         $path = 'images/cover/';
         $name = '_geenfoto.jpg';
+        $name_orig = '_geenfoto.jpg';
 
         if($r->hasFile('foto')) {
             if($r->file('foto')->isValid()) {
@@ -258,7 +259,7 @@ class AdminController extends Controller
                 $name_orig = '_orig_' . $name;
                 $f->move($path, $name_orig);
 
-                $resizedimg = Image::make($path . $name_orig)->fit(800,600);
+                $resizedimg = Image::make($path . $name_orig)->fit(400,300);
                 $resizedimg->save($path . $name);
 
                 $path = $r['coverfoto'];
@@ -270,6 +271,7 @@ class AdminController extends Controller
         $cat->naam = $r['naam'];
         $cat->cat_linknaam = strtolower($r['cat_linknaam']);
         $cat->coverfoto = $path . $name;
+        $cat->fullresfoto = $path . $name_orig;
 
         $cat->save();
 

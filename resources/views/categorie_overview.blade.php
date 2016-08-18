@@ -19,7 +19,7 @@
 	<article id="{{ $cat->cat_linknaam }}">
         <div class="catoverzicht_cat">
             <h2>{{ $cat->naam }}</h2>
-            <a href="{{ asset($cat->coverfoto) }}" data-lightbox="{{ $cat->naam }}" data-title="{{ $cat->naam }}">
+            <a href="{{ asset($cat->fullresfoto) }}" data-lightbox="{{ $cat->naam }}" data-title="{{ $cat->naam }}">
                 <img src="{{ asset($cat->coverfoto) }}" alt="{{ $cat->naam }}"/>
             </a>
             <!--<div class="producten_caption" >
