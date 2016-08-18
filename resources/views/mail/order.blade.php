@@ -24,10 +24,10 @@
 
 	    Product: <strong>{{ $producten[$i]->naam }} {{ $producten[$i]->afmetingen }}</strong><br>
 
-	    Aantal m&sup2; besteld: 
+        Aantal {{ $producten[$i]->eenheid }} besteld: 
 	    <strong>{{ $vierkantemeters[$i] }}</strong><br>
 	    @if(Auth::user()->role == 'handelaar')
-	        Handelaarsprijs per m&sup2;: <strong>{{ $producten[$i]->prijs_handelaar }}</strong><br>
+            Handelaarsprijs per {{ $producten[$i]->eenheid }}: <strong>{{ $producten[$i]->prijs_handelaar }}</strong><br>
             Uitgerekende prijs: 
 	        <strong>{{ $prijzen[$i] }}</strong><br>
 	    @endif
