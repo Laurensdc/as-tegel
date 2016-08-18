@@ -21,8 +21,8 @@
 						<a href="{{ route('home') }}/lang/en" @if(Cookie::get('ln') == 'en') class="active" @endif>EN</a></div>
 				</div>
 				<div class="toolbar_right">
-					<div class="toolbar_contact">0470/05.38.62</div>
-					<div class="toolbar_contact"><a href="mailto:contact@as-tegel.be">contact@as-tegel.be</a></div>
+					<div class="toolbar_contact">0475/27.37.17</div>
+					<div class="toolbar_contact"><a href="mailto:info@as-tegel.be">info@as-tegel.be</a></div>
 					@if(Auth::check())
 						<div class="toolbar_account">{{ trans('cont.welkom') }}, {{ Auth::user()->firstname }} ({{ Auth::user()->role }}) &ndash;
 							<a href="{{ route('home') }}/logout">{{ trans('cont.logout') }}</a>

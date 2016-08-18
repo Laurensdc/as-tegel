@@ -23,5 +23,8 @@ return [
 	"prijzen_afgehaald" =>  "All prices are given for pickup of goods. BTW included.",
     "nicest_products"   => "Look at some of our nicest products",
     "explore_collection" => "Explore collection",
+    "spotlight"         => "Spotlight",
+    "spotlight_text"    => "Temporary offers",
+    "bekijk"            => "Check out",
 
 ];

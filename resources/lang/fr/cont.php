@@ -22,7 +22,11 @@ return [
 	"orderit"		=> "Commandez",
 	"prijzen_afgehaald" =>  "Tous les prix sont donnés hors transport. BTW inclu.",
     "nicest_products"   => "Régardez nos meilleurs produits.",
-    "explore_collection" => "Découvre collection",
+    "explore_collection" => "Découvre la collection",
+    "spotlight"         => "Promo",
+    "spotlight_text"    => "Des offres temporaires",
+    "bekijk"            => "Regarder a",
+
 
 ];
 

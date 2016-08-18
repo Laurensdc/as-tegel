@@ -7,7 +7,7 @@
 @section('homecontent')
     <div class="homepromo">
         <div class="homepromo_banner">
-            <h2>Spotlight</h2> <span>Tijdelijke aanbiedingen</span>
+            <h2>{{ trans('cont.spotlight') }}</h2> <span>{{ trans('cont.spotlight_text') }}</span>
         </div>
         <div class="producten_content">
 
@@ -30,7 +30,9 @@
                             <p class="txt_warning">{{ trans('cont.nostock') }}.</p>
                         @endif
 
-                        <a href="{{ route('producten') }}/{{ $p->subcategorie->categorie->cat_linknaam }}/{{ $p->subcategorie->subcat_linknaam }}">Bekijk {{ $p->naam }} &rarr;</a>
+                        <a href="{{ route('producten') }}/{{ $p->subcategorie->categorie->cat_linknaam }}/{{ $p->subcategorie->subcat_linknaam }}">
+                            {{ trans('cont.bekijk') }} {{ $p->naam }} &rarr;
+                        </a>
 
                     </article>
                 @endforeach
