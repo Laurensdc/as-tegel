@@ -43,9 +43,9 @@
             Aantal {{ $producten[$i]->eenheid }} besteld: 
 		    <strong>{{ $vierkantemeters[$i] }}</strong><br>
 		    @if(Auth::user()->role == 'handelaar')
-                Handelaarsprijs per {{ $producten[$i]->eenheid }}: <strong>&euro; {{ $producten[$i]->prijs_handelaar }}</strong><br>
+                Handelaarsprijs per {{ $producten[$i]->eenheid }}: <strong>&euro;{{ $producten[$i]->prijs_handelaar }}</strong><br>
                 Uitgerekende prijs: 
-                <strong>&euro; {{ $prijzen[$i] }}</strong><br>    
+                <strong>&euro;{{ $prijzen[$i] }}</strong><br>    
             @endif
 
 		        
@@ -57,7 +57,7 @@
 	<br>
 
     @if(Auth::user()->role == 'handelaar')
-	    <p>Totale prijs: <strong>&euro; {{ $totaleprijs }}</strong></p>
+	    <p>Totale prijs: <strong>&euro;{{ $totaleprijs }}</strong></p>
     @endif
 
 	<br>

@@ -15,8 +15,7 @@
                 
                 @if(Auth::check())		    
                     @if(Auth::user()->role=='handelaar')
-                        aan &euro;
-                        {{ $producten[$i]->prijs_handelaar }}
+                        aan &euro;{{ $producten[$i]->prijs_handelaar }}
                         /{{ $producten[$i]->eenheid }} 
                     @endif    
                 @endif     
