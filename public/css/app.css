@@ -561,13 +561,23 @@ header .header_bestelling a:hover {
         margin: 0 0 0 2rem;
         display: inline-block; } }
 
-.homecontainer .homepromo .homepromo_banner {
-  background-color: #18BAAB;
-  color: #FAFAFA;
-  font-weight: 800;
-  font-size: 3rem;
-  line-height: 3rem;
-  padding: 3rem; }
+.homecontainer .homepromo {
+  border: 1px solid #424242;
+  margin: 6rem 0 0; }
+  .homecontainer .homepromo .homepromo_banner {
+    background-color: #424242;
+    color: #FAFAFA;
+    line-height: 3rem;
+    margin-bottom: 1rem;
+    padding: 3rem; }
+    .homecontainer .homepromo .homepromo_banner h2 {
+      font-weight: 800;
+      font-size: 3rem;
+      margin-right: 3rem;
+      display: inline-block; }
+
+.homecontainer .roundimg {
+  border-radius: 50px; }
 
 .homecontainer .nicest_products article {
   overflow: hidden;

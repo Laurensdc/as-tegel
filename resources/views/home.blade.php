@@ -2,12 +2,12 @@
 
 @section('css')
 <link rel="stylesheet" href="{{ asset('bower_components/lightbox2/dist/css/lightbox.min.css') }}"/>
-@endsection)
+@endsection
 
 @section('homecontent')
     <div class="homepromo">
         <div class="homepromo_banner">
-            <p>Spotlight</p>
+            <h2>Spotlight</h2> <span>Tijdelijke aanbiedingen</span>
         </div>
         <div class="producten_content">
 
@@ -29,8 +29,8 @@
                         @if($p->invoorraad == false)
                             <p class="txt_warning">{{ trans('cont.nostock') }}.</p>
                         @endif
-                        
-                        <a class="btn" href="{{ route('producten') }}/{{ $p->subcategorie->categorie->cat_linknaam }}/{{ $p->subcategorie->subcat_linknaam }}">Bekijk</a>
+
+                        <a href="{{ route('producten') }}/{{ $p->subcategorie->categorie->cat_linknaam }}/{{ $p->subcategorie->subcat_linknaam }}">Bekijk {{ $p->naam }} &rarr;</a>
 
                     </article>
                 @endforeach

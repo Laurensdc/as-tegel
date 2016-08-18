@@ -74,6 +74,7 @@ class ProductSeeder extends Seeder
             'coverfoto'=>'images/producten/vietnamees/getrommeld_2.jpg',
             'fullresfoto'=>'images/producten/vietnamees/getrommeld_2.jpg',
             'subcategorie_id'=>1,
+            'inpromo'=>true,
             'groepering'=>1,
 
             'created_at' => date('Y-m-d H:i:s'),
@@ -98,7 +99,7 @@ class ProductSeeder extends Seeder
             'fullresfoto'=>'images/producten/vietnamees/getrommeld.jpg',
             'subcategorie_id'=>1,
             'groepering'=>1,
-            'inpromo'=>true,
+            'inpromo'=>false,
             'invoorraad'=>false,
         ]);
 

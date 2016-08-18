@@ -20,14 +20,28 @@
     }
 
     .homepromo {
+        border:1px solid $verygray;
+        margin:6rem 0 0;
+
         .homepromo_banner {
-            background-color:$colorb;
+            background-color:$verygray;
             color:$almostwhite;
-            font-weight:800;
-            font-size:3rem;
             line-height:3rem;
-            padding:3rem;
+            margin-bottom:1rem;
+            padding:3rem;  
+
+            h2 {
+                font-weight:800;
+                font-size:3rem;
+                margin-right:3rem;
+                display:inline-block;
+            }
         }
+        
+    }
+
+    .roundimg {
+        border-radius:50px;
     }
 
     .nicest_products {
