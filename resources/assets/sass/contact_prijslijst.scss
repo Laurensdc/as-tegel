@@ -1,0 +1,88 @@
+.contact_content, .prijslijst_content {
+    width:100%;
+    padding:0 1rem;
+
+    @media (min-width:$screen-medium) {
+        padding:0;
+	    width:60rem;
+    }
+	margin:0 auto;
+
+    ul {
+        margin:2rem 0;
+    }
+    
+    li {
+        padding:0.5rem 2rem;
+    }
+
+    h2 {
+        margin:5rem 0 2rem;
+        font-size:2rem;
+    }
+
+    h3 {
+        margin:3rem 0 1rem;
+    }
+
+    p {
+        margin-bottom:2rem;
+        
+    }
+}
+
+.contact_content_left {
+	width:20rem;
+	display:inline-block;
+}
+
+.contact_gap {
+	height:5rem;
+}
+
+.prijslijst_content {
+    height:100%;
+    margin-bottom:10rem;
+    
+    h3 {
+        
+        float:left;
+        margin-top:4rem;
+    }
+
+    .item {
+        height:3.2rem;
+        width:100%;
+        float:left;
+        padding:0 1rem;
+        border-left:1px solid $gray;
+        border-right:1px solid $gray;
+        border-bottom:1px solid $gray;
+
+        &:nth-child(even) {
+            background-color:$notsowhite;
+        }
+        
+    }
+
+    .left, .right {
+        float:left;
+        p {
+            line-height:3.2rem;
+            margin:0;
+        }
+    }
+
+    .left {
+        width:70%;
+    }
+
+    .right {
+        width:30%; 
+        p {
+            float:right;
+        }
+
+    }
+
+}

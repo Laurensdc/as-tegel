@@ -26,11 +26,6 @@
 			<li><span class='contact_content_left'>Telefoonnummer: </span>0470/05.38.62</li>
 		</ul>
 
-		<h3>Darline - Nettoyage / Motivational Speaking</h3>
-		<ul>
-			<li><span class='contact_content_left'>E-mail: </span><a href="mailto:darline@as-tegel.be">darline@as-tegel.be</a></li>
-		</ul>
-
 		<h3>Laurens - Website Development</h3>
 		<ul>
 			<li><span class='contact_content_left'>E-mail: </span><a href="mailto:laurens@as-tegel.be">laurens@as-tegel.be</a></li>

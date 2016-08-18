@@ -8,6 +8,7 @@ use Cookie;
 use Illuminate\Http\Request;
 use Session;
 use Redirect;
+use Auth;
 
 class HomeController extends Controller
 {
@@ -40,6 +41,20 @@ class HomeController extends Controller
 
     function ce() {
         return view('ce', ["title" => "EP norm", "headermenu_active" => "ce"]);
+    }
+
+    function prijslijst() {
+        $producten = App\Product::all();
+        $categories = App\Categorie::all();
+        $subcategories = App\Subcategorie::all();
+
+        return view('prijslijst', [
+            "title" => "Prijslijst", 
+            "headermenu_active" => "prijslijst",
+            "producten" => $producten,
+            "categories" => $categories,
+            "subcategories" => $subcategories,
+            ]);
     }
 
 }

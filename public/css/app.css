@@ -963,19 +963,24 @@ a.admin_active {
 a.admin_delete {
   display: none; }
 
-.contact_content {
-  width: 60rem;
+.contact_content, .prijslijst_content {
+  width: 100%;
+  padding: 0 1rem;
   margin: 0 auto; }
-  .contact_content ul {
+  @media (min-width: 45em) {
+    .contact_content, .prijslijst_content {
+      padding: 0;
+      width: 60rem; } }
+  .contact_content ul, .prijslijst_content ul {
     margin: 2rem 0; }
-  .contact_content li {
+  .contact_content li, .prijslijst_content li {
     padding: 0.5rem 2rem; }
-  .contact_content h2 {
+  .contact_content h2, .prijslijst_content h2 {
     margin: 5rem 0 2rem;
     font-size: 2rem; }
-  .contact_content h3 {
+  .contact_content h3, .prijslijst_content h3 {
     margin: 3rem 0 1rem; }
-  .contact_content p {
+  .contact_content p, .prijslijst_content p {
     margin-bottom: 2rem; }
 
 .contact_content_left {
@@ -984,6 +989,34 @@ a.admin_delete {
 
 .contact_gap {
   height: 5rem; }
+
+.prijslijst_content {
+  height: 100%;
+  margin-bottom: 10rem; }
+  .prijslijst_content h3 {
+    float: left;
+    margin-top: 4rem; }
+  .prijslijst_content .item {
+    height: 3.2rem;
+    width: 100%;
+    float: left;
+    padding: 0 1rem;
+    border-left: 1px solid #9E9E9E;
+    border-right: 1px solid #9E9E9E;
+    border-bottom: 1px solid #9E9E9E; }
+    .prijslijst_content .item:nth-child(even) {
+      background-color: #F5F5F5; }
+  .prijslijst_content .left, .prijslijst_content .right {
+    float: left; }
+    .prijslijst_content .left p, .prijslijst_content .right p {
+      line-height: 3.2rem;
+      margin: 0; }
+  .prijslijst_content .left {
+    width: 70%; }
+  .prijslijst_content .right {
+    width: 30%; }
+    .prijslijst_content .right p {
+      float: right; }
 
 .push {
   height: 28rem; }

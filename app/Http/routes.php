@@ -27,6 +27,10 @@ Route::get('/contact', ['middleware' => 'lang', 'as' => 'contact', 'uses' => 'Ho
 // DOP norm
 Route::get('/ce', ['middleware' => 'lang', 'as' => 'ce', 'uses' => 'HomeController@ce']);
 
+// Prijslijst
+Route::get('/prijslijst', ['middleware' => 'lang', 'as' => 'prijslijst', 'uses' => 'HomeController@prijslijst']);
+
+
 // Producten
 Route::get('/producten', ['middleware' => 'lang', 'as' => 'producten', 'uses' => 'ProductenController@overview']);
 //Route::get('/producten/{cat}', ['middleware' => 'lang', 'uses' => 'ProductenController@categorieFilter']);

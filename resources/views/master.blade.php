@@ -66,7 +66,7 @@
         <footer>
             <div class="footercontent">
                 <div class="footercol">
-                    <p><span class="icon-download"></span> Prijslijst</p>
+                    <p><a href="{{ route('prijslijst') }}" target="_blank"><span class="icon-download"></span> Prijslijst</a></p>
                     <p><a href="{{ route('ce') }}"><span class="icon-ok"></span> CE Markering</a></p>
                 </div>
                 <div class="footercol">&nbsp;</div>
