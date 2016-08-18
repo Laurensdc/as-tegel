@@ -23,7 +23,7 @@
 			</p>
             <p>
 				<label>Volgorde in menu (optioneel)</label>
-                <input type="number" max="99" name="volgorde">
+                <input type="number" max="99" name="volgorde" value="{{ $categorie->volgorde }}">
             </p>
             @if ($errors->has('volgorde'))
                 <p class="txt_warning"><label></label>Moet uniek zijn (of leeg laten)</p>
