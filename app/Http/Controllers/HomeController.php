@@ -17,7 +17,17 @@ class HomeController extends Controller
      * @return void
      */
     function homePage() {
-        return view('home', ["title" => "Home", "headermenu_active" => "home"]);
+        $featuredproducts = App\Product::where('inpromo', 1)->get();
+        $subcategories = App\Subcategorie::all();
+        $categories = App\Categorie::all();
+
+        return view('home', [
+            "title" => "Home", 
+            "headermenu_active" => "home",
+            "featuredproducts" => $featuredproducts,
+            "subcategories" => $subcategories,
+            "categories" => $categories,
+            ]);
     }
 
     function contact() {
