@@ -14,13 +14,18 @@
 				<input type="text" name="afmetingen">
 			</p>
 			<p>
-				<label>Prijs Particulier</label>
-				<input type="text" name="prijs_particulier">
-			</p>
-			<p>
 				<label>Prijs Handelaar</label>
 				<input type="text" name="prijs_handelaar">
 			</p>
+            <p>
+                <label>Eenheid</label>
+                <select name="eenheid">
+                    <option value="m&sup2;">m&sup2;</option>
+                    <option value="stuk">stuk</option>
+                    <option value="lot">lot</option>
+                    <option value="ton">ton</option>
+                </select>
+            </p>
 			<p>
 				<label>Is product in voorraad?</label>
 				<select name="invoorraad">					

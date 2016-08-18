@@ -13,10 +13,15 @@
 				<label>Afmetingen</label>
 				<input type="text" name="afmetingen" value="{{ $p->afmetingen }}">
 			</p>
-			<p>
-				<label>Prijs Particulier</label>
-				<input type="text" name="prijs_particulier" value="{{ $p->prijs_particulier }}">
-			</p>
+            <p>
+                <label>Eenheid</label>
+                <select name="eenheid">
+                    <option value="m&sup2;" @if($p->eenheid == 'm&sup2;') selected @endif >m&sup2;</option>
+                    <option value="stuk" @if($p->eenheid == 'stuk') selected @endif >stuk</option>
+                    <option value="lot" @if($p->eenheid == 'lot') selected @endif >lot</option>
+                    <option value="ton" @if($p->eenheid == 'ton') selected @endif >ton</option>
+                </select>
+            </p>
 			<p>
 				<label>Prijs Handelaar</label>
 				<input type="text" name="prijs_handelaar" value="{{ $p->prijs_handelaar }}">

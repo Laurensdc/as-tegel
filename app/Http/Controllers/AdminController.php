@@ -140,8 +140,8 @@ class AdminController extends Controller
         
         $p->naam = $r['naam'];
         $p->afmetingen = $r['afmetingen'];
-        $p->prijs_particulier = $r['prijs_particulier'];
         $p->prijs_handelaar = $r['prijs_handelaar'];
+        $p->eenheid = $r['eenheid'];
         $p->invoorraad = $r['invoorraad'];
         $p->inpromo = $r['inpromo'];
         $p->groepering = $r['groepering'];
@@ -188,8 +188,8 @@ class AdminController extends Controller
 
         $p->naam = $r['naam'];
         $p->afmetingen = $r['afmetingen'];
-        $p->prijs_particulier = $r['prijs_particulier'];
         $p->prijs_handelaar = $r['prijs_handelaar'];
+        $p->eenheid = $r['eenheid'];
         $p->invoorraad = $r['invoorraad'];
         $p->inpromo = $r['inpromo'];
         $p->groepering = $r['groepering'];

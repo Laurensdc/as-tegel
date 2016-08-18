@@ -4,8 +4,7 @@
 	<div class="admin_smallcol">
 		<h2>Sorteren</h2>	
 		<p>
-			<a class="boringlink" href="{{ route('admin') }}/producten/sort/naam">Naam</a> - 
-			<a class="boringlink" href="{{ route('admin') }}/producten/sort/prijs_particulier">Particuliere prijs</a>	 - 
+			<a class="boringlink" href="{{ route('admin') }}/producten/sort/naam">Naam</a> -  
 			<a class="boringlink" href="{{ route('admin') }}/producten/sort/prijs_handelaar">Handelaarsprijs</a> - 
 			<a class="boringlink" href="{{ route('admin') }}/producten/sort/invoorraad">In voorraad</a> -
             <a class="boringlink" href="{{ route('admin') }}/producten/sort/inpromo">Promo</a> -  
