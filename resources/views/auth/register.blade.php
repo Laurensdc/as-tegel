@@ -8,7 +8,7 @@
 
 		<div>
 			<label class="">Voornaam</label>
-			<input type="text" name="voornaam" value="{{ old('voornaam') }}">
+			<input type="text" name="voornaam" value="{{ old('voornaam') }}" autofocus>
 
 			@if ($errors->has('voornaam'))
 				<span class="txt_warning">

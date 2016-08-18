@@ -13,6 +13,10 @@
 				<label>Afmetingen</label>
 				<input type="text" name="afmetingen" value="{{ $p->afmetingen }}">
 			</p>
+			<p>
+				<label>Prijs Handelaar</label>
+				<input type="text" name="prijs_handelaar" value="{{ $p->prijs_handelaar }}">
+			</p>
             <p>
                 <label>Eenheid</label>
                 <select name="eenheid">
@@ -20,12 +24,10 @@
                     <option value="stuk" @if($p->eenheid == 'stuk') selected @endif >stuk</option>
                     <option value="lot" @if($p->eenheid == 'lot') selected @endif >lot</option>
                     <option value="ton" @if($p->eenheid == 'ton') selected @endif >ton</option>
+                    <option value="dag" @if($p->eenheid == 'dag') selected @endif >dag</option>
+                    <option value="week" @if($p->eenheid == 'week') selected @endif >week</option>
                 </select>
             </p>
-			<p>
-				<label>Prijs Handelaar</label>
-				<input type="text" name="prijs_handelaar" value="{{ $p->prijs_handelaar }}">
-			</p>
 			<p>
 				<label>Is product in voorraad?</label>
 				<select name="invoorraad">					

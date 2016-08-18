@@ -24,6 +24,8 @@
                     <option value="stuk">stuk</option>
                     <option value="lot">lot</option>
                     <option value="ton">ton</option>
+                    <option value="dag">dag</option>
+                    <option value="week">week</option>
                 </select>
             </p>
 			<p>

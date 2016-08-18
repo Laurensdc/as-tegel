@@ -14,7 +14,7 @@
 
 		<div>
 			<label>E-mail</label>
-			<input type="email" name="email" value="{{ old('email') }}">
+			<input type="email" name="email" value="{{ old('email') }}" autofocus>
 
 			@if ($errors->has('email'))
 				<span class="txt_warning">
