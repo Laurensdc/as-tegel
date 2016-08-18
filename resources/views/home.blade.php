@@ -31,7 +31,7 @@
                         @endif
 
                         <a href="{{ route('producten') }}/{{ $p->subcategorie->categorie->cat_linknaam }}/{{ $p->subcategorie->subcat_linknaam }}">
-                            {{ trans('cont.bekijk') }} {{ $p->naam }} &rarr;
+                            {{ trans('cont.bekijk') }} {{ $p->naam }} <span class="icon-angle-circled-right">
                         </a>
 
                     </article>

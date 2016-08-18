@@ -16,7 +16,7 @@ return [
 	"nostock"		    => "No stock available, but orders are still possible",
 	"add"			    => "Add",
 	"toorder"		    => "to my order",
-	"order"			    => "Add to quotation",
+	"order"			    => "Add to order",
 	"product_added"	    => "Product added to your order",
 	"orderit"		    => "Order now",
     "vraag_offerte"     => "Order quotation",
@@ -26,5 +26,18 @@ return [
     "spotlight"         => "Spotlight",
     "spotlight_text"    => "Temporary offers",
     "bekijk"            => "Check out",
+    "prijslijst"        => "Pricelist",
+    "ce_markering"      => "CE Marking",
+    "volg_ons_op"       => "Follow us on",
+    "website_by"        => "Website by",
+    "uw_bestelling"     => "Your order",
+    "geen_prod_toegevoegd" => "You haven't added products to your order yet.",
+    "terug_naar_prod"   => "Back to product page",
+    "item_verwijderen"  => "Delete item",
+    "alle_items_verwijderen" => "Delete all items",
+    "totaal"            => "Total",
+    "ikwildop"          => "Yes, I want to receive a DOP certificate with my order.",
+    
+
 
 ];

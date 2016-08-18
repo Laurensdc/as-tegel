@@ -66,16 +66,16 @@
         <footer>
             <div class="footercontent">
                 <div class="footercol">
-                    <p><a href="{{ route('prijslijst') }}" target="_blank"><span class="icon-download"></span> Prijslijst</a></p>
-                    <p><a href="{{ route('ce') }}"><span class="icon-ok"></span> CE Markering</a></p>
+                    <p><a href="{{ route('prijslijst') }}" target="_blank"><span class="icon-download"></span> {{ trans('cont.prijslijst') }}</a></p>
+                    <p><a href="{{ route('ce') }}"><span class="icon-ok"></span> {{ trans('cont.ce_markering') }}</a></p>
                 </div>
                 <div class="footercol">&nbsp;</div>
                 <div class="footercol">
                     <p><a href="mailto:info@as-tegel.be"><span class="icon-mail"></span> info@as-tegel.be</a></p>
                     <p><span class="icon-phone"></span> 0475/27.37.17</p>
-                    <p><a href="https://www.facebook.com/As-Tegel-219524735099565/" target="_blank"><span class="icon-facebook-rect"></span> Volg ons op Facebook</a></p>
+                    <p><a href="https://www.facebook.com/As-Tegel-219524735099565/" target="_blank"><span class="icon-facebook-rect"></span> {{ trans('cont.volg_ons_op') }} Facebook</a></p>
                     <hr>
-                    <p>Website by <a href="http://laurensdev.com" target="_blank">Laurens Development</a></p>
+                    <p>{{ trans('cont.website_by') }} <a href="http://laurensdev.com" target="_blank">Laurens Development</a></p>
                 </div>
             </div>
 

@@ -26,6 +26,17 @@ return [
     "spotlight"         => "In de kijker",
     "spotlight_text"    => "Tijdelijke aanbiedingen",
     "bekijk"            => "Bekijk",
+    "prijslijst"        => "Prijslijst",
+    "ce_markering"      => "CE Markering",
+    "volg_ons_op"       => "Volg ons op",
+    "website_by"        => "Website door",
+    "uw_bestelling"     => "Uw bestelling",
+    "geen_prod_toegevoegd" => "Nog geen producten aan bestelling toegevoegd.",
+    "terug_naar_prod"   => "Terug naar producten",
+    "item_verwijderen"  => "Verwijder item",
+    "alle_items_verwijderen" => "Alles verwijderen",
+    "totaal"            => "Totaal",
+    "ikwildop"          => "Ja, ik wens een DOP certificaat te ontvangen met mijn bestelling.",    
 
 
 ];

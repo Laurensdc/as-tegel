@@ -16,7 +16,7 @@ return [
 	"nostock"		=> "Pas de stock maintenant, mais vous pouvez encore commander",
 	"add"			=> "Ajoutez",
 	"toorder"		=> "à ma commande",
-	"order"			=> "Ajoutez en offre",
+	"order"			=> "Ajoutez en commande",
 	"product_added"	=> "Produit ajouté à votre commande",
     "vraag_offerte" => "Demandez offre",
 	"orderit"		=> "Commandez",
@@ -26,7 +26,18 @@ return [
     "spotlight"         => "Promo",
     "spotlight_text"    => "Des offres temporaires",
     "bekijk"            => "Regarder a",
-
+    "prijslijst"        => "Liste de prix",
+    "ce_markering"      => "Marquage CE",
+    "volg_ons_op"       => "Suivez-nous sur",
+    "website_by"        => "Site web par",
+    "uw_bestelling"     => "Votre commande",
+    "geen_prod_toegevoegd" => "Vous n'avez pas ajouté des produits à votre commande.",
+    "terug_naar_prod"   => "Retourner à page produit",
+    "item_verwijderen"  => "Effacez",
+    "alle_items_verwijderen" => "Effacez tous",
+    "totaal"            => "Total",
+    "ikwildop"          => "Oui, je veux reçevoir un certificat de DOP avec ma commande.",
+    
 
 ];
 

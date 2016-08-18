@@ -79,7 +79,6 @@ class AdminController extends Controller
         // Probably because mailgun only allows registered email to be sent to
 		Mail::send('mail.handelaar_goedgekeurd', ['user' => $user], function($m) use ($user)
 		{
-		    $m->from('mailer@as-tegel.be', 'As-Tegel');
 		    $m->to($user->email)->subject('Uw aanvraag voor handelaar is goedgekeurd'); 
 		});
 		
