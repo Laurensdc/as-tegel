@@ -62,9 +62,13 @@
 
         <footer>
             <div class="container">
-                hello
+                <div class="footercol">
 
-
+                </div>
+                
+                <div class="footercol">
+                    
+                </div>
             </div>
         </footer>
 
