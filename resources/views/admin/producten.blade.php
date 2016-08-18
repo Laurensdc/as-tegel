@@ -22,7 +22,6 @@
 		<tr>
 			<td><strong>Naam</strong></td>
 			<td><strong>Afmetingen</strong></td>
-			<td><strong>Prijs Particulier</strong></td>
 			<td><strong>Prijs Handelaar</strong></td>
 			<td><strong>In voorraad</strong></td>
             <td><strong>Promo</strong></td>
@@ -36,7 +35,6 @@
 		<tr>
 			<td>{{ $p->naam }}</td>
 			<td>{{ $p->afmetingen }}</td>
-			<td>{{ $p->prijs_particulier }}</td>
 			<td>{{ $p->prijs_handelaar }}</td>
 			<td>{{ $p->invoorraad }}</td>
             <td>{{ $p->inpromo }}</td>

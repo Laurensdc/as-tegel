@@ -34,14 +34,13 @@
 
 		    Aantal m&sup2; besteld: 
 		    <strong>{{ $vierkantemeters[$i] }}</strong><br>
-		    @if(Auth::user()->role == 'particulier')
-		    Particuliere prijs per m&sup2;: <strong>&euro; {{ $producten[$i]->prijs_particulier }}</strong><br>
-		    @elseif(Auth::user()->role == 'handelaar')
-		    Handelaarsprijs per m&sup2;: <strong>&euro; {{ $producten[$i]->prijs_handelaar }}</strong><br>
-		    @endif
+		    if(Auth::user()->role == 'handelaar')
+                Handelaarsprijs per m&sup2;: <strong>&euro; {{ $producten[$i]->prijs_handelaar }}</strong><br>
+                Uitgerekende prijs: 
+                <strong>&euro; {{ $prijzen[$i] }}</strong><br>    
+            @endif
 
-		    Uitgerekende prijs: 
-		    <strong>&euro; {{ $prijzen[$i] }}</strong><br>    
+		        
 	    </p>
 	    <br>
 
@@ -49,7 +48,9 @@
 
 	<br>
 
-	<p>Totale prijs: <strong>&euro; {{ $totaleprijs }}</strong></p>
+    @if(Auth::user()->role == 'handelaar')
+	    <p>Totale prijs: <strong>&euro; {{ $totaleprijs }}</strong></p>
+    @endif
 
 	<br>
 

@@ -11,29 +11,42 @@
 		    <p><strong>{{ $producten[$i]->naam }}</strong></p> 
             <div class="order_item">
                 <p>{{ $producten[$i]->afmetingen }}</p>
-                <p>{{ $vierkantemeters[$i] }}m&sup2;
-                aan &euro;
+                <p>{{ $vierkantemeters[$i] }}{{ $producten[$i]->eenheid }}
+                
                 @if(Auth::check())		    
-                    @if(Auth::user()->role=='handelaar') {{ $producten[$i]->prijs_handelaar }} 
-                    @else {{ $producten[$i]->prijs_particulier }} 
-                    @endif 		    
-                @else {{ $producten[$i]->prijs_particulier }} 
+                    @if(Auth::user()->role=='handelaar')
+                        aan &euro;
+                        {{ $producten[$i]->prijs_handelaar }}
+                        /{{ $producten[$i]->eenheid }} 
+                    @endif    
                 @endif     
-                /m&sup2;
+                
                 </p>
-                <p>&rarr; &euro;{{ $prijzen[$i] }}</p>
                 <p><a href="{{ route('deleteorder') }}/{{ $sessionIndexes[$i] }}">Item verwijderen</a></p>
             </div>
 		    
 		@endfor
 
-		<p><strong>Totaal: </strong> &euro;{{ $totaleprijs }}</p>
-		<br>
-        <p>{{ trans('cont.prijzen_afgehaald') }}</p>
+        @if(Auth::check())		    
+            @if(Auth::user()->role=='handelaar')
+		        <p><strong>Totaal: </strong> &euro;{{ $totaleprijs }}</p>
+                <br>
+                <p>{{ trans('cont.prijzen_afgehaald') }}</p>
+            @endif
+        @endif
+
         <br>
         
 		<p>
+        @if(Auth::check())		    
+            @if(Auth::user()->role=='handelaar')
 			<a href="{{ route('placeorder') }}" class="btn">{{ trans('cont.orderit') }}</a>
+            @else
+            <a href="{{ route('placeorder') }}" class="btn">{{ trans('cont.vraag_offerte') }}</a>
+            @endif
+        @else
+            <a href="{{ route('placeorder') }}" class="btn">{{ trans('cont.vraag_offerte') }}</a>
+        @endif
             <a href="{{ route('deleteorder') }}">Alle items verwijderen</a>
 		</p>
 

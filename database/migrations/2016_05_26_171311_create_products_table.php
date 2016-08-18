@@ -18,8 +18,10 @@ class CreateProductsTable extends Migration
             $table->string('afmetingen');
             $table->integer('groepering')->default(99);
 
-            $table->decimal('prijs_particulier', 4, 2);
+            $table->decimal('prijs_bestellen', 4, 2);
             $table->decimal('prijs_handelaar', 4, 2);
+            $table->string('eenheid', 40)->default('m&sup2;');
+
             $table->boolean('invoorraad')->default(true);
             $table->boolean('inpromo')->default(false);
 

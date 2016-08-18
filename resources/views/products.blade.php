@@ -37,14 +37,9 @@
 				<ul>
 					<li>{{ trans('cont.dimensions') }}: {{ $p->afmetingen }}</li>
 					@if(Auth::check())
-
 						@if(Auth::user()->role == 'handelaar')
-							<li>{{ trans('cont.price') }}: &euro;{{ $p->prijs_handelaar }}/m&sup2;</li>
-						@else
-							<li>{{ trans('cont.price') }}: &euro;{{ $p->prijs_particulier }}/m&sup2;</li>
+							<li>{{ trans('cont.price') }}: &euro;{{ $p->prijs_handelaar }}/{!! $p->eenheid !!}</li>
 						@endif
-					@else
-						<li>{{ trans('cont.price') }}: &euro;{{ $p->prijs_particulier }}/m&sup2;</li>
 					@endif
 
 				</ul>
@@ -59,7 +54,7 @@
                 <form action="" method="post" name="form">
                     {{ csrf_field() }}
                     <input type="hidden" value="{{ $p->id }}" name="prod_id">
-                    <p>{{ trans('cont.add') }} <input type="number" name="vierkantemeter" min="1" max="1000" value="20" required/>m&sup2; {{ trans('cont.toorder') }}.</p> 
+                    <p>{{ trans('cont.add') }} <input type="number" name="vierkantemeter" min="1" max="1000" value="20" required/>{!! $p->eenheid !!} {{ trans('cont.toorder') }}.</p> 
                     <p><input type="submit" clas="btn btn_cta" value="{{ trans('cont.order') }}"/></p>
                 </form>
 			</article>

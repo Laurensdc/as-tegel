@@ -563,13 +563,16 @@ header .header_bestelling a:hover {
 
 .homecontainer .homepromo {
   border: 1px solid #424242;
+  background-color: #FFFFFF;
   margin: 6rem 0 0; }
+  .homecontainer .homepromo .producten_content {
+    background-color: #FFFFFF; }
   .homecontainer .homepromo .homepromo_banner {
     background-color: #424242;
     color: #FAFAFA;
     line-height: 3rem;
     margin-bottom: 1rem;
-    padding: 3rem; }
+    padding: 1rem 0 1rem 3rem; }
     .homecontainer .homepromo .homepromo_banner h2 {
       font-weight: 800;
       font-size: 3rem;

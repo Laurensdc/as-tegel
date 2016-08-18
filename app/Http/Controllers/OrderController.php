@@ -23,6 +23,7 @@ class OrderController extends Controller
     	$vierkantemeters = array();
     	$prijzen = array();
         $sessionIndexes = array();
+        $eenheden = array();
 
     	foreach($items as $n=>$i) {
     		$prod = Product::find($i[0]);
@@ -31,8 +32,9 @@ class OrderController extends Controller
             array_push($sessionIndexes, $n);
     		if(Auth::check() && Auth::user()->role == 'handelaar') {
     			array_push($prijzen, $prod->prijs_handelaar * $i[1]);
+
     		} 
-    		else array_push($prijzen, $prod->prijs_particulier * $i[1]);
+    		//else array_push($prijzen, $prod->prijs_particulier * $i[1]);
     	}
 
     	$totaleprijs = 0;
@@ -48,8 +50,7 @@ class OrderController extends Controller
     	 "vierkantemeters" => $vierkantemeters,
     	 "prijzen" => $prijzen,
     	 "totaleprijs" => $totaleprijs,
-         "sessionIndexes" => $sessionIndexes
-
+         "sessionIndexes" => $sessionIndexes,
     	 ]);
 
     	}

@@ -14,7 +14,7 @@ class ProductSeeder extends Seeder
         DB::table('products')->insert([
             'naam'=>'Vietnamees Getrommeld',
             'afmetingen'=>'20 x 20 x 2',
-            'prijs_particulier'=>'22.32',
+            'prijs_bestellen'=>'22.32',
             'prijs_handelaar'=>'15.32',
             'coverfoto'=>'images/producten/vietnamees/getrommeld.jpg',
             'fullresfoto'=>'images/producten/vietnamees/getrommeld.jpg',
@@ -27,7 +27,7 @@ class ProductSeeder extends Seeder
         DB::table('products')->insert([
             'naam'=>'Vietnamees Geschuurd Gezaagd',
             'afmetingen'=>'20 x 30 x 2',
-            'prijs_particulier'=>'22.32',
+            'prijs_bestellen'=>'22.32',
             'prijs_handelaar'=>'15.32',
             'coverfoto'=>'images/producten/vietnamees/geschuurd_gezaagd.jpg',
             'fullresfoto'=>'images/producten/vietnamees/geschuurd_gezaagd.jpg',
@@ -38,7 +38,7 @@ class ProductSeeder extends Seeder
         DB::table('products')->insert([
             'naam'=>'Candela Grey',
             'afmetingen'=>'20 x 30 x 2',
-            'prijs_particulier'=>'22.32',
+            'prijs_bestellen'=>'22.32',
             'prijs_handelaar'=>'15.32',
             'coverfoto'=>'images/producten/indisch/candela_grey.jpg',
             'fullresfoto'=>'images/producten/indisch/candela_grey.jpg',
@@ -47,7 +47,7 @@ class ProductSeeder extends Seeder
         DB::table('products')->insert([
             'naam'=>'Candela Multicolor Tegels',
             'afmetingen'=>'20 x 30 x 2',
-            'prijs_particulier'=>'24.32',
+            'prijs_bestellen'=>'24.32',
             'prijs_handelaar'=>'16.32',
             'coverfoto'=>'images/producten/indisch/candela_multicolor_tegels.jpg',
             'fullresfoto'=>'images/producten/indisch/candela_multicolor_tegels.jpg',
@@ -56,7 +56,7 @@ class ProductSeeder extends Seeder
         DB::table('products')->insert([
             'naam'=>'Vietnamees Getrommeld',
             'afmetingen'=>'30 x 30 x 2',
-            'prijs_particulier'=>'22.32',
+            'prijs_bestellen'=>'22.32',
             'prijs_handelaar'=>'15.32',
             'coverfoto'=>'images/producten/vietnamees/getrommeld.jpg',
             'fullresfoto'=>'images/producten/vietnamees/getrommeld.jpg',
@@ -69,7 +69,7 @@ class ProductSeeder extends Seeder
         DB::table('products')->insert([
             'naam'=>'Vietnamees Getrommeld',
             'afmetingen'=>'60 x 60 x 3',
-            'prijs_particulier'=>'35.00',
+            'prijs_bestellen'=>'35.00',
             'prijs_handelaar'=>'25.00',
             'coverfoto'=>'images/producten/vietnamees/getrommeld_2.jpg',
             'fullresfoto'=>'images/producten/vietnamees/getrommeld_2.jpg',
@@ -84,7 +84,7 @@ class ProductSeeder extends Seeder
         DB::table('products')->insert([
             'naam'=>'Vietnamees Getrommeld',
             'afmetingen'=>'40 x 40 x 2',
-            'prijs_particulier'=>'22.32',
+            'prijs_bestellen'=>'22.32',
             'prijs_handelaar'=>'24.32',
             'subcategorie_id'=>1,
             'groepering'=>1,
@@ -93,7 +93,7 @@ class ProductSeeder extends Seeder
         DB::table('products')->insert([
             'naam'=>'Vietnamees Getrommeld',
             'afmetingen'=>'100 x 100 x 3',
-            'prijs_particulier'=>'35.00',
+            'prijs_bestellen'=>'35.00',
             'prijs_handelaar'=>'25.00',
             'coverfoto'=>'images/producten/vietnamees/getrommeld.jpg',
             'fullresfoto'=>'images/producten/vietnamees/getrommeld.jpg',
@@ -106,7 +106,7 @@ class ProductSeeder extends Seeder
         DB::table('products')->insert([
             'naam'=>'Carius',
             'afmetingen'=>'33 x 11 x 3',
-            'prijs_particulier'=>'30.00',
+            'prijs_bestellen'=>'30.00',
             'prijs_handelaar'=>'20.00',
             'coverfoto'=>'images/producten/carius/carius.jpg',
             'fullresfoto'=>'images/producten/carius/carius.jpg',
@@ -117,7 +117,7 @@ class ProductSeeder extends Seeder
         DB::table('products')->insert([
             'naam'=>'Carius',
             'afmetingen'=>'33 x 11 x 4',
-            'prijs_particulier'=>'30.00',
+            'prijs_bestellen'=>'30.00',
             'prijs_handelaar'=>'20.00',
             'coverfoto'=>'images/producten/carius/carius_4dik.jpg',
             'fullresfoto'=>'images/producten/carius/carius_4dik.jpg',
@@ -128,7 +128,7 @@ class ProductSeeder extends Seeder
         DB::table('products')->insert([
             'naam'=>'Osteria Antracite',
             'afmetingen'=>'60 x 60 x 2',
-            'prijs_particulier'=>'40.00',
+            'prijs_bestellen'=>'40.00',
             'prijs_handelaar'=>'30.00',
             'coverfoto'=>'images/producten/keramiek/osteria.jpg',
             'fullresfoto'=>'images/producten/keramiek/osteria.jpg',
@@ -138,7 +138,7 @@ class ProductSeeder extends Seeder
         DB::table('products')->insert([
             'naam'=>'Gevlamd en Geborsteld',
             'afmetingen'=>'40 x 40 x 2',
-            'prijs_particulier'=>'25.00',
+            'prijs_bestellen'=>'25.00',
             'prijs_handelaar'=>'23.00',
             'coverfoto'=>'images/producten/chinees/gevlamd_geborsteld.jpg',
             'fullresfoto'=>'images/producten/chinees/gevlamd_geborsteld.jpg',
@@ -148,7 +148,7 @@ class ProductSeeder extends Seeder
         DB::table('products')->insert([
             'naam'=>'Candela Grey',
             'afmetingen'=>'20 x 5 x 5',
-            'prijs_particulier'=>'25.32',
+            'prijs_bestellen'=>'25.32',
             'prijs_handelaar'=>'17.48',
             'coverfoto'=>'images/producten/indisch/candela_grey_20x5x5.jpg',
             'fullresfoto'=>'images/producten/indisch/candela_grey_20x5x5.jpg',
@@ -159,7 +159,7 @@ class ProductSeeder extends Seeder
         DB::table('products')->insert([
             'naam'=>'Candela Black',
             'afmetingen'=>'20 x 20 x 2',
-            'prijs_particulier'=>'20',
+            'prijs_bestellen'=>'20',
             'prijs_handelaar'=>'12',
             'coverfoto'=>'images/producten/indisch/candela_black.jpg',
             'fullresfoto'=>'images/producten/indisch/candela_black.jpg',
