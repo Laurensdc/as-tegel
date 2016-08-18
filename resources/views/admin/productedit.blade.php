@@ -24,8 +24,15 @@
 			<p>
 				<label>Is product in voorraad?</label>
 				<select name="invoorraad">					
-					<option value="1" @if($p->invoorraad)selected @endif>Ja</option>
-					<option value="0" @if(!$p->invoorraad)selected @endif>Nee</option>
+					<option value="1" @if($p->invoorraad) selected @endif >Ja</option>
+					<option value="0" @if(!$p->invoorraad) selected @endif >Nee</option>
+				</select>
+			</p>
+			<p>
+				<label>Promo op voorpagina?</label>
+				<select name="inpromo">					
+					<option value="0" @if(!$p->inpromo) selected @endif >Nee</option>
+					<option value="1" @if($p->inpromo) selected @endif >Ja</option>
 				</select>
 			</p>
             <p>

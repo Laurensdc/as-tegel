@@ -98,6 +98,7 @@ class ProductSeeder extends Seeder
             'fullresfoto'=>'images/producten/vietnamees/getrommeld.jpg',
             'subcategorie_id'=>1,
             'groepering'=>1,
+            'inpromo'=>true,
             'invoorraad'=>false,
         ]);
 
@@ -108,6 +109,7 @@ class ProductSeeder extends Seeder
             'prijs_handelaar'=>'20.00',
             'coverfoto'=>'images/producten/carius/carius.jpg',
             'fullresfoto'=>'images/producten/carius/carius.jpg',
+            'inpromo'=>true,
             'subcategorie_id'=>5,
         ]);
       

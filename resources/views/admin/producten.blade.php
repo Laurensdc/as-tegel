@@ -24,6 +24,7 @@
 			<td><strong>Prijs Particulier</strong></td>
 			<td><strong>Prijs Handelaar</strong></td>
 			<td><strong>In voorraad</strong></td>
+            <td><strong>Promo</strong></td>
             <td><strong>Groep</strong></td>
 			<td><strong>Categorie</strong></td>
 			<td><strong>Beschrijving</strong></td>
@@ -37,6 +38,7 @@
 			<td>{{ $p->prijs_particulier }}</td>
 			<td>{{ $p->prijs_handelaar }}</td>
 			<td>{{ $p->invoorraad }}</td>
+            <td>{{ $p->inpromo }}</td>
             <td>{{ $p->groepering }}</td>
 			<td>{{ $p->subcategorie->naam }}</td>
 			<td>{{ substr($p->beschrijving, 0, 25) }}@if($p->beschrijving != '')...@endif</td>

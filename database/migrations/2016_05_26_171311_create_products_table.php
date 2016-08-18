@@ -21,6 +21,7 @@ class CreateProductsTable extends Migration
             $table->decimal('prijs_particulier', 4, 2);
             $table->decimal('prijs_handelaar', 4, 2);
             $table->boolean('invoorraad')->default(true);
+            $table->boolean('inpromo')->default(false);
 
             $table->text('beschrijving');
             $table->string('fullresfoto')->default('images/producten/_geenfoto.jpg');

@@ -28,6 +28,13 @@
 					<option value="0">Nee</option>
 				</select>
 			</p>
+			<p>
+				<label>Promo op voorpagina?</label>
+				<select name="inpromo">					
+					<option value="0">Nee</option>
+					<option value="1">Ja</option>
+				</select>
+			</p>
             <p>
                 <label>Groeperingsnummer</label>
                 <input type="number" name="groepering" value="99">
