@@ -29,7 +29,7 @@
 		
 		@foreach($producten as $i=>$p)
 			<article>	
-				<a href="{{ asset($p->coverfoto) }}" data-lightbox="{{ $p->naam }}" data-title="{{ $p->naam }}">
+				<a href="{{ asset($p->fullresfoto) }}" data-lightbox="{{ $p->naam }}" data-title="{{ $p->naam }}">
 					<img src="{{ asset($p->coverfoto) }}"/>
 				</a>
 				

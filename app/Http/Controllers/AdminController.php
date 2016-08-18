@@ -12,6 +12,7 @@ use App\Categorie;
 use App\Subcategorie;
 use Mail;
 use DB;
+use Image;
 
 class AdminController extends Controller
 {
@@ -111,18 +112,22 @@ class AdminController extends Controller
     function productEdit($id, Request $r) {
         // File upload in correct folder, also on fail
         $f = $r->file('foto');
-        $path = 'images/cover/';
+        $path = 'images/producten/';
         $name = '_geenfoto.jpg';
-        $passpath = $r['coverfoto'];    // Original path
+        $name_orig = '_geenfoto.jpg';
 
         if($r->hasFile('foto')) {
             if($r->file('foto')->isValid()) {
                 $path = public_path() . '/' . $r['coverfoto']; 
                 $name = $f->getClientOriginalName();
-                $f->move($path, $name);
+                $name_orig = '_orig_' . $name;
+                $f->move($path, $name_orig);
+
+                $resizedimg = Image::make($path . $name_orig)->fit(400,300);
+                $resizedimg->save($path . $name);
+
                 $path = $r['coverfoto'];
-                $passpath = $path . $name;  // Only edit $p->coverfoto in this case
-           }
+            }
         }
 
         // Make changes to product
@@ -135,7 +140,8 @@ class AdminController extends Controller
         $p->invoorraad = $r['invoorraad'];
         $p->groepering = $r['groepering'];
         $p->beschrijving = $r['beschrijving'];
-        $p->coverfoto = $passpath;
+        $p->coverfoto = $path . $name;
+        $p->fullresfoto = $path . $name_orig;
         $p->subcategorie_id = $r['subcategorie_id'];
 
         $p->save();
@@ -155,15 +161,22 @@ class AdminController extends Controller
         $f = $r->file('foto');
         $path = 'images/producten/';
         $name = '_geenfoto.jpg';
+        $name_orig = '_geenfoto.jpg';
 
         if($r->hasFile('foto')) {
             if($r->file('foto')->isValid()) {
                 $path = public_path() . '/' . $r['coverfoto']; 
                 $name = $f->getClientOriginalName();
-                $f->move($path, $name);
+                $name_orig = '_orig_' . $name;
+                $f->move($path, $name_orig);
+
+                $resizedimg = Image::make($path . $name_orig)->fit(400,300);
+                $resizedimg->save($path . $name);
+
                 $path = $r['coverfoto'];
-           }
-        }        
+            }
+        }
+
 
         $p = new Product;
 
@@ -175,6 +188,7 @@ class AdminController extends Controller
         $p->groepering = $r['groepering'];
         $p->beschrijving = $r['beschrijving'];
         $p->coverfoto = $path . $name;
+        $p->fullresfoto = $path . $name_orig;
         $p->subcategorie_id = $r['subcategorie_id'];
 
         $p->save();
@@ -241,11 +255,16 @@ class AdminController extends Controller
             if($r->file('foto')->isValid()) {
                 $path = public_path() . '/' . $r['coverfoto']; 
                 $name = $f->getClientOriginalName();
-                $f->move($path, $name);
-                $path = $r['coverfoto'];
-           }
-        }
+                $name_orig = '_orig_' . $name;
+                $f->move($path, $name_orig);
 
+                $resizedimg = Image::make($path . $name_orig)->fit(800,600);
+                $resizedimg->save($path . $name);
+
+                $path = $r['coverfoto'];
+            }
+        }
+        
         $cat = new Categorie;
 
         $cat->naam = $r['naam'];
@@ -349,9 +368,13 @@ class AdminController extends Controller
             if($r->file('foto')->isValid()) {
                 $path = public_path() . '/' . $r['coverfoto']; 
                 $name = $f->getClientOriginalName();
-                $f->move($path, $name);
+                $name_orig = '_orig_' . $name;
+                $f->move($path, $name_orig);
                 $msg = $r['coverfoto'] . $name;
                 $status = true;
+
+                $resizedimg = Image::make($path . $name_orig)->fit(400,300);
+                $resizedimg->save($path . $name);
             }
         }
         

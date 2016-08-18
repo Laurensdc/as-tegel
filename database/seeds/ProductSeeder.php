@@ -17,6 +17,7 @@ class ProductSeeder extends Seeder
             'prijs_particulier'=>'22.32',
             'prijs_handelaar'=>'15.32',
             'coverfoto'=>'images/producten/vietnamees/getrommeld.jpg',
+            'fullresfoto'=>'images/producten/vietnamees/getrommeld.jpg',
             'subcategorie_id'=>1,
             'groepering'=>2,
 
@@ -29,6 +30,8 @@ class ProductSeeder extends Seeder
             'prijs_particulier'=>'22.32',
             'prijs_handelaar'=>'15.32',
             'coverfoto'=>'images/producten/vietnamees/geschuurd_gezaagd.jpg',
+            'fullresfoto'=>'images/producten/vietnamees/geschuurd_gezaagd.jpg',
+            
             'subcategorie_id'=>2,
         ]);
 
@@ -38,6 +41,7 @@ class ProductSeeder extends Seeder
             'prijs_particulier'=>'22.32',
             'prijs_handelaar'=>'15.32',
             'coverfoto'=>'images/producten/indisch/candela_grey.jpg',
+            'fullresfoto'=>'images/producten/indisch/candela_grey.jpg',
             'subcategorie_id'=>3,
         ]);
         DB::table('products')->insert([
@@ -46,6 +50,7 @@ class ProductSeeder extends Seeder
             'prijs_particulier'=>'24.32',
             'prijs_handelaar'=>'16.32',
             'coverfoto'=>'images/producten/indisch/candela_multicolor_tegels.jpg',
+            'fullresfoto'=>'images/producten/indisch/candela_multicolor_tegels.jpg',
             'subcategorie_id'=>3,
         ]);
         DB::table('products')->insert([
@@ -54,6 +59,7 @@ class ProductSeeder extends Seeder
             'prijs_particulier'=>'22.32',
             'prijs_handelaar'=>'15.32',
             'coverfoto'=>'images/producten/vietnamees/getrommeld.jpg',
+            'fullresfoto'=>'images/producten/vietnamees/getrommeld.jpg',
             'subcategorie_id'=>1,
             'invoorraad'=>false,
 
@@ -66,6 +72,7 @@ class ProductSeeder extends Seeder
             'prijs_particulier'=>'35.00',
             'prijs_handelaar'=>'25.00',
             'coverfoto'=>'images/producten/vietnamees/getrommeld_2.jpg',
+            'fullresfoto'=>'images/producten/vietnamees/getrommeld_2.jpg',
             'subcategorie_id'=>1,
             'groepering'=>1,
 
@@ -88,6 +95,7 @@ class ProductSeeder extends Seeder
             'prijs_particulier'=>'35.00',
             'prijs_handelaar'=>'25.00',
             'coverfoto'=>'images/producten/vietnamees/getrommeld.jpg',
+            'fullresfoto'=>'images/producten/vietnamees/getrommeld.jpg',
             'subcategorie_id'=>1,
             'groepering'=>1,
             'invoorraad'=>false,
@@ -99,6 +107,7 @@ class ProductSeeder extends Seeder
             'prijs_particulier'=>'30.00',
             'prijs_handelaar'=>'20.00',
             'coverfoto'=>'images/producten/carius/carius.jpg',
+            'fullresfoto'=>'images/producten/carius/carius.jpg',
             'subcategorie_id'=>5,
         ]);
       
@@ -108,6 +117,7 @@ class ProductSeeder extends Seeder
             'prijs_particulier'=>'30.00',
             'prijs_handelaar'=>'20.00',
             'coverfoto'=>'images/producten/carius/carius_4dik.jpg',
+            'fullresfoto'=>'images/producten/carius/carius_4dik.jpg',
             'beschrijving'=>'De Carius is een unieke steen. Te verkrijgen in twee verschillende formaten met elk hun unieke afwerking zal deze steen uw tuin gegarandeerd vervolmaken!',
             'subcategorie_id'=>5,
         ]);     
@@ -118,6 +128,7 @@ class ProductSeeder extends Seeder
             'prijs_particulier'=>'40.00',
             'prijs_handelaar'=>'30.00',
             'coverfoto'=>'images/producten/keramiek/osteria.jpg',
+            'fullresfoto'=>'images/producten/keramiek/osteria.jpg',
             'subcategorie_id'=>6,
         ]);
 
@@ -127,6 +138,7 @@ class ProductSeeder extends Seeder
             'prijs_particulier'=>'25.00',
             'prijs_handelaar'=>'23.00',
             'coverfoto'=>'images/producten/chinees/gevlamd_geborsteld.jpg',
+            'fullresfoto'=>'images/producten/chinees/gevlamd_geborsteld.jpg',
             'subcategorie_id'=>7,
         ]);
 
@@ -136,6 +148,7 @@ class ProductSeeder extends Seeder
             'prijs_particulier'=>'25.32',
             'prijs_handelaar'=>'17.48',
             'coverfoto'=>'images/producten/indisch/candela_grey_20x5x5.jpg',
+            'fullresfoto'=>'images/producten/indisch/candela_grey_20x5x5.jpg',
             'invoorraad'=>false,
             'subcategorie_id'=>3,
         ]);
@@ -146,6 +159,7 @@ class ProductSeeder extends Seeder
             'prijs_particulier'=>'20',
             'prijs_handelaar'=>'12',
             'coverfoto'=>'images/producten/indisch/candela_black.jpg',
+            'fullresfoto'=>'images/producten/indisch/candela_black.jpg',
             'subcategorie_id'=>3,
         ]);
     }

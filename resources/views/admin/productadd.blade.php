@@ -48,7 +48,7 @@
 			</p>
 			<p>
 				<label>Map voor foto</label>
-				<input type="text" name="foto" size="40" value="images/producten/">
+				<input type="text" name="coverfoto" size="40" value="images/producten/">
 			</p>	
 			<p>
 				<label>Foto</label>

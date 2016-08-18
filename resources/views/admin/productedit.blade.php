@@ -47,7 +47,7 @@
 				<textarea name="beschrijving" rows="3" cols="40">{{ $p->beschrijving }}</textarea>
 			</p>
 			<p>
-				<label>Map voor foto</label>
+				<label>Map voor foto <span class="txt_warning">moet eindigen met '/' bij bewerken!</span></label>
 				<input type="text" name="coverfoto" value="{{ $p->coverfoto }}" size="40">
 			</p>
 			<p>
