@@ -7,7 +7,8 @@
 			<a class="boringlink" href="{{ route('admin') }}/producten/sort/naam">Naam</a> - 
 			<a class="boringlink" href="{{ route('admin') }}/producten/sort/prijs_particulier">Particuliere prijs</a>	 - 
 			<a class="boringlink" href="{{ route('admin') }}/producten/sort/prijs_handelaar">Handelaarsprijs</a> - 
-			<a class="boringlink" href="{{ route('admin') }}/producten/sort/invoorraad">In voorraad</a> - 
+			<a class="boringlink" href="{{ route('admin') }}/producten/sort/invoorraad">In voorraad</a> -
+            <a class="boringlink" href="{{ route('admin') }}/producten/sort/inpromo">Promo</a> -  
 			<a class="boringlink" href="{{ route('admin') }}/producten/sort/subcategorie_id">Categorie</a>
 		</p>
 

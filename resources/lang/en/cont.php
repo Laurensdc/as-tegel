@@ -20,7 +20,7 @@ return [
 	"product_added"	    => "Product added to your order",
 	"orderit"		    => "Order now",
 	"prijzen_afgehaald" =>  "All prices are given for pickup of goods. BTW included.",
-    "nicest_products"   => "Here you can see some of our nicest products.",
+    "nicest_products"   => "Look at some of our nicest products",
     "explore_collection" => "Explore collection",
 
 ];

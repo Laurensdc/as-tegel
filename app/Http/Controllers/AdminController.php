@@ -92,7 +92,12 @@ class AdminController extends Controller
     }
 
     function productOverviewOrderby($val) {
-        $producten = Product::orderBy($val)->get();
+        if($val == 'inpromo') {
+            $producten = Product::orderBy($val, 'desc')->get();
+        }
+        else {
+            $producten = Product::orderBy($val)->get();
+        }
 
         return view('admin.producten',
          ['producten' => $producten]);
