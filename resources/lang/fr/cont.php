@@ -37,7 +37,7 @@ return [
     "alle_items_verwijderen" => "Effacez tous",
     "totaal"            => "Total",
     "ikwildop"          => "Oui, je veux reçevoir un certificat de DOP avec ma commande.",
-    
+    "notavailable"      => "Prix non disponible",
 
 ];
 

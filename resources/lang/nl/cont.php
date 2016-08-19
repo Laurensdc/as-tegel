@@ -37,6 +37,6 @@ return [
     "alle_items_verwijderen" => "Alle items verwijderen",
     "totaal"            => "Totaal",
     "ikwildop"          => "Ja, ik wens een DOP certificaat te ontvangen met mijn bestelling.",    
-
+    "notavailable"      => "Prijs niet beschikbaar",
 
 ];

@@ -38,7 +38,11 @@
 					<li>{{ trans('cont.dimensions') }}: {{ $p->afmetingen }}</li>
 					@if(Auth::check())
 						@if(Auth::user()->role == 'handelaar')
+                            @if($p->prijs_handelaar == '' || $p->prijs_handelaar == 0) 
+                            <li>{{ trans('cont.notavailable') }}.</li>
+                            @else
 							<li>{{ trans('cont.price') }}: &euro;{{ $p->prijs_handelaar }}/{!! $p->eenheid !!}</li>
+                            @endif
 						@endif
 					@endif
 

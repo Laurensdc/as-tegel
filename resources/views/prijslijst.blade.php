@@ -27,7 +27,11 @@
                                             <p><!-- {{ $s->naam }} --> {{ $p->naam }} {{ $p->afmetingen }}</p>
                                         </div>
                                         <div class="right">
-                                            <p>&euro;{{ $p->prijs_handelaar }}</p>
+                                            @if($p->prijs_handelaar == '' || $p->prijs_handelaar == 0)
+                                                <p>Prijs niet beschikbaar</p>
+                                            @else
+                                                <p>&euro;{{ $p->prijs_handelaar }}</p>
+                                            @endif
                                         </div>
                                     </div>
                                 @endif
@@ -35,8 +39,12 @@
                         @endif
                     @endforeach
                 @endforeach
-            @endif   
+            @endif
         </div>
+        <div class="prijslijst_content">
+            <br><br><br><br>
+            <p><a href="{{ route('producten') }}">&larrhk; Terug naar site</a></p>
+        </div>   
 	</body>
 </html>
 

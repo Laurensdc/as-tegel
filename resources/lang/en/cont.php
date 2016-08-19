@@ -37,7 +37,7 @@ return [
     "alle_items_verwijderen" => "Delete all items",
     "totaal"            => "Total",
     "ikwildop"          => "Yes, I want to receive a DOP certificate with my order.",
-    
+    "notavailable"      => "Price not available",
 
 
 ];
