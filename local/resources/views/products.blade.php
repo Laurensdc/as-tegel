@@ -58,7 +58,7 @@
                 <form action="" method="post" name="form">
                     {{ csrf_field() }}
                     <input type="hidden" value="{{ $p->id }}" name="prod_id">
-                    <p>{{ trans('cont.add') }} <input type="number" name="vierkantemeter" min="1" max="999" value="0" required/>x 1{!! $p->eenheid !!} {{ trans('cont.toorder') }}.</p> 
+                    <p>{{ trans('cont.add') }} <input type="number" name="vierkantemeter" min="1" max="999" value="0" required/>x 1 {!! $p->eenheid !!} {{ trans('cont.toorder') }}.</p> 
                     <p><input type="submit" clas="btn btn_cta" value="{{ trans('cont.order') }}"/></p>
                 </form>
 			</article>
