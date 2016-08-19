@@ -841,6 +841,253 @@ class ProductSeeder extends Seeder
             'subcategorie_id'=>15,
         ]);   
 
+        ////// Darshana
+         DB::table('products')->insert([
+            'naam'=>'Darshana',
+            'afmetingen'=>'50 x 50 x 2.5',
+            'prijs_handelaar'=>'19.30',
+            'coverfoto'=>'images/producten/_geenfoto.jpg',
+            'fullresfoto'=>'images/producten/_geenfoto.jpg',
+            'subcategorie_id'=>16,
+        ]);   
+
+        DB::table('products')->insert([
+            'naam'=>'Darshana',
+            'afmetingen'=>'60 x 60 x 2.5',
+            'prijs_handelaar'=>'20.05',
+            'coverfoto'=>'images/producten/_geenfoto.jpg',
+            'fullresfoto'=>'images/producten/_geenfoto.jpg',
+            'subcategorie_id'=>16,
+        ]);         
+
+        DB::table('products')->insert([
+            'naam'=>'Darshana',
+            'afmetingen'=>'100 x 100 x 3',
+            'prijs_handelaar'=>'34.49',
+            'coverfoto'=>'images/producten/_geenfoto.jpg',
+            'fullresfoto'=>'images/producten/_geenfoto.jpg',
+            'subcategorie_id'=>16,
+        ]);   
+
+
+        ////// Tandur
+        DB::table('products')->insert([
+            'naam'=>'Tandur Yellow',
+            'afmetingen'=>'90 x 60 x 2.5',
+            'prijs_handelaar'=>'',
+            'coverfoto'=>'images/producten/_geenfoto.jpg',
+            'fullresfoto'=>'images/producten/_geenfoto.jpg',
+            'subcategorie_id'=>17,
+        ]); 
+
+        DB::table('products')->insert([
+            'naam'=>'Tandur Yellow',
+            'afmetingen'=>'60 x 60 x 3',
+            'prijs_handelaar'=>'',
+            'coverfoto'=>'images/producten/_geenfoto.jpg',
+            'fullresfoto'=>'images/producten/_geenfoto.jpg',
+            'subcategorie_id'=>17,
+        ]); 
+
+        DB::table('products')->insert([
+            'naam'=>'Tandur Grey',
+            'afmetingen'=>'90 x 60 x 2.5',
+            'prijs_handelaar'=>'',
+            'coverfoto'=>'images/producten/_geenfoto.jpg',
+            'fullresfoto'=>'images/producten/_geenfoto.jpg',
+            'subcategorie_id'=>17,
+        ]); 
+
+        DB::table('products')->insert([
+            'naam'=>'Tandur Black',
+            'afmetingen'=>'90 x 60 x 2.5',
+            'prijs_handelaar'=>'',
+            'coverfoto'=>'images/producten/_geenfoto.jpg',
+            'fullresfoto'=>'images/producten/_geenfoto.jpg',
+            'subcategorie_id'=>17,
+        ]); 
+
+        DB::table('products')->insert([
+            'naam'=>'Tandur Black',
+            'afmetingen'=>'120 x 60 x 3',
+            'prijs_handelaar'=>'',
+            'coverfoto'=>'images/producten/_geenfoto.jpg',
+            'fullresfoto'=>'images/producten/_geenfoto.jpg',
+            'subcategorie_id'=>17,
+        ]); 
+
+
+        ////// Candela
+        DB::table('products')->insert([
+            'naam'=>'Candelay Grey',
+            'afmetingen'=>'10 x 10 x 5-7',
+            'prijs_handelaar'=>'',
+            'coverfoto'=>'images/producten/_geenfoto.jpg',
+            'fullresfoto'=>'images/producten/_geenfoto.jpg',
+            'groepering'=>1,
+            'subcategorie_id'=>18,
+        ]);
+
+        DB::table('products')->insert([
+            'naam'=>'Candelay Grey',
+            'afmetingen'=>'11 x 17 x 5-7',
+            'prijs_handelaar'=>'22.74',
+            'coverfoto'=>'images/producten/_geenfoto.jpg',
+            'fullresfoto'=>'images/producten/_geenfoto.jpg',
+            'groepering'=>1,
+            'subcategorie_id'=>18,
+        ]);
+
+        DB::table('products')->insert([
+            'naam'=>'Candelay Grey',
+            'afmetingen'=>'14 x 14 x 3-5',
+            'prijs_handelaar'=>'12.60',
+            'coverfoto'=>'images/producten/_geenfoto.jpg',
+            'fullresfoto'=>'images/producten/_geenfoto.jpg',
+            'groepering'=>1,
+            'subcategorie_id'=>18,
+        ]);
+
+        DB::table('products')->insert([
+            'naam'=>'Candelay Grey',
+            'afmetingen'=>'14 x 14 x 5-7',
+            'prijs_handelaar'=>'16.98',
+            'coverfoto'=>'images/producten/_geenfoto.jpg',
+            'fullresfoto'=>'images/producten/_geenfoto.jpg',
+            'groepering'=>1,
+            'subcategorie_id'=>18,
+        ]);
+
+        DB::table('products')->insert([
+            'naam'=>'Candelay Grey',
+            'afmetingen'=>'14 x 20 x 5-7',
+            'prijs_handelaar'=>'20.21',
+            'coverfoto'=>'images/producten/_geenfoto.jpg',
+            'fullresfoto'=>'images/producten/_geenfoto.jpg',
+            'groepering'=>1,
+            'subcategorie_id'=>18,
+        ]);
+
+        DB::table('products')->insert([
+            'naam'=>'Candelay Multicolor',
+            'afmetingen'=>'10 x 10 x 5-7',
+            'prijs_handelaar'=>'20.41',
+            'coverfoto'=>'images/producten/_geenfoto.jpg',
+            'fullresfoto'=>'images/producten/_geenfoto.jpg',
+            'groepering'=>2,
+            'subcategorie_id'=>18,
+        ]);
+
+        DB::table('products')->insert([
+            'naam'=>'Candelay Multicolor',
+            'afmetingen'=>'11 x 17 x 5-7',
+            'prijs_handelaar'=>'16.98',
+            'coverfoto'=>'images/producten/_geenfoto.jpg',
+            'fullresfoto'=>'images/producten/_geenfoto.jpg',
+            'groepering'=>2,
+            'subcategorie_id'=>18,
+        ]);
+
+        DB::table('products')->insert([
+            'naam'=>'Candelay Multicolor',
+            'afmetingen'=>'14 x 14 x 3-5',
+            'prijs_handelaar'=>'12.60',
+            'coverfoto'=>'images/producten/_geenfoto.jpg',
+            'fullresfoto'=>'images/producten/_geenfoto.jpg',
+            'groepering'=>2,
+            'subcategorie_id'=>18,
+        ]);
+
+        DB::table('products')->insert([
+            'naam'=>'Candelay Multicolor',
+            'afmetingen'=>'14 x 14 x 5-7',
+            'prijs_handelaar'=>'17.75',
+            'coverfoto'=>'images/producten/_geenfoto.jpg',
+            'fullresfoto'=>'images/producten/_geenfoto.jpg',
+            'groepering'=>2,
+            'subcategorie_id'=>18,
+        ]);
+
+        DB::table('products')->insert([
+            'naam'=>'Candelay Black',
+            'afmetingen'=>'14 x 14 x 5-7',
+            'prijs_handelaar'=>'25.03',
+            'coverfoto'=>'images/producten/_geenfoto.jpg',
+            'fullresfoto'=>'images/producten/_geenfoto.jpg',
+            'groepering'=>3,
+            'subcategorie_id'=>18,
+        ]);
+
+        DB::table('products')->insert([
+            'naam'=>'Candelay Mint',
+            'afmetingen'=>'14 x 14 x 5-7',
+            'prijs_handelaar'=>'21.09',
+            'coverfoto'=>'images/producten/_geenfoto.jpg',
+            'fullresfoto'=>'images/producten/_geenfoto.jpg',
+            'groepering'=>4,
+            'subcategorie_id'=>18,
+        ]);
+
+        DB::table('products')->insert([
+            'naam'=>'Candelay Mint',
+            'afmetingen'=>'14 x 20 x 5-7',
+            'prijs_handelaar'=>'22.58',
+            'coverfoto'=>'images/producten/_geenfoto.jpg',
+            'fullresfoto'=>'images/producten/_geenfoto.jpg',
+            'groepering'=>4,
+            'subcategorie_id'=>18,
+        ]);
+
+        ////// Isola
+        DB::table('products')->insert([
+            'naam'=>'Isola',
+            'afmetingen'=>'20 x 20 x 2.5',
+            'prijs_handelaar'=>'',
+            'coverfoto'=>'images/producten/_geenfoto.jpg',
+            'fullresfoto'=>'images/producten/_geenfoto.jpg',
+            'groepering'=>4,
+            'subcategorie_id'=>19,
+        ]);        
+
+        DB::table('products')->insert([
+            'naam'=>'Isola',
+            'afmetingen'=>'40 x 60 x 2.5',
+            'prijs_handelaar'=>'',
+            'coverfoto'=>'images/producten/_geenfoto.jpg',
+            'fullresfoto'=>'images/producten/_geenfoto.jpg',
+            'groepering'=>4,
+            'subcategorie_id'=>19,
+        ]);
+
+        DB::table('products')->insert([
+            'naam'=>'Isola',
+            'afmetingen'=>'60 x 60 x 2.5',
+            'prijs_handelaar'=>'',
+            'coverfoto'=>'images/producten/_geenfoto.jpg',
+            'fullresfoto'=>'images/producten/_geenfoto.jpg',
+            'groepering'=>4,
+            'subcategorie_id'=>19,
+        ]);
+
+        DB::table('products')->insert([
+            'naam'=>'Isola',
+            'afmetingen'=>'60 x 33 x 3.7',
+            'prijs_handelaar'=>'',
+            'coverfoto'=>'images/producten/_geenfoto.jpg',
+            'fullresfoto'=>'images/producten/_geenfoto.jpg',
+            'groepering'=>4,
+            'subcategorie_id'=>19,
+        ]);
+
+        DB::table('products')->insert([
+            'naam'=>'Isola',
+            'afmetingen'=>'43 x 43 x 3.7',
+            'prijs_handelaar'=>'',
+            'coverfoto'=>'images/producten/_geenfoto.jpg',
+            'fullresfoto'=>'images/producten/_geenfoto.jpg',
+            'groepering'=>4,
+            'subcategorie_id'=>19,
+        ]);
 
 
         ////// Indische Carius

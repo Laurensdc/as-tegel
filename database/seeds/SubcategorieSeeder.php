@@ -133,7 +133,7 @@ class SubcategorieSeeder extends Seeder
         DB::table('subcategories')->insert([
             'naam'=>'Daya',
             'subcat_linknaam'=>'daya',
-            'beschrijving'=>'',
+            'beschrijving'=>'Exclusieve tegel! Aarzel niet.',
             'categorie_id'=>3,
         ]);        
 
@@ -141,7 +141,7 @@ class SubcategorieSeeder extends Seeder
         DB::table('subcategories')->insert([
             'naam'=>'Darshana',
             'subcat_linknaam'=>'darshana',
-            'beschrijving'=>'',
+            'beschrijving'=>'Deze tegel heeft rechte kanten en een gezandstraald oppervlak.',
             'categorie_id'=>3,
         ]);        
 
@@ -157,7 +157,7 @@ class SubcategorieSeeder extends Seeder
         DB::table('subcategories')->insert([
             'naam'=>'Candela',
             'subcat_linknaam'=>'candela',
-            'beschrijving'=>'',
+            'beschrijving'=>'Een klassieker in het gamma. Candela blijft een veilige keuze als u rekent op schoonheid.',
             'categorie_id'=>3,
         ]);        
 
@@ -177,6 +177,14 @@ class SubcategorieSeeder extends Seeder
             'beschrijving'=>'De Carius heeft een uniek formaat dat u nergens anders zult vinden. Zachte afwerking.',
             'categorie_id'=>3,
         ]);
+
+        //21
+         DB::table('subcategories')->insert([
+            'naam'=>'Machines',
+            'subcat_linknaam'=>'machines',
+            'beschrijving'=>'U kan onze machines huren. Contacteer ons voor meer info',
+            'categorie_id'=>4,
+        ]);       
 
     }
 }
