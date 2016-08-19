@@ -26,9 +26,9 @@
 			<li><span class='contact_content_left'>Telefoonnummer: </span>0470/05.38.62</li>
 		</ul>
 
-		<h3>Laurens - Website Development</h3>
+		<h3>Vragen over de website? Een fout gevonden?</h3>
 		<ul>
-			<li><span class='contact_content_left'>E-mail: </span><a href="mailto:laurens@as-tegel.be">laurens@as-tegel.be</a></li>
+			<li><span class='contact_content_left'>Contacteer webmaster: </span><a href="mailto:webmaster@as-tegel.be">webmaster@as-tegel.be</a></li>
 		</ul>
 
 	</div>
