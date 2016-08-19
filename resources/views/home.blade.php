@@ -5,40 +5,40 @@
 @endsection
 
 @section('homecontent')
-    <div class="homepromo">
-        <div class="homepromo_banner">
-            <h2>{{ trans('cont.spotlight') }}</h2> <span>{{ trans('cont.spotlight_text') }}</span>
+    @if(sizeof($featuredproducts) > 0)
+        <div class="homepromo">
+            <div class="homepromo_banner">
+                <h2>{{ trans('cont.spotlight') }}</h2> <span>{{ trans('cont.spotlight_text') }}</span>
+            </div>
+            <div class="producten_content">
+                    @foreach($featuredproducts as $p)
+                        <article>	
+                            <a href="{{ asset($p->fullresfoto) }}" data-lightbox="{{ $p->naam }}" data-title="{{ $p->naam }}">
+                                <img src="{{ asset($p->coverfoto) }}"/>
+                            </a>
+                            
+                            <h1>{{ $p->naam }}</h1>
+                            <ul>
+                                <li>{{ trans('cont.dimensions') }}: {{ $p->afmetingen }}</li>
+                            </ul>
+                            
+                            @if(isset($p->beschrijving))
+                                <p>{{ $p->beschrijving }}</p>
+                            @endif
+
+                            @if($p->invoorraad == false)
+                                <p class="txt_warning">{{ trans('cont.nostock') }}.</p>
+                            @endif
+
+                            <a href="{{ route('producten') }}/{{ $p->subcategorie->categorie->cat_linknaam }}/{{ $p->subcategorie->subcat_linknaam }}">
+                                {{ trans('cont.bekijk') }} {{ $p->naam }} <span class="icon-angle-circled-right">
+                            </a>
+
+                        </article>
+                    @endforeach
+            </div>  
         </div>
-        <div class="producten_content">
-
-                @foreach($featuredproducts as $p)
-                    <article>	
-                        <a href="{{ asset($p->fullresfoto) }}" data-lightbox="{{ $p->naam }}" data-title="{{ $p->naam }}">
-                            <img src="{{ asset($p->coverfoto) }}"/>
-                        </a>
-                        
-                        <h1>{{ $p->naam }}</h1>
-                        <ul>
-                            <li>{{ trans('cont.dimensions') }}: {{ $p->afmetingen }}</li>
-                        </ul>
-                        
-                        @if(isset($p->beschrijving))
-                            <p>{{ $p->beschrijving }}</p>
-                        @endif
-
-                        @if($p->invoorraad == false)
-                            <p class="txt_warning">{{ trans('cont.nostock') }}.</p>
-                        @endif
-
-                        <a href="{{ route('producten') }}/{{ $p->subcategorie->categorie->cat_linknaam }}/{{ $p->subcategorie->subcat_linknaam }}">
-                            {{ trans('cont.bekijk') }} {{ $p->naam }} <span class="icon-angle-circled-right">
-                        </a>
-
-                    </article>
-                @endforeach
-
-        </div>
-    </div>
+    @endif
 
     <div class="hometext">
         <p>
