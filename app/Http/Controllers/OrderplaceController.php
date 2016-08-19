@@ -55,6 +55,7 @@ class OrderplaceController extends Controller
 
 		$fdate = $date->format('d-m-Y H:i:s'); // same format as NOW()
 
+        // Mail to Chris
  	  	Mail::send('mail.order',
              [  
 	    	 "items" => $items,
@@ -69,12 +70,30 @@ class OrderplaceController extends Controller
 
              ], function($message) use ($user)
             {
-                $message->to(['chriswolfcarius@yahoo.com.sg', 'laurensdc@gmail.com'], 'Laurens De Cock')->subject('Bestelling van ' . $user->lastname . ' ' . $user->firstname);
-            });
+                $message->to(['chriswolfcarius@yahoo.com.sg', 'laurensdc@gmail.com'])->subject('Bestelling van ' . $user->lastname . ' ' . $user->firstname);
+        });
 
 
         Session::forget('orderitems');
         Session::forget('dop');
+
+        // Mail to user
+ 	  	Mail::send('mail.orderconfirm_user',
+             [  
+            "items" => $items,
+            "producten" => $producten,
+            "subcategorie" => $subcategorie,
+            "categorie" => $categorie,
+            "vierkantemeters" => $vierkantemeters,
+            "prijzen" => $prijzen,
+            "totaleprijs" => $totaleprijs,
+            "user" => $user,
+            "date" => $fdate
+
+             ], function($message) use ($user)
+            {
+                $message->to('' . $user->email, $user->lastname . ' ' . $user->firstname)->subject('Uw bestelling bij AS-Tegel');
+        });
 
         // Redirect and confirm
     	return view('mail.orderconfirm',
