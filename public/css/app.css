@@ -279,20 +279,17 @@ input, select {
 
 /* '' */
 /* Large cover photos for Home */
-.home_vietnamees {
-  background-image: url("../images/home/vietnamees.jpg"); }
-
-.home_indisch {
-  background-image: url("../images/home/indisch.jpg"); }
-
-.home_chinees {
-  background-image: url("../images/home/chinees.jpg"); }
-
 .home_carius {
   background-image: url("../images/home/carius.jpg"); }
 
 .home_keramiek {
   background-image: url("../images/home/keramiek.jpg"); }
+
+.home_chandra {
+  background-image: url("../images/home/chandra.jpg"); }
+
+.home_sierkeien {
+  background-image: url("../images/home/sierkeien.jpg"); }
 
 /* General stuff */
 html {

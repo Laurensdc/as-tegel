@@ -48,7 +48,7 @@
     </div>
 
     <div class="nicest_products">
-        <a href="{{ route('producten') }}/specialiteiten/carius">
+        <a href="{{ route('producten') }}/vietnamees/cariusviet">
             <article class="home_carius mgright-2pct">
                 <div class="home_caption">
                     <span>Carius</span>
@@ -56,37 +56,29 @@
             </article>
         </a>
 
-        <a href="{{ route('producten') }}/keramiek/keramiek">
+        <!--<a href="{{ route('producten') }}/keramiek/keramiek">-->
+
+        <!--</a>-->
+
+        <a href="{{ route('producten') }}/indisch/chandra">
+            <article class="home_chandra">
+                <div class="home_caption">
+                    <span>Chandra Blue</span>
+                </div>
+            </article>
+        </a>
+
+            <article class="home_sierkeien mgright-2pct">
+                <div class="home_caption">
+                    <span>Sierkeien</span>
+                </div>
+            </article>
+
             <article class="home_keramiek">
                 <div class="home_caption">
                     <span>Keramische Natuursteen</span>
                 </div>
             </article>
-        </a>
-
-        <a href="{{ route('producten') }}/vietnamees/geschuurdgezaagd">
-            <article class="home_vietnamees mgright-2pct">
-                <div class="home_caption">
-                    <span>Vietnamese Geschuurd Gezaagd</span>
-                </div>
-            </article>
-        </a>
-
-        <a href="{{ route('producten') }}/chinees/vloer">
-            <article class="home_chinees">
-                <div class="home_caption">
-                    <span>Chinese natuursteen voor uw vloer</span>
-                </div>
-            </article>
-        </a>
-
-        <a href="{{ route('producten') }}/indisch/candela">
-            <article class="home_indisch mgright-2pct">
-                <div class="home_caption">
-                    <span>Candela</span>
-                </div>
-            </article>
-        </a>
 
     </div>
 
