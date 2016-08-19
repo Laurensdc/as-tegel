@@ -486,13 +486,364 @@ class ProductSeeder extends Seeder
         ]);
 
         ////// Indisch
+        ////// Chandra
+        DB::table('products')->insert([
+            'naam'=>'Chandra Yellow (Gekartelde kanten)',
+            'afmetingen'=>'90 x 60 x 2.5',
+            'prijs_handelaar'=>'32.07',
+            'coverfoto'=>'images/producten/_geenfoto.jpg',
+            'fullresfoto'=>'images/producten/_geenfoto.jpg',
+            'groepering'=>1,
+            'subcategorie_id'=>12,
+        ]);        
+
+        DB::table('products')->insert([
+            'naam'=>'Chandra Yellow (Rechte kanten)',
+            'afmetingen'=>'20 x 20 x 2',
+            'prijs_handelaar'=>'23.04',
+            'coverfoto'=>'images/producten/_geenfoto.jpg',
+            'fullresfoto'=>'images/producten/_geenfoto.jpg',
+            'groepering'=>1,
+            'subcategorie_id'=>12,
+        ]);        
+
+        DB::table('products')->insert([
+            'naam'=>'Chandra Yellow (Rechte kanten)',
+            'afmetingen'=>'60 x 60 x 3',
+            'prijs_handelaar'=>'26.76',
+            'coverfoto'=>'images/producten/_geenfoto.jpg',
+            'fullresfoto'=>'images/producten/_geenfoto.jpg',
+            'groepering'=>1,
+            'subcategorie_id'=>12,
+        ]);        
+
+        DB::table('products')->insert([
+            'naam'=>'Chandra Yellow Zwembadboord',
+            'afmetingen'=>'90 x 35 x 4',
+            'prijs_handelaar'=>'18.72',
+            'eenheid' => 'stuk',
+            'coverfoto'=>'images/producten/_geenfoto.jpg',
+            'fullresfoto'=>'images/producten/_geenfoto.jpg',
+            'groepering'=>1,
+            'subcategorie_id'=>12,
+        ]);        
+
+        DB::table('products')->insert([
+            'naam'=>'Chandra Blue Natural (Rechte kanten)',
+            'afmetingen'=>'90 x 60 x 2.5',
+            'prijs_handelaar'=>'32.07',
+            'coverfoto'=>'images/producten/_geenfoto.jpg',
+            'fullresfoto'=>'images/producten/_geenfoto.jpg',
+            'groepering'=>2,
+            'subcategorie_id'=>12,
+        ]);        
+
+        DB::table('products')->insert([
+            'naam'=>'Chandra Blue (Rechte kanten)',
+            'afmetingen'=>'20 x 20 x 2',
+            'prijs_handelaar'=>'23.04',
+            'coverfoto'=>'images/producten/_geenfoto.jpg',
+            'fullresfoto'=>'images/producten/_geenfoto.jpg',
+            'groepering'=>2,
+            'subcategorie_id'=>12,
+        ]);        
+
+        DB::table('products')->insert([
+            'naam'=>'Chandra Blue (Rechte kanten)',
+            'afmetingen'=>'60 x 60 x 3',
+            'prijs_handelaar'=>'26.76',
+            'coverfoto'=>'images/producten/_geenfoto.jpg',
+            'fullresfoto'=>'images/producten/_geenfoto.jpg',
+            'groepering'=>2,
+            'subcategorie_id'=>12,
+        ]);        
+
+        DB::table('products')->insert([
+            'naam'=>'Chandra Blue Zwembadboord',
+            'afmetingen'=>'90 x 35 x 4',
+            'prijs_handelaar'=>'18.72',
+            'eenheid' => 'stuk',
+            'coverfoto'=>'images/producten/_geenfoto.jpg',
+            'fullresfoto'=>'images/producten/_geenfoto.jpg',
+            'groepering'=>2,
+            'subcategorie_id'=>12,
+        ]);        
+
+        DB::table('products')->insert([
+            'naam'=>'Chandra Black (Gekartelde kanten)',
+            'afmetingen'=>'90 x 60 x 2.5',
+            'prijs_handelaar'=>'32.07',
+            'coverfoto'=>'images/producten/_geenfoto.jpg',
+            'fullresfoto'=>'images/producten/_geenfoto.jpg',
+            'groepering'=>3,
+            'subcategorie_id'=>12,
+        ]);        
+
+        DB::table('products')->insert([
+            'naam'=>'Chandra Black (Gekartelde kanten)',
+            'afmetingen'=>'20 x 20 x 2',
+            'prijs_handelaar'=>'23.04',
+            'coverfoto'=>'images/producten/_geenfoto.jpg',
+            'fullresfoto'=>'images/producten/_geenfoto.jpg',
+            'groepering'=>3,
+            'subcategorie_id'=>12,
+        ]);        
+
+        DB::table('products')->insert([
+            'naam'=>'Chandra Black (Gekartelde kanten)',
+            'afmetingen'=>'60 x 60 x 3',
+            'prijs_handelaar'=>'26.76',
+            'coverfoto'=>'images/producten/_geenfoto.jpg',
+            'fullresfoto'=>'images/producten/_geenfoto.jpg',
+            'groepering'=>3,
+            'subcategorie_id'=>12,
+        ]);        
+
+        DB::table('products')->insert([
+            'naam'=>'Chandra Black Scraped',
+            'afmetingen'=>'60 x 60 x 3',
+            'prijs_handelaar'=>'23.94',
+            'coverfoto'=>'images/producten/_geenfoto.jpg',
+            'fullresfoto'=>'images/producten/_geenfoto.jpg',
+            'groepering'=>3,
+            'subcategorie_id'=>12,
+        ]);        
+
+        DB::table('products')->insert([
+            'naam'=>'Chandra Bourgondisch(Naturel oppervlak)',
+            'afmetingen'=>'40 x 60 x 2.2',
+            'prijs_handelaar'=>'31.68',
+            'coverfoto'=>'images/producten/_geenfoto.jpg',
+            'fullresfoto'=>'images/producten/_geenfoto.jpg',
+            'groepering'=>4,
+            'subcategorie_id'=>12,
+        ]);        
+
+        DB::table('products')->insert([
+            'naam'=>'Chandra Bourgondisch (Naturel oppervlak)',
+            'afmetingen'=>'60 x 60 x 2.2',
+            'prijs_handelaar'=>'33.72',
+            'coverfoto'=>'images/producten/_geenfoto.jpg',
+            'fullresfoto'=>'images/producten/_geenfoto.jpg',
+            'groepering'=>4,
+            'subcategorie_id'=>12,
+        ]);        
+
+        DB::table('products')->insert([
+            'naam'=>'Chandra Bourgondisch - Romeins Verband',
+            'afmetingen'=>'Variabel',
+            'prijs_handelaar'=>'28.49',
+            'coverfoto'=>'images/producten/_geenfoto.jpg',
+            'fullresfoto'=>'images/producten/_geenfoto.jpg',
+            'groepering'=>4,
+            'subcategorie_id'=>12,
+        ]);        
         
 
+        ////// Aruna
+        DB::table('products')->insert([
+            'naam'=>'Aruna Black (Rechte kanten)',
+            'afmetingen'=>'60 x 60 x 2.5',
+            'prijs_handelaar'=>'',
+            'coverfoto'=>'images/producten/_geenfoto.jpg',
+            'fullresfoto'=>'images/producten/_geenfoto.jpg',
+            'subcategorie_id'=>13,
+        ]);   
+
+        DB::table('products')->insert([
+            'naam'=>'Aruna Black (Rechte kanten)',
+            'afmetingen'=>'80 x 80 x 3',
+            'prijs_handelaar'=>'',
+            'coverfoto'=>'images/producten/_geenfoto.jpg',
+            'fullresfoto'=>'images/producten/_geenfoto.jpg',
+            'subcategorie_id'=>13,
+        ]);   
+
+        DB::table('products')->insert([
+            'naam'=>'Aruna Black (Rechte kanten)',
+            'afmetingen'=>'100 x 100 x 3',
+            'prijs_handelaar'=>'',
+            'coverfoto'=>'images/producten/_geenfoto.jpg',
+            'fullresfoto'=>'images/producten/_geenfoto.jpg',
+            'subcategorie_id'=>13,
+        ]);   
+
+        DB::table('products')->insert([
+            'naam'=>'Aruna Gothiek (Getrommelde kanten)',
+            'afmetingen'=>'20 x 20 x 3',
+            'prijs_handelaar'=>'',
+            'coverfoto'=>'images/producten/_geenfoto.jpg',
+            'fullresfoto'=>'images/producten/_geenfoto.jpg',
+            'subcategorie_id'=>13,
+        ]);   
+
+        DB::table('products')->insert([
+            'naam'=>'Aruna Gothiek (Getrommelde kanten)',
+            'afmetingen'=>'60 x 60 x 3',
+            'prijs_handelaar'=>'',
+            'coverfoto'=>'images/producten/_geenfoto.jpg',
+            'fullresfoto'=>'images/producten/_geenfoto.jpg',
+            'subcategorie_id'=>13,
+        ]);   
+
+        DB::table('products')->insert([
+            'naam'=>'Aruna Gothiek (Getrommelde kanten)',
+            'afmetingen'=>'80 x 80 x 3',
+            'prijs_handelaar'=>'',
+            'coverfoto'=>'images/producten/_geenfoto.jpg',
+            'fullresfoto'=>'images/producten/_geenfoto.jpg',
+            'subcategorie_id'=>13,
+        ]);   
+
+        ////// Jalasa
+        DB::table('products')->insert([
+            'naam'=>'Jalasa Black',
+            'afmetingen'=>'60 x 60 x 2.5',
+            'prijs_handelaar'=>'',
+            'coverfoto'=>'images/producten/_geenfoto.jpg',
+            'fullresfoto'=>'images/producten/_geenfoto.jpg',
+            'subcategorie_id'=>14,
+        ]);   
+
+        DB::table('products')->insert([
+            'naam'=>'Jalasa Black',
+            'afmetingen'=>'80 x 80 x 3',
+            'prijs_handelaar'=>'',
+            'coverfoto'=>'images/producten/_geenfoto.jpg',
+            'fullresfoto'=>'images/producten/_geenfoto.jpg',
+            'subcategorie_id'=>14,
+        ]);   
+
+        DB::table('products')->insert([
+            'naam'=>'Jalasa Black',
+            'afmetingen'=>'100 x 100 x 3',
+            'prijs_handelaar'=>'',
+            'coverfoto'=>'images/producten/_geenfoto.jpg',
+            'fullresfoto'=>'images/producten/_geenfoto.jpg',
+            'subcategorie_id'=>14,
+        ]);   
+
+        ////// Daya
+        DB::table('products')->insert([
+            'naam'=>'Daya Natural Tumbled',
+            'afmetingen'=>'11 x 11 x 4',
+            'prijs_handelaar'=>'',
+            'coverfoto'=>'images/producten/_geenfoto.jpg',
+            'fullresfoto'=>'images/producten/_geenfoto.jpg',
+            'subcategorie_id'=>15,
+        ]);   
+
+        DB::table('products')->insert([
+            'naam'=>'Daya Natural Tumbled',
+            'afmetingen'=>'11 x 15 x 4',
+            'prijs_handelaar'=>'',
+            'coverfoto'=>'images/producten/_geenfoto.jpg',
+            'fullresfoto'=>'images/producten/_geenfoto.jpg',
+            'subcategorie_id'=>15,
+        ]);   
+
+        DB::table('products')->insert([
+            'naam'=>'Daya Natural Tumbled',
+            'afmetingen'=>'11 x 20 x 4',
+            'prijs_handelaar'=>'',
+            'coverfoto'=>'images/producten/_geenfoto.jpg',
+            'fullresfoto'=>'images/producten/_geenfoto.jpg',
+            'subcategorie_id'=>15,
+        ]);   
+
+        DB::table('products')->insert([
+            'naam'=>'Daya Natural Tumbled',
+            'afmetingen'=>'15 x 15 x 4',
+            'prijs_handelaar'=>'34.62',
+            'coverfoto'=>'images/producten/_geenfoto.jpg',
+            'fullresfoto'=>'images/producten/_geenfoto.jpg',
+            'subcategorie_id'=>15,
+        ]);   
+
+        DB::table('products')->insert([
+            'naam'=>'Daya Natural Tumbled',
+            'afmetingen'=>'15 x 20 x 4',
+            'prijs_handelaar'=>'',
+            'coverfoto'=>'images/producten/_geenfoto.jpg',
+            'fullresfoto'=>'images/producten/_geenfoto.jpg',
+            'subcategorie_id'=>15,
+        ]);   
+
+        DB::table('products')->insert([
+            'naam'=>'Daya Natural Tumbled',
+            'afmetingen'=>'15 x 30 x 4',
+            'prijs_handelaar'=>'',
+            'coverfoto'=>'images/producten/_geenfoto.jpg',
+            'fullresfoto'=>'images/producten/_geenfoto.jpg',
+            'subcategorie_id'=>15,
+        ]);   
+
+        DB::table('products')->insert([
+            'naam'=>'Daya Natural Tumbled',
+            'afmetingen'=>'20 x 20 x 4',
+            'prijs_handelaar'=>'34.62',
+            'coverfoto'=>'images/producten/_geenfoto.jpg',
+            'fullresfoto'=>'images/producten/_geenfoto.jpg',
+            'subcategorie_id'=>15,
+        ]);   
+
+        DB::table('products')->insert([
+            'naam'=>'Daya Natural Tumbled',
+            'afmetingen'=>'20 x 30 x 4',
+            'prijs_handelaar'=>'',
+            'coverfoto'=>'images/producten/_geenfoto.jpg',
+            'fullresfoto'=>'images/producten/_geenfoto.jpg',
+            'subcategorie_id'=>15,
+        ]);   
+
+        DB::table('products')->insert([
+            'naam'=>'Daya Natural Tumbled',
+            'afmetingen'=>'30 x 30 x 4',
+            'prijs_handelaar'=>'',
+            'coverfoto'=>'images/producten/_geenfoto.jpg',
+            'fullresfoto'=>'images/producten/_geenfoto.jpg',
+            'subcategorie_id'=>15,
+        ]);   
+
+        DB::table('products')->insert([
+            'naam'=>'Daya Natural Tumbled',
+            'afmetingen'=>'40 x 40 x 4',
+            'prijs_handelaar'=>'',
+            'coverfoto'=>'images/producten/_geenfoto.jpg',
+            'fullresfoto'=>'images/producten/_geenfoto.jpg',
+            'subcategorie_id'=>15,
+        ]);   
+
+        DB::table('products')->insert([
+            'naam'=>'Daya (Gekartelde kanten)',
+            'afmetingen'=>'14 x 14 x 3-5',
+            'prijs_handelaar'=>'26.37',
+            'coverfoto'=>'images/producten/_geenfoto.jpg',
+            'fullresfoto'=>'images/producten/_geenfoto.jpg',
+            'subcategorie_id'=>15,
+        ]);   
+
+        DB::table('products')->insert([
+            'naam'=>'Daya (Gekartelde kanten)',
+            'afmetingen'=>'14 x 20 x 3-5',
+            'prijs_handelaar'=>'26.43',
+            'coverfoto'=>'images/producten/_geenfoto.jpg',
+            'fullresfoto'=>'images/producten/_geenfoto.jpg',
+            'subcategorie_id'=>15,
+        ]);   
+
+        DB::table('products')->insert([
+            'naam'=>'Daya (Gekartelde kanten)',
+            'afmetingen'=>'11 x 17 x 3-5',
+            'prijs_handelaar'=>'',
+            'coverfoto'=>'images/producten/_geenfoto.jpg',
+            'fullresfoto'=>'images/producten/_geenfoto.jpg',
+            'subcategorie_id'=>15,
+        ]);   
 
 
 
-
-
+        ////// Indische Carius
         DB::table('products')->insert([
             'naam'=>'Carius Naturel',
             'afmetingen'=>'33 x 11 x 4',

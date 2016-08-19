@@ -109,7 +109,7 @@ class SubcategorieSeeder extends Seeder
         DB::table('subcategories')->insert([
             'naam'=>'Chandra',
             'subcat_linknaam'=>'chandra',
-            'beschrijving'=>'',
+            'beschrijving'=>'Ontdek ons ruim assortiment aan verschillende Chandra tegels.',
             'categorie_id'=>3,
         ]);        
 
