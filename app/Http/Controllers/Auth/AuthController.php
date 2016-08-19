@@ -77,7 +77,7 @@ class AuthController extends Controller
                 'btw' => $data['btw']
              ], function($message) use ($naam)
             {
-                $message->to(['chriswolfcarius@yahoo.com.sg', 'laurensdc@gmail.com'])->subject('Aanvraag registratie handelaar ' . $naam);
+                $message->to('chriswolfcarius@yahoo.com.sg')->subject('Aanvraag registratie handelaar ' . $naam);
             });
 
         }

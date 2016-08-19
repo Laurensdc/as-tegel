@@ -1144,10 +1144,5 @@ class ProductSeeder extends Seeder
             'fullresfoto'=>'images/producten/_geenfoto.jpg',
             'subcategorie_id'=>20,
         ]);
-
-
-
-
-
     }
 }
