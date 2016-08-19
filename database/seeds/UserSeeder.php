@@ -11,6 +11,7 @@ class UserSeeder extends Seeder
 	 */
 	public function run()
 	{
+        /*
 		DB::table('users')->insert([
 			'firstname'=>'Laurens',
 			'lastname'=>'De Cock',
@@ -34,6 +35,6 @@ class UserSeeder extends Seeder
 			'btwnr'=>'BE123451235'
 	   ]);
 
-
+       */
 	}
 }
