@@ -407,7 +407,7 @@ a.btn:hover {
 
 .btn_warning {
   color: #FAFAFA;
-  background-color: #18BAAB; }
+  background-color: #7CB342; }
 
 .txt_warning, .boringlink.txt_warning {
   color: #D84315; }
@@ -592,7 +592,7 @@ header .header_bestelling a:hover {
   display: inline-block; }
 
 .catmenu a:hover, .catmenu li.active a:hover, .catmenu ul li.active a:hover {
-  color: #F3E663; }
+  color: #DACC38; }
 
 .catmenu li.active a, .catmenu ul li.active a {
   color: #BAAB18; }
