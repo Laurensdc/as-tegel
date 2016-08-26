@@ -137,7 +137,15 @@ class AdminController extends Controller
                 $resizedimg->save($path . $name);
 
                 $path = $r['coverfoto'];
+            }    
+            else {
+                $path = $r['coverfoto'];
+                $name = '';
             }
+        }
+        else {
+            $path = $r['coverfoto'];
+            $name = '';
         }
 
         // Make changes to product
@@ -186,9 +194,16 @@ class AdminController extends Controller
 
                 $path = $r['coverfoto'];
             }
+            else {
+                $path = $r['coverfoto'];
+                $name = '';
+            }
         }
-
-
+        else {
+            $path = $r['coverfoto'];
+            $name = '';
+        }
+        
         $p = new Product;
 
         $p->naam = $r['naam'];
@@ -283,6 +298,14 @@ class AdminController extends Controller
 
                 $path = $r['coverfoto'];
             }
+            else {
+                $path = $r['coverfoto'];
+                $name = '';
+            }
+        }
+        else {
+            $path = $r['coverfoto'];
+            $name = '';
         }
         
         $cat = new Categorie;
@@ -397,7 +420,15 @@ class AdminController extends Controller
 
                 $resizedimg = Image::make($path . $name_orig)->fit(400,300);
                 $resizedimg->save($path . $name);
+            }  
+            else {
+                $path = $r['coverfoto'];
+                $name = '';
             }
+        }
+        else {
+            $path = $r['coverfoto'];
+            $name = '';
         }
         
         return $this->fotoUpload($status, $msg);
