@@ -120,6 +120,10 @@ class AdminController extends Controller
     }
 
     function productEdit($id, Request $r) {
+        // Make changes to product
+        $p = Product::find($id);
+        $useold = false;
+
         // File upload in correct folder, also on fail
         $f = $r->file('foto');
         $path = 'images/producten/';
@@ -139,18 +143,32 @@ class AdminController extends Controller
                 $path = $r['coverfoto'];
             }    
             else {
-                $path = $r['coverfoto'];
-                $name = '';
+                $useold = true;
             }
         }
         else {
-            $path = $r['coverfoto'];
-            $name = '';
+            $useold = true;
         }
 
-        // Make changes to product
-        $p = Product::find($id);
-        
+        if(!$useold) {     
+            $p->coverfoto = $path . $name;
+            $p->fullresfoto = $path . $name_orig;
+        }
+        else {
+            // Split off last '/' and insert _orig_ so that a string of the path of a picture can be inserted
+            // into r['coverfoto'] and the right thumbnail and full res foto will be set.  
+            $path = $r['coverfoto'];
+
+            $parts = explode('/', $path);
+            $last = array_pop($parts);
+            $parts = array(implode('/', $parts), $last);
+            echo $parts[0]; // outputs "path without catname"
+
+            $p->coverfoto = $parts[0] . '/' . $last;
+            $p->fullresfoto = $parts[0] . '/_orig_' . $last; 
+        }
+
+  
         $p->naam = $r['naam'];
         $p->afmetingen = $r['afmetingen'];
         $p->prijs_handelaar = $r['prijs_handelaar'];
@@ -159,8 +177,6 @@ class AdminController extends Controller
         $p->inpromo = $r['inpromo'];
         $p->groepering = $r['groepering'];
         $p->beschrijving = $r['beschrijving'];
-        $p->coverfoto = $path . $name;
-        $p->fullresfoto = $path . $name_orig;
         $p->subcategorie_id = $r['subcategorie_id'];
 
         $p->save();
@@ -182,6 +198,8 @@ class AdminController extends Controller
         $name = '_geenfoto.jpg';
         $name_orig = '_geenfoto.jpg';
 
+        $useold = false;
+
         if($r->hasFile('foto')) {
             if($r->file('foto')->isValid()) {
                 $path = $_SERVER['DOCUMENT_ROOT'] . '/' . $r['coverfoto']; 
@@ -195,16 +213,34 @@ class AdminController extends Controller
                 $path = $r['coverfoto'];
             }
             else {
-                $path = $r['coverfoto'];
-                $name = '';
+                $useold = true;
             }
         }
         else {
+            $useold = true;
+            
+        }
+
+        $p = new Product;
+
+        if(!$useold) {     
+            $p->coverfoto = $path . $name;
+            $p->fullresfoto = $path . $name_orig;
+        }
+        else {
+            // Split off last '/' and insert _orig_ so that a string of the path of a picture can be inserted
+            // into r['coverfoto'] and the right thumbnail and full res foto will be set.  
             $path = $r['coverfoto'];
-            $name = '';
+
+            $parts = explode('/', $path);
+            $last = array_pop($parts);
+            $parts = array(implode('/', $parts), $last);
+            echo $parts[0]; // outputs "path without catname"
+
+            $p->coverfoto = $parts[0] . '/' . $last;
+            $p->fullresfoto = $parts[0] . '/_orig_' . $last; 
         }
         
-        $p = new Product;
 
         $p->naam = $r['naam'];
         $p->afmetingen = $r['afmetingen'];
@@ -214,8 +250,7 @@ class AdminController extends Controller
         $p->inpromo = $r['inpromo'];
         $p->groepering = $r['groepering'];
         $p->beschrijving = $r['beschrijving'];
-        $p->coverfoto = $path . $name;
-        $p->fullresfoto = $path . $name_orig;
+
         $p->subcategorie_id = $r['subcategorie_id'];
 
         $p->save();
@@ -298,14 +333,6 @@ class AdminController extends Controller
 
                 $path = $r['coverfoto'];
             }
-            else {
-                $path = $r['coverfoto'];
-                $name = '';
-            }
-        }
-        else {
-            $path = $r['coverfoto'];
-            $name = '';
         }
         
         $cat = new Categorie;
@@ -421,16 +448,8 @@ class AdminController extends Controller
                 $resizedimg = Image::make($path . $name_orig)->fit(400,300);
                 $resizedimg->save($path . $name);
             }  
-            else {
-                $path = $r['coverfoto'];
-                $name = '';
-            }
         }
-        else {
-            $path = $r['coverfoto'];
-            $name = '';
-        }
-        
+
         return $this->fotoUpload($status, $msg);
 
     }
