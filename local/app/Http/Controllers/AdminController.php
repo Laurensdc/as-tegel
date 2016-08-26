@@ -128,7 +128,7 @@ class AdminController extends Controller
 
         if($r->hasFile('foto')) {
             if($r->file('foto')->isValid()) {
-                $path = public_path() . '/' . $r['coverfoto']; 
+                $path = $_SERVER['DOCUMENT_ROOT'] . '/' . $r['coverfoto']; 
                 $name = $f->getClientOriginalName();
                 $name_orig = '_orig_' . $name;
                 $f->move($path, $name_orig);
@@ -176,7 +176,7 @@ class AdminController extends Controller
 
         if($r->hasFile('foto')) {
             if($r->file('foto')->isValid()) {
-                $path = public_path() . '/' . $r['coverfoto']; 
+                $path = $_SERVER['DOCUMENT_ROOT'] . '/' . $r['coverfoto']; 
                 $name = $f->getClientOriginalName();
                 $name_orig = '_orig_' . $name;
                 $f->move($path, $name_orig);
@@ -273,7 +273,7 @@ class AdminController extends Controller
 
         if($r->hasFile('foto')) {
             if($r->file('foto')->isValid()) {
-                $path = public_path() . '/' . $r['coverfoto']; 
+                $path = $_SERVER['DOCUMENT_ROOT'] . '/' . $r['coverfoto']; 
                 $name = $f->getClientOriginalName();
                 $name_orig = '_orig_' . $name;
                 $f->move($path, $name_orig);
@@ -388,7 +388,7 @@ class AdminController extends Controller
 
         if($r->hasFile('foto')) {
             if($r->file('foto')->isValid()) {
-                $path = public_path() . '/' . $r['coverfoto']; 
+                $path = $_SERVER['DOCUMENT_ROOT'] . '/' . $r['coverfoto']; 
                 $name = $f->getClientOriginalName();
                 $name_orig = '_orig_' . $name;
                 $f->move($path, $name_orig);
