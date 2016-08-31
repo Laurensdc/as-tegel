@@ -21,7 +21,7 @@ return [
     "vraag_offerte"     => "Vraag offerte aan",
 	"orderit"		    => "Plaats bestelling",
 	"prijzen_afgehaald" =>  "Alle prijzen zijn afgehaald te Desselgem. Exclusief BTW.",
-    "nicest_products"   => "Bekijk enkele van onze mooise producten",
+    "nicest_products"   => "Bekijk enkele van onze mooiste producten",
     "explore_collection" => "Ontdek aanbod",
     "spotlight"         => "In de kijker",
     "spotlight_text"    => "Tijdelijke aanbiedingen",
