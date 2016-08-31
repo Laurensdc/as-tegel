@@ -296,6 +296,7 @@ class AdminController extends Controller
         $cat->naam = $r['naam'];
         $cat->cat_linknaam = strtolower($r['cat_linknaam']);
         $cat->coverfoto = $r['coverfoto'];
+        $cat->fullresfoto = $r['coverfoto'];
         $cat->volgorde = $r['volgorde'];
 
         $cat->save();
