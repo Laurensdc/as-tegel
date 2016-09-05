@@ -32,7 +32,7 @@
                     <div class="catoverzicht_subcat_detail">
                         <h3>
                             <a href="{{ route('producten') }}/{{ $cat->cat_linknaam }}/{{ $subcat->subcat_linknaam }}">
-                                {{ $subcat->naam }} <span class="icon-angle-circled-right">
+                                {{ $subcat->naam }} <!--<span class="icon-angle-circled-right">-->
                             </a>
                         </h3>
                         @if(isset($subcat->beschrijving) && $subcat->beschrijving != '')
@@ -56,7 +56,7 @@
 
 @section('javascript')
 <script src="{{ asset('bower_components/jquery/dist/jquery.min.js') }}"></script>
-<script src="js/scripts.js"></script>
+<script src="js/smoothscroll.js"></script>
 <script src="{{ asset('bower_components/lightbox2/dist/js/lightbox.min.js') }}"></script>
 @endsection
 
