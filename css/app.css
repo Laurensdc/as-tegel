@@ -1016,14 +1016,21 @@ a.admin_delete {
       float: right; }
 
 .push {
-  height: 28rem; }
+  height: 45rem; }
+  @media (min-width: 45em) {
+    .push {
+      height: 28rem; } }
 
 footer {
   clear: both;
   width: 100%;
   background-color: #424242;
-  height: 28rem;
+  height: 45rem;
   padding: 3rem; }
+  @media (min-width: 45em) {
+    footer {
+      height: 28rem;
+      padding: 6rem 3rem; } }
   @media (min-width: 85em) {
     footer {
       padding: 6rem 0; } }

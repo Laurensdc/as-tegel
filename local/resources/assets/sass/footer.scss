@@ -1,5 +1,9 @@
 .push {
-    height:28rem;
+    height:45rem;
+
+    @media (min-width: $screen-medium) {
+        height:28rem;
+    }
 }
 
 footer {
@@ -8,8 +12,13 @@ footer {
     width:100%;
     background-color:$verygray;
 
-    height:28rem;
+    height:45rem;
     padding: 3rem;
+
+    @media (min-width: $screen-medium) {
+        height:28rem;
+        padding: 6rem 3rem;
+    }
 
 
     @media (min-width: $screen-big) {
