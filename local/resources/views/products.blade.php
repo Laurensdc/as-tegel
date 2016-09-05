@@ -49,7 +49,7 @@
 				</ul>
 				
 				@if(isset($p->beschrijving))
-					<p>{{ $p->beschrijving }}</p>
+					<p>{{{ $p->beschrijving }}}</p>
 				@endif
 
 				@if($p->invoorraad == false)
