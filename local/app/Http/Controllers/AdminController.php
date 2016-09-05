@@ -288,7 +288,7 @@ class AdminController extends Controller
 
         $this->validate($r, [
             'cat_linknaam' => 'alpha|required|unique:categories,cat_linknaam,' . $id,
-            'volgorde' => 'unique:categories',
+            'volgorde' => 'unique:categories,volgorde,' . $id,
             ]);
 
         $cat = Categorie::find($id);
@@ -296,6 +296,7 @@ class AdminController extends Controller
         $cat->naam = $r['naam'];
         $cat->cat_linknaam = strtolower($r['cat_linknaam']);
         $cat->coverfoto = $r['coverfoto'];
+        $cat->fullresfoto = $r['coverfoto'];
         $cat->volgorde = $r['volgorde'];
 
         $cat->save();
