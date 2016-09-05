@@ -35,6 +35,10 @@ class HomeController extends Controller
         return view('contact', ["title" => "Contact", "headermenu_active" => "contact"]);
     }
 
+    function about() {
+        return view('about', ["title" => trans('cont.about'), "headermenu_active" => trans('cont.about') ]);
+    }
+
     function lang($ln, Request $request) {     
         return Redirect::back()->withCookie(cookie('ln', $ln));
     }

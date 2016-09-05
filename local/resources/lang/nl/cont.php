@@ -38,5 +38,13 @@ return [
     "totaal"            => "Totaal",
     "ikwildop"          => "Ja, ik wens een DOP certificaat te ontvangen met mijn bestelling.",    
     "notavailable"      => "Prijs niet beschikbaar",
+    "about"             => "Over ons",
+    "or"                => "Of",
+    "gettoknowus"       => "Leer ons kennen",
+    "contactus"         => "Contacteer ons",
+
+    
+
+
 
 ];

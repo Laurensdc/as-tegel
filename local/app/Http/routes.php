@@ -24,12 +24,14 @@ Route::get('/lang/{ln}', 'HomeController@lang');
 // Contact
 Route::get('/contact', ['middleware' => 'lang', 'as' => 'contact', 'uses' => 'HomeController@contact']);
 
-// DOP norm
+// CE norm
 Route::get('/ce', ['middleware' => 'lang', 'as' => 'ce', 'uses' => 'HomeController@ce']);
 
 // Prijslijst
 Route::get('/prijslijst', ['middleware' => 'lang', 'as' => 'prijslijst', 'uses' => 'HomeController@prijslijst']);
 
+// About
+Route::get('/about', ['middleware' => 'lang', 'as' => 'about', 'uses' => 'HomeController@about']);
 
 // Producten
 Route::get('/producten', ['middleware' => 'lang', 'as' => 'producten', 'uses' => 'ProductenController@overview']);

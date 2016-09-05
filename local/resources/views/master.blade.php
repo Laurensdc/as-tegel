@@ -68,6 +68,9 @@
                 <div class="footercol">
                     <p><a href="{{ route('prijslijst') }}" target="_blank"><span class="icon-download"></span> {{ trans('cont.prijslijst') }}</a></p>
                     <p><a href="{{ route('ce') }}"><span class="icon-ok"></span> {{ trans('cont.ce_markering') }}</a></p>
+                    <hr>
+                    <p><a href="{{ route('contact') }}">Contact</a></p>
+                    <p><a href="{{ route('about') }}">{{ trans('cont.about') }}</a></p>
                 </div>
                 <div class="footercol">&nbsp;</div>
                 <div class="footercol">

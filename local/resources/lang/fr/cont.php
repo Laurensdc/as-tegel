@@ -38,6 +38,11 @@ return [
     "totaal"            => "Total",
     "ikwildop"          => "Oui, je veux reçevoir un certificat de DOP avec ma commande.",
     "notavailable"      => "Prix non disponible",
+    "about"             => "Qui sommes-nous?",
+    "or"                => "Ou",
+    "gettoknowus"       => "Apprend à nous connaître",
+    "contactus"         => "Contactez-nous",
+
 
 ];
 

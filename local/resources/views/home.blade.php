@@ -36,6 +36,8 @@
 
                         </article>
                     @endforeach
+
+                    <br>
             </div>  
         </div>
     @endif
@@ -45,6 +47,8 @@
             {{ trans('cont.nicest_products') }}
             <a href="{{ route('producten') }}" class="btn">{{ trans('cont.explore_collection') }}</a>
         </p>
+        <br>
+        <p>{{ trans('cont.or') }}...<a href="{{ route('about') }}">{{ trans('cont.gettoknowus') }}</a></p>
     </div>
 
     <div class="nicest_products">
