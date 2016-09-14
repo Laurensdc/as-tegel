@@ -45,7 +45,7 @@
     <div class="hometext">
         <p>
             Stockverkoop! 16 - 17 - 18 september.<br>
-            Bezoek ons vrijblijvend te Desselgem!.
+            Bezoek ons vrijblijvend te Desselgem!
         </p>
     </div>
 

@@ -33,6 +33,5 @@
 - php artisan migrate:refresh --seed
 
 # TODO's
-
  - I gave full linux read/write permissions because I had issues on chromebook, reset that
 
