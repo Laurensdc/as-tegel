@@ -44,6 +44,13 @@
 
     <div class="hometext">
         <p>
+            Stockverkoop! 16 - 17 - 18 september.<br>
+            Bezoek ons vrijblijvend te Desselgem!.
+        </p>
+    </div>
+
+    <div class="hometext">
+        <p>
             {{ trans('cont.nicest_products') }}
             <a href="{{ route('producten') }}" class="btn">{{ trans('cont.explore_collection') }}</a>
         </p>
