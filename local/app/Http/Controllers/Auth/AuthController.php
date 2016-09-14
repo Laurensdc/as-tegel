@@ -67,12 +67,11 @@ class AuthController extends Controller
     protected function create(array $data)
     {
         $naam = $data['naam'];
-        
+
         if(!isset($data['is_handelaar'])) {
             $data['btw'] = null;
         }
-
-        if(isset($data['is_handelaar'])) {      
+        else if($data['is_handelaar'] == true) {      
             Mail::send('mail.handelaar',
              [  'voornaam' => $data['voornaam'],
                 'achternaam' => $data['naam'],
