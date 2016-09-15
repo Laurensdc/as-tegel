@@ -20,6 +20,17 @@ return [
     'password'  => 'Mot de passe',
     'remember'  => 'Sauvegarder',
     'forgotpass'    => 'Oublié votre mot de passe?',
+    'name'  =>  'Nom',
+    'firstname' => 'Prénom',
+    'email' => 'Couriel',
+    'confirmpassword' => 'Confirmation de mot de passe',
+    'phone' => 'Numéro de telephone',
+    'optional' => 'optionel',
+    'iamwholesale' => 'Je suis entrepreneur',
+    'phonealt'  => 'Si vous donnez votre numéro de téléphone, nous vous serez beaucoup mieux.',
+    'btwnr' => 'Numéro de BTW'
+
+    
 
 
 

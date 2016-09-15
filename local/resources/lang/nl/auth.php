@@ -17,6 +17,16 @@ return [
     'password'  => 'Wachtwoord',
     'remember'  => 'Gegevens onthouden',
     'forgotpass'    => 'Uw wachtwoord vergeten?',
+    'name'  =>  'Naam',
+    'firstname' => 'Voornaam',
+    'email' => 'E-mail',
+    'confirmpassword' => 'Bevestig wachtwoord',
+    'phone' => 'Telefoonnummer',
+    'optional' => 'optioneel',
+    'iamwholesale' => 'Ik ben een handelaar',
+    'phonealt'  => 'Indien u uw telefoonnummer wenst op te geven, kunnen wij u beter van dienst zijn.',
+    'btwnr' => 'BTW Nummer'
+
     
 
 ];

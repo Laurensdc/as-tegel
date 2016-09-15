@@ -20,6 +20,17 @@ return [
     'password'  => 'Password',
     'remember'  => 'Remember',
     'forgotpass'    => 'Forgot your password?',
+    'name'  =>  'Last name',
+    'firstname' => 'First name',
+    'email' => 'Email',
+    'confirmpassword' => 'Confirm password',
+    'phone' => 'Phone',
+    'optional' => 'optional',
+    'iamwholesale' => 'I do wholesale',
+    'phonealt'  => 'If you wish, you can give us your phone number. If you do, we can be of better service to you.',
+    'btwnr' => 'BTW Number'
+
+    
 
 
 
