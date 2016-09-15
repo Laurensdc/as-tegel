@@ -4,9 +4,7 @@
 <div class="login_panel">
 	<h2>Log in</h2>
 	<p>
-        Heeft u nog geen login?<br>Geen probleem, u kan zich registreren.
-        <br>
-        <a href="{{ route('home') }}/register">Ik wil me registreren.</a>
+        {!! trans('auth.nologin') !!}
     </p>
 
 	<form role="form" method="POST" action="{{ url('/login') }}">
@@ -24,7 +22,7 @@
 		</div>
 
 		<div>
-			<label>Wachtwoord</label>
+			<label>{{ trans('auth.password') }}</label>
 			<input type="password" class="form-control" name="password">
 
 			@if ($errors->has('password'))
@@ -36,13 +34,13 @@
 		<br>
 		<div>
 			<label>
-				<input type="checkbox" name="remember"> Gegevens onthouden
+				<input type="checkbox" name="remember"> {{ trans('auth.remember') }}
 			</label>
 		</div>
 
 		<div>
-			<input type="submit" value="Log in"> 
-			<a class="boringlink" href="{{ url('/password/reset') }}">Wachtwoord vergeten?</a>
+			<input type="submit" value="{{ trans('cont.login') }}"> 
+			<a class="boringlink" href="{{ url('/password/reset') }}">{{ trans('auth.forgotpass') }}</a>
 		</div>
 	</form>
 </div>
