@@ -26,7 +26,8 @@ return [
     'confirmpassword' => 'Confirmation de mot de passe',
     'phone' => 'Numéro de telephone',
     'optional' => 'optionel',
-    'iamwholesale' => 'Je suis entrepreneur',
+    'areyouwholesale' => 'Vous-êtes entrepreneur?',
+    'iamwholesale' => 'Oui, je suis entrepreneur',
     'phonealt'  => 'Si vous donnez votre numéro de téléphone, nous vous serez beaucoup mieux.',
     'btwnr' => 'Numéro de BTW'
 

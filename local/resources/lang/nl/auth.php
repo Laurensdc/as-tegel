@@ -23,7 +23,8 @@ return [
     'confirmpassword' => 'Bevestig wachtwoord',
     'phone' => 'Telefoonnummer',
     'optional' => 'optioneel',
-    'iamwholesale' => 'Ik ben een handelaar',
+    'areyouwholesale' => 'Bent u een handelaar?',
+    'iamwholesale' => 'Ja, ik ben een handelaar',
     'phonealt'  => 'Indien u uw telefoonnummer wenst op te geven, kunnen wij u beter van dienst zijn.',
     'btwnr' => 'BTW Nummer'
 

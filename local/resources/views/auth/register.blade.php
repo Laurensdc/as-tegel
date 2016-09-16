@@ -72,6 +72,7 @@
 		</div>
 
 		<div class="login_handelaar">
+			<label>{{ trans('auth.areyouwholesale') }}</label>
 			<input type="checkbox" name="is_handelaar" id="cbhandelaar"> {{ trans('auth.iamwholesale') }}
 			<p class="handelaar_tekst" id="handelaar_tekst"></p>
 		</div>

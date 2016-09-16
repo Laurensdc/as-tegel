@@ -26,7 +26,8 @@ return [
     'confirmpassword' => 'Confirm password',
     'phone' => 'Phone',
     'optional' => 'optional',
-    'iamwholesale' => 'I do wholesale',
+    'areyouwholesale' => 'Are you wholesale?',
+    'iamwholesale' => 'Yes, I do wholesale',
     'phonealt'  => 'If you wish, you can give us your phone number. If you do, we can be of better service to you.',
     'btwnr' => 'BTW Number'
 
