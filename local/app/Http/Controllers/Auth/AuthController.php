@@ -85,6 +85,18 @@ class AuthController extends Controller
             });
 
         }
+        else {
+            Mail::send('mail.particulier',
+             [  'voornaam' => $data['voornaam'],
+                'achternaam' => $data['naam'],
+                'telnr' => $data['tel'],
+                'email' => $data['email'],
+             ], function($message) use ($naam)
+            {
+                $message->to('chriswolfcarius@yahoo.com.sg')->subject('Registratie particulier ' . $naam);
+            });
+
+        }
 
         return User::create([
             'firstname' => $data['voornaam'],

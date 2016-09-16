@@ -8,7 +8,7 @@
 			<td><strong>E-mail</strong></td>
 			<td><strong>Telefoonnummer</strong></td>
 			<td><strong>Rol</strong></td>
-			<td><strong>BTW-nummer</strong></td>
+			<td><strong>BTW</strong></td>
 			<td></td>
 		</tr>
 	@foreach($users as $user)
