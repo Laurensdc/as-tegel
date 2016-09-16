@@ -15,7 +15,7 @@ return [
 
     'failed'   => 'Ces identifiants ne correspondent pas à nos enregistrements',
     'throttle' => 'Trop de tentatives de connexion. Veuillez essayer de nouveau dans :seconds secondes.',
-    'nologin'  => 'Pas de login?<br>Pas de problème. Enregistrez-vous.<br><a href="{{ route(\'home\') }}/register">Oui, je veux m\'enregistrer.</a>',
+    'nologin'  => 'Pas de login?<br>Pas de problème. Enregistrez-vous.<br><a href="' . route('home') . '/register">Oui, je veux m\'enregistrer.</a>',
     'backtosite' => 'Retourner au site',
     'password'  => 'Mot de passe',
     'remember'  => 'Sauvegarder',

@@ -12,7 +12,7 @@ return [
     */
     'failed'   => 'Deze combinatie van e-mailadres en wachtwoord is niet geldig.',
     'throttle' => 'Teveel gefaalde login pogingen. Probeer het over :seconds seconden nogmaals.',
-    'nologin'  => 'Heeft u nog geen login?<br>Geen probleem, u kan zich registreren.<br><a href="{{ route(\'home\') }}/register">Ja, ik wil me registreren.</a>',
+    'nologin'  => 'Heeft u nog geen login?<br>Geen probleem, u kan zich registreren.<br><a href="' . route('home') . '/register">Ja, ik wil me registreren.</a>',
     'backtosite' => 'Terug naar site',
     'password'  => 'Wachtwoord',
     'remember'  => 'Gegevens onthouden',
