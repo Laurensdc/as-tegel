@@ -71,6 +71,16 @@ class AuthController extends Controller
 
         if(!isset($data['is_handelaar'])) {
             $data['btw'] = null;
+            Mail::send('mail.particulier',
+             [  'voornaam' => $data['voornaam'],
+                'achternaam' => $data['naam'],
+                'telnr' => $data['tel'],
+                'email' => $data['email'],
+             ], function($message) use ($naam)
+            {
+                $message->to('chriswolfcarius@yahoo.com.sg')->subject('Registratie particulier ' . $naam);
+            });
+
         }
         else if($data['is_handelaar'] == true) {      
             Mail::send('mail.handelaar',
@@ -82,18 +92,6 @@ class AuthController extends Controller
              ], function($message) use ($naam)
             {
                 $message->to('chriswolfcarius@yahoo.com.sg')->subject('Aanvraag registratie handelaar ' . $naam);
-            });
-
-        }
-        else {
-            Mail::send('mail.particulier',
-             [  'voornaam' => $data['voornaam'],
-                'achternaam' => $data['naam'],
-                'telnr' => $data['tel'],
-                'email' => $data['email'],
-             ], function($message) use ($naam)
-            {
-                $message->to('chriswolfcarius@yahoo.com.sg')->subject('Registratie particulier ' . $naam);
             });
 
         }
