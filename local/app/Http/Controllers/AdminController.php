@@ -51,12 +51,15 @@ class AdminController extends Controller
             });
 
         }
+        if($user->role == 'admin') $user->role = 'admin';
+        else $user->role = $request['role'];
 
     	$user->firstname = $request['firstname'];
     	$user->lastname = $request['lastname'];
-    	$user->role = $request['role'];
+    	
     	$user->telnr = $request['telnr'];
     	$user->email = $request['email'];
+        $user->btwnr = $request['btw'];
     	$user->save();
 
     	return redirect()->route('admin_useroverview');

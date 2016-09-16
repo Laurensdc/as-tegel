@@ -31,6 +31,10 @@
 				</select>
 			</p>
 			<p>
+				<label>BTW-nummer</label>
+				<input type="text" name="btw" value="{{ $user->btwnr }}">
+			</p>
+			<p>
 				<label></label>
 				<input type="submit" value="Aanpassen"> <a href="{{ route('admin') }}/users" class="boringlink">Annuleren</a>
 			</p>
