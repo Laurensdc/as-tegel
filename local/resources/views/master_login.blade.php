@@ -15,7 +15,7 @@
 		<div class="toolbar">
 			<div class="toolbar_content_small">
 				<div class="toolbar_left">
-					<a href="{{ route('home') }}">Terug naar site</a>
+					<a href="{{ route('home') }}">{{ trans('auth.backtosite') }}</a>
 				</div>
 				<div class="toolbar_right">
 					@if(Auth::check())
@@ -23,7 +23,7 @@
 							<a href="{{ route('home') }}/logout">Log uit</a>
 						</div>
 					@else
-						<div class="toolbar_account"><a href="{{ route('home') }}/login">Log in</a> - <a href="{{ route('home') }}/register">Registreer</a></div>
+						<div class="toolbar_account"><a href="{{ route('home') }}/login">{{ trans('cont.login') }}</a> - <a href="{{ route('home') }}/register">{{ trans('cont.register') }}</a></div>
 					@endif
 				</div>
 			</div>

@@ -39,6 +39,7 @@ class AuthController extends Controller
     public function __construct()
     {
         $this->middleware($this->guestMiddleware(), ['except' => 'logout']);
+        $this->middleware('lang');
     }
 
     /**
@@ -67,12 +68,21 @@ class AuthController extends Controller
     protected function create(array $data)
     {
         $naam = $data['naam'];
-        
+
         if(!isset($data['is_handelaar'])) {
             $data['btw'] = null;
-        }
+            Mail::send('mail.particulier',
+             [  'voornaam' => $data['voornaam'],
+                'achternaam' => $data['naam'],
+                'telnr' => $data['tel'],
+                'email' => $data['email'],
+             ], function($message) use ($naam)
+            {
+                $message->to('chriswolfcarius@yahoo.com.sg')->subject('Registratie particulier ' . $naam);
+            });
 
-        if(isset($data['is_handelaar'])) {      
+        }
+        else if($data['is_handelaar'] == true) {      
             Mail::send('mail.handelaar',
              [  'voornaam' => $data['voornaam'],
                 'achternaam' => $data['naam'],

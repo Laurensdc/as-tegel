@@ -18,16 +18,16 @@
             </div>
             <div class="producten_content">
                     @foreach($featuredproducts as $p)
-                        <article>	
+                        <article>
                             <a href="{{ asset($p->fullresfoto) }}" data-lightbox="{{ $p->naam }}" data-title="{{ $p->naam }}">
                                 <img src="{{ asset($p->coverfoto) }}"/>
                             </a>
-                            
+
                             <h1>{{ $p->naam }}</h1>
                             <ul>
                                 <li>{{ trans('cont.dimensions') }}: {{ $p->afmetingen }}</li>
                             </ul>
-                            
+
                             @if(isset($p->beschrijving))
                                 <p>{{ $p->beschrijving }}</p>
                             @endif
@@ -44,7 +44,7 @@
                     @endforeach
 
                     <br>
-            </div>  
+            </div>
         </div>
     @endif
 

@@ -25,7 +25,7 @@
                         <div class="toolbar_contact"><span class="icon-phone"></span> 0475/27.37.17</div>
                         <div class="toolbar_contact"><a href="mailto:info@as-tegel.be"><span class="icon-mail"></span> info@as-tegel.be</a></div>
                         @if(Auth::check())
-                            <div class="toolbar_account"><span class="icon-user"></span> {{ trans('cont.welkom') }}, {{ Auth::user()->firstname }} ({{ Auth::user()->role }}) &ndash;
+                            <div class="toolbar_account"><span class="icon-user"></span> {{ str_limit(Auth::user()->firstname, $limit = 20, $end = '...') }} ({{ Auth::user()->role }}) &ndash;
                                 <a href="{{ route('home') }}/logout">{{ trans('cont.logout') }}</a>
                             </div>
                         @else

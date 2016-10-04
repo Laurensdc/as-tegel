@@ -2,12 +2,12 @@
 
 @section('content')
 <div class="login_panel">
-	<h2>Registreer</h2>
+	<h2>{{ trans('cont.register') }}</h2>
 	<form role="form" method="POST" action="{{ url('/register') }}" id="registerform">
 		{{ csrf_field() }}
 
 		<div>
-			<label class="">Voornaam</label>
+			<label class="">{{ trans('auth.firstname') }}</label>
 			<input type="text" name="voornaam" value="{{ old('voornaam') }}" autofocus>
 
 			@if ($errors->has('voornaam'))
@@ -18,7 +18,7 @@
 		</div>
 
 		<div>
-			<label class="">Naam</label>
+			<label class="">{{ trans('auth.name') }}</label>
 			<input type="text" name="naam" value="{{ old('naam') }}">
 
 			@if ($errors->has('naam'))
@@ -29,7 +29,7 @@
 		</div>
 
 		<div>
-			<label>E-mail</label>
+			<label>{{ trans('auth.email') }}</label>
 			<input type="email" name="email" value="{{ old('email') }}">
 
 			@if ($errors->has('email'))
@@ -40,7 +40,7 @@
 		</div>
 
 		<div>
-			<label>Wachtwoord</label>
+			<label>{{ trans('auth.password') }}</label>
 			<input type="password" name="password">
 			@if ($errors->has('password'))
 				<span class="txt_warning">
@@ -50,7 +50,7 @@
 		</div>
 
 		<div>
-			<label>Bevestig wachtwoord</label>
+			<label>{{ trans('auth.confirmpassword') }}</label>
 			<input type="password" name="password_confirmation">
 
 			@if ($errors->has('password_confirmation'))
@@ -61,8 +61,8 @@
 		</div>
 
 		<div>
-			<label>Telefoonnummer (optioneel)</label>
-			<input type="text" name="tel" value="{{ old('tel') }}" title="Indien u uw telefoonnummer wenst op te geven, kunnen wij u beter van dienst zijn.">
+			<label>{{ trans('auth.phone') }} ({{ trans('auth.optional') }})</label>
+			<input type="text" name="tel" value="{{ old('tel') }}" title="">
 
 			@if ($errors->has('tel'))
 				<span class="txt_warning">
@@ -72,12 +72,13 @@
 		</div>
 
 		<div class="login_handelaar">
-			<input type="checkbox" name="is_handelaar" id="cbhandelaar"> Ik ben een handelaar
+			<label>{{ trans('auth.areyouwholesale') }}</label>
+			<input type="checkbox" name="is_handelaar" id="cbhandelaar"> {{ trans('auth.iamwholesale') }}
 			<p class="handelaar_tekst" id="handelaar_tekst"></p>
 		</div>
 
         <div class="input_btw">
-            <label>BTW Nummer</label>
+            <label>{{ trans('auth.btwnr') }}</label>
             <input type="text" name="btw" id="btw" value="BE ">
             <span class="txt_warning" id="btw_errormsg"></span>
         </div>

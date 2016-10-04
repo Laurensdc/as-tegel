@@ -32,4 +32,6 @@
 - Set db settings in .env
 - php artisan migrate:refresh --seed
 
+# TODO's
+ - I gave full linux read/write permissions because I had issues on chromebook, look into it
 
