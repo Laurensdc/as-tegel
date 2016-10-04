@@ -5,6 +5,12 @@
 @endsection
 
 @section('homecontent')
+    <div class="hometext">
+        <p>
+            Onze toonzaal is gesloten van 31/10/2016 t.e.m 4/11/2016
+        </p>
+    </div>
+
     @if(sizeof($featuredproducts) > 0)
         <div class="homepromo">
             <div class="homepromo_banner">
