@@ -1,6 +1,6 @@
 /* Producten content, Categorie overzicht */
 .producten_content {
-	background-color:$almostwhite;
+	background-color:$actuallywhite;
 	overflow:hidden;
 	padding:1rem;
 }
@@ -10,7 +10,7 @@
 	padding:1rem 0 1rem 1.5%;
 	margin-bottom:2rem;
 }
-	
+
 .producten_content {
     @media (min-width: $screen_medium) {
         padding:0;
@@ -20,7 +20,7 @@
         overflow:hidden;
 
         background-size:cover;
-        background-position:center top;				
+        background-position:center top;
         margin-bottom: 7rem;
 
         width:100%;
@@ -30,7 +30,7 @@
         @media (min-width: $screen_mediumbig) {
             width:31.33333%;
             float:left;
-            margin:0 1% 2%;           
+            margin:0 1% 2%;
         }
         font-size:1.4rem;
 
@@ -125,8 +125,8 @@
 
         @media (min-width: $screen_medium) {
             line-height:4rem;
-            font-size:1.6rem;        
-        }      
+            font-size:1.6rem;
+        }
     }
 }
 

@@ -1,5 +1,5 @@
 .categorie_overzicht {
-	background-color:$almostwhite;
+	background-color:$actuallywhite;
 	overflow:hidden;
 	padding:0 1rem;
 
@@ -21,15 +21,15 @@
         }
     }
 
-    article {	
+    article {
         overflow:hidden;
-        position:relative;  
+        position:relative;
 
         border-bottom:1px solid $gray;
         margin-bottom: 1rem;
 
         width:100%;
-        float:left;   
+        float:left;
     }
 
     img {
@@ -40,7 +40,7 @@
         margin-bottom:2rem;
         max-height:30rem;
         object-fit:cover;
-    } 
+    }
 }
 
 .catoverzicht_cat {
@@ -91,4 +91,3 @@
         }
     }
 }
-

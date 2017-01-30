@@ -13,7 +13,7 @@
 @section('homecontent')
 
     @if(sizeof($motd) > 0 && $motd->content != '')
-    <div class="hometext">
+    <div class="hometext attention">
 
         <p>
             {!! nl2br($motd->content) !!}

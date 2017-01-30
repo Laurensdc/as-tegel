@@ -17,7 +17,7 @@
                 <div class="toolbar_content">
                     <div class="toolbar_left">
                         <div class="toolbar_languages">
-                            <a href="{{ route('home') }}/lang/nl" @if(Cookie::get('ln') == 'nl') class="active" @endif>NL</a> - 
+                            <a href="{{ route('home') }}/lang/nl" @if(Cookie::get('ln') == 'nl') class="active" @endif>NL</a> -
                             <a href="{{ route('home') }}/lang/fr" @if(Cookie::get('ln') == 'fr') class="active" @endif>FR</a> -
                             <a href="{{ route('home') }}/lang/en" @if(Cookie::get('ln') == 'en') class="active" @endif>EN</a></div>
                     </div>
@@ -39,11 +39,11 @@
                 <ul>
                     <li><a href="{{ route('home') }}"  class="logo"><img src="{{ asset('assets/logo.png') }}" alt="Logo"/></a></li>
                     <li><a href="{{ route('home') }}" @if($headermenu_active === 'home') class="active" @endif>Home</a></li>
-                    <li><a href="{{ route('producten') }}" @if($headermenu_active === 'producten') class="active" @endif>{{ trans('cont.products') }}</a></li>				
-                    <li><a href="{{ route('contact') }}" @if($headermenu_active === 'contact') class="active" @endif>Contact</a></li>			
+                    <li><a href="{{ route('producten') }}" @if($headermenu_active === 'producten') class="active" @endif>{{ trans('cont.products') }}</a></li>
+                    <li><a href="{{ route('contact') }}" @if($headermenu_active === 'contact') class="active" @endif>Contact</a></li>
                 </ul>
                 <div class="header_bestelling">
-                    <p> 
+                    <p>
                         <a href="{{ route('order') }}">
                             <!--<img src="{{ asset('assets/icon-order.png') }}" class="order-icon" alt="Order icon"/>-->
                             <span class="icon-basket"></span> {{ trans('cont.bestelling') }} ({{ count(Session::get('orderitems')) }} items)
@@ -78,12 +78,16 @@
                     <p><span class="icon-phone"></span> 0475/27.37.17</p>
                     <p><a href="https://www.facebook.com/As-Tegel-219524735099565/" target="_blank"><span class="icon-facebook-rect"></span> {{ trans('cont.volg_ons_op') }} Facebook</a></p>
                     <hr>
+                    <p><strong>Partners</strong></p>
+                    <p><a href="http://www.isox.be/nl" target="_blank">Isox</a></p>
+                    <p><a href="http://www.compaktuna.be/nl/home-1.htm" target="_blank">Compaktuna</a></p>
+                    <hr>
                     <p>{{ trans('cont.website_by') }} <a href="http://laurensdev.com" target="_blank">Laurens Development</a></p>
                 </div>
             </div>
 
         </footer>
-        
+
 		@yield('javascript')
 
 	</body>

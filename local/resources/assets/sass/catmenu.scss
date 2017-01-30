@@ -17,14 +17,13 @@
 }
 
 .catmenu li, .catmenu .catmenu_title {
-	border:1px solid $gray;
+
+    border-left:1px solid $gray;
 	margin-top:-1px;
+
 }
 
-.catmenu .catmenu_title {
-	font-weight:600;
-	background-color:$almostwhite;
-}
+
 
 .catmenu ul {
 	display: none;
@@ -37,14 +36,22 @@
 	color:$textcolor;
 	padding:1rem;
 	display:inline-block;
+    transition:none;
+}
+
+.catmenu .catmenu_title {
+	font-weight:700;
+
+    background-color:$verygray;
+    color:$almostwhite;
 }
 
 .catmenu a:hover, .catmenu li.active a:hover, .catmenu ul li.active a:hover {
-	color:$colora;
+	font-weight:700;
 }
 
 // Menu items and submenu items
 .catmenu li.active a, .catmenu ul li.active a {
-    //font-weight:600;
-    color:$colora;
+    font-weight:700;
+    text-decoration: underline;
 }

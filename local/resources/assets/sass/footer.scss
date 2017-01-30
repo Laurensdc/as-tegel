@@ -12,11 +12,11 @@ footer {
     width:100%;
     background-color:$verygray;
 
-    height:45rem;
+    height:55rem;
     padding: 3rem;
 
     @media (min-width: $screen-medium) {
-        height:28rem;
+        height:40rem;
         padding: 6rem 3rem;
     }
 
@@ -25,11 +25,11 @@ footer {
         padding: 6rem 0;
 
     }
-    
+
     .footercontent {
         margin: 0 auto;
         width:100%;
- 
+
         color:$almostwhite;
         background-color:$verygray;
 
