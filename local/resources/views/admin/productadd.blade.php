@@ -26,18 +26,19 @@
                     <option value="ton">ton</option>
                     <option value="dag">dag</option>
                     <option value="week">week</option>
+                    <option value="meter">meter</option>
                 </select>
             </p>
 			<p>
 				<label>Is product in voorraad?</label>
-				<select name="invoorraad">					
+				<select name="invoorraad">
 					<option value="1">Ja</option>
 					<option value="0">Nee</option>
 				</select>
 			</p>
 			<p>
 				<label>Promo op voorpagina?</label>
-				<select name="inpromo">					
+				<select name="inpromo">
 					<option value="0">Nee</option>
 					<option value="1">Ja</option>
 				</select>
@@ -55,7 +56,7 @@
 						</option>
 					@endforeach
 				</select>
-			</p>	
+			</p>
 			<p>
 				<label>Beschrijving</label>
 				<textarea name="beschrijving" rows="3" cols="40"></textarea>
@@ -63,11 +64,11 @@
 			<p>
 				<label>Map voor foto</label>
 				<input type="text" name="coverfoto" size="40" value="images/producten/">
-			</p>	
+			</p>
 			<p>
 				<label>Foto</label>
 				<input type="file" name="foto" methode="post">
-			</p>			
+			</p>
 			<label></label>
 			<input type="submit" value ="Product Toevoegen"> <a href="{{ route('admin_productoverview') }}" class="boringlink">Annuleren</a>
 		</form>

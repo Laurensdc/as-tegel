@@ -26,18 +26,19 @@
                     <option value="ton" @if($p->eenheid == 'ton') selected @endif >ton</option>
                     <option value="dag" @if($p->eenheid == 'dag') selected @endif >dag</option>
                     <option value="week" @if($p->eenheid == 'week') selected @endif >week</option>
+                    <option value="meter" @if($p->eenheid == 'meter') selected @endif >meter</option>
                 </select>
             </p>
 			<p>
 				<label>Is product in voorraad?</label>
-				<select name="invoorraad">					
+				<select name="invoorraad">
 					<option value="1" @if($p->invoorraad) selected @endif >Ja</option>
 					<option value="0" @if(!$p->invoorraad) selected @endif >Nee</option>
 				</select>
 			</p>
 			<p>
 				<label>Promo op voorpagina?</label>
-				<select name="inpromo">					
+				<select name="inpromo">
 					<option value="0" @if(!$p->inpromo) selected @endif >Nee</option>
 					<option value="1" @if($p->inpromo) selected @endif >Ja</option>
 				</select>
@@ -55,7 +56,7 @@
 						</option>
 					@endforeach
 				</select>
-			</p>	
+			</p>
 			<p>
 				<label>Beschrijving</label>
 				<textarea name="beschrijving" rows="3" cols="40">{{ $p->beschrijving }}</textarea>
@@ -77,12 +78,9 @@
 	<div class="admin_smallcol">
 				<span id="for_admin_delete"class="txt_warning"><span class="icon-trash-empty"></span> Verwijderen</span>
 				<a class="admin_delete btn" href="{{ route('admin' )}}/producten/delete/{{ $p->id}}">Bevestig verwijdering {{ $p->naam }}</a>
-	</div>	
+	</div>
 @endsection
 
-@section('javascript') 
+@section('javascript')
 	<script src="{{ asset('js/adminscripts.js') }}"></script>
 @endsection
-
-
-
