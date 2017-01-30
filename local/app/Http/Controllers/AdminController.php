@@ -10,6 +10,7 @@ use App\User;
 use App\Product;
 use App\Categorie;
 use App\Subcategorie;
+use App\Motd;
 use Mail;
 use DB;
 use Image;
@@ -47,7 +48,7 @@ class AdminController extends Controller
         if($user->role == 'particulier' && $request['role'] == 'handelaar') {
             Mail::send('mail.handelaar_goedgekeurd', ['user' => $user], function($m) use ($user)
             {
-                $m->to($user->email)->subject('Uw aanvraag voor handelaar is goedgekeurd'); 
+                $m->to($user->email)->subject('Uw aanvraag voor handelaar is goedgekeurd');
             });
 
         }
@@ -56,7 +57,7 @@ class AdminController extends Controller
 
     	$user->firstname = $request['firstname'];
     	$user->lastname = $request['lastname'];
-    	
+
     	$user->telnr = $request['telnr'];
     	$user->email = $request['email'];
         $user->btwnr = $request['btw'];
@@ -69,7 +70,7 @@ class AdminController extends Controller
         $user = User::find($id);
         $user->delete();
 
-        return redirect()->route('admin_useroverview');   
+        return redirect()->route('admin_useroverview');
     }
 
     function makeHandelaar($email) {
@@ -80,8 +81,8 @@ class AdminController extends Controller
 
             Mail::send('mail.handelaar_goedgekeurd', ['user' => $user], function($m) use ($user)
             {
-                $m->to($user->email)->subject('Uw aanvraag voor handelaar is goedgekeurd'); 
-            });          
+                $m->to($user->email)->subject('Uw aanvraag voor handelaar is goedgekeurd');
+            });
         }
 
        	return redirect()->route('admin_useroverview');
@@ -94,7 +95,7 @@ class AdminController extends Controller
     function productOverview() {
         $producten = Product::orderBy('naam')->get();
 
-        return view('admin.producten', 
+        return view('admin.producten',
             ['producten' => $producten]);
 
     }
@@ -135,7 +136,7 @@ class AdminController extends Controller
 
         if($r->hasFile('foto')) {
             if($r->file('foto')->isValid()) {
-                $path = $_SERVER['DOCUMENT_ROOT'] . '/' . $r['coverfoto']; 
+                $path = $_SERVER['DOCUMENT_ROOT'] . '/' . $r['coverfoto'];
                 $name = $f->getClientOriginalName();
                 $name_orig = '_orig_' . $name;
                 $f->move($path, $name_orig);
@@ -144,7 +145,7 @@ class AdminController extends Controller
                 $resizedimg->save($path . $name);
 
                 $path = $r['coverfoto'];
-            }    
+            }
             else {
                 $useold = true;
             }
@@ -153,13 +154,13 @@ class AdminController extends Controller
             $useold = true;
         }
 
-        if(!$useold) {     
+        if(!$useold) {
             $p->coverfoto = $path . $name;
             $p->fullresfoto = $path . $name_orig;
         }
         else {
             // Split off last '/' and insert _orig_ so that a string of the path of a picture can be inserted
-            // into r['coverfoto'] and the right thumbnail and full res foto will be set.  
+            // into r['coverfoto'] and the right thumbnail and full res foto will be set.
             $path = $r['coverfoto'];
 
             $parts = explode('/', $path);
@@ -168,10 +169,10 @@ class AdminController extends Controller
             echo $parts[0]; // outputs "path without catname"
 
             $p->coverfoto = $parts[0] . '/' . $last;
-            $p->fullresfoto = $parts[0] . '/_orig_' . $last; 
+            $p->fullresfoto = $parts[0] . '/_orig_' . $last;
         }
 
-  
+
         $p->naam = $r['naam'];
         $p->afmetingen = $r['afmetingen'];
         $p->prijs_handelaar = $r['prijs_handelaar'];
@@ -205,7 +206,7 @@ class AdminController extends Controller
 
         if($r->hasFile('foto')) {
             if($r->file('foto')->isValid()) {
-                $path = $_SERVER['DOCUMENT_ROOT'] . '/' . $r['coverfoto']; 
+                $path = $_SERVER['DOCUMENT_ROOT'] . '/' . $r['coverfoto'];
                 $name = $f->getClientOriginalName();
                 $name_orig = '_orig_' . $name;
                 $f->move($path, $name_orig);
@@ -221,18 +222,18 @@ class AdminController extends Controller
         }
         else {
             $useold = true;
-            
+
         }
 
         $p = new Product;
 
-        if(!$useold) {     
+        if(!$useold) {
             $p->coverfoto = $path . $name;
             $p->fullresfoto = $path . $name_orig;
         }
         else {
             // Split off last '/' and insert _orig_ so that a string of the path of a picture can be inserted
-            // into r['coverfoto'] and the right thumbnail and full res foto will be set.  
+            // into r['coverfoto'] and the right thumbnail and full res foto will be set.
             $path = $r['coverfoto'];
 
             $parts = explode('/', $path);
@@ -241,9 +242,9 @@ class AdminController extends Controller
             echo $parts[0]; // outputs "path without catname"
 
             $p->coverfoto = $parts[0] . '/' . $last;
-            $p->fullresfoto = $parts[0] . '/_orig_' . $last; 
+            $p->fullresfoto = $parts[0] . '/_orig_' . $last;
         }
-        
+
 
         $p->naam = $r['naam'];
         $p->afmetingen = $r['afmetingen'];
@@ -275,7 +276,7 @@ class AdminController extends Controller
     function categorieOverview() {
         $categories = Categorie::all();
 
-        return view('admin.categories', 
+        return view('admin.categories',
             ['categories' => $categories]);
     }
 
@@ -327,7 +328,7 @@ class AdminController extends Controller
 
         if($r->hasFile('foto')) {
             if($r->file('foto')->isValid()) {
-                $path = $_SERVER['DOCUMENT_ROOT'] . '/' . $r['coverfoto']; 
+                $path = $_SERVER['DOCUMENT_ROOT'] . '/' . $r['coverfoto'];
                 $name = $f->getClientOriginalName();
                 $name_orig = '_orig_' . $name;
                 $f->move($path, $name_orig);
@@ -338,7 +339,7 @@ class AdminController extends Controller
                 $path = $r['coverfoto'];
             }
         }
-        
+
         $cat = new Categorie;
 
         $cat->naam = $r['naam'];
@@ -442,7 +443,7 @@ class AdminController extends Controller
 
         if($r->hasFile('foto')) {
             if($r->file('foto')->isValid()) {
-                $path = $_SERVER['DOCUMENT_ROOT'] . '/' . $r['coverfoto']; 
+                $path = $_SERVER['DOCUMENT_ROOT'] . '/' . $r['coverfoto'];
                 $name = $f->getClientOriginalName();
                 $name_orig = '_orig_' . $name;
                 $f->move($path, $name_orig);
@@ -451,12 +452,31 @@ class AdminController extends Controller
 
                 $resizedimg = Image::make($path . $name_orig)->fit(400,300);
                 $resizedimg->save($path . $name);
-            }  
+            }
         }
 
         return $this->fotoUpload($status, $msg);
-
     }
 
+    //////////////////
+    // MOTD
+
+    function motd() {
+        $motd = Motd::all()->first();
+
+        return view('admin.motd', ['motd' => $motd]);
+    }
+
+    function motdAction(Request $r) {
+
+        $motd = Motd::all()->first();
+
+        if($motd == null) $motd = new Motd;
+
+        $motd->content = $r["motd"];
+        $motd->save();
+
+        return view('admin.motd', ['motd' => $motd]);
+    }
 
 }

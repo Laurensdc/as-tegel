@@ -38,6 +38,11 @@
                             <span class="icon-upload"></span> Foto Uploaden
                         </a>
 					</div>
+                    <div class="toolbar_admin_item">
+                        <a @if($admin_menu=='motd') class="admin_active" @endif href="{{ route('admin') }}/motd">
+                            MOTD
+                        </a>
+                    </div>
 					@if(Auth::check())
 						<div class="toolbar_account">Ingelogd als {{ str_limit(Auth::user()->firstname, $limit = 10, $end = '...') }} ({{ Auth::user()->role }}) &ndash;
 							<a href="{{ route('home') }}/logout">Log uit</a>

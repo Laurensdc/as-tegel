@@ -43,7 +43,7 @@ Route::post('/producten/{cat}/{subcat}', ['middleware' => 'lang', 'uses' => 'Pro
 Route::get('/order', ['middleware' => 'lang', 'uses' => 'OrderController@overview', 'as' => 'order']);
 Route::get('/order/delete', ['middleware' => 'lang', 'uses' => 'OrderController@deleteorder', 'as' => 'deleteorder']);
 Route::get('/order/place', ['middleware' => 'lang', 'uses' => 'OrderplaceController@placeOrder', 'as' => 'placeorder']);
-Route::get('/order/delete/{id}',['middleware' => 'lang', 'uses' => 'OrderController@deleteOne']); 
+Route::get('/order/delete/{id}',['middleware' => 'lang', 'uses' => 'OrderController@deleteOne']);
 Route::get('/order/toggledop', ['middleware' => 'lang', 'uses' => 'OrderController@toggledop', 'as' => 'dop']);
 
 // Auth
@@ -115,7 +115,10 @@ Route::get('/admin', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminControl
 	Route::get('/admin/fotoupload', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@fotoUpload']);
 	Route::post('/admin/fotoupload', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@fotoUploadAction']);
 
+    // MOTD
+        Route::get('/admin/motd', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@motd']);
+        Route::post('/admin/motd', ['middleware' => ['auth', 'admin'], 'uses' => 'AdminController@motdAction']);
+
 Route::get('/unauthorized', function() {
 	return view('admin.unauthorized');
 });
-

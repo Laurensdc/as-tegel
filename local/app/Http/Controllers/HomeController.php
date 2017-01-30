@@ -21,13 +21,15 @@ class HomeController extends Controller
         $featuredproducts = App\Product::where('inpromo', 1)->get();
         $subcategories = App\Subcategorie::all();
         $categories = App\Categorie::all();
+        $motd = App\Motd::all()->first();
 
         return view('home', [
-            "title" => "Home", 
+            "title" => "Home",
             "headermenu_active" => "home",
             "featuredproducts" => $featuredproducts,
             "subcategories" => $subcategories,
             "categories" => $categories,
+            "motd" => $motd
             ]);
     }
 
@@ -39,7 +41,7 @@ class HomeController extends Controller
         return view('about', ["title" => trans('cont.about'), "headermenu_active" => trans('cont.about') ]);
     }
 
-    function lang($ln, Request $request) {     
+    function lang($ln, Request $request) {
         return Redirect::back()->withCookie(cookie('ln', $ln));
     }
 
@@ -53,7 +55,7 @@ class HomeController extends Controller
         $subcategories = App\Subcategorie::all();
 
         return view('prijslijst', [
-            "title" => "Prijslijst", 
+            "title" => "Prijslijst",
             "headermenu_active" => "prijslijst",
             "producten" => $producten,
             "categories" => $categories,

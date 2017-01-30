@@ -4,7 +4,7 @@
 	<div class="admin_smallcol">
 		@if(Auth::check())
 			<h2>Welkom!</h2>
-			<p>Succesvol ingelogd als {{ Auth::user()->role }}</p>				
+			<p>Succesvol ingelogd als {{ Auth::user()->role }}</p>
 		@endif
 
 		<br>
@@ -19,6 +19,8 @@
 			<a class="btn" href="{{ route('admin_subcategorieoverview') }}">Subcategorie</a>
 
 			<a class="btn" href="{{ route('admin') }}/fotoupload">Foto Uploaden</a>
+
+            <a class="btn" href="{{ route('admin') }}/motd">MOTD (Bericht home)</a>
 		</p>
 	</div>
 @endsection
