@@ -16,7 +16,7 @@
     <div class="hometext">
 
         <p>
-            {{ $motd->content }}
+            {!! nl2br($motd->content) !!}
         </p>
 
     </div>

@@ -464,6 +464,8 @@ class AdminController extends Controller
     function motd() {
         $motd = Motd::all()->first();
 
+        if($motd == null) $motd = new Motd;
+
         return view('admin.motd', ['motd' => $motd]);
     }
 
@@ -476,7 +478,7 @@ class AdminController extends Controller
         $motd->content = $r["motd"];
         $motd->save();
 
-        return view('admin.motd', ['motd' => $motd]);
+        return view('admin.home', ['motd' => $motd]);
     }
 
 }
