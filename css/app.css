@@ -573,7 +573,6 @@ header .header_bestelling a:hover {
       margin: 0 1rem 0 0; } }
 
 .catmenu li, .catmenu .catmenu_title {
-  height: 4rem;
   border: 1px solid #9E9E9E;
   margin-top: -1px; }
 
@@ -592,7 +591,7 @@ header .header_bestelling a:hover {
   display: inline-block; }
 
 .catmenu a:hover, .catmenu li.active a:hover, .catmenu ul li.active a:hover {
-  color: #DACC38; }
+  color: #BAAB18; }
 
 .catmenu li.active a, .catmenu ul li.active a {
   color: #BAAB18; }

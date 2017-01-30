@@ -17,7 +17,6 @@
 }
 
 .catmenu li, .catmenu .catmenu_title {
-	height:4rem;
 	border:1px solid $gray;
 	margin-top:-1px;
 }
@@ -41,7 +40,7 @@
 }
 
 .catmenu a:hover, .catmenu li.active a:hover, .catmenu ul li.active a:hover {
-	color:$colora_lighter;
+	color:$colora;
 }
 
 // Menu items and submenu items
